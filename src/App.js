@@ -4,14 +4,14 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import './App.css';
 
 import {
-  BrowserRouter,
   Routes,
   Route,
   Link
 } from "react-router-dom";
 
-const React = require('react'),
-      { useState, useEffect } = require('react');
+// const React = require('react'),
+const React = require('react');
+//       { useState, useEffect } = require('react');
 
 function App() {
   return (
@@ -41,8 +41,8 @@ function About() {
 const Navbar = () => {
   return (
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/about">About</Link></li>
     </ul>
   );
 }
