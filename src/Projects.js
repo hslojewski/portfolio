@@ -1,8 +1,7 @@
-// const React = require('react'),
-const React = require('react');
-//       { useState, useEffect } = require('react');
+import { Link } from "react-router-dom";
 
-// const Projects = () => {
+const React = require('react');
+
 class Projects extends React.Component {
   render() {
     const { projects = [] } = this.props;
@@ -13,7 +12,7 @@ class Projects extends React.Component {
         <ul>
         {projects.map(project => {
             return(
-            <  li>{project.title}</li>
+            <li><Link to={project.path}>{project.title}</Link></li>
             );
         })}
         </ul>

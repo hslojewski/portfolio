@@ -1,11 +1,6 @@
-import './App.css';
-// import blah from "./projects_list.json"
+import { Routes, Route, Link, } from "react-router-dom";
 
-import {
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import './App.css';
 
 import Home from './Home';
 import About from './About';
@@ -41,9 +36,9 @@ const App = () => {
       // })
   }
 
-  var getProjectData = () => {
+  var getProjectData = (projId) => {
     // debugger;
-    var projId = window.location.hash.replace("#/projects/","");
+    // var projId = window.location.hash.replace("#/projects/","");
     var projPath = `${process.env.PUBLIC_URL}/projects/${projId}.json`;
     var that = this;
     // var projectsPath = './projects_list.json';
@@ -63,9 +58,9 @@ const App = () => {
       });
   }
 
-  if (window.location.hash.includes("#/projects/")) {
-    getProjectData();
-  }
+  // if (window.location.hash.includes("#/projects/")) {
+  //   getProjectData();
+  // }
 
   useEffect(() => {
     getProjects();
@@ -76,8 +71,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/projects" element={<Projects projects={projects} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects projects={projects} />} />
         {projects.map((project, i) => {
           // var a = projectsData;
           // var locat = window.location.hash.replace("#/","");
@@ -86,7 +81,10 @@ const App = () => {
           // var proj = projects[i];
           var path = "/projects/" + project.path;
           return (
-            <Route exact path={path} key={i} element={<Project data={projectData} />} />
+            <Route path={path} key={i} 
+                   element={<Project projId={project.path}
+                                     getProjectData={getProjectData}
+                                     data={projectData} />} />
           );
         })}
       </Routes>
