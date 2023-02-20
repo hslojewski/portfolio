@@ -9,33 +9,26 @@ import {
   Link
 } from "react-router-dom";
 
+import Home from './Home';
+import About from './About';
+import Projects from './Projects';
+
 // const React = require('react'),
 const React = require('react');
 //       { useState, useEffect } = require('react');
 
-function App() {
+const App = () => {
   return (
     <div>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />}>
-          {/* <Route path="resume" element={<Resume />} /> */}
+        <Route exact path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />}>
         </Route>
       </Routes>
     </div>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-  // Intro
-  // Projects/Categories list
-  // Contact/Links
-}
-
-function About() {
-  return <h2>About</h2>;
 }
 
 const Navbar = () => {
@@ -43,6 +36,10 @@ const Navbar = () => {
     <ul>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/about">About</Link></li>
+      <li><Link to="/projects">Projects</Link></li>
+      <li><Link to="/email">Email</Link></li>
+      <li><Link to="/linkedin">LinkedIn</Link></li>
+      <li><Link to="/resume">Resume</Link></li>
     </ul>
   );
 }
