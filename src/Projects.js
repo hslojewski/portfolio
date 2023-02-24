@@ -12,7 +12,7 @@ class Projects extends React.Component {
         <ul>
         {projects.map(project => {
             return(
-            <li><Link to={project.path}>{project.title}</Link></li>
+            <li><Link exact to={project.path}>{project.title}</Link></li>
             );
         })}
         </ul>

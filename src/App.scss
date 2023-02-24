@@ -1,0 +1,49 @@
+body{ padding: 20px; }
+a.disabled {
+	color: gray;
+  pointer-events: none;
+  cursor: default;
+}
+th, .center{ text-align: center; }
+.note-id{ width: 10%; }
+.note-input{ width: 50%; }
+
+
+body{
+  &:has(div.winter){
+    &:has(.light-mode){
+      background: #EBE4EC;
+      color: #332e26;
+      a{
+        color: #6C3637;
+        &:hover{ color: #184F2D; }
+      }
+    }
+    &:has(.dark-mode){
+      background: #4F2056;
+      color: #f0eeeb;
+      a{
+        color: #89D1A5;
+        &:hover{ color: #E3B1EB; }
+      }
+    }
+  }
+  &:has(div.spring){
+    &:has(.light-mode){
+      background: #F0FFE3;
+      color: #6C5208;
+      a{
+        color: #3E5F1F;
+        &:hover{ color: #A5056D; }
+      }
+    }
+    &:has(.dark-mode){
+      background: #244207;
+      color: #FFF6DE;
+      a{
+        color: #F0FFE3;
+        &:hover{ color: #E1C4D6; }
+      }
+    }
+  }
+}

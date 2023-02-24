@@ -1,7 +1,9 @@
 import { Routes, Route, Link, } from "react-router-dom";
+import moment from 'moment';
 
-import './App.css';
+import './App.scss';
 
+import Nav from './Nav';
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
@@ -13,15 +15,43 @@ const React = require('react'),
 const App = () => {
   const [projects, setProjects] = useState([]);
   const [projectData, setProjectData] = useState({});
-  // const [projectsData, setProjectsState] =  React.useState(blah);
+  const [colorMode, setColorMode] = useState("light");
+  const [season, setSeason] = useState("");
+
+  var checkSeason = (moment) => {
+    // debugger;
+    // const date = new Date('2017-4-28');
+    // const start = new Date('2017-4-20');
+    // const end = new Date('2017-5-16');
+    const springBegins = 2;
+    const summerBegins = 5;
+    const autumnBegins = 8;
+    // const winterBegins = 11;
+
+    if (moment().month() <= springBegins) {
+      setSeason("winter");
+    } else if (moment().month() <= summerBegins) {
+      setSeason("spring");
+    } else if (moment().month() <= autumnBegins) {
+      setSeason("summer");
+    } else {
+      setSeason("autumn");
+    }
+  }
+
+  var toggleColorMode = () => {
+    colorMode === "light" ? setColorMode('dark') : setColorMode('light');
+  }
 
   var getProjects = () => {
+    // var projectsPath = `${process.env.PUBLIC_URL}/projects_list.json`;
     var projectsPath = `${process.env.PUBLIC_URL}/projects_list.json`;
     // var projectsPath = './projects_list.json';
     fetch(projectsPath)
       .then(response => {
         return response.json();
       }).then(result => {
+          // debugger;
           var allProjects = result;
           setProjects(allProjects);
       }).catch((e: Error) => {
@@ -64,11 +94,12 @@ const App = () => {
 
   useEffect(() => {
     getProjects();
+    checkSeason(moment);
   }, [])
   
   return (
-    <div>
-      <Navbar />
+    <div class={colorMode+"-mode "+season}>
+      <Nav colorMode={colorMode} toggleColorMode={toggleColorMode} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -89,19 +120,6 @@ const App = () => {
         })}
       </Routes>
     </div>
-  );
-}
-
-const Navbar = () => {
-  return (
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/projects">Projects</Link></li>
-      <li><Link to="/email">Email</Link></li>
-      <li><Link to="/linkedin">LinkedIn</Link></li>
-      <li><Link to="/resume">Resume</Link></li>
-    </ul>
   );
 }
 

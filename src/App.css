@@ -1,9 +1,0 @@
-body{ padding: 20px; }
-a.disabled {
-	color: gray;
-  pointer-events: none;
-  cursor: default;
-}
-th, .center{ text-align: center; }
-.note-id{ width: 10%; }
-.note-input{ width: 50%; }
