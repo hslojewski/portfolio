@@ -46,4 +46,15 @@ body{
       }
     }
   }
+  p{ align-content: start; }
+  .clear-line{ clear: both; }
+  .width-25{ width: 25%; }
+  .width-50{ width: 50%; }
+  .align-left{ float: left; }
+  .align-right{ float: right; }
+  .align-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -44,7 +44,6 @@ const App = () => {
   }
 
   var getProjects = () => {
-    // var projectsPath = `${process.env.PUBLIC_URL}/projects_list.json`;
     var projectsPath = `${process.env.PUBLIC_URL}/projects_list.json`;
     // var projectsPath = './projects_list.json';
     fetch(projectsPath)
