@@ -8,15 +8,17 @@ import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import Project from './Project';
+import Tag from './Tag';
 
 const React = require('react'),
       { useState, useEffect } = require('react');
 
 const App = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState({});
   const [projectData, setProjectData] = useState({});
   const [colorMode, setColorMode] = useState("light");
   const [season, setSeason] = useState("");
+  const [tags, setTags] = useState([]);
 
   var checkSeason = (moment) => {
     // debugger;
@@ -53,6 +55,7 @@ const App = () => {
           // debugger;
           var allProjects = result;
           setProjects(allProjects);
+          getTags(allProjects);
       }).catch((e: Error) => {
         console.log(e.message);
       });
@@ -87,6 +90,14 @@ const App = () => {
       });
   }
 
+  var getTags = (allProjects) => {
+    var allTags = [];
+    Object.keys(allProjects).map((projectPath, i) => {
+      allTags = new Set([...allTags, ...allProjects[projectPath].tags]);
+    });
+    setTags(Array.from(allTags));
+  }
+
   // if (window.location.hash.includes("#/projects/")) {
   //   getProjectData();
   // }
@@ -95,26 +106,30 @@ const App = () => {
     getProjects();
     checkSeason(moment);
   }, [])
-  
+
   return (
     <div class={colorMode+"-mode "+season}>
       <Nav colorMode={colorMode} toggleColorMode={toggleColorMode} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects projects={projects} />} />
-        {projects.map((project, i) => {
-          // var a = projectsData;
-          // var locat = window.location.hash.replace("#/","");
-          // debugger;
-          // if (project == locat)
-          // var proj = projects[i];
-          var path = "/projects/" + project.path;
+        <Route path="/projects" element={<Projects projects={projects}
+                                                   tags={tags} />} />
+        {Object.keys(projects).map((projectPath, i) => {
+          var path = "/projects/" + projectPath;
           return (
             <Route path={path} key={i} 
-                   element={<Project projId={project.path}
+                   element={<Project projId={projectPath}
                                      getProjectData={getProjectData}
                                      data={projectData} />} />
+          );
+        })}
+        {tags.map((tag, i) => {
+          var path = "tags/" + tag;
+          return (
+            <Route path={path} key={i} 
+                   element={<Tag projects={projects}
+                                 tag={tag} />} />
           );
         })}
       </Routes>

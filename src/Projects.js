@@ -4,15 +4,23 @@ const React = require('react');
 
 class Projects extends React.Component {
   render() {
-    const { projects = [] } = this.props;
+    const { projects = {}, tags = [] } = this.props;
 
     return (
         <div>
-        <h2>Projects</h2>
+        <h1>Projects</h1>
         <ul>
-        {projects.map(project => {
+        {Object.keys(projects).map(projectPath => {            
             return(
-            <li><Link exact to={project.path}>{project.title}</Link></li>
+                <li><Link exact to={projectPath}>{projects[projectPath].title}</Link></li>
+            );
+        })}
+        </ul>
+        <h2>Tags</h2>
+        <ul>
+        {tags.map(tag => {
+            return(
+                <li><Link exact to={"/tags/"+tag}>{tag}</Link></li>
             );
         })}
         </ul>

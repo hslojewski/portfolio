@@ -1,10 +1,18 @@
-[
-    {
-        "path": "weather-extension",
-        "title": "Weather Extension"
+{
+    "weather-extension": {
+        "title": "Weather Extension",
+        "tags": [
+            "prototyping",
+            "hci",
+            "depaul"
+        ]       
     },
-    {
-        "path": "2",
-        "title": "project 2"
+    "blah": {
+        "title": "blah",
+        "tags": [
+            "prototyping",
+            "hci",
+            "blah"
+        ]  
     }
-]
+}
