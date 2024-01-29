@@ -1,6 +1,6 @@
 import React from 'react';
 import parse from 'html-react-parser';
-
+import { Routes, Route, Link, } from "react-router-dom";
 
 class Project extends React.Component {
 
@@ -14,7 +14,8 @@ class Project extends React.Component {
     // debugger;
     const { data = {} } = this.props;
     return (
-      <div>
+      <div class="content">
+        <Link to="/projects">Back to Projects</Link>
         <h1>Project: {data.title}</h1>
         <p>{data.description}</p>
         <p>
@@ -28,16 +29,16 @@ class Project extends React.Component {
           return(
             <div class={"section "+ section.classes}>
               {section.wrap_images && section.wrap_images.map(image => {
-                return(<img src={image.src} alt={image.alt} class={image.classes} />);
+                return(<img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} class={image.classes} />);
                 }
               )}
-              <h3>{section.title}</h3>
+              <h2>{section.title}</h2>
               <p>{parse(section.detail)}</p>
               {section.button &&
                 <button class={section.button.classes} src={section.button.url}>{section.button.title}</button>
               }
               {section.images && section.images.map(image => {
-                return(<img src={image.src} alt={image.alt} class={image.classes} />);
+                return(<img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} class={image.classes} />);
                 }
               )}
               {section.video &&
@@ -46,6 +47,7 @@ class Project extends React.Component {
             </div>
           );
         })}</p>
+        <Link to="/projects">Back to Projects</Link>
       </div>
     );
   }

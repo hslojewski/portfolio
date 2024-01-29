@@ -6,15 +6,20 @@ class Nav extends React.Component {
     const { toggleColorMode, colorMode = "light" } = this.props;
 
     return(
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/email">Email</Link></li>
-        <li><Link to="/linkedin">LinkedIn</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
-        <li><button onClick={toggleColorMode}>{colorMode === "light" ? "Dark Mode" : "Light Mode"}</button></li>
-      </ul>
+      <nav class="nav">
+          <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="mailto:heidi.slojewski@gmail.com">Email</Link></li>
+          <li><Link to="https://www.linkedin.com/in/heidislojewski" target="_blank">LinkedIn</Link></li>
+          <li><Link to="/resume" target="_blank">Resume</Link></li>
+          <li><Link class={"mode " + colorMode+"-mode"}
+                    alt={[colorMode, "mode"].join(" ")}
+                    onClick={toggleColorMode}>
+          </Link></li>
+        </ul>
+      </nav>
     );
   }
 }

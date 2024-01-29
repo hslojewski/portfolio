@@ -18,7 +18,7 @@
                 {
                     "src": "weather/sketch_example.png",
                     "alt": "Sketch of idea as a messaging scenario",
-                    "classes": "align-center width-50"
+                    "classes": "align-center width-50 mobile-width-100"
                 }
             ]
         },
@@ -30,12 +30,12 @@
                 {
                     "src": "weather/scenarios_vocabulary.png",
                     "alt": "Original notes written about scenarios and vocabulary that would trigger app extension",
-                    "classes": "align-center width-50 clear-line"
+                    "classes": "align-center width-50 mobile-width-100 clear-line"
                 },
                 {
                     "src": "weather/sketch_flow.png",
                     "alt": "Sketch of user flow for experiencing weather app extension",
-                    "classes": "align-center width-50"
+                    "classes": "align-center width-50 mobile-width-100"
                 }
             ]
         },
@@ -47,7 +47,7 @@
                 {
                     "src": "weather/ui_options.gif",
                     "alt": "Paper prototype example illustrating the different options for how to display a weather indicator, including text-based messaging versus icon-based indicators.",
-                    "classes": "align-center width-50"
+                    "classes": "align-center width-50 mobile-width-100"
                 }
             ]
         },

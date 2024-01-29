@@ -4,6 +4,7 @@ import moment from 'moment';
 import './App.scss';
 
 import Nav from './Nav';
+import Footer from './Footer';
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
@@ -25,16 +26,18 @@ const App = () => {
     // const date = new Date('2017-4-28');
     // const start = new Date('2017-4-20');
     // const end = new Date('2017-5-16');
-    const springBegins = 2;
-    const summerBegins = 5;
-    const autumnBegins = 8;
+    const springBegins = 2; // March
+    const summerBegins = 4; // May
+    const autumnBegins = 6; // July
     // const winterBegins = 11;
+    // console.log("month: "+moment().month());
 
-    if (moment().month() <= springBegins) {
+    const currentMonth = moment().month();
+    if (currentMonth <= springBegins) {
       setSeason("winter");
-    } else if (moment().month() <= summerBegins) {
+    } else if (currentMonth <= summerBegins) {
       setSeason("spring");
-    } else if (moment().month() <= autumnBegins) {
+    } else if (currentMonth <= autumnBegins) {
       setSeason("summer");
     } else {
       setSeason("autumn");
@@ -133,6 +136,7 @@ const App = () => {
           );
         })}
       </Routes>
+      <Footer />
     </div>
   );
 }

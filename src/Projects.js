@@ -7,7 +7,7 @@ class Projects extends React.Component {
     const { projects = {}, tags = [] } = this.props;
 
     return (
-        <div>
+        <div class="content">
         <h1>Projects</h1>
         <ul>
         {Object.keys(projects).map(projectPath => {            

@@ -7,7 +7,8 @@ class Tag extends React.Component {
     const { projects = {}, tag = "" } = this.props;
 
     return (
-        <div>
+        <div class="content">
+          <Link to="/projects">Back to Projects</Link>
           <h1>{tag}</h1>
           <ul>
           {Object.keys(projects).map(projectPath => {   

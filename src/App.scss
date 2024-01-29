@@ -1,60 +1,172 @@
-body{ padding: 20px; }
+$breakpoint-tablet: 768px;
+$ten-percent: 10%;
+$fifty-percent: 50%;
+$one-hundred-percent: 100%;
+$black: #000;
+$white: #fff;
+
+// winter colors - purple
+$color-bubble-bath: #EBE4EC;
+$color-hot-purple: #4F2056;
+$color-selago: #332e26;
+$color-vista-blue: #89D1A5;
+
+// spring colors - green
+$color-early-dawn: #FFF6DE;
+$color-pine-tree: #244207;
+$color-eggplant: #A5056D;
+$color-twilight: #E1C4D6;
+
+// summer colors - red
+$color-banana-mania: #FFEEB8;
+$color-bright-red: #901D29;
+$color-melon: #FFB8B8;
+
+// autumn colors - orange
+$color-linen: #F6F0EA;
+$color-chilean-fire: #DD5D36;
+$color-brown-pod: #4F1D0D;
+$dark-sea-green: #8FC78F;
+
+// body{ padding: 20px; }
 a.disabled {
 	color: gray;
   pointer-events: none;
   cursor: default;
 }
 th, .center{ text-align: center; }
-.note-id{ width: 10%; }
-.note-input{ width: 50%; }
+.note-id{ width: $ten-percent; }
+.note-input{ width: $fifty-percent; }
 
 
 body{
+  button{
+    padding: 10px;
+    border-radius: 20px;
+    border: 0;
+  }
   &:has(div.winter){
-    &:has(.light-mode){
-      background: #EBE4EC;
-      color: #332e26;
+    &:has(.light-mode), &:has(.dark-mode) .nav ul{
+      background: $color-bubble-bath;
+      color: $color-selago;
+      // color: $color-hot-purple;
       a{
-        color: #6C3637;
-        &:hover{ color: #184F2D; }
+        color: $color-hot-purple;
+        // color: #663435;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
+        &.light-mode{
+          background: url("../public/icons/light_mode.svg");
+        }
       }
     }
-    &:has(.dark-mode){
-      background: #4F2056;
-      color: #f0eeeb;
+    &:has(.dark-mode), &:has(.light-mode) .nav ul{
+      background: $color-hot-purple;
+      color: $color-bubble-bath;
       a{
-        color: #89D1A5;
-        &:hover{ color: #E3B1EB; }
+        color: $color-vista-blue;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
       }
     }
   }
   &:has(div.spring){
-    &:has(.light-mode){
-      background: #F0FFE3;
-      color: #6C5208;
+    &:has(.light-mode), &:has(.dark-mode) .nav ul{
+      background: $color-early-dawn;
+      // color: $color-pine-tree;
+      color: $color-selago;
       a{
-        color: #3E5F1F;
-        &:hover{ color: #A5056D; }
+        color: $color-eggplant;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
       }
     }
-    &:has(.dark-mode){
-      background: #244207;
-      color: #FFF6DE;
+    &:has(.dark-mode), &:has(.light-mode) .nav ul{
+      background: $color-pine-tree;
+      color: $color-early-dawn;
       a{
-        color: #F0FFE3;
-        &:hover{ color: #E1C4D6; }
+        color: $color-twilight;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
+      }
+    }
+  }
+  &:has(div.summer){
+    &:has(.light-mode), &:has(.dark-mode) .nav ul{
+      background: $color-banana-mania;
+      color: $color-selago;
+      a{
+        color: $color-bright-red;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
+      }
+    }
+    &:has(.dark-mode), &:has(.light-mode) .nav ul{
+      background: $color-bright-red;
+      color: $color-banana-mania;
+      a{
+        color: $color-melon;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
+      }
+    }
+  }
+  &:has(div.autumn){
+    &:has(.light-mode), &:has(.dark-mode) .nav ul{
+      background: $color-linen;
+      color: $color-selago;
+      a{
+        color: $color-chilean-fire;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
+      }
+    }
+    &:has(.dark-mode), &:has(.light-mode) .nav ul{
+      background: $color-brown-pod;
+      color: $dark-sea-green;
+      a{
+        color: $color-linen;
+        text-decoration: none;
+        &:hover{ text-decoration: underline; }
       }
     }
   }
   p{ align-content: start; }
   // .clear-line{ clear: both; }
+  .nav{
+    ul{
+      *{ display: inline; }
+      // position: fixed;
+      // top: 0;
+      // left: 0;
+      // right: 0;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      li{ margin: 20px; }
+      li a{
+        color: $black;
+        text-decoration: none;
+      }
+    }
+  }
+  footer{
+    padding: 20px;
+    text-align: center;
+  }
+  .mode{ width: 30px; }
+  .content{ padding: 20px; }
   .width-25{ width: 25%; }
-  .width-50{ width: 50%; }
+  .width-50{ width: $fifty-percent; }
   // .align-left{ float: left; }
   // .align-right{ float: right; }
   .align-center{
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media (max-width: $breakpoint-tablet - 1) {
+    .mobile-width-100{ width: $one-hundred-percent; }
   }
 }
