@@ -147,7 +147,7 @@ const App = () => {
       allTags = allTags.concat(allProjects[projectPath].tags || []);
     });
     const blah = {
-      tags: getTools(allProjects),
+      tools: getTools(allProjects),
       skills: getSkills(allProjects),
       affiliations: getAffiliations(allProjects),
     }
@@ -225,19 +225,20 @@ const App = () => {
                             />} />
           );
         })}
-        {Object.values(tags).map((tagList) => {
-          tagList.map((tag, k) => {
-            var path = "/tags/" + tag.toLowerCase();
-            console.log(path);
-            console.log(tag);
-            // debugger;
-            return (
-              <Route path={path} key={k} 
-                     element={<Tag projects={projects}
+        {tools.concat(skills).concat(affiliations).map((tag, i) => {
+          var path = "/tags/" + tag;
+          // console.log(path);
+          // console.log(tag);
+          // console.log(tags);
+          console.log(tools.concat(skills).concat(affiliations));
+          // debugger;
+          return (
+            <Route path={path} key={i} 
+                    element={<Tag projects={projects}
                                   tag={tag}
-                              />} />
-            );
-          });
+                            />}
+            />
+          );
         })}
       </Routes>
       <Footer />
