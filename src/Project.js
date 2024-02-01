@@ -6,38 +6,25 @@ class Project extends React.Component {
 
   componentWillMount() {
     // debugger;
-    const {
-      getProjectData, getProjectTools, getProjectSkills, getProjectAffiliation,
-      projId = '', data = {}, tools = [], skills = [], affiliation = ""
-    } = this.props;
+    const { getProjectData, projId = '', data = {} } = this.props;
     getProjectData(projId);
-    getProjectTools(projId);
-    getProjectSkills(projId);
-    getProjectAffiliation(projId);
   }
 
   render() {
-    const { data = {}, tools = [], skills = [], affiliation = "" } = this.props;
     // debugger;
+    const { data = {} } = this.props;
     return (
       <div class="content">
         <Link to="/projects">Back to Projects</Link>
         <h1>Project: {data.title}</h1>
         <p>{data.description}</p>
         <p>
-          <strong>Tools: </strong>
-          {tools && tools.map(tool => {
+          <strong>Tools & Skills: </strong>
+          {data.tools_and_skills && data.tools_and_skills.map(tool => {
             return(<span>{tool}, </span>);
           })}
         </p>
-        <p>
-          <strong>Skills: </strong>
-          {skills && skills.map(skill => {
-            return(<span>{skill}, </span>);
-          })}
-        </p>
-        <p><strong>Affiliation: </strong>{affiliation}</p>
-        
+        <p><strong>Affiliation: </strong>{data.affiliation}</p>
         <p>{data.content && data.content.map(section => {
           return(
             <div class={"section "+ section.classes}>

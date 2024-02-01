@@ -17,15 +17,9 @@ const React = require('react'),
 const App = () => {
   const [projects, setProjects] = useState({});
   const [projectData, setProjectData] = useState({});
-  const [projectTools, setProjectTools] = useState([]);
-  const [projectSkills, setProjectSkills] = useState([]);
-  const [projectAffiliation, setProjectAffiliation] = useState("");
   const [colorMode, setColorMode] = useState("light");
   const [season, setSeason] = useState("");
-  const [tags, setTags] = useState({});
-  const [tools, setTools] = useState([]);
-  const [skills, setSkills] = useState([]);
-  const [affiliations, setAffiliations] = useState([]);
+  const [tags, setTags] = useState([]);
 
   var checkSeason = (moment) => {
     // debugger;
@@ -65,10 +59,6 @@ const App = () => {
           var allProjects = result;
           setProjects(allProjects);
           getTags(allProjects);
-          getTools(allProjects);
-          getSkills(allProjects);
-          getAffiliations(allProjects);
-          // debugger;
       }).catch((e: Error) => {
         console.log(e.message);
       });
@@ -103,89 +93,12 @@ const App = () => {
       });
   }
 
-  var getProjectTools = (projId) => {
-    var projPath = `${process.env.PUBLIC_URL}/projects_list.json`;
-    fetch(projPath)
-      .then(response => {
-        return response.json();
-      }).then(result => {
-        console.log(projId);
-          setProjectTools(result[projId].tools);
-      }).catch((e: Error) => {
-        console.log(e.message);
-      });
-  }
-
-  var getProjectSkills = (projId) => {
-    var projPath = `${process.env.PUBLIC_URL}/projects_list.json`;
-    fetch(projPath)
-      .then(response => {
-        return response.json();
-      }).then(result => {
-        console.log(projId);
-        setProjectSkills(result[projId].skills);
-      }).catch((e: Error) => {
-        console.log(e.message);
-      });
-  }
-
-  var getProjectAffiliation = (projId) => {
-    var projPath = `${process.env.PUBLIC_URL}/projects_list.json`;
-    fetch(projPath)
-      .then(response => {
-        return response.json();
-      }).then(result => {
-        setProjectAffiliation(result[projId].affiliation);
-      }).catch((e: Error) => {
-        console.log(e.message);
-      });
-  }
-
   var getTags = (allProjects) => {
     var allTags = [];
     Object.keys(allProjects).map((projectPath, i) => {
-      allTags = allTags.concat(allProjects[projectPath].tags || []);
+      allTags = new Set([...allTags, ...allProjects[projectPath].tags]);
     });
-    const blah = {
-      tags: getTools(allProjects),
-      skills: getSkills(allProjects),
-      affiliations: getAffiliations(allProjects),
-    }
-    // debugger;
-    // setTags(Array.from(new Set(allTags)));
-    setTags(blah);
-  }
-
-  var getTools = (allProjects) => {
-    var allTools = [];
-    Object.keys(allProjects).map((projectPath, i) => {
-      // allTools = new Set(allTools.concat(allProjects[projectPath].tools));
-      allTools = allTools.concat(allProjects[projectPath].tools || []);
-    });
-    // debugger;
-    setTools(Array.from(new Set(allTools)));
-    return Array.from(new Set(allTools));
-  }
-
-  var getSkills = (allProjects) => {
-    var allSkills = [];
-    Object.keys(allProjects).map((projectPath, i) => {
-      // allSkills = new Set(allSkills.concat(allProjects[projectPath].skills));
-      allSkills = allSkills.concat(allProjects[projectPath].skills || []);
-    });
-    setSkills(Array.from(new Set(allSkills)));
-    return Array.from(new Set(allSkills));
-  }
-
-  var getAffiliations = (allProjects) => {
-    var allAffiliations = [];
-    Object.keys(allProjects).map((projectPath, i) => {
-      // allAffiliations = new Set(allAffiliations.concat(allProjects[projectPath].affiliation));
-      // debugger;
-      allAffiliations = allProjects[projectPath].affiliation ? allAffiliations.concat(allProjects[projectPath].affiliation) : allAffiliations;
-    });
-    setAffiliations(Array.from(new Set(allAffiliations)));
-    return Array.from(new Set(allAffiliations));
+    setTags(Array.from(allTags));
   }
 
   // if (window.location.hash.includes("#/projects/")) {
@@ -204,40 +117,23 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects projects={projects}
-                                                   tags={tags}
-                                                   tools={tools}
-                                                   skills={skills}
-                                                   affiliations={affiliations}
-                                        />} />
+                                                   tags={tags} />} />
         {Object.keys(projects).map((projectPath, i) => {
           var path = "/projects/" + projectPath;
           return (
             <Route path={path} key={i} 
                    element={<Project projId={projectPath}
                                      getProjectData={getProjectData}
-                                     getProjectTools={getProjectTools}
-                                     getProjectSkills={getProjectSkills}
-                                     getProjectAffiliation={getProjectAffiliation}
-                                     data={projectData}
-                                     tools={projectTools}
-                                     skills={projectSkills}
-                                     affiliation={projectAffiliation}
-                            />} />
+                                     data={projectData} />} />
           );
         })}
-        {Object.values(tags).map((tagList) => {
-          tagList.map((tag, k) => {
-            var path = "/tags/" + tag.toLowerCase();
-            console.log(path);
-            console.log(tag);
-            // debugger;
-            return (
-              <Route path={path} key={k} 
-                     element={<Tag projects={projects}
-                                  tag={tag}
-                              />} />
-            );
-          });
+        {tags.map((tag, i) => {
+          var path = "tags/" + tag;
+          return (
+            <Route path={path} key={i} 
+                   element={<Tag projects={projects}
+                                 tag={tag} />} />
+          );
         })}
       </Routes>
       <Footer />

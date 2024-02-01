@@ -5,7 +5,7 @@ const React = require('react');
 class Tag extends React.Component {
   render() {
     const { projects = {}, tag = "" } = this.props;
-debugger;
+
     return (
         <div class="content">
           <Link to="/projects">Back to Projects</Link>

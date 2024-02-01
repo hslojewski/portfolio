@@ -1,8 +1,18 @@
 {
     "weather-extension": {
         "title": "Weather Extension",
-        "tools": [
-            "Axure"
-        ]
+        "tags": [
+            "prototyping",
+            "hci",
+            "depaul"
+        ]       
+    },
+    "blah": {
+        "title": "blah",
+        "tags": [
+            "prototyping",
+            "hci",
+            "blah"
+        ]  
     }
 }

@@ -4,8 +4,8 @@ const React = require('react');
 
 class Projects extends React.Component {
   render() {
-    const { projects = {}, tags = [], tools = [], skills = [], affiliations = [] } = this.props;
-    console.log(skills);
+    const { projects = {}, tags = [] } = this.props;
+
     return (
         <div class="content">
         <h1>Projects</h1>
@@ -16,35 +16,11 @@ class Projects extends React.Component {
             );
         })}
         </ul>
-        {/* <h2>Tags</h2>
+        <h2>Tags</h2>
         <ul>
         {tags.map(tag => {
             return(
                 <li><Link exact to={"/tags/"+tag}>{tag}</Link></li>
-            );
-        })}
-        </ul> */}
-        <h2>Tools</h2>
-        <ul>
-        {tools.map(tool => {
-            return(
-                <li><Link exact to={"/tags/"+tool}>{tool}</Link></li>
-            );
-        })}
-        </ul>
-        <h2>Skills</h2>
-        <ul>
-        {skills.map(skill => {
-            return(
-                <li><Link exact to={"/tags/"+skill}>{skill}</Link></li>
-            );
-        })}
-        </ul>
-        <h2>Affiliations</h2>
-        <ul>
-        {affiliations.map(affiliation => {
-            return(
-                <li><Link exact to={"/tags/"+affiliation}>{affiliation}</Link></li>
             );
         })}
         </ul>
