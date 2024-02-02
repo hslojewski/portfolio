@@ -18,6 +18,7 @@ const App = () => {
   const [projects, setProjects] = useState({});
   const [projectData, setProjectData] = useState({});
   const [projectTools, setProjectTools] = useState([]);
+  const [activeTag, setActiveTag] = useState("");
   const [projectSkills, setProjectSkills] = useState([]);
   const [projectAffiliation, setProjectAffiliation] = useState("");
   const [colorMode, setColorMode] = useState("light");
@@ -101,6 +102,13 @@ const App = () => {
       }).catch((e: Error) => {
         console.log(e.message);
       });
+  }
+
+  var getAffiliationProjects = (affiliation) => {
+    console.log(tags);
+    console.log(projects);
+    console.log(projectData);
+    debugger;
   }
 
   var getProjectTools = (projId) => {
@@ -208,6 +216,9 @@ const App = () => {
                                                    tools={tools}
                                                    skills={skills}
                                                    affiliations={affiliations}
+                                                   getAffiliationProjects={getAffiliationProjects}
+                                                   activeTag={activeTag}
+                                                   setActiveTag={setActiveTag}
                                         />} />
         {Object.keys(projects).map((projectPath, i) => {
           var path = "/projects/" + projectPath;

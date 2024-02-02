@@ -9,7 +9,7 @@ class Tag extends React.Component {
   
     return (
         <div class="content">
-          <Link to="/projects">Back to Projects</Link>
+          {/* <Link to="/projects">Back to Projects</Link> */}
           <h1>{tag}</h1>
           <ul>
           {Object.keys(projects).map(projectPath => {

@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
+import Tag from './Tag';
+
 
 const React = require('react');
 
 class Projects extends React.Component {
   render() {
-    const { projects = {}, tags = [], tools = [], skills = [], affiliations = [] } = this.props;
+    const {
+        getAffiliationProjects, setActiveTag,
+        projects = {}, tags = [], tools = [], skills = [], affiliations = [], activeTag = ""
+    } = this.props;
+
+    var displayProjects = (tag) => {
+        // debugger;
+        setActiveTag(tag);
+    }
     console.log(skills);
     return (
         <div class="content">
@@ -28,7 +38,8 @@ class Projects extends React.Component {
         <ul>
         {tools.map(tool => {
             return(
-                <li><Link exact to={"/tags/"+tool}>{tool}</Link></li>
+                // <li><Link exact to={"/tags/"+tool}>{tool}</Link></li>
+                <li><Link onClick={()=>displayProjects(tool)}>{tool}</Link></li>
             );
         })}
         </ul>
@@ -36,7 +47,8 @@ class Projects extends React.Component {
         <ul>
         {skills.map(skill => {
             return(
-                <li><Link exact to={"/tags/"+skill}>{skill}</Link></li>
+                // <li><Link exact to={"/tags/"+skill}>{skill}</Link></li>
+                <li><Link onClick={()=>displayProjects(skill)}>{skill}</Link></li>
             );
         })}
         </ul>
@@ -44,10 +56,12 @@ class Projects extends React.Component {
         <ul>
         {affiliations.map(affiliation => {
             return(
-                <li><Link exact to={"/tags/"+affiliation}>{affiliation}</Link></li>
+                <li><Link onClick={()=>displayProjects(affiliation)}>{affiliation}</Link></li>
             );
         })}
         </ul>
+
+        <Tag projects={projects} tag={activeTag} />
 
 
         <div>Category/Tags</div>
