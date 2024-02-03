@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const React = require('react');
 
 class ActiveFilters extends React.Component {

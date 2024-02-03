@@ -1,20 +1,20 @@
 import React from 'react';
 import parse from 'html-react-parser';
-import { Routes, Route, Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Project extends React.Component {
 
   componentWillMount() {
     const {
       getProjectData,
-      projectPath = '', data = {}
+      projectPath = ''
     } = this.props;
     getProjectData(projectPath);
   }
 
   render() {
-    // debugger;
     const { data = {} } = this.props;
+
     return (
       <div className="content">
         <Link to="/projects">Back to Projects</Link>

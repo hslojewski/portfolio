@@ -12,7 +12,6 @@ class Projects extends React.Component {
         projects = {}, tools = [], skills = [], affiliations = [], activeTags = []
     } = this.props;
 
-    // console.log(skills);
     return (
         <div className="content">
             <h1>Projects</h1>

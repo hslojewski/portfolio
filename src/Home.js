@@ -1,6 +1,4 @@
-// const React = require('react'),
 const React = require('react');
-//       { useState, useEffect } = require('react');
 
 const Home = () => {
   return (

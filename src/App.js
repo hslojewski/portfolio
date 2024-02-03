@@ -9,7 +9,6 @@ import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import Project from './Project';
-import Tag from './ProjectsList';
 
 const React = require('react'),
       { useState, useEffect } = require('react');
@@ -67,7 +66,6 @@ const App = () => {
 
   var getProjectData = (projId) => {
     var projPath = `${process.env.PUBLIC_URL}/projects/${projId}.json`;
-    var that = this;
     fetch(projPath)
       .then(response => {
         return response.json();
@@ -82,7 +80,7 @@ const App = () => {
     var tools = [],
         skills = [],
         affiliations = [];
-    Object.keys(allProjects).map((projectPath, i) => {
+    Object.keys(allProjects).forEach(projectPath => {
       tools = Array.from(new Set(tools.concat(allProjects[projectPath].tools || [])));
       skills = Array.from(new Set(skills.concat(allProjects[projectPath].skills || [])));
       affiliations = Array.from(new Set(affiliations.concat(allProjects[projectPath].affiliation || [])));
