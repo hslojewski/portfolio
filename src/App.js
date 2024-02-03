@@ -18,6 +18,7 @@ const App = () => {
   const [projects, setProjects] = useState({});
   const [projectData, setProjectData] = useState({});
   const [projectTools, setProjectTools] = useState([]);
+  const [activeTags, setActiveTags] = useState([]);
   const [projectSkills, setProjectSkills] = useState([]);
   const [projectAffiliation, setProjectAffiliation] = useState("");
   const [colorMode, setColorMode] = useState("light");
@@ -101,6 +102,13 @@ const App = () => {
       }).catch((e: Error) => {
         console.log(e.message);
       });
+  }
+
+  var getAffiliationProjects = (affiliation) => {
+    console.log(tags);
+    console.log(projects);
+    console.log(projectData);
+    debugger;
   }
 
   var getProjectTools = (projId) => {
@@ -188,6 +196,19 @@ const App = () => {
     return Array.from(new Set(allAffiliations));
   }
 
+  var displayProjects = (tag) => {
+    console.log("activeTags.includes(tag): ", activeTags.includes(tag));
+    // debugger;
+    if (activeTags.includes(tag)) {
+      setActiveTags(activeTags.filter(activeTag => activeTag !== tag));
+    } else {
+      setActiveTags(activeTags.concat(tag));
+    }
+    console.log("App Component -- activeTags: ", activeTags);
+    // debugger;
+    // 
+  }
+
   // if (window.location.hash.includes("#/projects/")) {
   //   getProjectData();
   // }
@@ -198,16 +219,20 @@ const App = () => {
   }, [])
 
   return (
-    <div class={colorMode+"-mode "+season}>
+    <div className={colorMode+"-mode "+season}>
       <Nav colorMode={colorMode} toggleColorMode={toggleColorMode} />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact="true"path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects projects={projects}
                                                    tags={tags}
                                                    tools={tools}
                                                    skills={skills}
                                                    affiliations={affiliations}
+                                                   getAffiliationProjects={getAffiliationProjects}
+                                                   activeTags={activeTags}
+                                                   setActiveTags={setActiveTags}
+                                                   displayProjects={displayProjects}
                                         />} />
         {Object.keys(projects).map((projectPath, i) => {
           var path = "/projects/" + projectPath;
@@ -230,7 +255,7 @@ const App = () => {
           // console.log(path);
           // console.log(tag);
           // console.log(tags);
-          console.log(tools.concat(skills).concat(affiliations));
+          // console.log(tools.concat(skills).concat(affiliations));
           // debugger;
           return (
             <Route path={path} key={i} 

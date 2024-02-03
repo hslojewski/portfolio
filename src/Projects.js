@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
+import Tag from './Tag';
+
 
 const React = require('react');
 
 class Projects extends React.Component {
   render() {
-    const { projects = {}, tags = [], tools = [], skills = [], affiliations = [] } = this.props;
-    console.log(skills);
+    const {
+        getAffiliationProjects, setActiveTags, displayProjects,
+        projects = {}, tags = [], tools = [], skills = [], affiliations = [], activeTags = []
+    } = this.props;
+
+    // console.log(skills);
     return (
-        <div class="content">
+        <div className="content">
         <h1>Projects</h1>
         <ul>
         {Object.keys(projects).map(projectPath => {            
             return(
-                <li><Link exact to={projectPath}>{projects[projectPath].title}</Link></li>
+                <li><Link exact="true"to={projectPath}>{projects[projectPath].title}</Link></li>
             );
         })}
         </ul>
@@ -20,34 +26,38 @@ class Projects extends React.Component {
         <ul>
         {tags.map(tag => {
             return(
-                <li><Link exact to={"/tags/"+tag}>{tag}</Link></li>
+                <li><Link exact="true"to={"/tags/"+tag}>{tag}</Link></li>
             );
         })}
         </ul> */}
         <h2>Tools</h2>
         <ul>
-        {tools.map(tool => {
+        {tools.map((tool, i) => {
             return(
-                <li><Link exact to={"/tags/"+tool}>{tool}</Link></li>
+                // <li><Link exact="true"to={"/tags/"+tool}>{tool}</Link></li>
+                <li><Link key={i} onClick={()=>displayProjects(tool)}>{tool}</Link></li>
             );
         })}
         </ul>
         <h2>Skills</h2>
         <ul>
-        {skills.map(skill => {
+        {skills.map((skill, i) => {
             return(
-                <li><Link exact to={"/tags/"+skill}>{skill}</Link></li>
+                // <li><Link exact="true"to={"/tags/"+skill}>{skill}</Link></li>
+                <li><Link key={i} onClick={()=>displayProjects(skill)}>{skill}</Link></li>
             );
         })}
         </ul>
         <h2>Affiliations</h2>
         <ul>
-        {affiliations.map(affiliation => {
+        {affiliations.map((affiliation, i) => {
             return(
-                <li><Link exact to={"/tags/"+affiliation}>{affiliation}</Link></li>
+                <li><Link key={i} onClick={()=>displayProjects(affiliation)}>{affiliation}</Link></li>
             );
         })}
         </ul>
+
+        <Tag projects={projects} activeTags={activeTags} />
 
 
         <div>Category/Tags</div>
