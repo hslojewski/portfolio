@@ -9,9 +9,10 @@ class Projects extends React.Component {
   render() {
     const {
         displayProjects,
-        projects = {}, tools = [], skills = [], affiliations = [], activeTags = []
+        activeTags = [], tools = [], skills = [], affiliations = [], projects = {}
     } = this.props;
-
+    console.log(tools);
+    // debugger;
     return (
         <div className="content">
             <h1>Projects</h1>

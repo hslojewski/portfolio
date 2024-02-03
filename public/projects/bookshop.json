@@ -1,17 +1,16 @@
 {
-    "path": "weather-extension",
-    "title": "How 'Bout that Weather?",
-    "description": "Messaging app extension that allows users to notice the weather while making plans",
+    "path": "bookshop",
+    "title": "Bookshop Database and Site",
+    "description": "Database management system and ecommerce site",
     "tools": [
-      "Axure",
-      "PowerPoint"
+        "Microsoft Access"
+      ],
+    "tools_and_skills": [
+      "Entity-Relationship (ER) Modeling", 
+      "Sitemap", 
+      "Wireframing"
     ],
-    "skills": [
-        "Scenario Planning",
-        "Process Flow",
-        "Prototyping"
-    ],
-    "affiliation": "DePaul University, Prototyping and Implementation",
+    "affiliation": "Loyola Marymount University, Information Management Systems Capstone Project",
     "content": [
         {
             "title": "Concept and Problem",

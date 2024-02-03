@@ -17,6 +17,7 @@ class Nav extends React.Component {
           <li><Link className={"mode " + colorMode+"-mode"}
                     alt={[colorMode, "mode"].join(" ")}
                     onClick={toggleColorMode}>
+            {colorMode === "light" ? "Dark Mode" : "Light Mode"}
           </Link></li>
         </ul>
       </nav>

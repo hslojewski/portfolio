@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const React = require('react');
 
-class Tag extends React.Component {
+class ProjectsList extends React.Component {
   render() {
     const { projects = {}, activeTags = [] } = this.props;
 
@@ -12,14 +12,20 @@ class Tag extends React.Component {
     console.log('activeTags: ',activeTags);
     if (activeTags.length) {
       activeTags.forEach(tag => {
+        // if (Object.keys(projectStuff).length) {
+        //   debugger;
+        // }
+        console.log(projects);
         Object.keys(projects).map(projectPath => {
           console.log('projectPath: ',projectPath);
+          debugger;
           var tools = projects[projectPath].tools || [],
               skills = projects[projectPath].skills || [],
               affiliations = projects[projectPath].affiliation || [],
               tags = tools.concat(skills).concat(affiliations);
           console.log('tags: ',tags);
           console.log('tag: ',tag);
+          // debugger;
           if (tags.includes(tag)) {
             activeTagProjectsSet.add(projectPath);
             activeTagProjectsList = Array.from(activeTagProjectsSet);
@@ -47,4 +53,4 @@ class Tag extends React.Component {
   }
 }
 
-export default Tag;
+export default ProjectsList;
