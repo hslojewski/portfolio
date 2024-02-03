@@ -14,7 +14,7 @@ class Project extends React.Component {
     // debugger;
     const { data = {} } = this.props;
     return (
-      <div class="content">
+      <div className="content">
         <Link to="/projects">Back to Projects</Link>
         <h1>Project: {data.title}</h1>
         <p>{data.description}</p>
@@ -27,18 +27,18 @@ class Project extends React.Component {
         <p><strong>Affiliation: </strong>{data.affiliation}</p>
         <p>{data.content && data.content.map(section => {
           return(
-            <div class={"section "+ section.classes}>
+            <div className={"section "+ section.classes}>
               {section.wrap_images && section.wrap_images.map(image => {
-                return(<img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} class={image.classes} />);
+                return(<img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
                 }
               )}
               <h2>{section.title}</h2>
               <p>{parse(section.detail)}</p>
               {section.button &&
-                <button class={section.button.classes} src={section.button.url}>{section.button.title}</button>
+                <button className={section.button.classes} src={section.button.url}>{section.button.title}</button>
               }
               {section.images && section.images.map(image => {
-                return(<img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} class={image.classes} />);
+                return(<img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
                 }
               )}
               {section.video &&

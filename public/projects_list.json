@@ -5,7 +5,18 @@
             "prototyping",
             "hci",
             "depaul"
-        ]       
+        ],
+        "tools": [
+            "Axure",
+            "PowerPoint"
+        ],
+        "skills": [
+            "Deck Presentation",
+            "Scenario Planning",
+            "Process Flow",
+            "Prototyping"
+        ],
+        "affiliation": "DePaul University"
     },
     "blah": {
         "title": "blah",

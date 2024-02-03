@@ -17,9 +17,16 @@ const React = require('react'),
 const App = () => {
   const [projects, setProjects] = useState({});
   const [projectData, setProjectData] = useState({});
+  const [projectTools, setProjectTools] = useState([]);
+  const [activeTags, setActiveTags] = useState([]);
+  const [projectSkills, setProjectSkills] = useState([]);
+  const [projectAffiliation, setProjectAffiliation] = useState("");
   const [colorMode, setColorMode] = useState("light");
   const [season, setSeason] = useState("");
-  const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState({});
+  const [tools, setTools] = useState([]);
+  const [skills, setSkills] = useState([]);
+  const [affiliations, setAffiliations] = useState([]);
 
   var checkSeason = (moment) => {
     // debugger;
@@ -59,6 +66,10 @@ const App = () => {
           var allProjects = result;
           setProjects(allProjects);
           getTags(allProjects);
+          getTools(allProjects);
+          getSkills(allProjects);
+          getAffiliations(allProjects);
+          // debugger;
       }).catch((e: Error) => {
         console.log(e.message);
       });
@@ -93,12 +104,109 @@ const App = () => {
       });
   }
 
+  var getAffiliationProjects = (affiliation) => {
+    console.log(tags);
+    console.log(projects);
+    console.log(projectData);
+    debugger;
+  }
+
+  var getProjectTools = (projId) => {
+    var projPath = `${process.env.PUBLIC_URL}/projects_list.json`;
+    fetch(projPath)
+      .then(response => {
+        return response.json();
+      }).then(result => {
+        console.log(projId);
+          setProjectTools(result[projId].tools);
+      }).catch((e: Error) => {
+        console.log(e.message);
+      });
+  }
+
+  var getProjectSkills = (projId) => {
+    var projPath = `${process.env.PUBLIC_URL}/projects_list.json`;
+    fetch(projPath)
+      .then(response => {
+        return response.json();
+      }).then(result => {
+        console.log(projId);
+        setProjectSkills(result[projId].skills);
+      }).catch((e: Error) => {
+        console.log(e.message);
+      });
+  }
+
+  var getProjectAffiliation = (projId) => {
+    var projPath = `${process.env.PUBLIC_URL}/projects_list.json`;
+    fetch(projPath)
+      .then(response => {
+        return response.json();
+      }).then(result => {
+        setProjectAffiliation(result[projId].affiliation);
+      }).catch((e: Error) => {
+        console.log(e.message);
+      });
+  }
+
   var getTags = (allProjects) => {
     var allTags = [];
     Object.keys(allProjects).map((projectPath, i) => {
-      allTags = new Set([...allTags, ...allProjects[projectPath].tags]);
+      allTags = allTags.concat(allProjects[projectPath].tags || []);
     });
-    setTags(Array.from(allTags));
+    const blah = {
+      tools: getTools(allProjects),
+      skills: getSkills(allProjects),
+      affiliations: getAffiliations(allProjects),
+    }
+    // debugger;
+    // setTags(Array.from(new Set(allTags)));
+    setTags(blah);
+  }
+
+  var getTools = (allProjects) => {
+    var allTools = [];
+    Object.keys(allProjects).map((projectPath, i) => {
+      // allTools = new Set(allTools.concat(allProjects[projectPath].tools));
+      allTools = allTools.concat(allProjects[projectPath].tools || []);
+    });
+    // debugger;
+    setTools(Array.from(new Set(allTools)));
+    return Array.from(new Set(allTools));
+  }
+
+  var getSkills = (allProjects) => {
+    var allSkills = [];
+    Object.keys(allProjects).map((projectPath, i) => {
+      // allSkills = new Set(allSkills.concat(allProjects[projectPath].skills));
+      allSkills = allSkills.concat(allProjects[projectPath].skills || []);
+    });
+    setSkills(Array.from(new Set(allSkills)));
+    return Array.from(new Set(allSkills));
+  }
+
+  var getAffiliations = (allProjects) => {
+    var allAffiliations = [];
+    Object.keys(allProjects).map((projectPath, i) => {
+      // allAffiliations = new Set(allAffiliations.concat(allProjects[projectPath].affiliation));
+      // debugger;
+      allAffiliations = allProjects[projectPath].affiliation ? allAffiliations.concat(allProjects[projectPath].affiliation) : allAffiliations;
+    });
+    setAffiliations(Array.from(new Set(allAffiliations)));
+    return Array.from(new Set(allAffiliations));
+  }
+
+  var displayProjects = (tag) => {
+    console.log("activeTags.includes(tag): ", activeTags.includes(tag));
+    // debugger;
+    if (activeTags.includes(tag)) {
+      setActiveTags(activeTags.filter(activeTag => activeTag !== tag));
+    } else {
+      setActiveTags(activeTags.concat(tag));
+    }
+    console.log("App Component -- activeTags: ", activeTags);
+    // debugger;
+    // 
   }
 
   // if (window.location.hash.includes("#/projects/")) {
@@ -111,28 +219,50 @@ const App = () => {
   }, [])
 
   return (
-    <div class={colorMode+"-mode "+season}>
+    <div className={colorMode+"-mode "+season}>
       <Nav colorMode={colorMode} toggleColorMode={toggleColorMode} />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact="true"path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects projects={projects}
-                                                   tags={tags} />} />
+                                                   tags={tags}
+                                                   tools={tools}
+                                                   skills={skills}
+                                                   affiliations={affiliations}
+                                                   getAffiliationProjects={getAffiliationProjects}
+                                                   activeTags={activeTags}
+                                                   setActiveTags={setActiveTags}
+                                                   displayProjects={displayProjects}
+                                        />} />
         {Object.keys(projects).map((projectPath, i) => {
           var path = "/projects/" + projectPath;
           return (
             <Route path={path} key={i} 
                    element={<Project projId={projectPath}
                                      getProjectData={getProjectData}
-                                     data={projectData} />} />
+                                     getProjectTools={getProjectTools}
+                                     getProjectSkills={getProjectSkills}
+                                     getProjectAffiliation={getProjectAffiliation}
+                                     data={projectData}
+                                     tools={projectTools}
+                                     skills={projectSkills}
+                                     affiliation={projectAffiliation}
+                            />} />
           );
         })}
-        {tags.map((tag, i) => {
-          var path = "tags/" + tag;
+        {tools.concat(skills).concat(affiliations).map((tag, i) => {
+          var path = "/tags/" + tag;
+          // console.log(path);
+          // console.log(tag);
+          // console.log(tags);
+          // console.log(tools.concat(skills).concat(affiliations));
+          // debugger;
           return (
             <Route path={path} key={i} 
-                   element={<Tag projects={projects}
-                                 tag={tag} />} />
+                    element={<Tag projects={projects}
+                                  tag={tag}
+                            />}
+            />
           );
         })}
       </Routes>
