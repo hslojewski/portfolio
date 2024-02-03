@@ -5,9 +5,11 @@ import { Routes, Route, Link, } from "react-router-dom";
 class Project extends React.Component {
 
   componentWillMount() {
-    // debugger;
-    const { getProjectData, projId = '', data = {} } = this.props;
-    getProjectData(projId);
+    const {
+      getProjectData,
+      projectPath = '', data = {}
+    } = this.props;
+    getProjectData(projectPath);
   }
 
   render() {
