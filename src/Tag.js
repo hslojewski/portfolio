@@ -4,38 +4,30 @@ const React = require('react');
 
 class Tag extends React.Component {
   render() {
-    const { projects = {}, activeTags = [] } = this.props;
-    console.log("Tag Component -- activeTags: ", activeTags);
     // debugger;
+    const { projects = {}, tag = "" } = this.props;
+  
     return (
-        <div className="content">
+        <div class="content">
           {/* <Link to="/projects">Back to Projects</Link> */}
-          <h1>Active Tags: {activeTags.map(activeTag => {
-                              debugger;
-                              return(
-                                <span>{activeTag}, </span>
-                              )
-                            })}
-          </h1>
+          <h1>{tag}</h1>
           <ul>
           {Object.keys(projects).map(projectPath => {
             var tools = projects[projectPath].tools || [],
                 skills = projects[projectPath].skills || [],
                 affiliations = projects[projectPath].affiliation || "",
                 tags = tools.concat(skills).concat(affiliations);
-            // console.log(tags);
+            console.log(tags.includes(tag));
+            console.log(tag);
             // debugger;
-            tags.forEach(tag => {
-              if (activeTags.includes(tag)) {
-                // console.log(activeTags);
-                var path = "/projects/" + projectPath;
-                console.log(path);
-                debugger;
-                return(
-                    <li><Link exact="true"to={path}>{projects[projectPath].title}</Link></li>
-                );
-              }
-            });
+            if (tags.includes(tag)) {
+              console.log(tags);
+              var path = "/projects/" + projectPath;
+              console.log(path);
+              return(
+                  <li><Link exact to={path}>{projects[projectPath].title}</Link></li>
+              );
+            }
           })}
           </ul>
         </div>

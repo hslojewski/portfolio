@@ -6,7 +6,7 @@ class Nav extends React.Component {
     const { toggleColorMode, colorMode = "light" } = this.props;
 
     return(
-      <nav className="nav">
+      <nav class="nav">
           <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
@@ -14,7 +14,7 @@ class Nav extends React.Component {
           <li><Link to="mailto:heidi.slojewski@gmail.com">Email</Link></li>
           <li><Link to="https://www.linkedin.com/in/heidislojewski" target="_blank">LinkedIn</Link></li>
           <li><Link to="/resume" target="_blank">Resume</Link></li>
-          <li><Link className={"mode " + colorMode+"-mode"}
+          <li><Link class={"mode " + colorMode+"-mode"}
                     alt={[colorMode, "mode"].join(" ")}
                     onClick={toggleColorMode}>
           </Link></li>
