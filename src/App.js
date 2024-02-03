@@ -198,15 +198,16 @@ const App = () => {
 
   var displayProjects = (tag) => {
     console.log("activeTags.includes(tag): ", activeTags.includes(tag));
+    // debugger;
     if (activeTags.includes(tag)) {
-        activeTags.filter(activeTag => activeTag !== tag);
+      setActiveTags(activeTags.filter(activeTag => activeTag !== tag));
     } else {
-        activeTags.push(tag);
+      setActiveTags(activeTags.concat(tag));
     }
     console.log("App Component -- activeTags: ", activeTags);
     // debugger;
-    setActiveTags(activeTags);
-}
+    // 
+  }
 
   // if (window.location.hash.includes("#/projects/")) {
   //   getProjectData();

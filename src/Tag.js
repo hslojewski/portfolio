@@ -6,40 +6,49 @@ class Tag extends React.Component {
   render() {
     const { projects = {}, activeTags = [] } = this.props;
     console.log("Tag Component -- activeTags: ", activeTags);
-    // debugger;
+
+    var activeTagProjectsList = [];
+    var activeTagProjectsSet = new Set();
+    var activeTagProjectsRender = [];
+    activeTags.forEach(tag => {
+      Object.keys(projects).map(projectPath => {
+        var tools = projects[projectPath].tools || [],
+            skills = projects[projectPath].skills || [],
+            affiliations = projects[projectPath].affiliation || [],
+            tags = tools.concat(skills).concat(affiliations);
+        if (tags.includes(tag)) {
+          // console.log(activeTags);
+          var path = "/projects/" + projectPath;
+          console.log(path);
+          debugger;
+          activeTagProjectsSet.add(projectPath);
+          activeTagProjectsList = Array.from(activeTagProjectsSet);
+        }
+      });
+    })
+
+    
     return (
         <div className="content">
           {/* <Link to="/projects">Back to Projects</Link> */}
           <h1>Active Tags: {activeTags.map(activeTag => {
-                              debugger;
+                              // debugger;
                               return(
                                 <span>{activeTag}, </span>
                               )
                             })}
           </h1>
-          <ul>
-          {Object.keys(projects).map(projectPath => {
-            var tools = projects[projectPath].tools || [],
-                skills = projects[projectPath].skills || [],
-                affiliations = projects[projectPath].affiliation || "",
-                tags = tools.concat(skills).concat(affiliations);
-            // console.log(tags);
-            // debugger;
-            tags.forEach(tag => {
-              if (activeTags.includes(tag)) {
-                // console.log(activeTags);
-                var path = "/projects/" + projectPath;
-                console.log(path);
-                debugger;
+          {activeTags.length > 0 &&
+            <ul>
+              {activeTagProjectsList.map(path => {
                 return(
-                    <li><Link exact="true"to={path}>{projects[projectPath].title}</Link></li>
-                );
-              }
-            });
-          })}
-          </ul>
+                  <li><Link exact="true" to={path}>{projects[path].title}</Link></li>
+                )
+              })}
+            </ul>
+          }
         </div>
-    );
+    )
   }
 }
 
