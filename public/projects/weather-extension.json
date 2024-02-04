@@ -2,16 +2,6 @@
     "path": "weather-extension",
     "title": "How 'Bout that Weather?",
     "description": "Messaging app extension that allows users to notice the weather while making plans",
-    "tools": [
-      "Axure",
-      "PowerPoint"
-    ],
-    "skills": [
-        "Scenario Planning",
-        "Process Flow",
-        "Prototyping"
-    ],
-    "affiliation": "DePaul University, Prototyping and Implementation",
     "content": [
         {
             "title": "Concept and Problem",

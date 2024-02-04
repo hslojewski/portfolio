@@ -2,30 +2,21 @@ import { Link } from "react-router-dom";
 
 const React = require('react');
 
-class ProjectsList extends React.Component {
+class FilteredProjects extends React.Component {
   render() {
     const { projects = {}, activeTags = [] } = this.props;
 
     var activeTagProjectsList = [];
     var activeTagProjectsSet = new Set();
     var projectsToDisplay = [];
-    console.log('activeTags: ',activeTags);
+
     if (activeTags.length) {
       activeTags.forEach(tag => {
-        // if (Object.keys(projectStuff).length) {
-        //   debugger;
-        // }
-        console.log(projects);
         Object.keys(projects).map(projectPath => {
-          console.log('projectPath: ',projectPath);
-          debugger;
           var tools = projects[projectPath].tools || [],
               skills = projects[projectPath].skills || [],
-              affiliations = projects[projectPath].affiliation || [],
+              affiliations = projects[projectPath].affiliations || [],
               tags = tools.concat(skills).concat(affiliations);
-          console.log('tags: ',tags);
-          console.log('tag: ',tag);
-          // debugger;
           if (tags.includes(tag)) {
             activeTagProjectsSet.add(projectPath);
             activeTagProjectsList = Array.from(activeTagProjectsSet);
@@ -53,4 +44,4 @@ class ProjectsList extends React.Component {
   }
 }
 
-export default ProjectsList;
+export default FilteredProjects;

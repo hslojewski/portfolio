@@ -1,6 +1,31 @@
 {
     "weather-extension": {
+        "title": "How 'Bout That Weather?",
+        "tools": [
+            "Axure",
+            "PowerPoint"
+          ],
+          "skills": [
+              "Scenario Planning",
+              "Process Flow",
+              "Prototyping"
+          ],
+          "affiliations": [
+            "DePaul University, Prototyping and Implementation"
+          ]
     },
     "bookshop": {
+        "title": "Bookshop Database and Website",
+        "tools": [
+            "Microsoft Access"
+          ],
+          "skills": [
+            "Entity-Relationship (ER) Modeling",
+            "Sitemap",
+            "Wireframing"
+          ],
+          "affiliations": [
+            "Loyola Marymount University, Information Management Systems Capstone Project"
+          ]
     }
 }

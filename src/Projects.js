@@ -1,6 +1,6 @@
 import TagsList from './TagsList';
 import ActiveFilters from './ActiveFilters';
-import ProjectsList from './ProjectsList';
+import FilteredProjects from './FilteredProjects';
 
 
 const React = require('react');
@@ -11,8 +11,7 @@ class Projects extends React.Component {
         displayProjects,
         activeTags = [], tools = [], skills = [], affiliations = [], projects = {}
     } = this.props;
-    console.log(tools);
-    // debugger;
+
     return (
         <div className="content">
             <h1>Projects</h1>
@@ -22,7 +21,7 @@ class Projects extends React.Component {
 
             <ActiveFilters activeTags={activeTags} />
 
-            <ProjectsList projects={projects} activeTags={activeTags} displayProjects={displayProjects} />
+            <FilteredProjects projects={projects} activeTags={activeTags} displayProjects={displayProjects} />
 
 
             <br/><br/><br/><br/><br/><br/><br/>

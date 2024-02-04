@@ -13,20 +13,31 @@ class Project extends React.Component {
   }
 
   render() {
-    const { data = {} } = this.props;
+    const { data = {}, tags = {}, title = "" } = this.props;
 
     return (
       <div className="content">
         <Link to="/projects">Back to Projects</Link>
-        <h1>Project: {data.title}</h1>
+        <h1>Project: {title}</h1>
         <p>{data.description}</p>
         <p>
           <strong>Tools & Skills: </strong>
-          {data.tools_and_skills && data.tools_and_skills.map(tool => {
-            return(<span>{tool}, </span>);
+          {tags.tools && tags.tools.map((tool, i) => {
+            return(<span>{tool}{tags.tools.length - 1 === i ? "" : ", "}</span>);
           })}
         </p>
-        <p><strong>Affiliation: </strong>{data.affiliation}</p>
+        <p>
+          <strong>Skills: </strong>
+          {tags.skills && tags.skills.map((skill, i) => {
+            return(<span>{skill}{tags.skills.length - 1 === i ? "" : ", "}</span>);
+          })}
+        </p>
+        <p>
+          <strong>Affiliation: </strong>
+          {tags.affiliations && tags.affiliations.map((affiliation, i) => {
+            return(<span>{affiliation}{tags.affiliations.length - 1 === i ? "" : ", "}</span>);
+          })}
+        </p>
         <p>{data.content && data.content.map(section => {
           return(
             <div className={"section "+ section.classes}>
