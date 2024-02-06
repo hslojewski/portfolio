@@ -4,11 +4,14 @@ const React = require('react');
 
 class FilteredProjects extends React.Component {
   render() {
-    const { projects = {}, activeTags = [] } = this.props;
+    const { projects = {}, activeTags = [], filterType = "AND" } = this.props;
 
     var activeTagProjectsList = [];
     var activeTagProjectsSet = new Set();
     var projectsToDisplay = [];
+    var ignoredProjectsSet = new Set();
+    var ignoredProjectsList = [];
+    var projectsToIgnore = [];
 
     if (activeTags.length) {
       activeTags.forEach(tag => {
@@ -21,14 +24,28 @@ class FilteredProjects extends React.Component {
             activeTagProjectsSet.add(projectPath);
             activeTagProjectsList = Array.from(activeTagProjectsSet);
             projectsToDisplay = activeTagProjectsList;
+          } else {
+            ignoredProjectsSet.add(projectPath);
+            ignoredProjectsList = Array.from(ignoredProjectsSet);
+            projectsToIgnore = ignoredProjectsList;
           }
         });
       })
     } else {
       projectsToDisplay = Object.keys(projects);
     }
+    console.log("projectsToDisplay");
     console.log(projectsToDisplay);
-    
+    console.log("projectsToIgnore");
+    console.log(projectsToIgnore);
+    if (filterType === "AND") {
+      // debugger;
+      projectsToDisplay = projectsToDisplay.filter(project => {
+        if (!projectsToIgnore.includes(project)) {
+          return project;
+        }
+      });
+    }
     return (
         <div>
           <h2>List</h2>

@@ -8,20 +8,22 @@ const React = require('react');
 class Projects extends React.Component {
   render() {
     const {
-        displayProjects,
-        activeTags = [], tools = [], skills = [], affiliations = [], projects = {}
+        displayProjects, toggleFilterType, clearActiveTags,
+        activeTags = [], tools = [], skills = [], affiliations = [], projects = {}, filterType = "AND"
     } = this.props;
-
+    
     return (
         <div className="content">
             <h1>Projects</h1>
             <TagsList title="Tools" tags={tools} displayProjects={displayProjects} />
             <TagsList title="Skills" tags={skills} displayProjects={displayProjects} />
             <TagsList title="Affiliations" tags={affiliations} displayProjects={displayProjects} />
+            <div>Filter Type: {filterType} <button onClick={toggleFilterType}>Toggle {filterType === "AND" ? "OR" : "AND"}</button></div>
+            <button onClick={clearActiveTags}>Clear all filters</button>
 
             <ActiveFilters activeTags={activeTags} />
 
-            <FilteredProjects projects={projects} activeTags={activeTags} displayProjects={displayProjects} />
+            <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects} />
 
 
             <br/><br/><br/><br/><br/><br/><br/>

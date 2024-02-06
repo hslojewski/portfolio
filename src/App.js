@@ -20,6 +20,7 @@ const App = () => {
   const [activeTags, setActiveTags] = useState([]);
   const [colorMode, setColorMode] = useState("light");
   const [season, setSeason] = useState("");
+  const [filterType, setFilterType] = useState("AND");
 
   var checkSeason = (moment) => {
     // debugger;
@@ -90,6 +91,15 @@ const App = () => {
     }
   }
 
+  var toggleFilterType = () => {
+    setFilterType(filterType === "AND" ? "OR" : "AND");
+    console.log(filterType);
+  }
+
+  var clearActiveTags = () => {
+    setActiveTags([]);
+  }
+
   useEffect(() => {
     getProjectsAndTags();
     checkSeason(moment);
@@ -109,8 +119,11 @@ const App = () => {
                   skills={tags.skills}
                   affiliations={tags.affiliations}
                   // tags={tags}
+                  toggleFilterType={toggleFilterType}
+                  filterType={filterType}
                   activeTags={activeTags}
                   displayProjects={displayProjects}
+                  clearActiveTags={clearActiveTags}
                 />
               }
         />
