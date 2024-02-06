@@ -11,7 +11,7 @@
               "Prototyping"
           ],
           "affiliations": [
-            "DePaul University, Prototyping and Implementation"
+            "DePaul University"
           ]
     },
     "bookshop": {
@@ -25,7 +25,39 @@
             "Wireframing"
           ],
           "affiliations": [
-            "Loyola Marymount University, Information Management Systems Capstone Project"
+            "Loyola Marymount University"
           ]
-    }
+    },
+    "know-whos-knocking": {
+      "title": "Know Who's Knocking",
+      "tools": [
+          "Arduino",
+          "Processing"
+        ],
+        "skills": [
+          "Process Flow Diagramming",
+          "Interaction Design",
+          "Prototyping"
+        ],
+        "affiliations": [
+          "Disney"
+        ]
+  },
+  "auto": {
+    "title": "Auto",
+    "tools": [
+        "Axure",
+        "PowerPoint"
+      ],
+      "skills": [
+        "Requirements Gathering",
+        "Scenario Planning",
+        "Process Flow",
+        "Prototyping",
+        "Final Presentation"
+      ],
+      "affiliations": [
+        "DePaul University"
+      ]
+  }
 }

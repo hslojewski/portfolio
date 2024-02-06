@@ -4,7 +4,7 @@
     "content": [
         {
             "title": "Process",
-            "detail": "<p>This capstone project was for a bookshop in need of marketability to customers. I compiled and organized data for the inventory, developed ER Models and schemas for the database, created sitemaps and schematics for a storyboard of wireframes for the bookshop's new website, and populated and configured both the database and the website in order to automate invoices, customer communication, and inventory findability and purchasability.</p>",
+            "detail": "<p>For the Information Management Systems Capstone Project. This capstone project was for a bookshop in need of marketability to customers. I compiled and organized data for the inventory, developed ER Models and schemas for the database, created sitemaps and schematics for a storyboard of wireframes for the bookshop's new website, and populated and configured both the database and the website in order to automate invoices, customer communication, and inventory findability and purchasability.</p>",
             "images": [
                 {
                     "src": "bookshop/site_wireframe.png",

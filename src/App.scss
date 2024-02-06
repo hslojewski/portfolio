@@ -132,7 +132,10 @@ body{
     }
   }
   p{ align-content: start; }
-  // .clear-line{ clear: both; }
+  footer{
+    padding: 20px;
+    text-align: center;
+  }
   .nav{
     ul{
       *{ display: inline; }
@@ -151,12 +154,16 @@ body{
       }
     }
   }
-  footer{
-    padding: 20px;
-    text-align: center;
-  }
   .mode{ width: 30px; }
-  .content{ padding: 20px; }
+  .content{
+    padding: 20px;
+    caption{
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+    }
+  }
   .width-25{ width: 25%; }
   .width-50{ width: $fifty-percent; }
   // .align-left{ float: left; }
