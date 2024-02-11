@@ -9,7 +9,7 @@ class Projects extends React.Component {
   render() {
     const {
         displayProjects, toggleFilterType, clearActiveTags,
-        activeTags = [], tools = [], skills = [], affiliations = [], projects = {}, filterType = "AND"
+        activeTags = [], tools = [], skills = [], affiliations = [], roles = [], projects = {}, filterType = "AND"
     } = this.props;
     
     return (
@@ -18,6 +18,7 @@ class Projects extends React.Component {
             <TagsList title="Tools" tags={tools} displayProjects={displayProjects} />
             <TagsList title="Skills" tags={skills} displayProjects={displayProjects} />
             <TagsList title="Affiliations" tags={affiliations} displayProjects={displayProjects} />
+            <TagsList title="Roles" tags={roles} displayProjects={displayProjects} />
             <div>Filter Type: {filterType} <button onClick={toggleFilterType}>Toggle {filterType === "AND" ? "OR" : "AND"}</button></div>
             <button onClick={clearActiveTags}>Clear all filters</button>
 

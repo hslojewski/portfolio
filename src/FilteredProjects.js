@@ -19,7 +19,8 @@ class FilteredProjects extends React.Component {
           var tools = projects[projectPath].tools || [],
               skills = projects[projectPath].skills || [],
               affiliations = projects[projectPath].affiliations || [],
-              tags = tools.concat(skills).concat(affiliations);
+              roles = projects[projectPath].roles || [],
+              tags = tools.concat(skills).concat(affiliations).concat(roles);
           if (tags.includes(tag)) {
             activeTagProjectsSet.add(projectPath);
             activeTagProjectsList = Array.from(activeTagProjectsSet);

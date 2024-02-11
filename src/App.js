@@ -14,7 +14,7 @@ const React = require('react'),
       { useState, useEffect } = require('react');
 
 const App = () => {
-  const [tags, setTags] = useState({ tools: [], skills: [], affiliations: [] });
+  const [tags, setTags] = useState({ tools: [], skills: [], affiliations: [], roles: [] });
   const [projects, setProjects] = useState({});
   const [projectData, setProjectData] = useState({});
   const [activeTags, setActiveTags] = useState([]);
@@ -58,7 +58,7 @@ const App = () => {
           setProjects(result);
           Object.keys(result).forEach(projectId => {
             var project = result[projectId];
-            ['tools', 'skills', 'affiliations'].forEach(tagType => {
+            ['tools', 'skills', 'affiliations', 'roles'].forEach(tagType => {
               if (project[tagType]) {
                 tags[tagType] = Array.from(new Set(tags[tagType].concat(project[tagType])));
               }
@@ -117,6 +117,7 @@ const App = () => {
                   tools={tags.tools}
                   skills={tags.skills}
                   affiliations={tags.affiliations}
+                  roles={tags.roles}
                   // tags={tags}
                   toggleFilterType={toggleFilterType}
                   filterType={filterType}
@@ -140,7 +141,8 @@ const App = () => {
                       tags={{
                         tools: projects[projectPath].tools,
                         skills: projects[projectPath].skills,
-                        affiliations: projects[projectPath].affiliations
+                        affiliations: projects[projectPath].affiliations,
+                        roles: projects[projectPath].roles
                       }}
                     />
                     }

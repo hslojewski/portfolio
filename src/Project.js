@@ -42,6 +42,12 @@ class Project extends React.Component {
             return(<span key={i}>{affiliation}{tags.affiliations.length - 1 === i ? "" : ", "}</span>);
           })}
         </p>
+        <p>
+          <strong>Role: </strong>
+          {tags.roles && tags.roles.map((role, i) => {
+            return(<span key={i}>{role}{tags.roles.length - 1 === i ? "" : ", "}</span>);
+          })}
+        </p>
         {data.date &&  
         <p>
           <strong>Date: </strong>
