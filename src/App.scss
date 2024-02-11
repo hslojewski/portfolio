@@ -1,6 +1,7 @@
 $breakpoint-tablet-low: 425px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
+$breakpoint-desktop-high: 1440px;
 $ten-percent: 10%;
 $fifty-percent: 50%;
 $one-hundred-percent: 100%;
@@ -218,11 +219,28 @@ body{
         padding: 0 15px; // padding right and left only
         margin-bottom: 20px; // vertical spacing between li elements
         width: 100%;
+        position: relative;
+        a:hover{
+          img{ opacity: 0.15; }
+          h3{
+            opacity: 1;
+          }
+        }
         img{
           width: 100%;
           // width: 300px;
           height: 300px;
           object-fit: cover;
+          transition: opacity ease 200ms;
+        }
+        h3{
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: opacity ease 200ms;
+          opacity: 0;
+          text-align: center;
         }
       }
     }
@@ -264,6 +282,25 @@ body{
       ul{
         li{
           width: 30%;
+        }
+      }
+      ul.one-item{
+        li{
+          width: 100%;
+        }
+      }
+      ul.two-items{
+        li{
+          width: 45%;
+        }
+      }
+    }
+  }
+  @media (min-width: $breakpoint-desktop-high) {
+    .project-list-wrapper{
+      ul{
+        li{
+          width: 22%;
         }
       }
       ul.one-item{

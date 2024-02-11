@@ -53,7 +53,7 @@ class FilteredProjects extends React.Component {
                   <li className="project-detail">
                     <Link exact="true" to={path}>
                       <img src={[process.env.PUBLIC_URL, projects[path].thumbnail].join("/")} alt={projects[path].thumbnail_alt} />
-                      <p>{projects[path].title}</p>
+                      <h3>{projects[path].title}</h3>
                     </Link>
                   </li>
                 )
