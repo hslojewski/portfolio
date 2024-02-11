@@ -1,50 +1,56 @@
 {
-    "weather-extension": {
-        "title": "How 'Bout That Weather?",
-        "tools": [
-            "Axure",
-            "PowerPoint"
-          ],
-          "skills": [
-              "Scenario Planning",
-              "Process Flow Diagramming",
-              "Prototyping"
-          ],
-          "affiliations": [
-            "DePaul University"
-          ]
-    },
-    "bookshop": {
-        "title": "Bookshop Database and Website",
-        "tools": [
-            "Microsoft Access"
-          ],
-          "skills": [
-            "Entity-Relationship (ER) Modeling",
-            "Sitemapping",
-            "Wireframing"
-          ],
-          "affiliations": [
-            "Loyola Marymount University"
-          ]
-    },
-    "know-whos-knocking": {
+  "how-bout-that-weather": {
+      "title": "How 'Bout That Weather?",
+      "tools": [
+          "Axure",
+          "PowerPoint"
+        ],
+        "skills": [
+            "Scenario Planning",
+            "Process Flow Diagramming",
+            "Prototyping"
+        ],
+        "affiliations": [
+          "DePaul University"
+        ],
+        "thumbnail": "projects/thumbnails/how-bout-that-weather.jpeg",
+        "thumbnail_alt": "Weather Extension logo"
+  },
+  "bookshop-database": {
+      "title": "Bookshop Database and Website",
+      "tools": [
+          "Microsoft Access"
+        ],
+        "skills": [
+          "Entity-Relationship (ER) Modeling",
+          "Sitemapping",
+          "Wireframing"
+        ],
+        "affiliations": [
+          "Loyola Marymount University"
+        ],
+        "thumbnail": "projects/thumbnails/bookshop.jpeg",
+        "thumbnail_alt": "Website checkout form"
+  },
+  "know-whos-knocking": {
       "title": "Know Who's Knocking",
       "tools": [
           "Arduino",
           "Processing"
         ],
         "skills": [
-          "Process Flow Diagram",
+          "Process Flow Diagramming",
           "Interaction Design",
           "Prototyping"
         ],
         "affiliations": [
           "Disney"
-        ]
+        ],
+        "thumbnail": "projects/thumbnails/know-whos-knocking.jpeg",
+        "thumbnail_alt": "Know Who's Knocking logo"
   },
-  "auto": {
-    "title": "Auto",
+  "auto-car-prototype": {
+    "title": "Auto: Car Assistance App Prototype",
     "tools": [
         "Axure",
         "PowerPoint"
@@ -58,6 +64,114 @@
       ],
       "affiliations": [
         "DePaul University"
-      ]
+      ],
+      "thumbnail": "projects/thumbnails/auto.jpeg",
+      "thumbnail_alt": "Auto car app logo"
+  },
+  "touchscreens-for-motor-impairments": {
+    "title": "Touchscreens for Motor Impairments",
+    "tools": [
+    ],
+    "skills": [
+      "Test Proposal Research",
+      "Task Analysis",
+      "User Testing",
+      "Video Editing",
+      "Presenting"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "thumbnail": "projects/thumbnails/touchscreen-motor-impairments.jpeg",
+    "thumbnail_alt": "Touchscreens and motor impairments evaluation"
+  },
+  "french-laundry-recipe-process-flow": {
+    "title": "French Laundry Recipe Process Flow",
+    "tools": [
+      "OmniGraffle",
+      "Draw.io"
+    ],
+    "skills": [
+      "Process Flow Diagramming",
+      "Information Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "thumbnail_alt": "",
+    "thumbnail": "projects/thumbnails/french-laundry.jpeg",
+    "thumbnail_alt": "Process flow diagram"
+  },
+  "survivor-infographic": {
+    "title": "Survivor Seasons Infographic",
+    "tools": [
+      "OmniGraffle"
+    ],
+    "skills": [
+      "Information Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "thumbnail": "projects/thumbnails/survivor-infographic.jpeg",
+    "thumbnail_alt": "Survivor seasons infographic"
+  },
+  "titanic-infographic": {
+    "title": "Titanic Passengers Infographic",
+    "tools": [
+      "Adobe Illustrator"
+    ],
+    "skills": [
+      "Information Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "thumbnail": "projects/thumbnails/titanic-infographic.jpeg",
+    "thumbnail_alt": "Titanic passengers infographic"
+  },
+  "twitter-print-infographic": {
+    "title": "U.S. Airline Twitter Sentiment: Print Infographic",
+    "tools": [
+      "Adobe Illustrator"
+    ],
+    "skills": [
+      "Information Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "thumbnail": "projects/thumbnails/twitter-print.jpeg",
+    "thumbnail_alt": "Twitter sentiment print infographic"
+  },
+  "twitter-interactive-infographic": {
+    "title": "U.S. Airline Twitter Sentiment: Interactive Infographic",
+    "tools": [
+      "ggplot",
+      "D3",
+      "Tableau"
+    ],
+    "skills": [
+      "Information Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "thumbnail": "projects/thumbnails/twitter-interactive.gif",
+    "thumbnail_alt": "Twitter sentiment interactive infographic"
+  },
+  "good-bad-graph-analysis": {
+    "title": "Good/Bad Graph Analysis",
+    "tools": [
+      
+    ],
+    "skills": [
+      "Information Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "thumbnail": "projects/thumbnails/good-bad-graph.jpeg",
+    "thumbnail_alt": "Jackpot value across U.S. Graph"
   }
 }

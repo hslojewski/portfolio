@@ -1,12 +1,13 @@
 {
     "path": "know-whos-knocking",
     "description": "Arduino project to redesign the doorbell idea.",
+    "date": 2014,
     "content": [
         {
             "detail": "<p>For the Interaction Design class, Digital User Experience Disney Creative Academy. During this 4-class course, I designed a small prototype using a combination of an Arduino circuit and a Processing screen output.</p>",
             "images": [
                 {
-                    "src": "knocking/drawing.png",
+                    "src": "projects/media/knocking/drawing.png",
                     "alt": "Drawing of example use case, applied to an apartment setting where a hallway of apartments was gated by a locked door",
                     "classes": "align-center width-50 mobile-width-100"
                 }
@@ -21,7 +22,7 @@
             "detail": "<p>The tools available to use included both Arduino and Processing. Arduino allows physical interactions with a small circuit board, including both light and proximity sensor options. Processing is a language that accepts input from Arduino interactions and outputs results on a computer.</p><p>The use of Arduino during the project was understood to be the input: the new doorbell's \"ringer\" that the visitor would \"ring.\"</p><p>The use of Processing during the project was understood to be the output: the notification to the resident that the visitor was there to see them.</p>",
             "images": [
                 {
-                    "src": "knocking/drawing_annotated.png",
+                    "src": "projects/media/knocking/drawing_annotated.png",
                     "alt": "Same drawing annotated with notes including where to place doorbells sensors and what fields to measure",
                     "classes": "align-center width-50 mobile-width-100"
                 }
@@ -36,7 +37,7 @@
             "detail": "<p><b>The \"Bell\" - Proximity and Light Sensor:</b> My example situation kept the proximity sensor at the bottom of the stairs to the apartment. If the visitor was less than three feet away from the sensor, the first piece of the combination lock would initiate the second piece to be open for recognition. This visitor would then walk up the stairs to the second floor and shine a light on the light sensor for five seconds and off for six seconds before the bell would register those steps and lead to the next.</p><b>The \"Ring\" - Resident Notification:</b> The resident would then receive notification of the visitor's presence at the door in the form of a sound or image on a device such as a phone or computer. The idea of using a phone or device was based on both perceived convenience for the resident; however, other considerations included television or image projections on the resident's walls.</p>",
             "images": [
                 {
-                    "src": "knocking/process_flow.png",
+                    "src": "projects/media/knocking/process_flow.png",
                     "alt": "Process flow drawing",
                     "caption": "Process Flow of the combination of proximity and light sensor requirements in order to \"unlock\" the doorbell's combination lock",
                     "classes": "align-center width-50 mobile-width-100"

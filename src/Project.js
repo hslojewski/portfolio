@@ -15,53 +15,65 @@ class Project extends React.Component {
 
   render() {
     const { projectPath = '', data = {}, tags = {}, title = "" } = this.props;
-
     return (
       <div className="content">
         <Link to="/projects">Back to Projects</Link>
         <h1>{title}</h1>
         <p>{data.description}</p>
-        <p>
-          <strong>Tools & Skills: </strong>
-          {tags.tools && tags.tools.map((tool, i) => {
-            return(<span>{tool}{tags.tools.length - 1 === i ? "" : ", "}</span>);
-          })}
-        </p>
-        <p>
-          <strong>Skills: </strong>
-          {tags.skills && tags.skills.map((skill, i) => {
-            return(<span>{skill}{tags.skills.length - 1 === i ? "" : ", "}</span>);
-          })}
-        </p>
+        {tags.tools.length > 0 &&
+          <p>
+            <strong>Tools: </strong>
+            {tags.tools.map((tool, i) => {
+              return(<span key={i}>{tool}{tags.tools.length - 1 === i ? "" : ", "}</span>);
+            })}
+          </p>
+        }
+        {tags.skills.length > 0 &&
+          <p>
+            <strong>Skills: </strong>
+            {tags.skills.map((skill, i) => {
+              return(<span key={i}>{skill}{tags.skills.length - 1 === i ? "" : ", "}</span>);
+            })}
+          </p>
+        }
         <p>
           <strong>Affiliation: </strong>
           {tags.affiliations && tags.affiliations.map((affiliation, i) => {
-            return(<span>{affiliation}{tags.affiliations.length - 1 === i ? "" : ", "}</span>);
+            return(<span key={i}>{affiliation}{tags.affiliations.length - 1 === i ? "" : ", "}</span>);
           })}
         </p>
-        <p>{data.content && data.content.map(section => {
+        {data.date &&  
+        <p>
+          <strong>Date: </strong>
+          <span>{data.date}</span>
+        </p>
+        }
+        <div>{data.content && data.content.map((section, i) => {
           return(
-            <div className={"section "+ section.classes}>
-              {section.wrap_images && section.wrap_images.map(image => {
-                return(<img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
+            <div key={i} className={"section "+ section.classes}>
+              {section.wrap_images && section.wrap_images.map((image, i) => {
+                return(<img key={i} src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
                 }
               )}
               <h2>{section.title}</h2>
-              <p>{parse(section.detail)}</p>
+              <h3>{section.sub_title}</h3>
+              <div>{parse(section.detail)}</div>
               {section.button &&
                 <button className={section.button.classes} src={section.button.url}>{section.button.title}</button>
               }
-              {section.images && section.images.map(image => {
+              <div className="blah">
+              {section.images && section.images.map((image, i) => {
                 return(
-                  <span>
+                  <span key={i} className={"meh " + image.containerClasses}>
                     <img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
                     {image.caption && <caption>{image.caption}</caption>}
                   </span>
                 );
                 }
               )}
+              </div>
               {section.video &&
-                <iframe src={section.video} width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe src={section.video} width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
               }
               {section.instagram_embed &&
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -70,7 +82,7 @@ class Project extends React.Component {
               }
             </div>
           );
-        })}</p>
+        })}</div>
         <Link to="/projects">Back to Projects</Link>
       </div>
     );

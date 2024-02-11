@@ -34,10 +34,6 @@ class FilteredProjects extends React.Component {
     } else {
       projectsToDisplay = Object.keys(projects);
     }
-    console.log("projectsToDisplay");
-    console.log(projectsToDisplay);
-    console.log("projectsToIgnore");
-    console.log(projectsToIgnore);
     if (filterType === "AND") {
       // debugger;
       projectsToDisplay = projectsToDisplay.filter(project => {
@@ -50,11 +46,23 @@ class FilteredProjects extends React.Component {
         <div>
           <h2>List</h2>
           {projectsToDisplay.length > 0 &&
-            projectsToDisplay.map(path => {
-              return(
-                <li><Link exact="true" to={path}>{projects[path].title}</Link></li>
-              )
-            })
+            <div className="project-list-wrapper">
+              <ul className={projectsToDisplay.length === 1 ? "one-item" : (projectsToDisplay.length === 2 ? "two-items" : null)}>
+              {projectsToDisplay.sort().map(path => {
+                return(
+                  <li className="project-detail">
+                    <Link exact="true" to={path}>
+                      <img src={[process.env.PUBLIC_URL, projects[path].thumbnail].join("/")} alt={projects[path].thumbnail_alt} />
+                      <p>{projects[path].title}</p>
+                    </Link>
+                  </li>
+                )
+              })}
+              </ul>
+            </div>
+          }
+          {projectsToDisplay.length === 0 &&
+            <div>No projects match that combination of filters. Try something else!</div>
           }
         </div>
     )

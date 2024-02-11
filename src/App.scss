@@ -1,4 +1,6 @@
+$breakpoint-tablet-low: 425px;
 $breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 $ten-percent: 10%;
 $fifty-percent: 50%;
 $one-hundred-percent: 100%;
@@ -38,7 +40,13 @@ th, .center{ text-align: center; }
 .note-id{ width: $ten-percent; }
 .note-input{ width: $fifty-percent; }
 
-
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
 body{
   button{
     padding: 10px;
@@ -164,17 +172,110 @@ body{
       display: flex;
     }
   }
-  .width-25{ width: 25%; }
-  .width-50{ width: $fifty-percent; }
+  // .width-25{ width: 25%; }
+  // .width-50{ width: $fifty-percent; }
   // .align-left{ float: left; }
-  // .align-right{ float: right; }
+  .align-right{ float: right; }
   .align-center{
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+  .blah{
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+    span.width-50{
+      flex: 50%;
+      // padding: 10px;
+      // padding: 15px;
+      width: 50%;
+      // img{ width: 100%; }
+      img{
+        // padding: 10px;
+        max-width: 100%;
+      }
+    }
+  }
+  .project-list-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    // justify-content: space-evenly;
+    gap: 15px;
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      // max-width: 90%; // adjust the width compared to the container
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      li{
+        padding: 0 15px; // padding right and left only
+        margin-bottom: 20px; // vertical spacing between li elements
+        width: 100%;
+        img{
+          width: 100%;
+          // width: 300px;
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 
-  @media (max-width: $breakpoint-tablet - 1) {
+  @media (max-width: $breakpoint-tablet-low) {
     .mobile-width-100{ width: $one-hundred-percent; }
+  }
+  @media (min-width: $breakpoint-tablet-low) {
+    .project-list-wrapper{
+      ul{
+        li{
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (min-width: $breakpoint-tablet) {
+    .project-list-wrapper{
+      ul{
+        li{
+          width: 45%;
+        }
+      }
+      ul.one-item{
+        li{
+          width: 100%;
+        }
+      }
+      ul.two-items{
+        li{
+          width: 45%;
+        }
+      }
+    }
+  }
+  @media (min-width: $breakpoint-desktop) {
+    .project-list-wrapper{
+      ul{
+        li{
+          width: 30%;
+        }
+      }
+      ul.one-item{
+        li{
+          width: 100%;
+        }
+      }
+      ul.two-items{
+        li{
+          width: 45%;
+        }
+      }
+    }
   }
 }

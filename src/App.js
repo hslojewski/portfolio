@@ -56,7 +56,6 @@ const App = () => {
         return response.json();
       }).then(result => {
           setProjects(result);
-
           Object.keys(result).forEach(projectId => {
             var project = result[projectId];
             ['tools', 'skills', 'affiliations'].forEach(tagType => {
