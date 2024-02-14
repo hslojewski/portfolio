@@ -164,6 +164,14 @@ body{
     }
   }
   .mode{ width: 30px; }
+  .tags-list{
+    .active{ font-weight: bold; }
+    .disabled{ 
+      pointer-events: none;
+      cursor: default;
+      color: gray !important;
+    }
+  }
   .content{
     padding: 20px;
     caption{

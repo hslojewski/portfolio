@@ -6,16 +6,28 @@ class TagsList extends React.Component {
   render() {
     const {
         displayProjects,
-        title = "", tags = []
+        title = "", tags = {}, activeTags = []
     } = this.props;
     
     return (
         <div>
             <h2>{title}</h2>
-            <ul>
-            {tags.map((tag, i) => {
+            <ul className="tags-list">
+            {Object.keys(tags).map((tag, i) => {
+                // debugger;
+                var tagLinkClasses = [];
+                if (activeTags.includes(tag)) {
+                    tagLinkClasses.push("active");
+                }
+                if (tags[tag] === 0) {
+                    tagLinkClasses.push("disabled");
+                }
                 return(
-                    <li><Link key={i} onClick={()=>displayProjects(tag)}>{tag}</Link></li>
+                    <li>
+                        <Link key={i} onClick={()=>displayProjects(tag)} className={tagLinkClasses}>
+                            {tag} ({tags[tag]})
+                        </Link>
+                    </li>
                 );
             })}
             </ul>

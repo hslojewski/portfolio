@@ -15,10 +15,10 @@ class Projects extends React.Component {
     return (
         <div className="content">
             <h1>Projects</h1>
-            <TagsList title="Tools" tags={tools} displayProjects={displayProjects} />
-            <TagsList title="Skills" tags={skills} displayProjects={displayProjects} />
-            <TagsList title="Affiliations" tags={affiliations} displayProjects={displayProjects} />
-            <TagsList title="Roles" tags={roles} displayProjects={displayProjects} />
+            <TagsList title="Tools" tags={tools} activeTags={activeTags} displayProjects={displayProjects} />
+            <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} />
+            <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} />
+            <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} />
             <div>Filter Type: {filterType} <button onClick={toggleFilterType}>Toggle {filterType === "AND" ? "OR" : "AND"}</button></div>
             <button onClick={clearActiveTags}>Clear all filters</button>
 
