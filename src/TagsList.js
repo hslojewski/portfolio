@@ -24,9 +24,9 @@ class TagsList extends React.Component {
                 }
                 return(
                     <li>
-                        <Link key={i} onClick={()=>displayProjects(tag)} className={tagLinkClasses}>
+                        <button key={i} onClick={()=>displayProjects(tag)} className={tagLinkClasses}>
                             {tag} ({tags[tag]})
-                        </Link>
+                        </button>
                     </li>
                 );
             })}

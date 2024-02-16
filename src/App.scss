@@ -27,9 +27,127 @@ $color-melon: #FFB8B8;
 
 // autumn colors - orange
 $color-linen: #F6F0EA;
-$color-chilean-fire: #DD5D36;
-$color-brown-pod: #4F1D0D;
-$dark-sea-green: #8FC78F;
+$color-brown-pod: #632612;
+$color-sea-green: #233E30;
+$color-chilean-fire: #F4BEAE;
+
+@mixin season-theming($season, $theme-light-bg, $theme-dark-bg, $theme-accent-color, $theme-font-color) {
+  body{
+    &:has(div.#{$season}){
+      &:has(.light-mode), &:has(.dark-mode) .nav ul{
+        // background: $color-bubble-bath;
+        background: $theme-light-bg;
+        // color: $color-selago;
+        color: $theme-font-color;
+        a{
+          color: $theme-dark-bg;
+          text-decoration: none;
+          &:hover{ text-decoration: underline; }
+          &.light-mode{
+            background: url("../public/icons/light_mode.svg");
+          }
+        }
+        .tags-list{
+          li{
+            button{
+              background: $theme-dark-bg;
+              color: $theme-light-bg;
+              &.active{
+                font-weight: bold;
+                background: $theme-accent-color;
+                color: $theme-font-color;
+              }
+            }
+          }
+        }
+      }
+      &:has(.dark-mode), &:has(.light-mode) .nav ul{
+        // background: $color-hot-purple;
+        background: $theme-dark-bg;
+        // color: $color-bubble-bath;
+        color: $theme-light-bg;
+        a{
+          color: $theme-accent-color;
+          text-decoration: none;
+          // &:hover{ text-decoration: underline; }
+        }
+        .tags-list{
+          li{
+            button{
+              background: $theme-light-bg;
+              color: $theme-font-color;
+              &.active{
+                font-weight: bold;
+                background: $theme-accent-color;
+                color: $theme-font-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+$winter-colors: (
+  light: $color-bubble-bath,
+  dark: $color-hot-purple,
+  accent: $color-vista-blue,
+  font: $color-selago
+);
+
+@include season-theming(
+  "winter",
+  map-get( $winter-colors, 'light'),
+  map-get( $winter-colors, 'dark'),
+  map-get( $winter-colors, 'accent'),
+  map-get( $winter-colors, 'font')
+);
+
+$spring-colors: (
+  light: $color-early-dawn,
+  dark: $color-pine-tree,
+  accent: $color-twilight,
+  font: $color-eggplant
+);
+
+@include season-theming(
+  "spring",
+  map-get( $spring-colors, 'light'),
+  map-get( $spring-colors, 'dark'),
+  map-get( $spring-colors, 'accent'),
+  map-get( $spring-colors, 'font')
+);
+
+$summer-colors: (
+  light: $color-banana-mania,
+  dark: $color-bright-red,
+  accent: $color-melon,
+  font: $color-selago
+);
+
+@include season-theming(
+  "summer",
+  map-get( $summer-colors, 'light'),
+  map-get( $summer-colors, 'dark'),
+  map-get( $summer-colors, 'accent'),
+  map-get( $summer-colors, 'font')
+);
+
+$autumn-colors: (
+  light: $color-linen,
+  dark: $color-brown-pod,
+  accent: $color-chilean-fire,
+  font: $color-sea-green
+);
+
+@include season-theming(
+  "autumn",
+  map-get( $autumn-colors, 'light'),
+  map-get( $autumn-colors, 'dark'),
+  map-get( $autumn-colors, 'accent'),
+  map-get( $autumn-colors, 'font')
+);
 
 // body{ padding: 20px; }
 a.disabled {
@@ -54,92 +172,92 @@ body{
     border-radius: 20px;
     border: 0;
   }
-  &:has(div.winter){
-    &:has(.light-mode), &:has(.dark-mode) .nav ul{
-      background: $color-bubble-bath;
-      color: $color-selago;
-      // color: $color-hot-purple;
-      a{
-        color: $color-hot-purple;
-        // color: #663435;
-        text-decoration: none;
-        &:hover{ text-decoration: underline; }
-        &.light-mode{
-          background: url("../public/icons/light_mode.svg");
-        }
-      }
-    }
-    &:has(.dark-mode), &:has(.light-mode) .nav ul{
-      background: $color-hot-purple;
-      color: $color-bubble-bath;
-      a{
-        color: $color-vista-blue;
-        text-decoration: none;
-        &:hover{ text-decoration: underline; }
-      }
-    }
-  }
-  &:has(div.spring){
-    &:has(.light-mode), &:has(.dark-mode) .nav ul{
-      background: $color-early-dawn;
-      // color: $color-pine-tree;
-      color: $color-selago;
-      a{
-        color: $color-eggplant;
-        text-decoration: none;
-        &:hover{ text-decoration: underline; }
-      }
-    }
-    &:has(.dark-mode), &:has(.light-mode) .nav ul{
-      background: $color-pine-tree;
-      color: $color-early-dawn;
-      a{
-        color: $color-twilight;
-        text-decoration: none;
-        &:hover{ text-decoration: underline; }
-      }
-    }
-  }
-  &:has(div.summer){
-    &:has(.light-mode), &:has(.dark-mode) .nav ul{
-      background: $color-banana-mania;
-      color: $color-selago;
-      a{
-        color: $color-bright-red;
-        text-decoration: none;
-        &:hover{ text-decoration: underline; }
-      }
-    }
-    &:has(.dark-mode), &:has(.light-mode) .nav ul{
-      background: $color-bright-red;
-      color: $color-banana-mania;
-      a{
-        color: $color-melon;
-        text-decoration: none;
-        &:hover{ text-decoration: underline; }
-      }
-    }
-  }
-  &:has(div.autumn){
-    &:has(.light-mode), &:has(.dark-mode) .nav ul{
-      background: $color-linen;
-      color: $color-selago;
-      a{
-        color: $color-chilean-fire;
-        text-decoration: none;
-        &:hover{ text-decoration: underline; }
-      }
-    }
-    &:has(.dark-mode), &:has(.light-mode) .nav ul{
-      background: $color-brown-pod;
-      color: $dark-sea-green;
-      a{
-        color: $color-linen;
-        text-decoration: none;
-        &:hover{ text-decoration: underline; }
-      }
-    }
-  }
+  // &:has(div.winter){
+  //   &:has(.light-mode), &:has(.dark-mode) .nav ul{
+  //     background: $color-bubble-bath;
+  //     color: $color-selago;
+  //     // color: $color-hot-purple;
+  //     a{
+  //       color: $color-hot-purple;
+  //       // color: #663435;
+  //       text-decoration: none;
+  //       &:hover{ text-decoration: underline; }
+  //       &.light-mode{
+  //         background: url("../public/icons/light_mode.svg");
+  //       }
+  //     }
+  //   }
+  //   &:has(.dark-mode), &:has(.light-mode) .nav ul{
+  //     background: $color-hot-purple;
+  //     color: $color-bubble-bath;
+  //     a{
+  //       color: $color-vista-blue;
+  //       text-decoration: none;
+  //       &:hover{ text-decoration: underline; }
+  //     }
+  //   }
+  // }
+  // &:has(div.spring){
+  //   &:has(.light-mode), &:has(.dark-mode) .nav ul{
+  //     background: $color-early-dawn;
+  //     // color: $color-pine-tree;
+  //     color: $color-selago;
+  //     a{
+  //       color: $color-eggplant;
+  //       text-decoration: none;
+  //       &:hover{ text-decoration: underline; }
+  //     }
+  //   }
+  //   &:has(.dark-mode), &:has(.light-mode) .nav ul{
+  //     background: $color-pine-tree;
+  //     color: $color-early-dawn;
+  //     a{
+  //       color: $color-twilight;
+  //       text-decoration: none;
+  //       &:hover{ text-decoration: underline; }
+  //     }
+  //   }
+  // }
+  // &:has(div.summer){
+  //   &:has(.light-mode), &:has(.dark-mode) .nav ul{
+  //     background: $color-banana-mania;
+  //     color: $color-selago;
+  //     a{
+  //       color: $color-bright-red;
+  //       text-decoration: none;
+  //       &:hover{ text-decoration: underline; }
+  //     }
+  //   }
+  //   &:has(.dark-mode), &:has(.light-mode) .nav ul{
+  //     background: $color-bright-red;
+  //     color: $color-banana-mania;
+  //     a{
+  //       color: $color-melon;
+  //       text-decoration: none;
+  //       &:hover{ text-decoration: underline; }
+  //     }
+  //   }
+  // }
+  // &:has(div.autumn){
+  //   &:has(.light-mode), &:has(.dark-mode) .nav ul{
+  //     background: $color-linen;
+  //     color: $color-selago;
+  //     a{
+  //       color: $color-chilean-fire;
+  //       text-decoration: none;
+  //       &:hover{ text-decoration: underline; }
+  //     }
+  //   }
+  //   &:has(.dark-mode), &:has(.light-mode) .nav ul{
+  //     background: $color-brown-pod;
+  //     color: $color-sea-green;
+  //     a{
+  //       color: $color-linen;
+  //       text-decoration: none;
+  //       &:hover{ text-decoration: underline; }
+  //     }
+  //   }
+  // }
   p{ align-content: start; }
   footer{
     padding: 20px;
@@ -165,11 +283,29 @@ body{
   }
   .mode{ width: 30px; }
   .tags-list{
-    .active{ font-weight: bold; }
-    .disabled{ 
-      pointer-events: none;
-      cursor: default;
-      color: gray !important;
+    display: flex;
+    // align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    *{ display: inline; }
+    li{
+      margin: 10px 10px 0 10px;
+      button{
+        cursor: pointer;
+        // background: $color-hot-purple;
+        // color: $color-bubble-bath;
+        &.active{
+          font-weight: bold;
+          // background: $color-vista-blue;
+          // color: $color-selago;
+        }
+        &.disabled{ 
+          pointer-events: none;
+          cursor: default;
+          color: gray !important;
+          background: transparent;
+        }
+      }
     }
   }
   .content{

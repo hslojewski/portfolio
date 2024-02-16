@@ -19,11 +19,7 @@ class Projects extends React.Component {
             <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} />
             <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} />
             <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} />
-            <div>Filter Type: {filterType} <button onClick={toggleFilterType}>Toggle {filterType === "AND" ? "OR" : "AND"}</button></div>
             <button onClick={clearActiveTags}>Clear all filters</button>
-
-            <ActiveFilters activeTags={activeTags} />
-
             <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects} />
 
 
