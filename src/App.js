@@ -214,7 +214,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className={colorMode + "-mode " + "autumn"}>
+    <div className={colorMode + "-mode " + season}>
       <Nav colorMode={colorMode} toggleColorMode={toggleColorMode} />
       <Routes>
         <Route exact="true" path="/" element={<Home />} />
