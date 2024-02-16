@@ -43,9 +43,7 @@ $color-chilean-fire: #F4BEAE;
           color: $theme-dark-bg;
           text-decoration: none;
           &:hover{ text-decoration: underline; }
-          &.light-mode{
-            background: url("../public/icons/light_mode.svg");
-          }
+          
         }
         .tags-list{
           li{

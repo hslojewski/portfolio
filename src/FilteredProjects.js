@@ -49,9 +49,9 @@ class FilteredProjects extends React.Component {
           {projectsToDisplay.length > 0 &&
             <div className="project-list-wrapper">
               <ul className={projectsToDisplay.length === 1 ? "one-item" : (projectsToDisplay.length === 2 ? "two-items" : null)}>
-              {projectsToDisplay.sort().map(path => {
+              {projectsToDisplay.sort().map((path, i) => {
                 return(
-                  <li className="project-detail">
+                  <li key={i} className="project-detail">
                     <Link exact="true" to={path}>
                       <img src={[process.env.PUBLIC_URL, projects[path].thumbnail].join("/")} alt={projects[path].thumbnail_alt} />
                       <h3>{projects[path].title}</h3>

@@ -24,7 +24,7 @@ const App = () => {
   const [season, setSeason] = useState("");
   const [filterType, setFilterType] = useState("AND");
 
-  var checkSeason = (moment) => {
+  var initializeSeason = () => {
     // // debugger;
     // const date = new Date('2017-4-28');
     // const start = new Date('2017-4-20');
@@ -45,6 +45,11 @@ const App = () => {
     } else {
       setSeason("autumn");
     }
+  }
+
+  var initializeColorMode = () => {
+    var localTimeHour = parseInt(moment().local().format("h"));
+    setColorMode(localTimeHour < 18 ? "light" : "dark");
   }
 
   var toggleColorMode = () => {
@@ -210,7 +215,8 @@ const App = () => {
 
   useEffect(() => {
     getProjectsAndTags();
-    checkSeason(moment);
+    initializeSeason();
+    initializeColorMode();
   }, [])
 
   return (

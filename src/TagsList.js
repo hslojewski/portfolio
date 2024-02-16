@@ -23,8 +23,8 @@ class TagsList extends React.Component {
                     tagLinkClasses.push("disabled");
                 }
                 return(
-                    <li>
-                        <button key={i} onClick={()=>displayProjects(tag)} className={tagLinkClasses}>
+                    <li key={i}>
+                        <button onClick={()=>displayProjects(tag)} className={tagLinkClasses}>
                             {tag} ({tags[tag]})
                         </button>
                     </li>
