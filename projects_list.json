@@ -13,6 +13,9 @@
         "affiliations": [
           "DePaul University"
         ],
+        "roles": [
+          "Student"
+        ],
         "thumbnail": "projects/thumbnails/how-bout-that-weather.jpeg",
         "thumbnail_alt": "Weather Extension logo"
   },
@@ -28,6 +31,9 @@
         ],
         "affiliations": [
           "Loyola Marymount University"
+        ],
+        "roles": [
+          "Student"
         ],
         "thumbnail": "projects/thumbnails/bookshop.jpeg",
         "thumbnail_alt": "Website checkout form"
@@ -45,6 +51,9 @@
         ],
         "affiliations": [
           "Disney"
+        ],
+        "roles": [
+          "Student"
         ],
         "thumbnail": "projects/thumbnails/know-whos-knocking.jpeg",
         "thumbnail_alt": "Know Who's Knocking logo"
@@ -65,6 +74,9 @@
       "affiliations": [
         "DePaul University"
       ],
+      "roles": [
+        "Student"
+      ],
       "thumbnail": "projects/thumbnails/auto.jpeg",
       "thumbnail_alt": "Auto car app logo"
   },
@@ -78,6 +90,9 @@
       "User Testing",
       "Video Editing",
       "Presenting"
+    ],
+    "roles": [
+      "Student"
     ],
     "affiliations": [
       "DePaul University"
@@ -98,7 +113,9 @@
     "affiliations": [
       "DePaul University"
     ],
-    "thumbnail_alt": "",
+    "roles": [
+      "Student"
+    ],
     "thumbnail": "projects/thumbnails/french-laundry.jpeg",
     "thumbnail_alt": "Process flow diagram"
   },
@@ -112,6 +129,9 @@
     ],
     "affiliations": [
       "DePaul University"
+    ],
+    "roles": [
+      "Student"
     ],
     "thumbnail": "projects/thumbnails/survivor-infographic.jpeg",
     "thumbnail_alt": "Survivor seasons infographic"
@@ -127,6 +147,9 @@
     "affiliations": [
       "DePaul University"
     ],
+    "roles": [
+      "Student"
+    ],
     "thumbnail": "projects/thumbnails/titanic-infographic.jpeg",
     "thumbnail_alt": "Titanic passengers infographic"
   },
@@ -140,6 +163,9 @@
     ],
     "affiliations": [
       "DePaul University"
+    ],
+    "roles": [
+      "Student"
     ],
     "thumbnail": "projects/thumbnails/twitter-print.jpeg",
     "thumbnail_alt": "Twitter sentiment print infographic"
@@ -157,8 +183,28 @@
     "affiliations": [
       "DePaul University"
     ],
+    "roles": [
+      "Student"
+    ],
     "thumbnail": "projects/thumbnails/twitter-interactive.gif",
     "thumbnail_alt": "Twitter sentiment interactive infographic"
+  },
+  "health-activity-infographic": {
+    "title": "Health and Activity: Quantified Self Infographic",
+    "tools": [
+      "Adobe Illustrator"
+    ],
+    "skills": [
+      "Information Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/health-infographic.gif",
+    "thumbnail_alt": "Health and Activity Infographic"
   },
   "good-bad-graph-analysis": {
     "title": "Good/Bad Graph Analysis",
@@ -171,7 +217,70 @@
     "affiliations": [
       "DePaul University"
     ],
+    "roles": [
+      "Student"
+    ],
     "thumbnail": "projects/thumbnails/good-bad-graph.jpeg",
     "thumbnail_alt": "Jackpot value across U.S. Graph"
+  },
+  "music-app-social-design": {
+    "title": "Social Design Patterns of Music Apps",
+    "tools": [
+      
+    ],
+    "skills": [
+      "Competitor Analysis",
+      "Research",
+      "Video Editing",
+      "Presenting"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/music-apps.jpeg",
+    "thumbnail_alt": "Music app presentation slide"
+  },
+  "disney-com-accessibility": {
+    "title": "Disney.com Accessibility Evaluation",
+    "tools": [
+      
+    ],
+    "skills": [
+      "Competitor Analysis",
+      "Research",
+      "Video Editing",
+      "Presenting"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/dcom-accessibility.jpeg",
+    "thumbnail_alt": "Disney.com homepage"
+  },
+  "grubhub-diningin-user-testing": {
+    "title": "GrubHub and DiningIn User Testing",
+    "tools": [
+      
+    ],
+    "skills": [
+      "Task Analysis",
+      "User Testing",
+      "Data Analysis",
+      "Presenting"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
+    "thumbnail_alt": "GrubHub online webpage"
   }
 }

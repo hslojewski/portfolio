@@ -11,7 +11,7 @@
                 {
                     "src": "projects/media/weather/sketch_example.png",
                     "alt": "Sketch of idea as a messaging scenario",
-                    "classes": "align-center width-50 mobile-width-100"
+                    "classes": "align-center"
                 }
             ]
         },
@@ -23,12 +23,12 @@
                 {
                     "src": "projects/media/weather/scenarios_vocabulary.png",
                     "alt": "Original notes written about scenarios and vocabulary that would trigger app extension",
-                    "classes": "align-center width-50 mobile-width-100 clear-line"
+                    "classes": "align-center clear-line"
                 },
                 {
                     "src": "projects/media/weather/sketch_flow.png",
                     "alt": "Sketch of user flow for experiencing weather app extension",
-                    "classes": "align-center width-50 mobile-width-100"
+                    "classes": "align-center"
                 }
             ]
         },
@@ -40,7 +40,7 @@
                 {
                     "src": "projects/media/weather/ui_options.gif",
                     "alt": "Paper prototype example illustrating the different options for how to display a weather indicator, including text-based messaging versus icon-based indicators.",
-                    "classes": "align-center width-50 mobile-width-100"
+                    "classes": "align-center"
                 }
             ]
         },
@@ -57,7 +57,8 @@
                 {
                     "src": "projects/media/weather/prototype_animation.gif",
                     "alt": "Animation showing a user's interaction with the prototype, including the tapping of the two weather indicators as well as clicking the weather detail in order to go to the weather app.",
-                    "classes": "align-center width-100"
+                    "classes": "align-center width-100",
+                    "containerClasses": "width-75"
                 }
                 
             ]
