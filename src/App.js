@@ -23,6 +23,9 @@ const App = () => {
   const [colorMode, setColorMode] = useState("light");
   const [season, setSeason] = useState("");
   const [filterType, setFilterType] = useState("AND");
+  const [tagAccordions, setTagAccordions] = useState({tools: false, skills: false, affiliations: false, roles: false});
+  const [isNavVisible, setNavVisibility] = useState(false);
+
 
   var initializeSeason = () => {
     // // debugger;
@@ -48,8 +51,8 @@ const App = () => {
   }
 
   var initializeColorMode = () => {
-    var localTimeHour = parseInt(moment().local().format("h"));
-    setColorMode(localTimeHour < 18 ? "light" : "dark");
+    var localTimeHour = parseInt(moment().local().format("H"));
+    setColorMode((localTimeHour > 6 && localTimeHour < 18) ? "light" : "dark");
   }
 
   var toggleColorMode = () => {
@@ -106,7 +109,7 @@ const App = () => {
     });
     console.log(tags);
     // debugger;
-    setTags(tags);
+    setTags({...tags});
   }
 
   var getProjectsAndTags = () => {
@@ -213,6 +216,15 @@ const App = () => {
     updateProjectsList([]);
   }
 
+  var toggleAccordion = (tagType) => {
+    tagAccordions[tagType] = !tagAccordions[tagType];
+    setTagAccordions({...tagAccordions});
+  }
+
+  var toggleNav = () => {
+    setNavVisibility(!isNavVisible);
+  }
+
   useEffect(() => {
     getProjectsAndTags();
     initializeSeason();
@@ -221,7 +233,12 @@ const App = () => {
 
   return (
     <div className={colorMode + "-mode " + season}>
-      <Nav colorMode={colorMode} toggleColorMode={toggleColorMode} />
+      <Nav
+        colorMode={colorMode}
+        toggleColorMode={toggleColorMode}
+        isNavVisible={isNavVisible}
+        toggleNav={toggleNav}
+      />
       <Routes>
         <Route exact="true" path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -239,6 +256,8 @@ const App = () => {
                   activeTags={activeTags}
                   displayProjects={displayProjects}
                   clearActiveTags={clearActiveTags}
+                  toggleAccordion={toggleAccordion}
+                  tagAccordions={tagAccordions}
                 />
               }
         />

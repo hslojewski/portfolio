@@ -8,17 +8,17 @@ const React = require('react');
 class Projects extends React.Component {
   render() {
     const {
-        displayProjects, toggleFilterType, clearActiveTags,
-        activeTags = [], tools = [], skills = [], affiliations = [], roles = [], projects = {}, filterType = "AND"
+        displayProjects, toggleFilterType, clearActiveTags, toggleAccordion,
+        activeTags = [], tools = [], skills = [], affiliations = [], roles = [], projects = {}, filterType = "AND", tagAccordions = {}
     } = this.props;
-    
+
     return (
         <div className="content">
             <h1>Projects</h1>
-            <TagsList title="Tools" tags={tools} activeTags={activeTags} displayProjects={displayProjects} />
-            <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} />
-            <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} />
-            <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} />
+            <TagsList title="Tools" tags={tools} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
+            <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
+            <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
+            <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <button onClick={clearActiveTags}>Clear all filters</button>
             <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects} />
 

@@ -34,13 +34,12 @@ $color-chilean-fire: #F4BEAE;
 @mixin season-theming($season, $theme-light-bg, $theme-dark-bg, $theme-accent-color, $theme-font-color) {
   body{
     &:has(div.#{$season}){
-      &:has(.light-mode), &:has(.dark-mode) .nav ul{
-        // background: $color-bubble-bath;
+      &:has(.light-mode), &:has(.dark-mode) .nav{
         background: $theme-light-bg;
-        // color: $color-selago;
         color: $theme-font-color;
         a{
           color: $theme-dark-bg;
+          background: $theme-light-bg;
           text-decoration: none;
           &:hover{ text-decoration: underline; }
           
@@ -51,7 +50,7 @@ $color-chilean-fire: #F4BEAE;
               background: $theme-dark-bg;
               color: $theme-light-bg;
               &.active{
-                font-weight: bold;
+                // font-weight: bold;
                 background: $theme-accent-color;
                 color: $theme-font-color;
               }
@@ -59,13 +58,14 @@ $color-chilean-fire: #F4BEAE;
           }
         }
       }
-      &:has(.dark-mode), &:has(.light-mode) .nav ul{
+      &:has(.dark-mode), &:has(.light-mode) .nav{
         // background: $color-hot-purple;
         background: $theme-dark-bg;
         // color: $color-bubble-bath;
         color: $theme-light-bg;
         a{
           color: $theme-accent-color;
+          background: $theme-dark-bg;
           text-decoration: none;
           // &:hover{ text-decoration: underline; }
         }
@@ -75,7 +75,7 @@ $color-chilean-fire: #F4BEAE;
               background: $theme-light-bg;
               color: $theme-font-color;
               &.active{
-                font-weight: bold;
+                // font-weight: bold;
                 background: $theme-accent-color;
                 color: $theme-font-color;
               }
@@ -170,138 +170,103 @@ body{
     border-radius: 20px;
     border: 0;
   }
-  // &:has(div.winter){
-  //   &:has(.light-mode), &:has(.dark-mode) .nav ul{
-  //     background: $color-bubble-bath;
-  //     color: $color-selago;
-  //     // color: $color-hot-purple;
-  //     a{
-  //       color: $color-hot-purple;
-  //       // color: #663435;
-  //       text-decoration: none;
-  //       &:hover{ text-decoration: underline; }
-  //       &.light-mode{
-  //         background: url("../public/icons/light_mode.svg");
-  //       }
-  //     }
-  //   }
-  //   &:has(.dark-mode), &:has(.light-mode) .nav ul{
-  //     background: $color-hot-purple;
-  //     color: $color-bubble-bath;
-  //     a{
-  //       color: $color-vista-blue;
-  //       text-decoration: none;
-  //       &:hover{ text-decoration: underline; }
-  //     }
-  //   }
-  // }
-  // &:has(div.spring){
-  //   &:has(.light-mode), &:has(.dark-mode) .nav ul{
-  //     background: $color-early-dawn;
-  //     // color: $color-pine-tree;
-  //     color: $color-selago;
-  //     a{
-  //       color: $color-eggplant;
-  //       text-decoration: none;
-  //       &:hover{ text-decoration: underline; }
-  //     }
-  //   }
-  //   &:has(.dark-mode), &:has(.light-mode) .nav ul{
-  //     background: $color-pine-tree;
-  //     color: $color-early-dawn;
-  //     a{
-  //       color: $color-twilight;
-  //       text-decoration: none;
-  //       &:hover{ text-decoration: underline; }
-  //     }
-  //   }
-  // }
-  // &:has(div.summer){
-  //   &:has(.light-mode), &:has(.dark-mode) .nav ul{
-  //     background: $color-banana-mania;
-  //     color: $color-selago;
-  //     a{
-  //       color: $color-bright-red;
-  //       text-decoration: none;
-  //       &:hover{ text-decoration: underline; }
-  //     }
-  //   }
-  //   &:has(.dark-mode), &:has(.light-mode) .nav ul{
-  //     background: $color-bright-red;
-  //     color: $color-banana-mania;
-  //     a{
-  //       color: $color-melon;
-  //       text-decoration: none;
-  //       &:hover{ text-decoration: underline; }
-  //     }
-  //   }
-  // }
-  // &:has(div.autumn){
-  //   &:has(.light-mode), &:has(.dark-mode) .nav ul{
-  //     background: $color-linen;
-  //     color: $color-selago;
-  //     a{
-  //       color: $color-chilean-fire;
-  //       text-decoration: none;
-  //       &:hover{ text-decoration: underline; }
-  //     }
-  //   }
-  //   &:has(.dark-mode), &:has(.light-mode) .nav ul{
-  //     background: $color-brown-pod;
-  //     color: $color-sea-green;
-  //     a{
-  //       color: $color-linen;
-  //       text-decoration: none;
-  //       &:hover{ text-decoration: underline; }
-  //     }
-  //   }
-  // }
   p{ align-content: start; }
   footer{
     padding: 20px;
     text-align: center;
   }
   .nav{
+    // overflow: hidden;
+    position: relative;
     ul{
-      *{ display: inline; }
+      // *{ display: inline; }
       // position: fixed;
-      // top: 0;
-      // left: 0;
-      // right: 0;
+      &.hide li{ display: none; }
+      top: 0;
+      left: 0;
+      right: 0;
       margin: 0;
       height: 80px;
+      padding: 0;
       display: flex;
       align-items: center;
-      li{ margin: 20px; }
+      display: block;
+      list-style-type: none;
+      li{
+        // padding: 20px;
+        position: relative;
+        top: 80px;
+        z-index: 1;
+        .mobile-only-nav-text{ margin-right: 10px; }
+      }
       li a{
         color: $black;
         text-decoration: none;
+        // display: inline;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        display: block;
+        // background: red;
+        text-align: center;
+
       }
+      // display: none;
+      // display: flex;
+    }
+    .menu{
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      // background: black;
+      // color: white !important;
+      height: 80px;
+      width: 80px;
     }
   }
   .mode{ width: 30px; }
-  .tags-list{
-    display: flex;
-    // align-items: center;
-    flex-wrap: wrap;
-    padding: 0;
-    *{ display: inline; }
-    li{
-      margin: 10px 10px 0 10px;
-      button{
-        cursor: pointer;
-        // background: $color-hot-purple;
-        // color: $color-bubble-bath;
-        &.active{
-          font-weight: bold;
-          // background: $color-vista-blue;
-          // color: $color-selago;
-        }
-        &.disabled{ 
-          pointer-events: none;
-          cursor: default;
-          color: gray !important;
-          background: transparent;
+  .tag{
+    &.close{
+      .tag-title:before{
+        content:'\25B6';
+      }
+      .tags-list{
+        display: none;
+      }
+    }
+    &:not(.close){
+      .tag-title:before{
+        // content:'\25BC';
+        content:'\25B6';
+        transform: rotate(90deg);
+        display: inline-block;
+        transition: all ease 200ms;
+      }
+    }
+    .tags-list{
+      display: flex;
+      // align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+      *{ display: inline; }
+      li{
+        margin: 10px 10px 0 10px;
+        button{
+          cursor: pointer;
+          // background: $color-hot-purple;
+          // color: $color-bubble-bath;
+          &.active{
+            // font-weight: bold;
+            // background: $color-vista-blue;
+            // color: $color-selago;
+          }
+          &.disabled{ 
+            pointer-events: none;
+            cursor: default;
+            color: gray !important;
+            background: transparent;
+          }
         }
       }
     }
@@ -332,7 +297,7 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
     // &.multi-row-images{ flex-wrap: wrap;}
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 15px;
     .meh img{ max-width: 100%; }
     .meh{
@@ -341,35 +306,11 @@ body{
       &.width-75{ flex-basis: 75%; }
       &.width-100{ flex-basis: 100%; }
     }
-    // span.width-50{
-    //   // flex: 50%;
-    //   flex-basis: 50%;
-    //   // padding: 10px;
-    //   // padding: 15px;
-    //   // width: 50%;
-    //   // img{ width: 100%; }
-    //   img{
-    //     // padding: 10px;
-    //     max-width: 100%;
-    //   }
-    // }
-    // span.width-100{
-    //   flex: 100%;
-    //   // padding: 10px;
-    //   // padding: 15px;
-    //   width: 100%;
-    //   // img{ width: 100%; }
-    //   img{
-    //     // padding: 10px;
-    //     max-width: 100%;
-    //   }
-    // }
   }
   .project-list-wrapper{
     display: flex;
     flex-wrap: nowrap;
     // justify-content: space-evenly;
-    gap: 15px;
     ul{
       list-style: none;
       margin: 0;
@@ -377,11 +318,18 @@ body{
       // max-width: 90%; // adjust the width compared to the container
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      li{
-        padding: 0 15px; // padding right and left only
-        margin-bottom: 20px; // vertical spacing between li elements
+      // justify-content: flex-start;
+      justify-content: space-evenly;
+      gap: 15px;
+      &.one-item li{
         width: 100%;
+        img{ height: inherit; }
+      }
+      li{
+        // padding: 0 15px; // padding right and left only
+        margin-bottom: 20px; // vertical spacing between li elements
+        // width: 100%;
+        width: 45%;
         position: relative;
         a:hover{
           img{ opacity: 0.15; }
@@ -392,7 +340,7 @@ body{
         img{
           width: 100%;
           // width: 300px;
-          height: 300px;
+          height: 150px;
           object-fit: cover;
           transition: opacity ease 200ms;
         }
@@ -415,17 +363,67 @@ body{
   @media (min-width: $breakpoint-tablet-low) {
     .project-list-wrapper{
       ul{
+        justify-content: space-evenly;
         li{
-          width: 100%;
+          // width: 100%;
         }
       }
     }
   }
   @media (min-width: $breakpoint-tablet) {
+    .nav{
+      ul{
+        *{ display: inline; }
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        margin: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li{
+          display: inherit !important;
+          position: inherit;
+          top: inherit;
+          // margin: 20px;
+          &.home{
+            position: absolute;
+            left: 0;
+            padding: 10px;
+          }
+          &.colorMode{
+            position: absolute;
+            right: 0;
+            padding: 10px;
+          }
+          .mobile-only-nav-text{ display: none; }
+        }
+        li a{
+          color: $black;
+          text-decoration: none;
+          background: transparent;
+        }
+      }
+      .menu{ display: none; }
+    }
+    .tag{
+      &:not(.close), &.close{
+        .tag-title:before{
+          content: inherit;
+        }
+        .tags-list{
+          display: flex;
+        }
+      }
+    }
+    .tags-list.close{ display: flex; }
     .project-list-wrapper{
       ul{
         li{
           width: 45%;
+          img{ height: 300px; }
         }
       }
       ul.one-item{
