@@ -203,7 +203,7 @@
     "roles": [
       "Student"
     ],
-    "thumbnail": "projects/thumbnails/health-infographic.gif",
+    "thumbnail": "projects/thumbnails/health-infographic.jpeg",
     "thumbnail_alt": "Health and Activity Infographic"
   },
   "good-bad-graph-analysis": {
@@ -240,7 +240,7 @@
     "roles": [
       "Student"
     ],
-    "thumbnail": "projects/thumbnails/music-apps.jpeg",
+    "thumbnail": "projects/thumbnails/music-apps.png",
     "thumbnail_alt": "Music app presentation slide"
   },
   "disney-com-accessibility": {
@@ -260,7 +260,7 @@
     "roles": [
       "Student"
     ],
-    "thumbnail": "projects/thumbnails/dcom-accessibility.jpeg",
+    "thumbnail": "projects/thumbnails/dcom-accessibility.png",
     "thumbnail_alt": "Disney.com homepage"
   },
   "grubhub-diningin-user-testing": {
