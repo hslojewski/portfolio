@@ -44,6 +44,13 @@ $color-chilean-fire: #F4BEAE;
           &:hover{ text-decoration: underline; }
           
         }
+        .tag{
+          border-color: $theme-dark-bg;
+          // background: rgba($theme-dark-bg, .15);
+        }
+        .tag-title{
+          background: rgba($theme-dark-bg, .15);
+        }
         .tags-list{
           li{
             button{
@@ -68,6 +75,13 @@ $color-chilean-fire: #F4BEAE;
           background: $theme-dark-bg;
           text-decoration: none;
           // &:hover{ text-decoration: underline; }
+        }
+        .tag{
+          border-color: $theme-light-bg;
+          // background: rgba($theme-light-bg, .15);
+        }
+        .tag-title{
+          background: rgba($theme-light-bg, .15);
         }
         .tags-list{
           li{
@@ -177,16 +191,18 @@ body{
   }
   .nav{
     // overflow: hidden;
-    position: relative;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
     ul{
       // *{ display: inline; }
       // position: fixed;
-      &.hide li{ display: none; }
+      &.hide-on-mobile li:not(.home, .menu){ display: none; }
       top: 0;
       left: 0;
       right: 0;
       margin: 0;
-      height: 80px;
+      // height: 50px;
       padding: 0;
       display: flex;
       align-items: center;
@@ -194,9 +210,17 @@ body{
       list-style-type: none;
       li{
         // padding: 20px;
-        position: relative;
+        // position: relative;
         top: 80px;
+        height: 100%;
         z-index: 1;
+        &.home{
+          // position: absolute;
+          // left: 0;
+          // padding: 10px;
+          display: contents;
+          a{ text-align: left;}
+        }
         .mobile-only-nav-text{ margin-right: 10px; }
       }
       li a{
@@ -204,7 +228,7 @@ body{
         text-decoration: none;
         // display: inline;
         padding: 20px;
-        height: 100%;
+        // height: 100%;
         width: 100%;
         display: block;
         // background: red;
@@ -221,12 +245,40 @@ body{
       top: 0;
       // background: black;
       // color: white !important;
-      height: 80px;
-      width: 80px;
+      // height: 80px;
+      // width: 80px;
+      // position: relative;
+      svg{
+        // position: relative;
+        // top: 50%;
+        // left: 50%;
+        // transform:translate(-50%,-50%);
+        padding: 20px;
+      }
     }
   }
   .mode{ width: 30px; }
+  .filters-header{
+    display: flex;
+    .title{
+      display: flex;
+      flex-basis: 50%;
+      align-items: center;
+      span{
+        padding-left: 5px;
+      }
+    }
+    .clear-all{
+      display: flex;
+      flex-basis: 50%;
+      align-items: center;
+      justify-content: right;
+    }
+  }
   .tag{
+    border: 1px solid;
+    border-width: 0.5px 0.5px 0 0.5px;
+    &.roles{ border-width: 0.5px; }
     &.close{
       .tag-title:before{
         content:'\25B6';
@@ -244,11 +296,16 @@ body{
         transition: all ease 200ms;
       }
     }
+    .tag-title{
+      margin: 0;
+      padding: 15px;
+    }
     .tags-list{
       display: flex;
       // align-items: center;
       flex-wrap: wrap;
-      padding: 0;
+      margin: 0;
+      padding: 5px 0 15px 0;
       *{ display: inline; }
       li{
         margin: 10px 10px 0 10px;
@@ -374,12 +431,13 @@ body{
     .nav{
       ul{
         *{ display: inline; }
+        // &.hide-on-mobile li:not(.home, .menu){ display: inherit; }
         // position: fixed;
         // top: 0;
         // left: 0;
         // right: 0;
         margin: 0;
-        height: 80px;
+        // height: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -391,13 +449,14 @@ body{
           &.home{
             position: absolute;
             left: 0;
-            padding: 10px;
+            // padding: 10px;
           }
           &.colorMode{
             position: absolute;
             right: 0;
-            padding: 10px;
+            // padding: 10px;
           }
+          &.menu{ display: none !important; }
           .mobile-only-nav-text{ display: none; }
         }
         li a{
@@ -411,10 +470,10 @@ body{
     .tag{
       &:not(.close), &.close{
         .tag-title:before{
-          content: inherit;
+          // content: inherit;
         }
         .tags-list{
-          display: flex;
+          // display: flex;
         }
       }
     }

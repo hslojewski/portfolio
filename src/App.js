@@ -15,7 +15,6 @@ const React = require('react'),
 
 const App = () => {
   var [tags, setTags] = useState({ tools: {}, skills: {}, affiliations: {}, roles: {} });
-  // const [projects, setProjects] = useState({});
   const [projects, setProjects] = useState([]);
   const [allProjects, setAllProjects] = useState({});
   const [projectData, setProjectData] = useState({});

@@ -13,8 +13,8 @@ class TagsList extends React.Component {
     var isAccordionOpen = tagAccordions[title.toLowerCase()] === true ? "open" : "close";
     
     return (
-        <div className={"tag " + isAccordionOpen}>
-            <h2 className="tag-title" onClick={()=>toggleAccordion(title.toLowerCase())}>{title}</h2>
+        <div className={["tag", title.toLowerCase(), isAccordionOpen].join(" ")}>
+            <h3 className="tag-title" onClick={()=>toggleAccordion(title.toLowerCase())}>{title}</h3>
             <ul className="tags-list">
             {Object.keys(tags).map((tag, i) => {
                 // debugger;

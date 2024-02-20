@@ -15,11 +15,21 @@ class Projects extends React.Component {
     return (
         <div className="content">
             <h1>Projects</h1>
+            <div className="filters-header">
+                <div className="title">
+                    <h2>Filters</h2>
+                    <span>({activeTags.length})</span>
+                </div>
+                <div className="clear-all">
+                  <div>
+                    <button onClick={clearActiveTags}>Clear all filters</button>
+                  </div>
+                </div>
+            </div>
             <TagsList title="Tools" tags={tools} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
-            <button onClick={clearActiveTags}>Clear all filters</button>
             <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects} />
 
 
