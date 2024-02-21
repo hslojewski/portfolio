@@ -17,7 +17,8 @@
           "Student"
         ],
         "thumbnail": "projects/thumbnails/how-bout-that-weather.jpeg",
-        "thumbnail_alt": "Weather Extension logo"
+        "thumbnail_alt": "Weather Extension logo",
+        "date": 2014
   },
   "bookshop-database": {
       "title": "Bookshop Database and Website",
@@ -36,7 +37,8 @@
           "Student"
         ],
         "thumbnail": "projects/thumbnails/bookshop.jpeg",
-        "thumbnail_alt": "Website checkout form"
+        "thumbnail_alt": "Website checkout form",
+        "date": 2013
   },
   "know-whos-knocking": {
       "title": "Know Who's Knocking",
@@ -56,7 +58,8 @@
           "Student"
         ],
         "thumbnail": "projects/thumbnails/know-whos-knocking.jpeg",
-        "thumbnail_alt": "Know Who's Knocking logo"
+        "thumbnail_alt": "Know Who's Knocking logo",
+        "date": 2014
   },
   "auto-car-prototype": {
     "title": "Auto: Car Assistance App Prototype",
@@ -78,7 +81,8 @@
         "Student"
       ],
       "thumbnail": "projects/thumbnails/auto.jpeg",
-      "thumbnail_alt": "Auto car app logo"
+      "thumbnail_alt": "Auto car app logo",
+      "date": 2015
   },
   "touchscreens-for-motor-impairments": {
     "title": "Touchscreens for Motor Impairments",
@@ -98,7 +102,8 @@
       "DePaul University"
     ],
     "thumbnail": "projects/thumbnails/touchscreen-motor-impairments.jpeg",
-    "thumbnail_alt": "Touchscreens and motor impairments evaluation"
+    "thumbnail_alt": "Touchscreens and motor impairments evaluation",
+    "date": 2016
   },
   "french-laundry-recipe-process-flow": {
     "title": "French Laundry Recipe Process Flow",
@@ -117,7 +122,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/french-laundry.jpeg",
-    "thumbnail_alt": "Process flow diagram"
+    "thumbnail_alt": "Process flow diagram",
+    "date": 2014
   },
   "survivor-infographic": {
     "title": "Survivor Seasons Infographic",
@@ -134,7 +140,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/survivor-infographic.jpeg",
-    "thumbnail_alt": "Survivor seasons infographic"
+    "thumbnail_alt": "Survivor seasons infographic",
+    "date": 2014
   },
   "titanic-infographic": {
     "title": "Titanic Passengers Infographic",
@@ -151,7 +158,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/titanic-infographic.jpeg",
-    "thumbnail_alt": "Titanic passengers infographic"
+    "thumbnail_alt": "Titanic passengers infographic",
+    "date": 2016
   },
   "twitter-print-infographic": {
     "title": "U.S. Airline Twitter Sentiment: Print Infographic",
@@ -168,7 +176,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/twitter-print.jpeg",
-    "thumbnail_alt": "Twitter sentiment print infographic"
+    "thumbnail_alt": "Twitter sentiment print infographic",
+    "date": 2016
   },
   "twitter-interactive-infographic": {
     "title": "U.S. Airline Twitter Sentiment: Interactive Infographic",
@@ -187,7 +196,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/twitter-interactive.gif",
-    "thumbnail_alt": "Twitter sentiment interactive infographic"
+    "thumbnail_alt": "Twitter sentiment interactive infographic",
+    "date": 2016
   },
   "health-activity-infographic": {
     "title": "Health and Activity: Quantified Self Infographic",
@@ -204,7 +214,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/health-infographic.jpeg",
-    "thumbnail_alt": "Health and Activity Infographic"
+    "thumbnail_alt": "Health and Activity Infographic",
+    "date": 2016
   },
   "good-bad-graph-analysis": {
     "title": "Good/Bad Graph Analysis",
@@ -221,7 +232,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/good-bad-graph.jpeg",
-    "thumbnail_alt": "Jackpot value across U.S. Graph"
+    "thumbnail_alt": "Jackpot value across U.S. Graph",
+    "date": 2016
   },
   "music-app-social-design": {
     "title": "Social Design Patterns of Music Apps",
@@ -241,7 +253,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/music-apps.png",
-    "thumbnail_alt": "Music app presentation slide"
+    "thumbnail_alt": "Music app presentation slide",
+    "date": 2015
   },
   "disney-com-accessibility": {
     "title": "Disney.com Accessibility Evaluation",
@@ -261,7 +274,8 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/dcom-accessibility.png",
-    "thumbnail_alt": "Disney.com homepage"
+    "thumbnail_alt": "Disney.com homepage",
+    "date": 2015
   },
   "grubhub-diningin-user-testing": {
     "title": "GrubHub and DiningIn User Testing",
@@ -281,6 +295,26 @@
       "Student"
     ],
     "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
-    "thumbnail_alt": "GrubHub online webpage"
+    "thumbnail_alt": "GrubHub online webpage",
+    "date": 2015
+  },
+  "buy-your-car": {
+    "title": "Buy Your Car",
+    "tools": [
+      "Axure"
+    ],
+    "skills": [
+      "Personas and Scenarios",
+      "Prototyping"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/buy-your-car.jpeg",
+    "thumbnail_alt": "Car purchasing app prototype",
+    "date": 2015
   }
 }

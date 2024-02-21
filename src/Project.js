@@ -14,7 +14,7 @@ class Project extends React.Component {
   }
 
   render() {
-    const { projectPath = '', data = {}, tags = {}, title = "" } = this.props;
+    const { projectPath = '', data = {}, tags = {}, date = null, title = "" } = this.props;
     return (
       <div className="content">
         <Link to="/projects">Back to Projects</Link>
@@ -48,11 +48,11 @@ class Project extends React.Component {
             return(<span key={i}>{role}{tags.roles.length - 1 === i ? "" : ", "}</span>);
           })}
         </p>
-        {data.date &&  
-        <p>
-          <strong>Date: </strong>
-          <span>{data.date}</span>
-        </p>
+        {date &&  
+          <p>
+            <strong>Date: </strong>
+            <span>{date}</span>
+          </p>
         }
         <div>{data.content && data.content.map((section, i) => {
           return(

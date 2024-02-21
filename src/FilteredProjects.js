@@ -4,7 +4,10 @@ const React = require('react');
 
 class FilteredProjects extends React.Component {
   render() {
-    const { projects = {}, activeTags = [], filterType = "AND" } = this.props;
+    const {
+      orderChronologically,
+      projects = {}, activeTags = [], filterType = "AND"
+    } = this.props;
 
     var activeTagProjectsList = [];
     var activeTagProjectsSet = new Set();
@@ -43,13 +46,16 @@ class FilteredProjects extends React.Component {
         }
       });
     }
+    var orderedProjects = orderChronologically(projects);
+    var projectsToDisplay = orderedProjects.filter(a => projectsToDisplay.includes(a));
+
     return (
         <div>
           <h2>List</h2>
           {projectsToDisplay.length > 0 &&
             <div className="project-list-wrapper">
               <ul className={projectsToDisplay.length === 1 ? "one-item" : (projectsToDisplay.length === 2 ? "two-items" : null)}>
-              {projectsToDisplay.sort().map((path, i) => {
+              {projectsToDisplay.map((path, i) => {
                 return(
                   <li key={i} className="project-detail">
                     <Link exact="true" to={path}>

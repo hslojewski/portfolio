@@ -278,9 +278,12 @@ body{
   .tag{
     border: 1px solid;
     border-width: 0.5px 0.5px 0 0.5px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: baseline;
     &.roles{ border-width: 0.5px; }
     &.close{
-      .tag-title:before{
+      .tag-title h3:before{
         content:'\25B6';
       }
       .tags-list{
@@ -288,7 +291,7 @@ body{
       }
     }
     &:not(.close){
-      .tag-title:before{
+      .tag-title h3:before{
         // content:'\25BC';
         content:'\25B6';
         transform: rotate(90deg);
@@ -297,8 +300,19 @@ body{
       }
     }
     .tag-title{
-      margin: 0;
+      display: flex;
+      flex-basis: 100%;
       padding: 15px;
+      h3{
+        display: flex;
+        margin: 0;
+        width: 100%;
+      }
+      .tag-count{
+        display: flex;
+        padding-left: 5px;
+        justify-content: right;
+      }
     }
     .tags-list{
       display: flex;
@@ -306,6 +320,7 @@ body{
       flex-wrap: wrap;
       margin: 0;
       padding: 5px 0 15px 0;
+      flex-basis: 100%;
       *{ display: inline; }
       li{
         margin: 10px 10px 0 10px;
@@ -330,6 +345,8 @@ body{
   }
   .content{
     padding: 20px;
+    position: relative;
+    top: 60px;
     caption{
       width: 90%;
       margin: 0 auto;
@@ -378,6 +395,7 @@ body{
       // justify-content: flex-start;
       justify-content: space-evenly;
       gap: 15px;
+      flex-basis: 100%;
       &.one-item li{
         width: 100%;
         img{ height: inherit; }
@@ -421,9 +439,7 @@ body{
     .project-list-wrapper{
       ul{
         justify-content: space-evenly;
-        li{
-          // width: 100%;
-        }
+        flex-basis: inherit;
       }
     }
   }
@@ -469,7 +485,7 @@ body{
     }
     .tag{
       &:not(.close), &.close{
-        .tag-title:before{
+        .tag-title h3:before{
           // content: inherit;
         }
         .tags-list{

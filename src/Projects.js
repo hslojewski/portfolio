@@ -8,10 +8,10 @@ const React = require('react');
 class Projects extends React.Component {
   render() {
     const {
-        displayProjects, toggleFilterType, clearActiveTags, toggleAccordion,
+        displayProjects, toggleFilterType, clearActiveTags, toggleAccordion, orderChronologically,
         activeTags = [], tools = [], skills = [], affiliations = [], roles = [], projects = {}, filterType = "AND", tagAccordions = {}
     } = this.props;
-
+    
     return (
         <div className="content">
             <h1>Projects</h1>
@@ -21,16 +21,14 @@ class Projects extends React.Component {
                     <span>({activeTags.length})</span>
                 </div>
                 <div className="clear-all">
-                  <div>
                     <button onClick={clearActiveTags}>Clear all filters</button>
-                  </div>
                 </div>
             </div>
             <TagsList title="Tools" tags={tools} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
-            <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects} />
+            <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects}orderChronologically={orderChronologically} />
 
 
             <br/><br/><br/><br/><br/><br/><br/>

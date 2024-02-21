@@ -202,7 +202,7 @@ const App = () => {
       updateProjectsList(updatedActiveTags);
     };
     console.log(activeTags);
-    // // debugger;
+    // debugger;
   }
 
   var toggleFilterType = () => {
@@ -222,6 +222,27 @@ const App = () => {
 
   var toggleNav = () => {
     setNavVisibility(!isNavVisible);
+  }
+
+  var orderChronologically = (projects) => {
+    var blah = {};
+    Object.keys(allProjects).map(a => {
+      blah[a] = allProjects[a].date;
+      console.log(allProjects[a].date);
+      // debugger;
+    });
+    var reverseChronYears = Array.from(new Set(Object.values(blah))).reverse();
+    console.log("reverseChronYears");
+    console.log(reverseChronYears);
+    var orderedProjects = [];
+    reverseChronYears.forEach(year => {
+      Object.keys(projects).forEach(a => {
+        if (year === projects[a].date && !orderedProjects.includes(a)) {
+          orderedProjects.push(a);
+        }
+      })
+    });
+    return orderedProjects;
   }
 
   useEffect(() => {
@@ -256,6 +277,7 @@ const App = () => {
                   displayProjects={displayProjects}
                   clearActiveTags={clearActiveTags}
                   toggleAccordion={toggleAccordion}
+                  orderChronologically={orderChronologically}
                   tagAccordions={tagAccordions}
                 />
               }
@@ -277,6 +299,7 @@ const App = () => {
                         affiliations: projects[projectPath].affiliations,
                         roles: projects[projectPath].roles
                       }}
+                      date={projects[projectPath].date}
                     />
                     }
               />
