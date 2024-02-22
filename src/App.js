@@ -8,7 +8,7 @@ import Footer from './Footer';
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
-import Project from './Project';
+import Content from './Content';
 
 const React = require('react'),
       { useState, useEffect } = require('react');
@@ -261,7 +261,11 @@ const App = () => {
       />
       <Routes>
         <Route exact="true" path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about"
+               element={
+                <About getProjectData={getProjectData} projectData={projectData} />
+               }
+        />
         <Route path="/projects"
                element={
                 <Projects
@@ -288,7 +292,7 @@ const App = () => {
             <Route path={path}
                    key={i} 
                    element={
-                    <Project
+                    <Content
                       projectPath={projectPath}
                       data={projectData}
                       getProjectData={getProjectData}
@@ -300,6 +304,7 @@ const App = () => {
                         roles: projects[projectPath].roles
                       }}
                       date={projects[projectPath].date}
+                      type="project"
                     />
                     }
               />

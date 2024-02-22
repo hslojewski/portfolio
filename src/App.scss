@@ -183,6 +183,7 @@ body{
     padding: 10px;
     border-radius: 20px;
     border: 0;
+    margin: 15px auto;
   }
   p{ align-content: start; }
   footer{
@@ -381,6 +382,14 @@ body{
       &.width-100{ flex-basis: 100%; }
     }
   }
+  .blah-icon-list{
+    display: flex;
+    .blah-icon{
+      display: flex;
+      flex-basis: 33%;
+      justify-content: center;
+    }
+  }
   .project-list-wrapper{
     display: flex;
     flex-wrap: nowrap;
@@ -398,7 +407,7 @@ body{
       flex-basis: 100%;
       &.one-item li{
         width: 100%;
-        img{ height: inherit; }
+        // img{ height: inherit; }
       }
       li{
         // padding: 0 15px; // padding right and left only
@@ -417,6 +426,7 @@ body{
           // width: 300px;
           height: 150px;
           object-fit: cover;
+          object-position: inherit;
           transition: opacity ease 200ms;
         }
         h3{

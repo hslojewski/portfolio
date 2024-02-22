@@ -1,0 +1,33 @@
+{
+    "path": "about",
+    "content": [
+        {
+            "detail": "<p>As a kid, I mastered touch typing from a Timon and Pumbaa game created by Disney Interactive Studios. When the Internet became more available, I learned HTML and CSS from playing Neopets. A few years later, I had an internship at the same Disney division that created so many of the computer games I grew up with. And soon after that, I would be part of a Disney initiative that taught me how to code.</p>"
+        },
+        {
+            "title": "Education",
+            "detail": "<p>My education has specialized in database design, software engineering, and human-computer interaction. My professional experience includes work with content management systems and scalable website solutions around the world and across brands under The Walt Disney Company.</p>",
+            "icons": [
+                {
+                    "component": "FaDatabase",
+                    "alt": "Body of text with details of example use scenario",
+                    "classes": "align-center width-50 mobile-width-100",
+                    "width": 100
+                },
+                {
+                    "component": "FaCode",
+                    "alt": "Body of text with details of example use scenario",
+                    "classes": "align-center width-50 mobile-width-100",
+                    "width": 100
+                },
+                {
+                    "component": "FaSitemap",
+                    "alt": "Body of text with details of example use scenario",
+                    "classes": "align-center width-50 mobile-width-100",
+                    "width": 100
+                }
+            ]
+        }
+    ]
+
+}

@@ -2,8 +2,9 @@ import React from 'react';
 import parse from 'html-react-parser';
 import { Link } from "react-router-dom";
 import { InstagramEmbed } from 'react-social-media-embed';
+import { FaDatabase, FaCode, FaSitemap } from "react-icons/fa6";
 
-class Project extends React.Component {
+class Content extends React.Component {
 
   componentDidMount() {
     const {
@@ -12,12 +13,23 @@ class Project extends React.Component {
     } = this.props;
     getProjectData(projectPath);
   }
-
   render() {
-    const { projectPath = '', data = {}, tags = {}, date = null, title = "" } = this.props;
+    const {
+      projectPath = '', data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, contentType = null
+    } = this.props;
+
+    var components = {
+      "FaDatabase": FaDatabase,
+      "FaCode": FaCode,
+      "FaSitemap": FaSitemap,
+    };
+    
+    
     return (
       <div className="content">
-        <Link to="/projects">Back to Projects</Link>
+        {contentType === "project" &&
+          <Link to="/projects">Back to Projects</Link>
+        }
         <h1>{title}</h1>
         <p>{data.description}</p>
         {tags.tools.length > 0 &&
@@ -36,18 +48,22 @@ class Project extends React.Component {
             })}
           </p>
         }
-        <p>
-          <strong>Affiliation: </strong>
-          {tags.affiliations && tags.affiliations.map((affiliation, i) => {
-            return(<span key={i}>{affiliation}{tags.affiliations.length - 1 === i ? "" : ", "}</span>);
-          })}
-        </p>
-        <p>
-          <strong>Role: </strong>
-          {tags.roles && tags.roles.map((role, i) => {
-            return(<span key={i}>{role}{tags.roles.length - 1 === i ? "" : ", "}</span>);
-          })}
-        </p>
+        {tags.affiliations.length > 0 &&
+          <p>
+            <strong>Affiliation: </strong>
+            {tags.affiliations && tags.affiliations.map((affiliation, i) => {
+              return(<span key={i}>{affiliation}{tags.affiliations.length - 1 === i ? "" : ", "}</span>);
+            })}
+          </p>
+        }
+        {tags.roles.length > 0 &&
+          <p>
+            <strong>Role: </strong>
+            {tags.roles && tags.roles.map((role, i) => {
+              return(<span key={i}>{role}{tags.roles.length - 1 === i ? "" : ", "}</span>);
+            })}
+          </p>
+        }
         {date &&  
           <p>
             <strong>Date: </strong>
@@ -86,13 +102,26 @@ class Project extends React.Component {
                 <InstagramEmbed url={section.instagram_embed} width={550} />
               </div>
               }
+              <div class="blah-icon-list">
+              {section.icons && section.icons.map((icon, i) => {
+                var Component = components[icon.component];
+                return(
+                  <div class="blah-icon">
+                    <Component key={i} size={icon.width} />
+                  </div>
+                );
+                }
+              )}
+              </div>
             </div>
           );
         })}</div>
-        <Link to="/projects">Back to Projects</Link>
+        {contentType === "project" &&
+          <Link to="/projects">Back to Projects</Link>
+        }
       </div>
     );
   }
 }
 
-export default Project;
+export default Content;
