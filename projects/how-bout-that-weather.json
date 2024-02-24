@@ -52,11 +52,13 @@
             "title": "Interactive Prototype",
             "classes": "clear-line",
             "detail": "<p>Ultimately, I decided to choose a UI combination that would be both subtle and as non-interfering as possible to the user but could still be informational to her if she would like to learn more.</p><p>Therefore, the final prototype provided information in the following ways:</p><ol><li>A simple icon next to Messaging dialog bubbles to give a quick notification of the weather, when date/time/location were mentioned</li><li>A more informational weather summary upon holding down the weather icon, mentioned above</li><li>A transition to the Weather App itself when pressing the weather icon itself</li></ol>",
-            "button": {
-                "title": "View the Prototype",
-                "classes": "align-center",
-                "url": "https://emhgau.axshare.com/#p=iphone_frame_for_desktop_view"
-            },
+            "buttons": [
+                {
+                    "title": "View the Prototype",
+                    "classes": "align-center",
+                    "url": "https://emhgau.axshare.com/#p=iphone_frame_for_desktop_view"
+                }
+            ],
             "images": [
                 {
                     "src": "projects/media/weather/prototype_animation.gif",
