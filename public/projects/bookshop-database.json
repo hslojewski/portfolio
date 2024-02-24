@@ -10,20 +10,20 @@
                 {
                     "src": "projects/media/bookshop/site_wireframe.png",
                     "alt": "Wireframe of bookshop website checkout form",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/bookshop/relationship_diagram.png",
                     "alt": "Entity-Relationship diagram for bookshop database, including customers, books, and orders",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/bookshop/site_sitemap.png",
                     "alt": "Bookshop webiste sitemap to show site's information architecture",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
                 }
             ]
         }

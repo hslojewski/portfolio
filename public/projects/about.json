@@ -2,31 +2,72 @@
     "path": "about",
     "content": [
         {
-            "detail": "<p>As a kid, I mastered touch typing from a Timon and Pumbaa game created by Disney Interactive Studios. When the Internet became more available, I learned HTML and CSS from playing Neopets. A few years later, I had an internship at the same Disney division that created so many of the computer games I grew up with. And soon after that, I would be part of a Disney initiative that taught me how to code.</p>"
+            "detail": "<p>Among the CD-ROMs I played as a kid, I mastered touch typing from <i>Adventures in Typing with Timon & Pumbaa</i>, created by Disney Interactive. When the Internet became more available, I learned HTML and CSS while playing Neopets. A few years later, I had an internship at the same Disney division that created so many of the computer games I enjoyed. And soon after that, I would be part of a Disney initiative that taught me how to code.</p>",
+            "images": [
+                {
+                    "src": "projects/media/about/heidi1.jpg",
+                    "alt": "Photo of a girl in front of a Macintosh computer",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-50 width-20"
+                },
+                {
+                    "src": "projects/media/about/heidi2.jpg",
+                    "alt": "Photo of a girl using an iMac",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-50 width-20"
+                },
+                {
+                    "src": "projects/media/about/heidi3.jpg",
+                    "alt": "Photo of a girl with a Mac laptop",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-50 width-20"
+                },
+                {
+                    "src": "projects/media/about/heidi4.jpg",
+                    "alt": "Photo of a girl with a Mac laptop",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-50 width-20"
+                }
+            ]
         },
         {
-            "title": "Education",
-            "detail": "<p>My education has specialized in database design, software engineering, and human-computer interaction. My professional experience includes work with content management systems and scalable website solutions around the world and across brands under The Walt Disney Company.</p>",
+            "detail": "<p>My education has specialized in database design, software engineering, and human-computer interaction.</p>",
             "icons": [
                 {
                     "component": "FaDatabase",
-                    "alt": "Body of text with details of example use scenario",
-                    "classes": "align-center width-50 mobile-width-100",
+                    "degree": "Applied Information Management Systems",
+                    "source": ["Loyola Marymount University"],
                     "width": 100
                 },
                 {
                     "component": "FaCode",
-                    "alt": "Body of text with details of example use scenario",
-                    "classes": "align-center width-50 mobile-width-100",
+                    "degree": "Software Engineering",
+                    "source": ["Disney's CODE: Rosie Program", "(Hackbright Academy)"],
                     "width": 100
                 },
                 {
                     "component": "FaSitemap",
-                    "alt": "Body of text with details of example use scenario",
-                    "classes": "align-center width-50 mobile-width-100",
+                    "degree": "M.S. Human-Computer Interaction",
+                    "source": ["DePaul University"],
                     "width": 100
                 }
             ]
+        },
+        {
+            "detail": "<p>My career thus far has specialized in product management, web development, and software engineering. My professional experience includes work with content management systems and scalable website solutions where I get to collaborate with global colleagues and various brands under The Walt Disney Company.</p>",
+            "projectsList": {
+                "filters": [
+                    "product manager",
+                    "software engineer"
+                ],
+                "filterType": "OR"
+            }
+        },
+        {
+            "detail": "<p>Outside of work, I enjoy movies, <a href='https://www.instagram.com/explore/tags/heiidski🗺️'>travel</a>, <a href='https://www.instagram.com/explore/tags/heiidski🎡'>theme parks</a>, <a href='https://www.instagram.com/explore/tags/heiidski🥾'>hiking</a>, <a href='https://www.instagram.com/explore/tags/heiidski🧩'>puzzles</a>, and exploring and <a href='https://www.instagram.com/explore/tags/heiidski🧨'>trying new things</a> wherever I go.</p>"
+        },
+        {
+            "detail": "<p>As an advocate of STEM/STEAM, I am open to opportunities where I can encourage and promote tech literacy.</p>"
         }
     ]
 

@@ -3,19 +3,21 @@ import parse from 'html-react-parser';
 import { Link } from "react-router-dom";
 import { InstagramEmbed } from 'react-social-media-embed';
 import { FaDatabase, FaCode, FaSitemap } from "react-icons/fa6";
+import FilteredProjects from './FilteredProjects';
 
 class Content extends React.Component {
 
   componentDidMount() {
     const {
-      getProjectData,
-      projectPath = ''
+      getProjectData, displayProjects, orderChronologically,
+      projectPath = '', projects = {}
     } = this.props;
     getProjectData(projectPath);
   }
   render() {
     const {
-      projectPath = '', data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, contentType = null
+      displayProjects, orderChronologically,
+      projectPath = '', data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, type = null, projects = {}
     } = this.props;
 
     var components = {
@@ -27,8 +29,10 @@ class Content extends React.Component {
     
     return (
       <div className="content">
-        {contentType === "project" &&
-          <Link to="/projects">Back to Projects</Link>
+        {type === "project" &&
+          <div className="projects-link">
+            <Link to="/projects" className="projects-link">Back to Projects</Link>
+          </div>
         }
         <h1>{title}</h1>
         <p>{data.description}</p>
@@ -70,54 +74,83 @@ class Content extends React.Component {
             <span>{date}</span>
           </p>
         }
-        <div>{data.content && data.content.map((section, i) => {
-          return(
-            <div key={i} className={"section "+ section.classes}>
-              {section.wrap_images && section.wrap_images.map((image, i) => {
-                return(<img key={i} src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
+        {(data.content||[]).length > 0 &&
+          <div>{(data.content||[]).map((section, i) => {
+            return(
+              <div key={i} className={"section "+ section.classes}>
+                {section.wrap_images && section.wrap_images.map((image, i) => {
+                  return(<img key={i} src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
+                  }
+                )}
+                <h2>{section.title}</h2>
+                <h3>{section.sub_title}</h3>
+                <div>{parse(section.detail)}</div>
+                {section.button &&
+                  <button className={section.button.classes} src={section.button.url}>{section.button.title}</button>
                 }
-              )}
-              <h2>{section.title}</h2>
-              <h3>{section.sub_title}</h3>
-              <div>{parse(section.detail)}</div>
-              {section.button &&
-                <button className={section.button.classes} src={section.button.url}>{section.button.title}</button>
-              }
-              <div className="blah">
-              {section.images && section.images.map((image, i) => {
-                return(
-                  <span key={i} className={"meh " + image.containerClasses}>
-                    <img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
-                    {image.caption && <caption>{image.caption}</caption>}
-                  </span>
-                );
-                }
-              )}
-              </div>
-              {section.video &&
-                <iframe src={section.video} width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
-              }
-              {section.instagram_embed &&
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <InstagramEmbed url={section.instagram_embed} width={550} />
-              </div>
-              }
-              <div class="blah-icon-list">
-              {section.icons && section.icons.map((icon, i) => {
-                var Component = components[icon.component];
-                return(
-                  <div class="blah-icon">
-                    <Component key={i} size={icon.width} />
+                {(section.images||[]).length > 0 &&
+                  <div className="blah">
+                    {(section.images||[]).map((image, i) => {
+                      return(
+                        <span key={i} className={"meh " + image.containerClasses}>
+                          <img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
+                          {image.caption && <caption>{image.caption}</caption>}
+                        </span>
+                      );
+                    })}
                   </div>
-                );
                 }
-              )}
+                {section.video &&
+                  <iframe src={section.video} width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                }
+                {section.instagramEmbed &&
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <InstagramEmbed url={section.instagramEmbed} width={550} />
+                  </div>
+                }
+                {(section.icons||[]).length > 0 &&
+                  <div className="blah-icon-list">
+                    {section.icons.map((icon, i) => {
+                      var Component = components[icon.component];
+                      return(
+                        <div key={i}  className="blah-icon">
+                          <Component key={i} size={icon.width} />
+                          {icon.degree && <div className="degree">{icon.degree}</div>}
+                          {icon.source && icon.source.map((source, i) => {
+                            return (<div className="source">{source}</div>);
+                          })}
+                        </div>
+                      );  
+                    })}
+                  </div>
+                }
+                {((section.projectsList||{}).filters||[]).length > 0 &&
+                  <div>
+                    <FilteredProjects
+                      projects={projects}
+                      activeTags={section.projectsList}
+                      filterType={(section.projectsList||{}).filterType}
+                      displayProjects={displayProjects}
+                      orderChronologically={orderChronologically}
+                      numToDisplay={6}
+                    />
+                    <div class="see-more-button">
+                      <Link to="/projects">
+                        <button>See More Projects</button>
+                      </Link>
+                    </div>
+                  </div>
+                }
               </div>
-            </div>
-          );
-        })}</div>
-        {contentType === "project" &&
-          <Link to="/projects">Back to Projects</Link>
+            );
+          })}</div>
+        }
+
+
+        {type === "project" &&
+          <div className="projects-link">
+            <Link to="/projects">Back to Projects</Link>
+          </div>
         }
       </div>
     );

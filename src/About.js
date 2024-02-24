@@ -7,17 +7,20 @@ class About extends React.Component {
   render() {
 
     const {
-      getProjectData,
-      projectData = {}
+      getProjectData, displayProjects, orderChronologically,
+      projects = {}, projectData = {}
     } = this.props;
     
     return (
       <div>
         <Content
+          title="Hi! I'm Heidi"
           projectPath="about"
           data={projectData}
           getProjectData={getProjectData}
-          title="Hi! I'm Heidi"
+          projects={projects}
+          displayProjects={displayProjects}
+          orderChronologically={orderChronologically}
         />
 
 

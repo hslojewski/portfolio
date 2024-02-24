@@ -263,7 +263,13 @@ const App = () => {
         <Route exact="true" path="/" element={<Home />} />
         <Route path="/about"
                element={
-                <About getProjectData={getProjectData} projectData={projectData} />
+                <About
+                  getProjectData={getProjectData}
+                  projectData={projectData}
+                  displayProjects={displayProjects}
+                  projects={projects}
+                  orderChronologically={orderChronologically}
+                />
                }
         />
         <Route path="/projects"
@@ -305,6 +311,7 @@ const App = () => {
                       }}
                       date={projects[projectPath].date}
                       type="project"
+                      orderChronologically={orderChronologically}
                     />
                     }
               />

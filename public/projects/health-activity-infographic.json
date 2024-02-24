@@ -9,8 +9,8 @@
                 {
                     "src": "projects/media/quantified-self/infographic.jpeg",
                     "alt": "Infographic of health and activity data",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
                 }
             ]
         }

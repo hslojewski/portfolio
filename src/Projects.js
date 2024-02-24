@@ -13,7 +13,7 @@ class Projects extends React.Component {
     } = this.props;
     
     return (
-        <div className="content">
+        <div className="content projects-list">
             <h1>Projects</h1>
             <div className="filters-header">
                 <div className="title">
@@ -28,7 +28,8 @@ class Projects extends React.Component {
             <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
             <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
-            <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects}orderChronologically={orderChronologically} />
+            <h2>List</h2>
+            <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects} orderChronologically={orderChronologically} />
 
 
             <br/><br/><br/><br/><br/><br/><br/>

@@ -22,8 +22,8 @@
                 {
                     "src": "projects/media/french-laundry/diagram.jpeg",
                     "alt": "French Laundry recipe process flow diagram",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
                 }
             ]
         }

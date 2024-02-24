@@ -17,14 +17,14 @@
                 {
                     "src": "projects/media/car-purchase/alicia_user_profile.png",
                     "alt": "Body of text with details of example use scenario",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-50"
                 },
                 {
                     "src": "projects/media/car-purchase/jim_user_profile.png",
                     "alt": "Body of text with details of example use scenario",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-50"
                 }
             ]
         },
@@ -39,8 +39,8 @@
                 {
                     "src": "projects/media/car-purchase/prototype_drawing.png",
                     "alt": "Drawing of app user interface prototype",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
                 }
             ]
         },
@@ -56,8 +56,8 @@
                 {
                     "src": "projects/media/car-purchase/prototype_axure.png",
                     "alt": "User interface for low fidelity app prototype",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-50"
                 }
 
             ]

@@ -6,7 +6,7 @@ class FilteredProjects extends React.Component {
   render() {
     const {
       orderChronologically,
-      projects = {}, activeTags = [], filterType = "AND"
+      projects = {}, activeTags = [], filterType = "AND", numToDisplay =  null
     } = this.props;
 
     var activeTagProjectsList = [];
@@ -48,10 +48,15 @@ class FilteredProjects extends React.Component {
     }
     var orderedProjects = orderChronologically(projects);
     var projectsToDisplay = orderedProjects.filter(a => projectsToDisplay.includes(a));
+    
+    if (numToDisplay && projectsToDisplay.length) {
+      projectsToDisplay = projectsToDisplay.slice(0, numToDisplay);
+    }
+    console.log(numToDisplay);
+    console.log(projectsToDisplay);
 
     return (
         <div>
-          <h2>List</h2>
           {projectsToDisplay.length > 0 &&
             <div className="project-list-wrapper">
               <ul className={projectsToDisplay.length === 1 ? "one-item" : (projectsToDisplay.length === 2 ? "two-items" : null)}>
