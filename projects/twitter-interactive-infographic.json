@@ -9,8 +9,8 @@
                 {
                     "src": "projects/media/twitter/interactive-infographic.gif",
                     "alt": "Infographic of Twitter sentiment data",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
                 }
             ]
         },

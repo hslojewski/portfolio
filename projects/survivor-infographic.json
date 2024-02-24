@@ -14,8 +14,8 @@
                 {
                     "src": "projects/media/survivor/infographic.jpeg",
                     "alt": "Infographic of Survivor season locations",
-                    "classes": "align-center width-50 mobile-width-100",
-                    "containerClasses": "width-50"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
                 }
             ]
         }

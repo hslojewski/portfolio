@@ -9,7 +9,8 @@
                 {
                     "src": "projects/media/knocking/drawing.png",
                     "alt": "Drawing of example use case, applied to an apartment setting where a hallway of apartments was gated by a locked door",
-                    "classes": "align-center width-50 mobile-width-100"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
                 }
             ]
         },
@@ -24,7 +25,8 @@
                 {
                     "src": "projects/media/knocking/drawing_annotated.png",
                     "alt": "Same drawing annotated with notes including where to place doorbells sensors and what fields to measure",
-                    "classes": "align-center width-50 mobile-width-100"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
                 }
             ]
         },
@@ -40,14 +42,15 @@
                     "src": "projects/media/knocking/process_flow.png",
                     "alt": "Process flow drawing",
                     "caption": "Process Flow of the combination of proximity and light sensor requirements in order to \"unlock\" the doorbell's combination lock",
-                    "classes": "align-center width-50 mobile-width-100"
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
                 }
             ]
         },
         {
             "title": "Prototype",
             "detail": "<p>The prototype created by the end of the class was the Arduino circuit board and Processing output tools. A user could come within three feet of contact with the \"bell\" sensor on the board to initiate a red circle notification on the screen. Then, the user could shine a light -- on that same sensor -- for five seconds before the red circle turned green, then proceed to wait for six seconds before the green circle would turn into a notification image.</p>",
-            "instagram_embed": "https://www.instagram.com/p/psMxABnFHF/?utm_source=ig_embed&ig_rid=db11df7b-76b4-4767-afe0-00c0a9a7a073"
+            "instagramEmbed": "https://www.instagram.com/p/psMxABnFHF/?utm_source=ig_embed&ig_rid=db11df7b-76b4-4767-afe0-00c0a9a7a073"
         },
         {
             "title": "Future Opportunities",
