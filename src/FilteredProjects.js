@@ -34,7 +34,7 @@ class FilteredProjects extends React.Component {
             projectsToIgnore = ignoredProjectsList;
           }
         });
-      })
+      });
     } else {
       projectsToDisplay = Object.keys(projects);
     }
@@ -74,7 +74,7 @@ class FilteredProjects extends React.Component {
             </div>
           }
           {projectsToDisplay.length === 0 &&
-            <div>No projects match that combination of filters. Try something else!</div>
+            <div></div>
           }
         </div>
     )

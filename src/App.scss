@@ -43,8 +43,25 @@ $widths: 20, 25, 45, 50, 75, 100;
           color: $theme-dark-bg;
           background: $theme-light-bg;
           text-decoration: none;
-          &:hover{ text-decoration: underline; }
-          
+          &:hover:not(.button){ text-decoration: underline; }
+        }
+        button{
+          color: $theme-light-bg;
+          border: 1px solid $theme-dark-bg;
+          background: $theme-dark-bg;
+          text-decoration: none;
+          &.secondary{
+            color: $theme-dark-bg;
+            border: 1px solid $theme-dark-bg;
+            background: transparent;
+            text-decoration: none;
+          }
+          &:hover, &.secondary:hover{
+            color: $theme-font-color;
+            border: 1px solid $theme-accent-color;
+            background: $theme-accent-color;
+            text-decoration: none;
+          }
         }
         .tag{
           border-color: $theme-dark-bg;
@@ -76,7 +93,25 @@ $widths: 20, 25, 45, 50, 75, 100;
           color: $theme-accent-color;
           background: $theme-dark-bg;
           text-decoration: none;
-          // &:hover{ text-decoration: underline; }
+          &:hover:not(.button){ text-decoration: underline; }
+        }
+        button{
+          color: $theme-dark-bg;
+          border: 1px solid $theme-light-bg;
+          background: $theme-light-bg;
+          text-decoration: none;
+          &.secondary{
+            color: $theme-light-bg;
+            border: 1px solid $theme-light-bg;
+            background: transparent;
+            text-decoration: none;
+          }
+          &:hover, &.secondary:hover{
+            color: $theme-font-color;
+            border: 1px solid $theme-accent-color;
+            background: $theme-accent-color;
+            text-decoration: none;
+          }
         }
         .tag{
           border-color: $theme-light-bg;
@@ -178,7 +213,8 @@ html, body{
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  position: relative;
 }
 body{
   button{
@@ -189,7 +225,8 @@ body{
   }
   p{ align-content: start; }
   footer{
-    padding: 20px;
+    padding: 50px 20px 20px 20px;
+    margin: 50px 20px 20px 20px;
     text-align: center;
   }
   .nav{
@@ -363,7 +400,22 @@ body{
       text-align: center;
       display: flex;
     }
-    .see-more-button{ text-align: center; }
+    .buttons-list{
+      display: flex;
+      flex-direction: row;;
+      div{
+        display: flex;
+        flex-basis: 50%;
+      }
+      .see-all{
+        justify-content: right;
+        margin-right: 15px;
+      }
+      .resume{
+        justify-content: left;
+        margin-left: 15px;
+      }
+    }
   }
   // .width-25{ width: 25%; }
   // .width-50{ width: $fifty-percent; }
@@ -374,7 +426,7 @@ body{
     margin-left: auto;
     margin-right: auto;
   }
-  .blah{
+  .image-container{
     // display: flex;
     // flex-wrap: wrap;
     // flex-direction: row;
@@ -397,10 +449,11 @@ body{
       }
     }
   }
-  .blah-icon-list{
+  .section-icon-list{
   //   display: flex;
-    .blah-icon{
+    .icon-details{
       text-align: center;
+      padding-top: 20px;
   //     display: flex;
   //     flex-basis: 33%;
   //     justify-content: flex-start;
@@ -420,6 +473,14 @@ body{
   //         margin-bottom: 5px;
   //       }
   //     }
+      div{
+        &.degree{
+          font-size: 14px;
+        }
+        &.source{
+          font-size: 12px;
+        }
+      }
     }
   }
   .project-list-wrapper{
@@ -487,6 +548,7 @@ body{
   }
   @media (min-width: $breakpoint-tablet) {
     .nav{
+      position: fixed;
       ul{
         *{ display: inline; }
         // &.hide-on-mobile li:not(.home, .menu){ display: inherit; }
@@ -554,7 +616,7 @@ body{
         }
       }
     }
-    .blah{
+    .image-container{
       flex-direction: row;
       .meh{
         @each $width in $widths {
@@ -564,16 +626,17 @@ body{
         }
       }
     }
-    .blah-icon-list{
+    .section-icon-list{
       display: flex;
-      .blah-icon{
+      .icon-details{
         display: flex;
         flex-basis: 33%;
         justify-content: flex-start;
         flex-direction: column;
+        padding-top: inherit;
         svg{
           margin: 0 auto;
-          height: 200px;
+          height: 100px;
         }
         div{
           text-align: center;

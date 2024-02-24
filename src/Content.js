@@ -2,7 +2,7 @@ import React from 'react';
 import parse from 'html-react-parser';
 import { Link } from "react-router-dom";
 import { InstagramEmbed } from 'react-social-media-embed';
-import { FaDatabase, FaCode, FaSitemap } from "react-icons/fa6";
+import { FaRegKeyboard, FaCode, FaSitemap } from "react-icons/fa6";
 import FilteredProjects from './FilteredProjects';
 
 class Content extends React.Component {
@@ -20,10 +20,10 @@ class Content extends React.Component {
       projectPath = '', data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, type = null, projects = {}
     } = this.props;
 
-    var components = {
-      "FaDatabase": FaDatabase,
-      "FaCode": FaCode,
+    var eduIconComponents = {
       "FaSitemap": FaSitemap,
+      "FaCode": FaCode,
+      "FaRegKeyboard": FaRegKeyboard
     };
     
     
@@ -85,11 +85,31 @@ class Content extends React.Component {
                 <h2>{section.title}</h2>
                 <h3>{section.sub_title}</h3>
                 <div>{parse(section.detail)}</div>
-                {section.button &&
-                  <button className={section.button.classes} src={section.button.url}>{section.button.title}</button>
+                {((section.projectsList||{}).filters||[]).length > 0 &&
+                  <div class="projects-list">
+                    <FilteredProjects
+                      projects={projects}
+                      activeTags={(section.projectsList||{}).filters}
+                      filterType={(section.projectsList||{}).filterType}
+                      displayProjects={displayProjects}
+                      orderChronologically={orderChronologically}
+                      numToDisplay={6}
+                    />
+                  </div>
+                }
+                {(section.buttons||[]).length > 0 &&
+                  <div class="buttons-list">
+                    {(section.buttons||[]).map((button, i) => {
+                      return(
+                        <Link to={button.url} key={i} className={button.classes.concat(" button")}>
+                          <button className={button.classes}>{button.title}</button>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 }
                 {(section.images||[]).length > 0 &&
-                  <div className="blah">
+                  <div className="image-container">
                     {(section.images||[]).map((image, i) => {
                       return(
                         <span key={i} className={"meh " + image.containerClasses}>
@@ -109,11 +129,11 @@ class Content extends React.Component {
                   </div>
                 }
                 {(section.icons||[]).length > 0 &&
-                  <div className="blah-icon-list">
+                  <div className="section-icon-list">
                     {section.icons.map((icon, i) => {
-                      var Component = components[icon.component];
+                      var Component = eduIconComponents[icon.component];
                       return(
-                        <div key={i}  className="blah-icon">
+                        <div key={i}  className="icon-details">
                           <Component key={i} size={icon.width} />
                           {icon.degree && <div className="degree">{icon.degree}</div>}
                           {icon.source && icon.source.map((source, i) => {
@@ -122,23 +142,6 @@ class Content extends React.Component {
                         </div>
                       );  
                     })}
-                  </div>
-                }
-                {((section.projectsList||{}).filters||[]).length > 0 &&
-                  <div>
-                    <FilteredProjects
-                      projects={projects}
-                      activeTags={section.projectsList}
-                      filterType={(section.projectsList||{}).filterType}
-                      displayProjects={displayProjects}
-                      orderChronologically={orderChronologically}
-                      numToDisplay={6}
-                    />
-                    <div class="see-more-button">
-                      <Link to="/projects">
-                        <button>See More Projects</button>
-                      </Link>
-                    </div>
                   </div>
                 }
               </div>

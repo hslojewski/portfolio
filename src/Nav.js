@@ -25,12 +25,12 @@ class Nav extends React.Component {
           <li>
             <Link to="/projects">Projects</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/resume" target="_blank">
               <span className="mobile-only-nav-text">Resume</span>
               <FaFile />
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="mailto:heidi.slojewski@gmail.com">
               <span className="mobile-only-nav-text">Email</span>

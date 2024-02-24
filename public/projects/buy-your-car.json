@@ -47,11 +47,13 @@
         {
             "title": "Wireframes and Prototype",
             "detail": "<p>Finally, I built wireframes based on my thoughts and sketches in Axure in order to better show the sticky functionality of the major navigational pieces, how the three major “pages” of the app were separate from each other yet still accessible, some basic UI ideas, as well as the general feel of the app as it would look in the palm of your hand.</p><p>Each wireframe was able to link and interact with each other to show the full experience of the Filter-Sort-Favorites functionality to the app.</p>",
-            "button": {
-                "title": "View the Prototype",
-                "classes": "align-center",
-                "url": "http://a391n8.axshare.com/iphone_frame_for_desktop_view.html"
-            },
+            "buttons": [
+                {
+                    "title": "View the Prototype",
+                    "classes": "align-center",
+                    "url": "http://a391n8.axshare.com/iphone_frame_for_desktop_view.html"
+                }
+            ],
             "images": [
                 {
                     "src": "projects/media/car-purchase/prototype_axure.png",
