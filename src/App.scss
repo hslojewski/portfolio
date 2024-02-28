@@ -31,7 +31,7 @@ $color-brown-pod: #632612;
 $color-sea-green: #233E30;
 $color-chilean-fire: #F4BEAE;
 
-$widths: 20, 25, 45, 50, 75, 100;
+$widths: 20, 25, 30, 45, 50, 75, 100;
 
 @mixin season-theming($season, $theme-light-bg, $theme-dark-bg, $theme-accent-color, $theme-font-color) {
   body{
@@ -254,12 +254,16 @@ body{
         top: 80px;
         height: 100%;
         z-index: 1;
+        a{ background-color: rgba(0, 0, 0, 0.1); }
         &.home{
           // position: absolute;
           // left: 0;
           // padding: 10px;
           display: contents;
-          a{ text-align: left;}
+          a{
+            text-align: left;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
         }
         .mobile-only-nav-text{ margin-right: 10px; }
       }
@@ -269,10 +273,11 @@ body{
         // display: inline;
         padding: 20px;
         // height: 100%;
-        width: 100%;
+        // width: 100%;
         display: block;
         // background: red;
         text-align: center;
+        &.mode{ width: 100%; }
 
       }
       // display: none;
@@ -296,6 +301,13 @@ body{
         padding: 20px;
       }
     }
+  }
+  .content-banner img{
+    width: 105%;
+    object-fit: cover;
+    height: 250px;
+    opacity: 0.75;
+    filter: blur(10px);
   }
   .mode{ width: 30px; }
   .filters-header{
@@ -366,6 +378,7 @@ body{
       li{
         margin: 10px 10px 0 10px;
         button{
+          margin: 0;
           cursor: pointer;
           // background: $color-hot-purple;
           // color: $color-bubble-bath;
@@ -384,15 +397,25 @@ body{
       }
     }
   }
-  .content{
+  .page-content{
     padding: 20px;
     position: relative;
     top: 60px;
-    max-width: 720px;
+    max-width: 1000px;
     margin: 0 auto;
     &.projects-list{
       max-width: 1400px;
       
+    }
+    .description, .meta{ font-size: 14px; }
+    .meta-item:not(.date):after{
+      content: "\2022";
+      padding: 0 5px;
+    }
+    .content-divider{
+      border: 1px solid;
+      opacity: 0.25;
+      margin: 20px 0;
     }
     caption{
       width: 90%;
@@ -417,8 +440,11 @@ body{
       }
     }
   }
+  .projects-link.bottom{
+    margin-top: 20px;
+  }
   // .width-25{ width: 25%; }
-  // .width-50{ width: $fifty-percent; }
+  // .width-45{ width: $fifty-percent; }
   // .align-left{ float: left; }
   .align-right{ float: right; }
   .align-center{
@@ -436,18 +462,28 @@ body{
     // &.multi-row-images{ flex-wrap: wrap;}
     justify-content: space-evenly;
     // gap: 15px;
-    .meh img{ max-width: 100%; }
-    .meh{
+    .image img{ max-width: 100%; }
+    .image{
+      padding-bottom: 15px;
       flex-basis: 100%;
-      // &.width-50{ flex-basis: 49%; }
+      // &.width-45{ flex-basis: 49%; }
       // &.width-75{ flex-basis: 75%; }
       // &.width-100{ flex-basis: 100%; }
+      &.no-padding{
+        padding: 0;
+      }
       @each $width in $widths {
         &.mobile-width-#{$width} {
           flex-basis: #{$width} + "%";
         }
       }
     }
+    .browser-navigation-bar{ display: none; }
+    .device, .browser{
+      //   margin: 0 10% 20px 10%;
+        padding-bottom: 20px;
+        // height: 600px;
+      }
   }
   .section-icon-list{
   //   display: flex;
@@ -618,13 +654,127 @@ body{
     }
     .image-container{
       flex-direction: row;
-      .meh{
+      .image{
         @each $width in $widths {
           &.width-#{$width} {
             flex-basis: #{$width} + "%";
           }
         }
       }
+
+      // browser
+      .browser {
+        font-size: 18px;
+        padding: 2.1em 0 0 0;
+        border-radius: 0.25em;
+        background: #ddd;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0.25em 0.9em -0.1em rgba(0,0,0,.3);
+      }
+      .browser .browser-navigation-bar {
+        display: block;
+        box-sizing: border-box;
+        height: 2.1em;
+        position: absolute;
+        top: 0;
+        padding: 0.3em;
+        width: 100%;
+        background: linear-gradient(to bottom, #edeaed 0%, #dddfdd 100%);
+        border-bottom: 2px solid #cbcbcb;
+      }
+      .browser i {
+        display: inline-block;
+        height: 0.7em;
+        width: 0.7em;
+        border-radius: 0.45em;
+        background-color: #eee;
+        margin: 0.4em 0.15em;
+      }
+      .browser i:nth-child(1) {background-color: rgb(255, 86, 79)}
+      .browser i:nth-child(1):hover {background-color: rgb(255, 20, 25)}
+      .browser i:nth-child(2) {background-color: rgb(255, 183, 42)}
+      .browser i:nth-child(2):hover {background-color: rgb(230, 175, 42)}
+      .browser i:nth-child(3) {background-color: rgb(37, 198, 58)}
+      .browser i:nth-child(3):hover {background-color: rgb(10, 225, 10)}
+      .browser input {
+        font-size: 0.75em;
+        vertical-align: top;
+        display: inline-block;
+        height: 1.6em;
+        color: #aaa;
+        width: calc(100% - 6em);
+        border: 0.1em solid #E1E1E1;
+        border-radius: 0.25em;
+        background-color: #eee;
+        margin: 0.1em;
+        padding: 0 0.4em;
+      }
+      .browser-container {
+        // height: 100%;
+        height: 700px;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto; 
+        text-align: center;
+      }
+      //tablet
+      .device {
+        position: relative;
+        // width: 768px;
+        // width: 90%;
+        // height: 1024px;
+        height: 500px;
+        // margin: auto;
+        border: 16px black solid;
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+        border-radius: 36px;
+        margin-bottom: 20px; 
+      }
+      .device:before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 5px;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 10px;
+      }
+      .device:after {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 50%;
+        bottom: -65px;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 50%;
+      }
+      .device .content {
+        // width: 768px;
+        // width: 100%;
+        // height: 1024px;
+        height: 103%;
+        background: white;
+        margin: -1px;
+        overflow: scroll;
+        img{ width: 100%; }
+      }
+      .device, .browser{
+      //   margin: 0 10% 20px 10%;
+        height: 600px;
+      }
+      // .device{
+      //   height: 600px;
+      //   // width: 60%;
+      // }
     }
     .section-icon-list{
       display: flex;

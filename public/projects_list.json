@@ -317,6 +317,64 @@
     "thumbnail_alt": "Car purchasing app prototype",
     "date": 2015
   },
+  "nyc-schools-mobile": {
+    "title": "NYC Schools Mobile Wireframes",
+    "tools": [
+      "Axure"
+    ],
+    "skills": [
+      "Wireframing",
+      "Site Evaluating",
+      "Mobile Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/nyc-schools.jpeg",
+    "thumbnail_alt": "NYC Schools Mobile Wireframes",
+    "date": 2015
+  },
+  "sears-mobile": {
+    "title": "Sears.com Mobile Wireframes",
+    "tools": [
+      "Axure"
+    ],
+    "skills": [
+      "Wireframing",
+      "Site Evaluating",
+      "Mobile Designing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/sears-mobile.jpeg",
+    "thumbnail_alt": "Sears.com mobile wireframe annotated",
+    "date": 2015
+  },
+  "la-zoo-mobile": {
+    "title": "Los Angeles Zoo Mobile App",
+    "tools": [
+    ],
+    "skills": [
+      "User Scenarios",
+      "Storyboarding"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/la-zoo-mobile.png",
+    "thumbnail_alt": "Koala silhouette overlaid with a lock icon",
+    "date": 2014
+  },
   "test-project1": {
     "title": "test project 1",
     "tools": [

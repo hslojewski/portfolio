@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import moment from 'moment';
 
 import './App.scss';
-
 import Nav from './Nav';
 import Footer from './Footer';
 import Home from './Home';
@@ -250,7 +249,7 @@ const App = () => {
     initializeSeason();
     initializeColorMode();
   }, [])
-
+  
   return (
     <div className={colorMode + "-mode " + season}>
       <Nav
@@ -300,6 +299,7 @@ const App = () => {
                    element={
                     <Content
                       projectPath={projectPath}
+                      thumbnail={projects[projectPath].thumbnail}
                       data={projectData}
                       getProjectData={getProjectData}
                       title={projects[projectPath].title}

@@ -1,7 +1,6 @@
 {
     "path": "twitter-interactive-infographic",
     "description": "Information Visualization and Infographics exercise",
-    "date": 2016,
     "content": [
         {
             "detail": "<p>For the same infographics class, my partner and I created an information visualization that served additional information to the <a href='/twitter-print-infographic'>print infographic</a> about the <a target='_blank' href='https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment'>Tweets sent to or about U.S. Airlines</a>.</p><p>This class was really useful in getting me familiar with ggplot, D3, and Tableau. The visualization was created through Tableau, which you can view below in addition to our essay.</p>",

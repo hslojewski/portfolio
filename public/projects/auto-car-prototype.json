@@ -1,7 +1,6 @@
 {
     "path": "auto-car-prototype",
     "description": "Car assistance device and app.",
-    "date": 2015,
     "content": [
         {
             "title": "Concept and Problem",
@@ -11,13 +10,13 @@
                     "src": "projects/media/auto/pres1.png",
                     "alt": "Bullet points from the final presentation",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-45"
+                    "containerClasses": "mobile-width-100 width-45"
                 },
                 {
                     "src": "projects/media/auto/pres2.png",
                     "alt": "More bullet points from the final presentation",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-45"
+                    "containerClasses": "mobile-width-100 width-45"
                 }
             ]
         },
@@ -29,7 +28,7 @@
                     "src": "projects/media/auto/prototype.png",
                     "alt": "Auto app prototype view",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100 width-50"
+                    "containerClasses": "mobile-width-100 width-45"
                 }
             ]
         },
