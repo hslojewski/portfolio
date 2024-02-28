@@ -8,25 +8,25 @@
                     "src": "projects/media/about/heidi1.jpg",
                     "alt": "Photo of a girl in front of a Macintosh computer",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-50 width-20"
+                    "containerClasses": "mobile-width-50 width-20 no-padding"
                 },
                 {
                     "src": "projects/media/about/heidi2.jpg",
                     "alt": "Photo of a girl using an iMac",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-50 width-20"
+                    "containerClasses": "mobile-width-50 width-20 no-padding"
                 },
                 {
                     "src": "projects/media/about/heidi3.jpg",
                     "alt": "Photo of a girl with a Mac laptop",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-50 width-20"
+                    "containerClasses": "mobile-width-50 width-20 no-padding"
                 },
                 {
                     "src": "projects/media/about/heidi4.jpg",
                     "alt": "Photo of a girl with a Mac laptop",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-50 width-20"
+                    "containerClasses": "mobile-width-50 width-20 no-padding"
                 }
             ]
         },

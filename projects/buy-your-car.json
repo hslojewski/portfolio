@@ -18,13 +18,13 @@
                     "src": "projects/media/car-purchase/alicia_user_profile.png",
                     "alt": "Body of text with details of example use scenario",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100 width-50"
+                    "containerClasses": "mobile-width-100 width-45"
                 },
                 {
                     "src": "projects/media/car-purchase/jim_user_profile.png",
                     "alt": "Body of text with details of example use scenario",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100 width-50"
+                    "containerClasses": "mobile-width-100 width-45"
                 }
             ]
         },
@@ -59,7 +59,7 @@
                     "src": "projects/media/car-purchase/prototype_axure.png",
                     "alt": "User interface for low fidelity app prototype",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100 width-50"
+                    "containerClasses": "mobile-width-100 width-45"
                 }
 
             ]

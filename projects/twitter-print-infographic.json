@@ -1,7 +1,6 @@
 {
     "path": "twitter-print-infographic",
     "description": "Information Visualization and Infographics exercise",
-    "date": 2016,
     "content": [
         {
             "detail": "<p>My partner and I got to create a print infographic for our Information Visualization class. We found a dataset online that includes records of <a target='_blank' href='https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment'>thousands of Tweets sent toward or about U.S. Airlines</a> in the span of one week in 2015.</p><p>This project was pretty fun! Here was our infographic and analysis essay.</p>",

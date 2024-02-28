@@ -2,7 +2,6 @@
     "path": "how-bout-that-weather",
     "title": "How 'Bout that Weather?",
     "description": "Messaging app extension that allows users to notice the weather while making plans",
-    "date": 2015,
     "content": [
         {
             "title": "Concept and Problem",
@@ -12,7 +11,7 @@
                     "src": "projects/media/weather/sketch_example.png",
                     "alt": "Sketch of idea as a messaging scenario",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100 width-50"
+                    "containerClasses": "mobile-width-100 width-45"
                 }
             ]
         },
@@ -44,7 +43,7 @@
                     "src": "projects/media/weather/ui_options.gif",
                     "alt": "Paper prototype example illustrating the different options for how to display a weather indicator, including text-based messaging versus icon-based indicators.",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100 width-50"
+                    "containerClasses": "mobile-width-100 width-45"
                 }
             ]
         },
@@ -64,7 +63,7 @@
                     "src": "projects/media/weather/prototype_animation.gif",
                     "alt": "Animation showing a user's interaction with the prototype, including the tapping of the two weather indicators as well as clicking the weather detail in order to go to the weather app.",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100 width-50"
+                    "containerClasses": "mobile-width-100 width-45"
                 }
                 
             ]

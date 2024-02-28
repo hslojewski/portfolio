@@ -1,7 +1,6 @@
 {
     "path": "know-whos-knocking",
     "description": "Arduino project to redesign the doorbell idea.",
-    "date": 2014,
     "content": [
         {
             "detail": "<p>For the Interaction Design class, Digital User Experience Disney Creative Academy. During this 4-class course, I designed a small prototype using a combination of an Arduino circuit and a Processing screen output.</p>",

@@ -1,7 +1,6 @@
 {
     "path": "disney-com-accessibility",
     "description": "Web accessbility evaluation for disney.com",
-    "date": 2015,
     "content": [
         {
             "detail": "<p>For an Accssibility and Design for Diverse Users course. I reviewed the web accessibility of the Disney Movies homepage and one of its child pages in order to determine the common highlights and deficiencies that the site has in providing an accessible experience to all of its users.</p>",

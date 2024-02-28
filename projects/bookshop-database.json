@@ -1,7 +1,6 @@
 {
     "path": "bookshop-database",
     "description": "Database management system and ecommerce site",
-    "date": 2013,
     "content": [
         {
             "title": "Process",
