@@ -13,15 +13,12 @@ class Content extends React.Component {
       projectPath = "", projects = {}
     } = this.props;
     getProjectData(projectPath);
-    
+    document.querySelector('body').scrollTo({
+      top: 0,
+      left: 0
+    });
   }
   render() {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-    
     const {
       displayProjects, orderChronologically,
       projectPath = "", thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, type = null, projects = {}
