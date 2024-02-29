@@ -158,7 +158,7 @@ class Content extends React.Component {
                     </div>
                   }
                   {section.video &&
-                    <iframe src={section.video} width="100%" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                    <iframe src={section.video} width="100%" height="400" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
                   }
                   {section.instagramEmbed &&
                     <div style={{ display: 'flex', justifyContent: 'center' }}>

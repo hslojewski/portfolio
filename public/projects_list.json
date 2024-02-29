@@ -375,6 +375,55 @@
     "thumbnail_alt": "Koala silhouette overlaid with a lock icon",
     "date": 2014
   },
+  "diva-den": {
+    "title": "Diva  Den",
+    "tools": [
+      "Proto.io",
+      "iMovie"
+    ],
+    "skills": [
+      "Storyboarding",
+      "Wireframing",
+      "Prototyping",
+      "Video Editing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/diva-den.png",
+    "thumbnail_alt": "Diva Den concept from wireframe to prototype",
+    "date": 2015
+  },
+  "inkformation": {
+    "title": "Inkformation",
+    "tools": [
+      "Axure",
+      "Draw.io",
+      "Concept Codify"
+    ],
+    "skills": [
+      "Site Proposal",
+      "Mood Board",
+      "Personas",
+      "Task Scenarios",
+      "Card Sorting",
+      "Site Mapping",
+      "Wireframing",
+      "Usabilitly Testing"
+    ],
+    "affiliations": [
+      "DePaul University"
+    ],
+    "roles": [
+      "Student"
+    ],
+    "thumbnail": "projects/thumbnails/inkformation.png",
+    "thumbnail_alt": "Inkformation homepage wireframe",
+    "date": 2015
+  },
   "test-project1": {
     "title": "test project 1",
     "tools": [

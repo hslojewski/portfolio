@@ -423,7 +423,7 @@ body{
     }
     caption{
       width: 90%;
-      margin: 0 auto;
+      // margin: 0 auto;
       text-align: center;
       display: flex;
     }
@@ -468,8 +468,9 @@ body{
     // gap: 15px;
     .image img{ max-width: 100%; }
     .image{
-      padding-bottom: 15px;
+      // padding-bottom: 15px;
       flex-basis: 100%;
+      margin-bottom: 15px;
       // &.width-45{ flex-basis: 49%; }
       // &.width-75{ flex-basis: 75%; }
       // &.width-100{ flex-basis: 100%; }
@@ -678,6 +679,7 @@ body{
         display: inline-block;
         position: relative;
         overflow: hidden;
+        // overflow: scroll;
         box-shadow: 0 0.25em 0.9em -0.1em rgba(0,0,0,.3);
       }
       .browser .browser-navigation-bar {
@@ -720,10 +722,13 @@ body{
       }
       .browser-container {
         // height: 100%;
-        height: 700px;
+        // height: 400px;
+        // height: 500px;
         width: 100%;
+        height: 100%;
         overflow-x: hidden;
         overflow-y: auto; 
+        overflow: scroll;
         text-align: center;
       }
       //tablet
