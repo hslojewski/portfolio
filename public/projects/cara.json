@@ -1,0 +1,134 @@
+{
+    "path": "cara",
+    "description": "Integrated experience and mobile game app for the Art Institute of Chicago",
+    "content": [
+        {
+            "detail": "<p>For an Intro to User-Centered Design course, this assignment called us to create an integrated mobile app experience for a repeatable activity, such as an amusement park, restaurant, or museum. While I came up with a mobile app integrated experience for the Los Angeles Zoo in a previous assignment, this assignment allowed three other students and myself the opportunity to explore the information architecture and interaction design of an app for the Art Institute of Chicago based on the input of potential users in their personal experiences and testing of the app's prototype.</p>",
+            "images": [
+                {
+                    "src": "projects/media/cara/cara_example.png",
+                    "alt": "Wireframe depicting site homepage",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        },
+        {
+            "title": "System Concept Statement",
+            "detail": "<p>What was particularly fun about this assignment was its theme and \"backstory\" -- the driving factor behind this app was that the user was assumed to be an \"Agent\" whose mission was to recover some of the world's cherished art pieces as a way of preserving human culture in the wake of a zombie apocalypse.</p><p>Thus, \"Cultural Asset Repossession Agent\" (or CARA) was the name of our app concept. Based on the educational spin we wanted to ensure in the product, our target users were:</p><ul><li>Elementary to High School Students between 12 and 16 years old -- Users who need a more enticing way to learn about art</li><li>Art History Majors between 19 and 22 years old -- Users who would like to experience the museum from a different perspective</li></ul><p>Because of this mission, the app would intend to keep users engaged by allowing them to collect pictures they take of art pieces and compete with other users in collecting these pieces and proving the knowledge gained from collecting these pictures by answering questions. Competition would intend to encourage more exploration of the Art Institute and allow users a more memorable experience in better understanding the art.</p>"
+        },
+        {
+            "title": "Contextual Inquiry",
+            "detail": "<p>To get a better idea of the interests and thoughts of our target users, we did a contextual inquiry of eight people who met our target user group qualifications, four from each group. We asked them about how often they go to museums, why they tend to go, how they feel about the experience, and what could make the experience better. In some cases, we were able to witness these users in a museum experience themselves. In others, we asked the users to demonstrate how they act in museums or how they would act. From this, we gathered our inquiry findings into a Stormboard and organized these findings into several common categories that the users talked about:</p><ul><li>Preparing for a trip</li><li>Locations and the museum environment</li><li>Motivators: what factors keeps them interested</li><li>Detractors: what factors make them lose interest</li><li>Reflections: what they think about the museum after leaving</li><li>Ideas they had for an app to use in a museum</li></ul><p>From here, we realized that users could benefit from having the option to use the app more competitively as a game or more leisurely as a collection tracker. Thus, we were open to the idea of either a Play or Leisure mode experience.</p>",
+            "images": [
+                {
+                    "src": "projects/media/cara/affinity_diagram.png",
+                    "alt": "Details about first example persona",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/cara/detractors_observations.png",
+                    "alt": "Details about second example persona",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        },
+        {
+            "title": "Requirements and Models",
+            "detail": "<p>From our contextual inquiries with potential users of this app, we came up with several requirements that the app needed:</p><ul><li>Profile builder</li><li>Friends to connect to</li><li>Map for navigation and geotagging</li><li>Accessible art information</li><li>Scoring and leaderboard functionality</li><li>Quiz functionality</li></ul>"
+        },
+        {
+            "subTitle": "Personas",
+            "detail": "<p>We also came up with two personas:</p><ul><li>Billie Jean: A 16 year old creative high school student interested in art who doesn't visit museums often and isn't sure what she wants to do professionally. She doesn't use her phone very much for social media or games unless her friends are involved.</li><li>Jordan: A 19 year old college sophomore majoring in Art History who visits museums regularly and would like to travel in order to see more art. He wants to be a teacher someday and so is bent on absorbing as much information about art pieces as possible.</li></ul>"
+        },
+        {
+            "subTitle": "Flows and Concepts",
+            "detail": "<p>The team then created a Flow Diagram to track how a user would navigate through the product, as well as a Concept Map to track how the different Content Types within the app interact with each other and the user's actions.</p>",
+            "images": [
+                {
+                    "src": "projects/media/cara/flow_diagram.jpeg",
+                    "alt": "Details about first example persona",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/cara/concept_map.jpg",
+                    "alt": "Details about second example persona",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        },
+        {
+            "title": "Conceptual Design",
+            "subTitle": "Task Scenarios",
+            "detail": "<p>Diving deeper into our personas and navigational elements, we came up with Conceptual Task Scenarios for our two personas to cover the Preparation, Performance, and Post-activity experiences that the users would have with the app. Calling back to the concepts of the app having two different modes, each persona was assigned to either the Play or Leisure modes. The Play mode user was known as the \"Repo Agent\" due to their quick and adventurous nature to playing the app, and the Leisure mode user was known as the \"Cultural Agent\" due to their  more inquisitive nature in learning more about the art.</p><p>We highlighted the \"During\" or Performance phase of the app experience as the one to focus our site mapping, wire framing, prototyping, and usability testing on due to their richness in possibilities for how to navigate through a map, take and save pictures, and “play” the game through answering trivia questions that promote competition and education.</p>"
+        },
+        {
+            "subTitle": "Interface Metaphors and Interaction Types",
+            "detail": "<p>To continue the theme of cultural repossession during a zombie apocalypse, we wanted our app navigation and metaphors to reflect the subject without trying to be too graphically obvious. Therefore, we perceived the app's walkthrough as if the user was accessing their collected art pieces in a warehouse, with bulletin boards as useful references and access points.</p><p>This fit naturally with the play and leisure modes because it could reflect how the bulletin board-like menu environments could be organized for those focused on the information accuracy or more messy for those quickly trying to collect as many pieces as possible.</p>"
+        },
+        {
+            "subTitle": "Card Sort",
+            "detail": "<p>Using Concept Codify, an open card sort was practiced by five test subjects who organized our content types into several categories. Overall, the results justified our original plan and we were satisfied with the results.</p>",
+            "images": [
+                {
+                    "src": "projects/media/cara/cluster_analysis.png",
+                    "alt": "Card sorting diagram of different tattoo-related vocabulary words to use on the website",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        },
+        {
+            "subTitle": "Site Map",
+            "detail": "<p>The site map we then created was useful in dividing up the screen wireframes that would be required for either the Play or Leisure mode, based on their complexity.</p>",
+            "images": [
+                {
+                    "src": "projects/media/cara/sitemap.jpeg",
+                    "alt": "Card sorting diagram of different tattoo-related vocabulary words to use on the website",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        },
+        {
+            "subTitle": "Wireframes",
+            "detail": "<p>We then created wireframes to more substantially lay out the look and feel of the basic navigation of the app in either the Play or Leisure modes.</p>",
+            "images": [
+                {
+                    "src": "projects/media/cara/wireframes.png",
+                    "alt": "Card sorting diagram of different tattoo-related vocabulary words to use on the website",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        },
+        {
+            "title": "Prototyping and Usability Evaluation",
+            "subTitle": "Prototype",
+            "detail": "<p>After laying out the basic skeleton of the app through the wireframes, we linked these wireframes' buttons and links to each other as well as applied color and imagery to highlight important menu items and buttons.</p>",
+            "buttons": [
+                {
+                    "title": "Download and Explore the Prototype",
+                    "classes": "align-center",
+                    "url": "projects/media/cara/prototype.pdf"
+                }
+            ],
+            "images": [
+                {
+                    "src": "projects/media/cara/prototype.png",
+                    "alt": "Card sorting diagram of different tattoo-related vocabulary words to use on the website",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        },
+        {
+            "subTitle": "User Testing",
+            "detail": "<p>This allowed us to test the app prototype on eight potential users. We assigned them three major tasks:</p><ol><li>Search for art pieces in the museum by a particular artist</li><li>Find the list of art pieces that you've already collected</li><li>Take a picture of an art piece you find interesting in order to learn more about it</li></ol><p>Generally, we found that users were confused by the inclusion of both a \"Locate\" and \"Warehouse\" button that needed some clarity in either vocabulary or through the use of clearer icons to better indicate that these buttons were used for accessing the Museum Map or the Art Collection. However, they were intrigued by the look and feel of the Home/Main Menu choices as well as exploration of the Warehouse in viewing collections and reading more about the art pieces collected. The quiz element of the game, although tested very minutely in this user test, was also fascinating to a user who thought that maybe they could get wallpapers as a prize additional to higher scores on the leaderboard. This idea gave more insight into what the app could do for a user even after visiting a museum -- how the app could continue to learn about the art even outside of the Institute.</p>"
+        }
+    ]
+}

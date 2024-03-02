@@ -424,94 +424,68 @@
     "thumbnail_alt": "Inkformation homepage wireframe",
     "date": 2015
   },
-  "test-project1": {
-    "title": "test project 1",
+  "cara": {
+    "title": "Cultural Asset Reposession Agent (CARA)",
     "tools": [
+      "Balsamiq", 
+      "Draw.io", 
+      "Stormboard", 
+      "Concept Codify"
     ],
     "skills": [
+      "Contextual Inquiry", 
+      "Personas and Task Scenarios",
+      "Card Sorting", 
+      "Site Mapping", 
+      "Wireframe Prototyping", 
+      "Usability Testing"
     ],
     "affiliations": [
+      "DePaul University"
     ],
     "roles": [
-      "Product Manager"
+      "Student"
     ],
-    "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
-    "thumbnail_alt": "test",
-    "date": 2015
+    "thumbnail": "projects/thumbnails/cara.jpg",
+    "thumbnail_alt": "App thumbnail for museum integrated experience",
+    "date": 2014
   },
-  "test-project2": {
-    "title": "test project 2",
+  "northwood-pie-website": {
+    "title": "Northwood Pie Website",
     "tools": [
+      "Squarespace"
     ],
     "skills": [
+      "HTML/CSS",
+      "JavaScript"
     ],
     "affiliations": [
+      "Site B Productions"
     ],
     "roles": [
-      "Software Engineer"
+      "Web Designer"
     ],
-    "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
-    "thumbnail_alt": "test",
-    "date": 2015
+    "thumbnail": "projects/thumbnails/northwood_pie.jpg",
+    "thumbnail_alt": "Movie poster for Northwood Pie, including pizza imagery and faces of cast members",
+    "date": 2020
   },
-  "test-project3": {
-    "title": "test project 3",
+  "the-drawing-website": {
+    "title": "The Drawing Website",
     "tools": [
+      "Squarespace"
     ],
     "skills": [
+      "HTML/CSS",
+      "JavaScript"
     ],
     "affiliations": [
+      "Site B Productions"
     ],
     "roles": [
-      "Product Manager"
+      "Web Designer"
     ],
-    "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
-    "thumbnail_alt": "test",
-    "date": 2015
-  },
-  "test-project4": {
-    "title": "test project 4",
-    "tools": [
-    ],
-    "skills": [
-    ],
-    "affiliations": [
-    ],
-    "roles": [
-      "Software Engineer"
-    ],
-    "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
-    "thumbnail_alt": "test",
-    "date": 2015
-  },
-  "test-project5": {
-    "title": "test project 5",
-    "tools": [
-    ],
-    "skills": [
-    ],
-    "affiliations": [
-    ],
-    "roles": [
-      "Product Manager"
-    ],
-    "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
-    "thumbnail_alt": "test",
-    "date": 2015
-  },
-  "test-project6": {
-    "title": "test project 6",
-    "tools": [
-    ],
-    "skills": [
-    ],
-    "affiliations": [
-    ],
-    "roles": [
-      "Software Engineer"
-    ],
-    "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
-    "thumbnail_alt": "test",
-    "date": 2015
+    "thumbnail": "projects/thumbnails/the_drawing.jpg",
+    "thumbnail_alt": "Movie poster for The Drawing, a girl in front of a window that has a hand with long fingers behind the glass",
+    "date": 2023
   }
 }
