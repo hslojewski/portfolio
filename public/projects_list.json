@@ -450,8 +450,42 @@
     "thumbnail_alt": "App thumbnail for museum integrated experience",
     "date": 2014
   },
-  "northwood-pie-website": {
-    "title": "Northwood Pie Website",
+  "dream-capture": {
+    "title": "Dream Capture Full Stack Web Application",
+    "tools": [
+      "GitHub"
+    ],
+    "skills": [
+      "HTML/CSS",
+      "JavaScript",
+      "jQuery",
+      "Python",
+      "D3",
+      "Bootstrap",
+      "Twilio API",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Flask",
+      "Jinja",
+      "BeautifulSoup",
+      "PyDictionary",
+      "Git"
+    ],
+    "affiliations": [
+      "Disney",
+      "Disney's CODE: Rosie",
+      "Hackbright Academy"
+    ],
+    "roles": [
+      "Student",
+      "Software Engineer Trainee"
+    ],
+    "thumbnail": "projects/thumbnails/dream_capture.png",
+    "thumbnail_alt": "DreamCapture app logo, featuring two moons laid opposite of each other",
+    "date": 2016
+  },
+  "northwood-pie": {
+    "title": "Northwood Pie Movie Website",
     "tools": [
       "Squarespace"
     ],
@@ -469,8 +503,8 @@
     "thumbnail_alt": "Movie poster for Northwood Pie, including pizza imagery and faces of cast members",
     "date": 2020
   },
-  "the-drawing-website": {
-    "title": "The Drawing Website",
+  "the-drawing": {
+    "title": "The Drawing Short Film",
     "tools": [
       "Squarespace"
     ],
@@ -482,10 +516,343 @@
       "Site B Productions"
     ],
     "roles": [
-      "Web Designer"
+      "Web Designer",
+      "Production Assistant"
     ],
     "thumbnail": "projects/thumbnails/the_drawing.jpg",
     "thumbnail_alt": "Movie poster for The Drawing, a girl in front of a window that has a hand with long fingers behind the glass",
     "date": 2023
+  },
+  "portfolio-site": {
+    "title": "My Portfolio Site",
+    "tools": [
+      "GitHub",
+      "GitHub Pages",
+      "Create React App",
+      "React Social Media Embed",
+      "Font Awesome Icons"
+    ],
+    "skills": [
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Sass",
+      "Accessibility"
+    ],
+    "affiliations": [
+      "Self"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "thumbnail": "projects/thumbnails/portfolio.jpg",
+    "thumbnail_alt": "",
+    "date": 2024
+  },
+  "disney-japan-migrations": {
+    "title": "Disney Japan Website Migrations",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations",
+      "Accessibility",
+      "Localization"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/disney_japan.jpg",
+    "thumbnail_alt": "",
+    "date": 2023
+  },
+  "el-capitan-theatre": {
+    "title": "El Capitan Theatre Website Migration",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/el_capitan.jpg",
+    "thumbnail_alt": "",
+    "date": 2024
+  },
+  "disney-press-sites": {
+    "title": "Disney+ Press and Disney Advertising Press Site Launches",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations",
+      "Accessibility"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/disney_press.jpg",
+    "thumbnail_alt": "",
+    "date": 2023
+  },
+  "disney-latam-press-sites": {
+    "title": "Disney Press Latin America and Disney Press Brazil Site Launches",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations",
+      "Accessibility",
+      "Localization"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/disney_latam_press.jpg",
+    "thumbnail_alt": "",
+    "date": 2024
+  },
+  "disney-dtci-site": {
+    "title": "Disney Entertainment | Creative Talent Development & Inclusion Site Migration",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations",
+      "Accessibility"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/dtci.jpg",
+    "thumbnail_alt": "",
+    "date": 2023
+  },
+  "disney-games-site": {
+    "title": "Disney Games Site Relaunch",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations",
+      "Accessibility"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/disney_games.jpg",
+    "thumbnail_alt": "",
+    "date": 2023
+  },
+  "disney-plus-site-rebrand": {
+    "title": "On Disney+ Site Rebrand",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/disney_games.jpg",
+    "thumbnail_alt": "",
+    "date": 2023
+  },
+  "avatar-pandorapedia": {
+    "title": "Avatar Pandorapedia Site Migration",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/disney_games.jpg",
+    "thumbnail_alt": "",
+    "date": 2022
+  },
+  "starwars-site-migration": {
+    "title": "Star Wars Site Migration",
+    "tools": [
+      "Content Management System (CMS)",
+      "WordPress"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/disney_games.jpg",
+    "thumbnail_alt": "",
+    "date": 2022
+  },
+  "starwars-bring-home-the-bounty": {
+    "title": "Star Wars Bring Home the Bounty",
+    "tools": [
+      "GitHub",
+      "Figma"
+    ],
+    "skills": [
+      "JavaScript",
+      "Ruby",
+      "Backbone",
+      "HTML/CSS",
+      "Sass",
+      "Accessibility",
+      "Mustache"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
+    "thumbnail_alt": "",
+    "date": 2021
+  },
+  "avatar-site": {
+    "title": "Avatar.com Site Launch",
+    "tools": [
+      "GitHub",
+      "Figma"
+    ],
+    "skills": [
+      "JavaScript",
+      "Ruby",
+      "Backbone",
+      "HTML/CSS",
+      "Sass",
+      "Accessibility",
+      "Mustache"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
+    "thumbnail_alt": "",
+    "date": 2021
+  },
+  "privacy-and-video-player-migration": {
+    "title": "Privacy and Video Player Migration",
+    "tools": [
+      "GitHub",
+      "Figma"
+    ],
+    "skills": [
+      "JavaScript",
+      "Ruby",
+      "Backbone",
+      "HTML/CSS",
+      "Sass",
+      "Accessibility",
+      "Mustache"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
+    "thumbnail_alt": "",
+    "date": 2022
+  },
+  "disney-fan-and-branded-sites": {
+    "title": "The Walt Disney Company Fan and Branded Websites",
+    "tools": [
+      "GitHub",
+      "Figma"
+    ],
+    "skills": [
+      "JavaScript",
+      "Ruby",
+      "Backbone",
+      "HTML/CSS",
+      "Sass",
+      "Accessibility",
+      "Mustache"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
+    "thumbnail_alt": "",
+    "date": 2022
+  },
+  "disney-wordpress-sites": {
+    "title": "The Walt Disney Company WordPress Websites",
+    "tools": [
+      "GitHub",
+      "Figma",
+      "WordPress"
+    ],
+    "skills": [
+      "JavaScript",
+      "Ruby",
+      "Backbone",
+      "HTML/CSS",
+      "Sass",
+      "Accessibility",
+      "Mustache",
+      "PHP"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
+    "thumbnail_alt": "",
+    "date": 2022
   }
 }

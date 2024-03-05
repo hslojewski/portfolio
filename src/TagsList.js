@@ -25,7 +25,7 @@ class TagsList extends React.Component {
                 <div className="tag-count">{activeFilterTags.length}</div>
             </div>
             <ul className="tags-list">
-            {Object.keys(tags).map((tag, i) => {
+            {Object.keys(tags).sort().map((tag, i) => {
                 // debugger;
                 var tagLinkClasses = [];
                 if (activeTags.includes(tag)) {

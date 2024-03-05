@@ -27,8 +27,8 @@ class Projects extends React.Component {
                         <h2>Filters</h2>
                         <span>({activeTags.length})</span>
                     </div>
-                    <div className="clear-all">
-                        <button onClick={clearActiveTags}>Clear all filters</button>
+                    <div className={"clear-all "}>
+                        <button onClick={clearActiveTags} className={activeTags.length === 0 ? "disabled" : null}>Clear all filters</button>
                     </div>
                 </div>
                 <TagsList title="Tools" tags={tools} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />

@@ -34,7 +34,7 @@ const App = () => {
     const summerBegins = 4; // May
     const autumnBegins = 6; // July
     // const winterBegins = 11;
-    // console.log("month: "+moment().month());
+    // // console.log("month: "+moment().month());
 
     const currentMonth = moment().month();
     if (currentMonth <= springBegins) {
@@ -71,7 +71,7 @@ const App = () => {
         // debugger;
         if (project[tagType]) {
           project[tagType].forEach(projectTag => {
-            console.log(projects);
+            // console.log(projects);
             // debugger;
             // if (projectTag in tags[tagType]) {
             //   tags[tagType][projectTag]++;
@@ -83,7 +83,7 @@ const App = () => {
             //   }
             //   debugger;
             // }
-            console.log(projectId);
+            // console.log(projectId);
             // if (projectTag === "DePaul University" && projectId === "health-activity-infographic") {
             //   debugger;
             // }
@@ -105,7 +105,7 @@ const App = () => {
         };
       });
     });
-    console.log(tags);
+    // console.log(tags);
     // debugger;
     setTags({...tags});
   }
@@ -120,7 +120,7 @@ const App = () => {
           setProjects(result);
           getTags(result);
       }).catch((e: Error) => {
-        console.log(e.message);
+        // console.log(e.message);
       });
   }
 
@@ -132,13 +132,13 @@ const App = () => {
       }).then(result => {
           setProjectData(result);
       }).catch((e: Error) => {
-        console.log(e.message);
+        // console.log(e.message);
       });
   }
 
   var updateProjectsList = (activeTags) => {
-    console.log(projects);
-    console.log(activeTags);
+    // console.log(projects);
+    // console.log(activeTags);
     // // debugger;
     var activeTagProjectsList = [];
     var activeTagProjectsSet = new Set();
@@ -200,13 +200,13 @@ const App = () => {
       // getTags(projects);
       updateProjectsList(updatedActiveTags);
     };
-    console.log(activeTags);
+    // console.log(activeTags);
     // debugger;
   }
 
   var toggleFilterType = () => {
     setFilterType(filterType === "AND" ? "OR" : "AND");
-    console.log(filterType);
+    // console.log(filterType);
   }
 
   var clearActiveTags = () => {
@@ -227,12 +227,12 @@ const App = () => {
     var blah = {};
     Object.keys(allProjects).map(a => {
       blah[a] = allProjects[a].date;
-      console.log(allProjects[a].date);
+      // console.log(allProjects[a].date);
       // debugger;
     });
     var reverseChronYears = Array.from(new Set(Object.values(blah))).reverse();
-    console.log("reverseChronYears");
-    console.log(reverseChronYears);
+    // console.log("reverseChronYears");
+    // console.log(reverseChronYears);
     var orderedProjects = [];
     reverseChronYears.forEach(year => {
       Object.keys(projects).forEach(a => {
@@ -252,6 +252,10 @@ const App = () => {
   
   return (
     <div className={colorMode + "-mode " + season}>
+      <div id="image-modal" className="modal">
+        <span className="close-modal">&times;</span>
+        <img className="modal-content" id="modal-image" />
+      </div>
       <Nav
         colorMode={colorMode}
         toggleColorMode={toggleColorMode}

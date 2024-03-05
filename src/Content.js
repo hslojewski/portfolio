@@ -7,6 +7,32 @@ import FilteredProjects from './FilteredProjects';
 
 class Content extends React.Component {
 
+  imageModalTrigger() {
+    var imageModal = document.getElementById("image-modal"),
+        contentImages = document.querySelectorAll(".image-container .image img"),
+        modalImage = document.getElementById("modal-image"),
+        closeIcon = document.getElementsByClassName("close-modal")[0];
+    if (contentImages.length) {
+      Array.from(contentImages).forEach(contentImage => {
+        contentImage.onclick = function(){
+          imageModal.style.display = "block";
+          modalImage.src = this.src;
+          modalImage.alt = this.alt;
+        }
+      });
+    }
+    if (closeIcon) {
+      closeIcon.onclick = function() { 
+          imageModal.style.display = "none";
+      }
+    }
+    window.addEventListener('keydown', e => {
+      if (e.key === "Escape") {
+        imageModal.style.display = "none";
+      }
+    });
+  }
+
   componentDidMount() {
     const {
       getProjectData, displayProjects, orderChronologically,
@@ -18,11 +44,14 @@ class Content extends React.Component {
       left: 0
     });
   }
+
   render() {
     const {
       displayProjects, orderChronologically,
       projectPath = "", thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, type = null, projects = {}
     } = this.props;
+
+    this.imageModalTrigger();
 
     var eduIconComponents = {
       "FaSitemap": FaSitemap,
@@ -50,7 +79,7 @@ class Content extends React.Component {
             {tags.tools.length > 0 &&
               <span className="meta-item tools">
                 <strong>Tools: </strong>
-                {tags.tools.map((tool, i) => {
+                {tags.tools.sort().map((tool, i) => {
                   return(<span key={i}>{tool}{tags.tools.length - 1 === i ? "" : ", "}</span>);
                 })}
               </span>
@@ -58,7 +87,7 @@ class Content extends React.Component {
             {tags.skills.length > 0 &&
               <span className="meta-item">
                 <strong>Skills: </strong>
-                {tags.skills.map((skill, i) => {
+                {tags.skills.sort().map((skill, i) => {
                   return(<span key={i}>{skill}{tags.skills.length - 1 === i ? "" : ", "}</span>);
                 })}
               </span>
@@ -66,7 +95,7 @@ class Content extends React.Component {
             {tags.affiliations.length > 0 &&
               <span className="meta-item">
                 <strong>Affiliation: </strong>
-                {tags.affiliations && tags.affiliations.map((affiliation, i) => {
+                {tags.affiliations.sort().map((affiliation, i) => {
                   return(<span key={i}>{affiliation}{tags.affiliations.length - 1 === i ? "" : ", "}</span>);
                 })}
               </span>
@@ -74,7 +103,7 @@ class Content extends React.Component {
             {tags.roles.length > 0 &&
               <span className="meta-item">
                 <strong>Role: </strong>
-                {tags.roles && tags.roles.map((role, i) => {
+                {tags.roles.sort().map((role, i) => {
                   return(<span key={i}>{role}{tags.roles.length - 1 === i ? "" : ", "}</span>);
                 })}
               </span>

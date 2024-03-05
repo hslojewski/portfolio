@@ -52,8 +52,8 @@ class FilteredProjects extends React.Component {
     if (numToDisplay && projectsToDisplay.length) {
       projectsToDisplay = projectsToDisplay.slice(0, numToDisplay);
     }
-    console.log(numToDisplay);
-    console.log(projectsToDisplay);
+    // console.log(numToDisplay);
+    // console.log(projectsToDisplay);
 
     return (
         <div>
