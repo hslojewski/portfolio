@@ -1,0 +1,28 @@
+{
+    "path": "bring-home-the-bounty",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/bring-home-the-bounty/section.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.com/bring-home-the-bounty"
+                },
+                {
+                    "src": "projects/media/bring-home-the-bounty/week10.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.com/bring-home-the-bounty/week-10"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "path": "avatar-site",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/avatar/homepage.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "avatar.com"
+                },
+                {
+                    "src": "projects/media/avatar/team.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "avatar.com/team"
+                }
+            ]
+        }
+    ]
+}

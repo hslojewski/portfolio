@@ -1,0 +1,76 @@
+{
+    "path": "disney-japan-migrations",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/disney-japan/disney.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "disney.co.jp"
+                },
+                {
+                    "src": "projects/media/disney-japan/kids.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "kids.disney.co.jp"
+                },
+                {
+                    "src": "projects/media/disney-japan/starwars.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.disney.co.jp"
+                },
+                {
+                    "src": "projects/media/disney-japan/marvel.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "marvel.disney.co.jp"
+                },
+                {
+                    "src": "projects/media/disney-japan/disneyplus.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "disneyplus.disney.co.jp"
+                },
+                {
+                    "src": "projects/media/disney-japan/studios.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "waltdisneystudios.jp"
+                },
+                {
+                    "src": "projects/media/disney-japan/searchlight.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "searchlightpictures.jp"
+                },
+                {
+                    "src": "projects/media/disney-japan/healthytainment.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "healthytainment.disney.co.jp"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "path": "disney-press-latam-sites",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/latam-press-sites/latam.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "prensa.disneylatino.com"
+                },
+                {
+                    "src": "projects/media/latam-press-sites/brazil.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "imprensa.disney.com.br"
+                }
+            ]
+        }
+    ]
+}

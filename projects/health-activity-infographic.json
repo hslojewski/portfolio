@@ -9,7 +9,7 @@
                     "src": "projects/media/quantified-self/infographic.jpeg",
                     "alt": "Infographic of health and activity data",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100"
+                    "containerClasses": "mobile-width-100 width-50"
                 }
             ]
         }

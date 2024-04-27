@@ -1,0 +1,28 @@
+{
+    "path": "pandorapedia",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/pandorapedia/section.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "avatar.com/pandorapedia"
+                },
+                {
+                    "src": "projects/media/pandorapedia/entry.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "avatar.com/pandorapedia/jake-sully"
+                }
+            ]
+        }
+    ]
+}

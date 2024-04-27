@@ -1,0 +1,28 @@
+{
+    "path": "disney-press-sites",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/disney-press-sites/disney_plus.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "press.disneyplus.com"
+                },
+                {
+                    "src": "projects/media/disney-press-sites/disney_advertising.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "press.disneyadvertising.com"
+                }
+            ]
+        }
+    ]
+}
