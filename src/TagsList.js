@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const React = require('react');
 
 class TagsList extends React.Component {

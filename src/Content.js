@@ -35,8 +35,8 @@ class Content extends React.Component {
 
   componentDidMount() {
     const {
-      getProjectData, displayProjects, orderChronologically,
-      projectPath = "", projects = {}
+      getProjectData,
+      projectPath = "",
     } = this.props;
     getProjectData(projectPath);
     document.querySelector('body').scrollTo({
@@ -48,7 +48,7 @@ class Content extends React.Component {
   render() {
     const {
       displayProjects, orderChronologically,
-      projectPath = "", thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, titleAlignment = null, type = null, projects = {}
+      thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, titleAlignment = null, type = null, projects = {}
     } = this.props;
 
     this.imageModalTrigger();
@@ -195,7 +195,7 @@ class Content extends React.Component {
                     </div>
                   }
                   {section.video &&
-                    <iframe src={section.video} aria-label="video" width="100%" height="400" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                    <iframe src={section.video} title="video" aria-label="video" width="100%" height="400" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
                   }
                   {section.instagramEmbed &&
                     <div style={{ display: 'flex', justifyContent: 'center' }}>

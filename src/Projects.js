@@ -1,5 +1,4 @@
 import TagsList from './TagsList';
-import ActiveFilters from './ActiveFilters';
 import FilteredProjects from './FilteredProjects';
 
 
@@ -15,7 +14,7 @@ class Projects extends React.Component {
 
     render() {
         const {
-            displayProjects, toggleFilterType, clearActiveTags, toggleAccordion, orderChronologically,
+            displayProjects, clearActiveTags, toggleAccordion, orderChronologically,
             activeTags = [], tools = [], skills = [], affiliations = [], roles = [], projects = {}, filterType = "AND", tagAccordions = {}
         } = this.props;
 

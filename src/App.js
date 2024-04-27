@@ -148,7 +148,7 @@ const App = () => {
     var projectsToIgnore = [];
     if (activeTags.length) {
       activeTags.forEach(tag => {
-        Object.keys(allProjects).map(projectPath => {
+        Object.keys(allProjects).forEach(projectPath => {
           var tools = allProjects[projectPath].tools || [],
               skills = allProjects[projectPath].skills || [],
               affiliations = allProjects[projectPath].affiliations || [],
@@ -225,7 +225,7 @@ const App = () => {
 
   var orderChronologically = (projects) => {
     var blah = {};
-    Object.keys(allProjects).map(a => {
+    Object.keys(allProjects).forEach(a => {
       blah[a] = allProjects[a].date;
       // console.log(allProjects[a].date);
       // debugger;
@@ -254,7 +254,7 @@ const App = () => {
     <div className={colorMode + "-mode " + season}>
       <div id="image-modal" className="modal">
         <span className="close-modal">&times;</span>
-        <img className="modal-content" id="modal-image" />
+        <img className="modal-content" id="modal-image" alt="modal" />
       </div>
       <Nav
         colorMode={colorMode}

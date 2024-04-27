@@ -18,7 +18,7 @@ class FilteredProjects extends React.Component {
 
     if (activeTags.length) {
       activeTags.forEach(tag => {
-        Object.keys(projects).map(projectPath => {
+        Object.keys(projects).forEach(projectPath => {
           var tools = projects[projectPath].tools || [],
               skills = projects[projectPath].skills || [],
               affiliations = projects[projectPath].affiliations || [],
@@ -47,7 +47,7 @@ class FilteredProjects extends React.Component {
       });
     }
     var orderedProjects = orderChronologically(projects);
-    var projectsToDisplay = orderedProjects.filter(a => projectsToDisplay.includes(a));
+    projectsToDisplay = orderedProjects.filter(a => projectsToDisplay.includes(a));
     
     if (numToDisplay && projectsToDisplay.length) {
       projectsToDisplay = projectsToDisplay.slice(0, numToDisplay);
