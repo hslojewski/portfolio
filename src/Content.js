@@ -2,14 +2,14 @@ import React from 'react';
 import parse from 'html-react-parser';
 import { Link } from "react-router-dom";
 import { InstagramEmbed } from 'react-social-media-embed';
-import { FaRegKeyboard, FaCode, FaSitemap } from "react-icons/fa6";
+import { FaRegKeyboard, FaCode, FaSitemap, FaLinkedinIn, FaEnvelope } from "react-icons/fa6";
 import FilteredProjects from './FilteredProjects';
 
 class Content extends React.Component {
 
   imageModalTrigger() {
     var imageModal = document.getElementById("image-modal"),
-        contentImages = document.querySelectorAll(".image-container .image img"),
+        contentImages = document.querySelectorAll(".image-container .image img:not(.ignore-modal)"),
         modalImage = document.getElementById("modal-image"),
         closeIcon = document.getElementsByClassName("close-modal")[0];
     if (contentImages.length) {
@@ -48,7 +48,7 @@ class Content extends React.Component {
   render() {
     const {
       displayProjects, orderChronologically,
-      projectPath = "", thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, type = null, projects = {}
+      projectPath = "", thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, titleAlignment = null, type = null, projects = {}
     } = this.props;
 
     this.imageModalTrigger();
@@ -56,7 +56,9 @@ class Content extends React.Component {
     var eduIconComponents = {
       "FaSitemap": FaSitemap,
       "FaCode": FaCode,
-      "FaRegKeyboard": FaRegKeyboard
+      "FaRegKeyboard": FaRegKeyboard,
+      "FaLinkedinIn": FaLinkedinIn,
+      "FaEnvelope": FaEnvelope
     };
     
     
@@ -73,7 +75,7 @@ class Content extends React.Component {
               <Link to="/projects" className="projects-link">Back to Projects</Link>
             </span>
           }
-          <h1>{title}</h1>
+          <h1 className={titleAlignment}>{title}</h1>
           <p className="description">{data.description}</p>
           <div className="meta">
             {tags.tools.length > 0 &&
@@ -124,12 +126,12 @@ class Content extends React.Component {
                     return(<img key={i} src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
                     }
                   )}
-                  <h2>{section.title}</h2>
-                  <h3>{section.subtitle}</h3>
+                  <h2 className={section.titleAlignment}>{section.title}</h2>
+                  <h3 className={section.subtitleAlignment}>{section.subtitle}</h3>
                   {section.detail &&
                     <div>{parse(section.detail)}</div>
                   }
-                  {((section.projectsList||{}).filters||[]).length > 0 &&
+                  {section.projectsList &&
                     <div className="projects-list">
                       <FilteredProjects
                         projects={projects}
@@ -144,9 +146,15 @@ class Content extends React.Component {
                   {(section.buttons||[]).length > 0 &&
                     <div className="buttons-list">
                       {(section.buttons||[]).map((button, i) => {
+                        if (button.icon) {
+                          var Component = eduIconComponents[button.icon];
+                        }
                         return(
-                          <Link to={button.url} key={i} className={button.classes.concat(" button")}>
-                            <button className={button.classes}>{button.title}</button>
+                          <Link to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")}>
+                            <button className={button.classes}>
+                              {button.title}
+                              {Component && <Component  />}
+                            </button>
                           </Link>
                         );
                       })}
@@ -187,7 +195,7 @@ class Content extends React.Component {
                     </div>
                   }
                   {section.video &&
-                    <iframe src={section.video} width="100%" height="400" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                    <iframe src={section.video} aria-label="video" width="100%" height="400" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
                   }
                   {section.instagramEmbed &&
                     <div style={{ display: 'flex', justifyContent: 'center' }}>

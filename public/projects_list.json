@@ -609,7 +609,7 @@
     "thumbnail_alt": "",
     "date": 2023
   },
-  "disney-latam-press-sites": {
+  "disney-press-latam-sites": {
     "title": "Disney Press Latin America and Disney Press Brazil Site Launches",
     "tools": [
       "Content Management System (CMS)"
@@ -630,7 +630,7 @@
     "thumbnail_alt": "",
     "date": 2024
   },
-  "disney-dtci-site": {
+  "disney-ctdi-site": {
     "title": "Disney Entertainment | Creative Talent Development & Inclusion Site Migration",
     "tools": [
       "Content Management System (CMS)"
@@ -646,7 +646,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/dtci.jpg",
+    "thumbnail": "projects/thumbnails/ctdi.jpg",
     "thumbnail_alt": "",
     "date": 2023
   },
@@ -689,7 +689,7 @@
     "thumbnail_alt": "",
     "date": 2023
   },
-  "avatar-pandorapedia": {
+  "pandorapedia": {
     "title": "Avatar Pandorapedia Site Migration",
     "tools": [
       "Content Management System (CMS)"
@@ -728,7 +728,7 @@
     "thumbnail_alt": "",
     "date": 2022
   },
-  "starwars-bring-home-the-bounty": {
+  "bring-home-the-bounty": {
     "title": "Star Wars Bring Home the Bounty",
     "tools": [
       "GitHub",

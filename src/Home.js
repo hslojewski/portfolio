@@ -1,14 +1,29 @@
+import Content from './Content';
+
 const React = require('react');
 
-const Home = () => {
-  return (
-    <div>
-      <h2>Home</h2>
-      <div>Intro</div>
-      <div>Featured Projects List, link to page</div>
-      <div>Instagram? Hobbies</div>
-    </div>
-  );
+class Home extends React.Component {
+
+  render() {
+
+    const {
+      getProjectData, displayProjects, orderChronologically,
+      projects = {}, projectData = {}
+    } = this.props;
+    
+    return (
+      <Content
+        projectPath="home"
+        title="Heidi Slojewski"
+        titleAlignment="center"
+        data={projectData}
+        getProjectData={getProjectData}
+        projects={projects}
+        displayProjects={displayProjects}
+        orderChronologically={orderChronologically}
+      />
+    );
+  }
 }
 
 export default Home;

@@ -63,7 +63,7 @@ class FilteredProjects extends React.Component {
               {projectsToDisplay.map((path, i) => {
                 return(
                   <li key={i} className="project-detail">
-                    <Link exact="true" to={path}>
+                    <Link exact="true" to={"/projects/" + path}>
                       <img src={[process.env.PUBLIC_URL, projects[path].thumbnail].join("/")} alt={projects[path].thumbnail_alt} />
                       <h3>{projects[path].title}</h3>
                     </Link>

@@ -7,25 +7,25 @@
                 {
                     "src": "projects/media/about/heidi1.jpg",
                     "alt": "Photo of a girl in front of a Macintosh computer",
-                    "classes": "align-center",
+                    "classes": "align-center ignore-modal",
                     "containerClasses": "mobile-width-50 width-20 no-padding"
                 },
                 {
                     "src": "projects/media/about/heidi2.jpg",
                     "alt": "Photo of a girl using an iMac",
-                    "classes": "align-center",
+                    "classes": "align-center ignore-modal",
                     "containerClasses": "mobile-width-50 width-20 no-padding"
                 },
                 {
                     "src": "projects/media/about/heidi3.jpg",
                     "alt": "Photo of a girl with a Mac laptop",
-                    "classes": "align-center",
+                    "classes": "align-center ignore-modal",
                     "containerClasses": "mobile-width-50 width-20 no-padding"
                 },
                 {
                     "src": "projects/media/about/heidi4.jpg",
                     "alt": "Photo of a girl with a Mac laptop",
-                    "classes": "align-center",
+                    "classes": "align-center ignore-modal",
                     "containerClasses": "mobile-width-50 width-20 no-padding"
                 }
             ]
@@ -65,12 +65,12 @@
             "buttons": [
                 {
                     "title": "See All Projects",
-                    "classes": "align-center see-all",
+                    "classes": "align-center see-all mobile-width-100 width-20",
                     "url": "/projects"
                 },
                 {
                     "title": "View My Resume",
-                    "classes": "align-center resume secondary",
+                    "classes": "align-center resume secondary mobile-width-100 width-20",
                     "url": "/resume"
                 }
             ]

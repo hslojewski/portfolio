@@ -263,7 +263,17 @@ const App = () => {
         toggleNav={toggleNav}
       />
       <Routes>
-        <Route exact="true" path="/" element={<Home />} />
+        <Route exact="true" path="/"
+               element={
+               <Home
+                  getProjectData={getProjectData}
+                  projectData={projectData}
+                  displayProjects={displayProjects}
+                  projects={projects}
+                  orderChronologically={orderChronologically}
+               />
+              }
+        />
         <Route path="/about"
                element={
                 <About

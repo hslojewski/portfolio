@@ -50,6 +50,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
           border: 1px solid $theme-dark-bg;
           background: $theme-dark-bg;
           text-decoration: none;
+          &.disabled{ background: rgba($theme-dark-bg, .6); }
           &.secondary{
             color: $theme-dark-bg;
             border: 1px solid $theme-dark-bg;
@@ -61,6 +62,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
             border: 1px solid $theme-accent-color;
             background: $theme-accent-color;
             text-decoration: none;
+            &.disabled{ background: rgba($theme-accent-color, .6); }
           }
         }
         .tag{
@@ -100,6 +102,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
           border: 1px solid $theme-light-bg;
           background: $theme-light-bg;
           text-decoration: none;
+          &.disabled{ background: rgba($theme-light-bg, .6); }
           &.secondary{
             color: $theme-light-bg;
             border: 1px solid $theme-light-bg;
@@ -111,6 +114,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
             border: 1px solid $theme-accent-color;
             background: $theme-accent-color;
             text-decoration: none;
+            &.disabled{ background: rgba($theme-font-color, .6); }
           }
         }
         .tag{
@@ -276,7 +280,6 @@ $autumn-colors: (
 
 // body{ padding: 20px; }
 button.disabled, a.disabled {
-	color: gray !important;
   pointer-events: none;
   cursor: default;
 }
@@ -470,7 +473,6 @@ body{
           &.disabled{ 
             pointer-events: none;
             cursor: default;
-            color: gray !important;
             background: transparent;
           }
         }
@@ -483,6 +485,9 @@ body{
     top: 60px;
     max-width: 1000px;
     margin: 0 auto;
+    h1, h2, h3{
+      &.center{ text-align: center; }
+    }
     &.projects-list{
       max-width: 1400px;
       
@@ -505,18 +510,24 @@ body{
     }
     .buttons-list{
       display: flex;
-      flex-direction: row;;
+      flex-direction: column;
+      // max-width: 100%;
+      margin: 0 auto;
       div{
         display: flex;
         flex-basis: 50%;
       }
-      .see-all{
-        justify-content: right;
-        margin-right: 15px;
-      }
-      .resume{
-        justify-content: left;
-        margin-left: 15px;
+      // .see-all{
+      //   justify-content: right;
+      //   margin-right: 15px;
+      // }
+      // .resume{
+      //   justify-content: left;
+      //   margin-left: 15px;
+      // }
+      .button-icon svg{
+        margin-left: 5px;
+        margin-bottom: -2px;
       }
     }
   }
@@ -661,6 +672,9 @@ body{
         justify-content: space-evenly;
         flex-basis: inherit;
       }
+    }
+    .page-content .buttons-list{
+      flex-direction: row;
     }
   }
   @media (min-width: $breakpoint-tablet) {
@@ -888,6 +902,9 @@ body{
           }
         }
       }
+    }
+    .page-content .buttons-list{
+      max-width: 55%;
     }
   }
   @media (min-width: $breakpoint-desktop) {
