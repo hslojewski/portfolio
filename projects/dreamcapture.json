@@ -25,7 +25,15 @@
         },
         {
             "title": "Data Model",
-            "detail": "<p>The database for this app was made up of 5 tables: Dreams, Symbols, Users, DreamSymbols (Association), and UserDreams (Association). Below is an illustration of the data model.</p>"
+            "detail": "<p>The database for this app was made up of 5 tables: Dreams, Symbols, Users, DreamSymbols (Association), and UserDreams (Association). Below is an illustration of the data model.</p>",
+            "images": [
+                {
+                    "src": "projects/media/dreamcapture/datamodel.png",
+                    "alt": "Data model diagramming relationship between users, dreams, and symbols",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
         },
         {
             "title": "Data",
@@ -42,49 +50,57 @@
             "images": [
                 {
                     "src": "projects/media/dreamcapture/homepage.png",
-                    "alt": "Wireframe depicting site homepage",
+                    "caption": "App homepage including DreamCapture logo and tagline to \"Unlock Your Dreams,\" prompting user to log in or create an account",
+                    "alt": "App homepage including DreamCapture logo and tagline to \"Unlock Your Dreams,\" prompting user to log in or create an account",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/dreamcapture/create_account.png",
-                    "alt": "Wireframe depicting site homepage",
+                    "caption": "App homepage with opened modal that includes login and account creation form options",
+                    "alt": "App homepage with opened modal that includes login and account creation form options",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/dreamcapture/dashboard.png",
-                    "alt": "Wireframe depicting site homepage",
+                    "caption": "App dashboard that includes recent dream logs, data visualization of user's types of dreams, and word cloud of phrases mentioned in journal entries",
+                    "alt": "App dashboard that includes recent dream logs, data visualization of user's types of dreams, and word cloud of phrases mentioned in journal entries",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/dreamcapture/record_dream.png",
-                    "alt": "Wireframe depicting site homepage",
+                    "caption": "App dashboard with opened modal that allows user to log dream details",
+                    "alt": "App dashboard with opened modal that allows user to log dream details",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/dreamcapture/dream_detail.png",
-                    "alt": "Wireframe depicting site homepage",
+                    "caption": "App journal entry of dream details, including words highlighted from the entry as symbols, with references to potential meanings based on known interpretations",
+                    "alt": "App journal entry of dream details, including words highlighted from the entry as symbols, with references to potential meanings based on known interpretations",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/dreamcapture/search_results.png",
-                    "alt": "Wireframe depicting site homepage",
+                    "caption": "App search results page where user can see how search terms match across known symbols, symbol meanings, and journal entries",
+                    "alt": "App search results page where user can see how search terms match across known symbols, symbol meanings, and journal entries",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/dreamcapture/symbol_detail.png",
-                    "alt": "Wireframe depicting site homepage",
+                    "caption": "App symbol entry that indicates meanings, related phrases, and related dream data including dates dreamed and journal entry details",
+                    "alt": "App symbol entry that indicates meanings, related phrases, and related dream data including dates dreamed and journal entry details",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/dreamcapture/text_message.png",
-                    "alt": "Wireframe depicting site homepage",
+                    "caption": "App open in a window on the left, with example SMS reminder from Twilio API confirming that user will be reminded to record dreams",
+                    "alt": "App open in a window on the left, with example SMS reminder from Twilio API confirming that user will be reminded to record dreams",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100"
                 }
