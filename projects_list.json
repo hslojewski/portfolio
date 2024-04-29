@@ -450,8 +450,8 @@
     "thumbnail_alt": "App thumbnail for museum integrated experience",
     "date": 2014
   },
-  "dream-capture": {
-    "title": "Dream Capture Full Stack Web Application",
+  "dreamcapture": {
+    "title": "DreamCapture Full Stack Web Application",
     "tools": [
       "GitHub"
     ],
