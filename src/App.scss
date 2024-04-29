@@ -297,6 +297,7 @@ html, body{
 }
 body{
   button{
+    font-size: 16px;
     padding: 10px;
     border-radius: 20px;
     border: 0;
@@ -504,9 +505,10 @@ body{
     }
     caption{
       width: 90%;
-      // margin: 0 auto;
+      margin: 5px auto 0;
       text-align: center;
       display: flex;
+      font-size: 12px;
     }
     .buttons-list{
       display: flex;
@@ -673,9 +675,10 @@ body{
         flex-basis: inherit;
       }
     }
-    .page-content .buttons-list{
-      flex-direction: row;
-    }
+    // .page-content .buttons-list{
+    //   flex-direction: row;
+    //   max-width: 55%;
+    // }
   }
   @media (min-width: $breakpoint-tablet) {
     .nav{
@@ -904,7 +907,8 @@ body{
       }
     }
     .page-content .buttons-list{
-      max-width: 55%;
+      flex-direction: row;
+      max-width: 65%;
     }
   }
   @media (min-width: $breakpoint-desktop) {
