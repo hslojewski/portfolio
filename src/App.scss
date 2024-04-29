@@ -565,6 +565,7 @@ body{
       // &.width-100{ flex-basis: 100%; }
       &.no-padding{
         padding: 0;
+        margin: 0;
       }
       @each $width in $widths {
         &.mobile-width-#{$width} {
