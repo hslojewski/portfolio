@@ -1,14 +1,12 @@
 {
     "path": "disney-press-sites",
-    "description": "asdf",
     "content": [
         {
-            "title": "Process",
-            "detail": "<p>asdf</p>",
+            "detail": "<p>Onboarded and shepherded the launch of two Press Sites managed by different Disney Marketing Teams in the U.S. specifically covering Disney+ Press and Disney Advertising Press. Trained the teams' site producers on how to utilize the out-of-box tools provided through the proprietary CMS that I am product manager for. Coordinated the launch of this site with our infrastructure team.</p>",
             "images": [
                 {
                     "src": "projects/media/disney-press-sites/disney_plus.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Homepage of different content links for Disney+ Press site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
@@ -16,7 +14,7 @@
                 },
                 {
                     "src": "projects/media/disney-press-sites/disney_advertising.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Homepage of different content links for Disney Advertising Press site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
