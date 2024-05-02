@@ -82,6 +82,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
                 background: $theme-accent-color;
                 color: $theme-font-color;
               }
+              &.disabled{ background: rgba($theme-dark-bg, .6); }
             }
           }
         }
@@ -134,6 +135,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
                 background: $theme-accent-color;
                 color: $theme-font-color;
               }
+              &.disabled{ background: rgba($theme-light-bg, .6); }
             }
           }
         }
@@ -390,6 +392,7 @@ body{
       object-fit: cover;
       height: 100px;
       opacity: 0.75;
+      margin-left: -25px;
       filter: blur(10px);
     }
   }

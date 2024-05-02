@@ -1,0 +1,26 @@
+{
+    "path": "el-capitan-theatre-site",
+    "content": [
+        {
+            "detail": "<p>We migrated the former version of the El Capitan Theatre site to our proprietary CMS platform, becoming the only ecommerce website housed on our platform.</p><p>As the Platform Product Manager, I managed the data ingestion needed in order for the CMS to be able to refer to the most current and accurate film screening data.</p><p>I was also a consultant in helping with the Frontend side of the project since it involved two aspects:</p><ol><li>Redesigning site's branding and theming with a new theme that hadn't been supported by our platform before</li><li>The Frontend code was also referring to a new Frontend framework, different from the framework I previously worked in as a frontend developer on the team. So I helped in deciding new data structure, content types, and additional tools needed to build out customizable pages that adhere to a style theme branded for the theatre.</li></ol><p>As the Product Operations side of my team, I onboarded the Theatre's site producers onto the platform, assisted them as they learned to build pages on the site, and shepherded the individual launches of each website. I also ensured that the site was set up with proper redirects from the old version of the site and was localized per region based on available CMS tools.</p>",
+            "images": [
+                {
+                    "src": "projects/media/el-capitan-theatre-site/homepage.png",
+                    "alt": "Homepage of multiple film screening options to experience at the theatre",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "elcapitantheatre.com"
+                },
+                {
+                    "src": "projects/media/el-capitan-theatre-site/theatre_info.png",
+                    "alt": "Webpage dedicated to providing theatre directions and contact information",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "elcapitantheatre.com/theatre-info"
+                }
+            ]
+        }
+    ]
+}

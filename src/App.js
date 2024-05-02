@@ -230,7 +230,7 @@ const App = () => {
       // console.log(allProjects[a].date);
       // debugger;
     });
-    var reverseChronYears = Array.from(new Set(Object.values(blah))).reverse();
+    var reverseChronYears = Array.from(new Set(Object.values(blah))).sort().reverse();
     // console.log("reverseChronYears");
     // console.log(reverseChronYears);
     var orderedProjects = [];

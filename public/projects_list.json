@@ -570,7 +570,7 @@
     "thumbnail_alt": "",
     "date": 2023
   },
-  "el-capitan-theatre": {
+  "el-capitan-theatre-site": {
     "title": "El Capitan Theatre Website Migration",
     "tools": [
       "Content Management System (CMS)"
@@ -585,7 +585,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/el_capitan.jpg",
+    "thumbnail": "projects/thumbnails/el-capitan-theatre.png",
     "thumbnail_alt": "",
     "date": 2024
   },
@@ -685,7 +685,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/disney_games.jpg",
+    "thumbnail": "projects/thumbnails/on-disney-plus.jpg",
     "thumbnail_alt": "",
     "date": 2023
   },
@@ -704,7 +704,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/disney_games.jpg",
+    "thumbnail": "projects/thumbnails/test.jpg",
     "thumbnail_alt": "",
     "date": 2022
   },
@@ -724,7 +724,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/disney_games.jpg",
+    "thumbnail": "projects/thumbnails/test.jpg",
     "thumbnail_alt": "",
     "date": 2022
   },
@@ -737,7 +737,7 @@
     "skills": [
       "JavaScript",
       "Ruby",
-      "Backbone",
+      "Backbone.js",
       "HTML/CSS",
       "Sass",
       "Accessibility",
@@ -762,7 +762,7 @@
     "skills": [
       "JavaScript",
       "Ruby",
-      "Backbone",
+      "Backbone.js",
       "HTML/CSS",
       "Sass",
       "Accessibility",
@@ -778,16 +778,15 @@
     "thumbnail_alt": "",
     "date": 2021
   },
-  "privacy-and-video-player-migration": {
-    "title": "Privacy and Video Player Migration",
+  "privacy-analytics-video-player-migration": {
+    "title": "Privacy, Analytics, and Video Player Migration",
     "tools": [
-      "GitHub",
-      "Figma"
+      "GitHub"
     ],
     "skills": [
       "JavaScript",
       "Ruby",
-      "Backbone",
+      "Backbone.js",
       "HTML/CSS",
       "Sass",
       "Accessibility",
@@ -812,7 +811,7 @@
     "skills": [
       "JavaScript",
       "Ruby",
-      "Backbone",
+      "Backbone.js",
       "HTML/CSS",
       "Sass",
       "Accessibility",
@@ -838,7 +837,7 @@
     "skills": [
       "JavaScript",
       "Ruby",
-      "Backbone",
+      "Backbone.js",
       "HTML/CSS",
       "Sass",
       "Accessibility",
