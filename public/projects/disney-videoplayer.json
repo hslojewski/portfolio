@@ -1,0 +1,40 @@
+{
+    "path": "disney-videoplayer",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/disney-videoplayer/disney_video_modal.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/disney-videoplayer/starwars_video_modal.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/disney-videoplayer/video_homepage.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "video.disney.com"
+                },
+                {
+                    "src": "projects/media/disney-videoplayer/video_page.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "https://video.disney.com/watch/inside-out-2-tickets-on-sale-6186cb25f2298dec84751fce"
+                }
+            ]
+        }
+    ]
+}

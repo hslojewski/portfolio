@@ -1,0 +1,44 @@
+{
+    "path": "disney-editorial-sites",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/disney-editorial-sites/style.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "style.disney.com"
+                },
+                {
+                    "src": "projects/media/disney-editorial-sites/family.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "family.disney.com"
+                },
+                {
+                    "src": "projects/media/disney-editorial-sites/omd.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "ohmy.disney.com"
+                },
+                {
+                    "src": "projects/media/disney-editorial-sites/style_article.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "style.disney.com/living/2019/04/27/diy-graduation-cap"
+                }
+            ]
+        }
+    ]
+}
