@@ -37,7 +37,7 @@
           "Student"
         ],
         "thumbnail": "projects/thumbnails/bookshop.jpeg",
-        "thumbnail_alt": "Website checkout form",
+        "thumbnail_alt": "Book website checkout form wireframe",
         "date": 2013
   },
   "know-whos-knocking": {
@@ -567,7 +567,7 @@
       "Platform Product Manager"
     ],
     "thumbnail": "projects/thumbnails/disney_japan.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Disney Japan website homepage",
     "date": 2023
   },
   "el-capitan-theatre-site": {
@@ -586,8 +586,29 @@
       "Platform Product Manager"
     ],
     "thumbnail": "projects/thumbnails/el-capitan-theatre.png",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "El Capitan Theatre website homepage",
     "date": 2024
+  },
+  "marvel-hq-storytoys": {
+    "title": "Marvel HQ Published by StoryToys Marketing Website",
+    "tools": [
+      "Content Management System (CMS)"
+    ],
+    "skills": [
+      "Product Management",
+      "Product Operations",
+      "Accessibility",
+      "HTML/CSS"
+    ],
+    "affiliations": [
+      "Disney"
+    ],
+    "roles": [
+      "Platform Product Manager"
+    ],
+    "thumbnail": "projects/thumbnails/marvel_hq.png",
+    "thumbnail_alt": "Marvel HQ Published by StoryToys website homepage",
+    "date": 2023
   },
   "disney-press-sites": {
     "title": "Disney+ Press and Disney Advertising Press Site Launches",
@@ -606,7 +627,7 @@
       "Platform Product Manager"
     ],
     "thumbnail": "projects/thumbnails/disney_press.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Disney+ Press website homepage",
     "date": 2023
   },
   "disney-press-latam-sites": {
@@ -627,7 +648,7 @@
       "Platform Product Manager"
     ],
     "thumbnail": "projects/thumbnails/disney_latam_press.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Disney Brazil Press website homepage",
     "date": 2024
   },
   "disney-ctdi-site": {
@@ -647,7 +668,7 @@
       "Platform Product Manager"
     ],
     "thumbnail": "projects/thumbnails/ctdi.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Disney Entertainment CTDI website homepage",
     "date": 2023
   },
   "disney-games-site": {
@@ -667,7 +688,7 @@
       "Platform Product Manager"
     ],
     "thumbnail": "projects/thumbnails/disney_games.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Disney Games website homepage",
     "date": 2023
   },
   "disney-plus-site-rebrand": {
@@ -686,11 +707,11 @@
       "Platform Product Manager"
     ],
     "thumbnail": "projects/thumbnails/on-disney-plus.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "On Disney+ website homepage",
     "date": 2023
   },
-  "pandorapedia": {
-    "title": "Avatar Pandorapedia Site Migration",
+  "avatar-pandorapedia": {
+    "title": "Pandorapedia Site Migration to Avatar.com",
     "tools": [
       "Content Management System (CMS)"
     ],
@@ -704,12 +725,12 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/test.jpg",
-    "thumbnail_alt": "",
+    "thumbnail": "projects/thumbnails/pandorapedia.png",
+    "thumbnail_alt": "Avatar Website's Pandorapedia section",
     "date": 2022
   },
-  "starwars-site-migration": {
-    "title": "Star Wars Site Migration",
+  "starwars-site-relaunch": {
+    "title": "Star Wars Site Relaunch",
     "tools": [
       "Content Management System (CMS)",
       "WordPress"
@@ -725,7 +746,7 @@
       "Platform Product Manager"
     ],
     "thumbnail": "projects/thumbnails/test.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "StarWars.com website homepage",
     "date": 2022
   },
   "bring-home-the-bounty": {
@@ -750,7 +771,7 @@
       "Software Engineer"
     ],
     "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Star Wars website \"Bring Home the Bounty\" section",
     "date": 2021
   },
   "avatar-site": {
@@ -774,12 +795,12 @@
     "roles": [
       "Software Engineer"
     ],
-    "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
-    "thumbnail_alt": "",
+    "thumbnail": "projects/thumbnails/avatar.png",
+    "thumbnail_alt": "Avatar website homepage",
     "date": 2021
   },
-  "privacy-analytics-video-player-migration": {
-    "title": "Privacy, Analytics, and Video Player Migration",
+  "disney-videoplayer": {
+    "title": "Video Player, Privacy, and Analytics Migration",
     "tools": [
       "GitHub"
     ],
@@ -799,7 +820,7 @@
       "Software Engineer"
     ],
     "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Disney website video player",
     "date": 2022
   },
   "disney-fan-and-branded-sites": {
@@ -824,11 +845,11 @@
       "Software Engineer"
     ],
     "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Compilation of different website homepages across Disney, Star Wars, 20th Century Studios, National Geographic Films, and Avatar",
     "date": 2022
   },
-  "disney-wordpress-sites": {
-    "title": "The Walt Disney Company WordPress Websites",
+  "disney-editorial-sites": {
+    "title": "Disney Editorial Sites (Disney Style, Oh My Disney, Disney Family)",
     "tools": [
       "GitHub",
       "Figma",
@@ -851,7 +872,7 @@
       "Software Engineer"
     ],
     "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
-    "thumbnail_alt": "",
+    "thumbnail_alt": "Disney Family website homepage",
     "date": 2022
   }
 }

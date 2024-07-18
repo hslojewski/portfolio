@@ -13,7 +13,7 @@
                     "src": "projects/media/good-bad-graph/jackpot-map.jpeg",
                     "alt": "Lottery jackpot value graph across the U.S.",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100"
+                    "containerClasses": "mobile-width-100 width-75"
                 }
             ]
         },
@@ -37,7 +37,7 @@
                     "src": "projects/media/good-bad-graph/vox-chart.jpeg",
                     "alt": "Circle area graph",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100"
+                    "containerClasses": "mobile-width-100 width-75"
                 }
             ]
         },
@@ -65,7 +65,7 @@
                     "src": "projects/media/good-bad-graph/graph-recommendation.jpeg",
                     "alt": "Examples of recommended bar charts and circle area graphs",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-100"
+                    "containerClasses": "mobile-width-100 width-75"
                 }
             ]
         }

@@ -1,0 +1,44 @@
+{
+    "path": "starwars-site-relaunch",
+    "description": "asdf",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>asdf</p>",
+            "images": [
+                {
+                    "src": "projects/media/starwars-relaunch/prelaunch_news.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.com/news"
+                },
+                {
+                    "src": "projects/media/starwars-relaunch/prelaunch_article.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.com/news/tony-gilroy-andor-season-1-interview"
+                },
+                {
+                    "src": "projects/media/starwars-relaunch/news.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.com/news"
+                },
+                {
+                    "src": "projects/media/starwars-relaunch/article.png",
+                    "alt": "(needs alt text)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.com/news/tony-gilroy-andor-season-1-interview"
+                }
+            ]
+        }
+    ]
+}

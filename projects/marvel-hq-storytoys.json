@@ -1,0 +1,18 @@
+{
+    "path": "marvel-hq-storytoys",
+    "content": [
+        {
+            "detail": "<p>sfds</p>",
+            "images": [
+                {
+                    "src": "projects/media/marvel-hq/homepage.png",
+                    "alt": "Webpage of Pandorapedia content, including featured and special categories of entries.",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "marvelhq.com"
+                }
+            ]
+        }
+    ]
+}
