@@ -384,16 +384,21 @@ body{
       }
     }
   }
-  .content-banner{
+  .page{
     position: relative;
-    top: 60px;
+    top: 40px;
+  }
+  .content-banner{
     img{
       width: 110%;
+      // width: 100%;
       object-fit: cover;
-      height: 100px;
-      opacity: 0.75;
-      margin-left: -25px;
+      height: 200px;
+      opacity: 0.8;
+      // margin-left: -25px;
       filter: blur(10px);
+      margin-left: 50%;
+      transform: translateX(-50%);
     }
   }
   .mode{ width: 30px; }
@@ -485,7 +490,6 @@ body{
   }
   .page-content{
     padding: 20px;
-    position: relative;
     top: 60px;
     max-width: 1200px;
     margin: 0 auto;

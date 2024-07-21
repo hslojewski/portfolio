@@ -63,7 +63,7 @@ class Content extends React.Component {
     
     
     return (
-      <div>
+      <div className="page">
         {thumbnail &&
           <div className="content-banner">
             <img src={[process.env.PUBLIC_URL, thumbnail].join("/")} alt="" />
