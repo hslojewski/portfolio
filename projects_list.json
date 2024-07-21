@@ -101,7 +101,7 @@
     "affiliations": [
       "DePaul University"
     ],
-    "thumbnail": "projects/thumbnails/touchscreen-motor-impairments.jpeg",
+    "thumbnail": "projects/thumbnails/touchscreen-motor-impairments.png",
     "thumbnail_alt": "Touchscreens and motor impairments evaluation",
     "date": 2016
   },
@@ -231,7 +231,7 @@
     "roles": [
       "Student"
     ],
-    "thumbnail": "projects/thumbnails/good-bad-graph.jpeg",
+    "thumbnail": "projects/thumbnails/good-bad-graph.png",
     "thumbnail_alt": "Jackpot value across U.S. Graph",
     "date": 2016
   },
@@ -294,7 +294,7 @@
     "roles": [
       "Student"
     ],
-    "thumbnail": "projects/thumbnails/grubhub-user-testing.jpeg",
+    "thumbnail": "projects/thumbnails/grubhub-user-testing.png",
     "thumbnail_alt": "GrubHub online webpage",
     "date": 2015
   },
@@ -566,7 +566,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/disney_japan.jpg",
+    "thumbnail": "projects/thumbnails/disney_japan.png",
     "thumbnail_alt": "Disney Japan website homepage",
     "date": 2023
   },
@@ -626,7 +626,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/disney_press.jpg",
+    "thumbnail": "projects/thumbnails/disney_press.png",
     "thumbnail_alt": "Disney+ Press website homepage",
     "date": 2023
   },
@@ -647,7 +647,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/disney_latam_press.jpg",
+    "thumbnail": "projects/thumbnails/disney_latam_press.png",
     "thumbnail_alt": "Disney Brazil Press website homepage",
     "date": 2024
   },
@@ -687,7 +687,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/disney_games.jpg",
+    "thumbnail": "projects/thumbnails/disney_games.png",
     "thumbnail_alt": "Disney Games website homepage",
     "date": 2023
   },
@@ -706,7 +706,7 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/on-disney-plus.jpg",
+    "thumbnail": "projects/thumbnails/on-disney-plus.png",
     "thumbnail_alt": "On Disney+ website homepage",
     "date": 2023
   },
@@ -871,7 +871,7 @@
     "roles": [
       "Software Engineer"
     ],
-    "thumbnail": "projects/thumbnails/sw_bhtb.jpg",
+    "thumbnail": "projects/thumbnails/disney_editorial.png",
     "thumbnail_alt": "Disney Family website homepage",
     "date": 2022
   }

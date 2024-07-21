@@ -3,12 +3,7 @@
     "description": "Movie website design",
     "content": [
         {
-            "title": "Process",
-            "detail": "<p>For an Interaction Design and Information Architecture course. I wanted to diagram an infographic about the 30 seasons of the Survivor reality TV show, utilizing the universal design principle of the five hat racks by organizing the show's information by three out of five of the hat racks (a.k.a. LATCH).</p><p>As a long-running TV show, Survivor has had enough data from 2000 to 2015 to warrant an infographic that indicates its film locations and ratings over the years.</p>"
-        },
-        {
-            "title": "Hat Racks Used",
-            "detail": "<p>Location: Plot points mark the countries/regions where each season was filmed. Location is a major element of the show and the graphic displays the common areas that the show has covered geographically.</p><p><strong>Hierarchy:</strong> Columns indicate the seasons' ratings over the years. Since the show has been running for 15 years, the graphic shows how its popularity has fared across that time.</p><p><strong>Timeline:</strong> Season Titles are ordered chronologically. The show has been running for 15 years and thus the graphic indicates when each season was filmed in accordance with location.</p><p>The timeline is further useful in how it interacts with the other two \"hats\" used:</p><ul><li><strong>Location/Map:</strong> Numbered circles mark when and where seasons took place on the map.</li><li><strong>Hierarchy/Columns:</strong> Associate rating over the years as they run below the timeline.</li></ul>",
+            "detail": "<p>I built a website for a feature film called <em>Northwood Pie</em> from Site B Productions.<p></p>The site was built on Squarespace -- with some adjustments made through HTML, CSS, and JavaScript -- so that future non-developers could edit the site content more easily in the future. The content hierarchy was set up to feature the trailer, review quotes, and where users could stream the movie online. The reset of the single-page site describes the movie's premise in more detail, followed by the cast and crew, other review highlights, news, and more information about the real restaurant that the movie was based on and filmed at. The social networks mentioned included a custom Letterboxed link. The site content was optimized for accessibility and SEO -- including heading structure, image alt text, and schema/JSON-LD.</p>",
             "images": [
                 {
                     "src": "projects/media/northwood-pie/desktop.png",
@@ -24,6 +19,13 @@
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100 width-45",
                     "windowWrapper": "device"
+                }
+            ],
+            "buttons": [
+                {
+                    "title": "Check Out the Website",
+                    "classes": "align-center see-all mobile-width-100 width-20",
+                    "url": "https://www.northwoodpie.com"
                 }
             ]
         }
