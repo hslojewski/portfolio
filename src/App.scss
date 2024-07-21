@@ -388,7 +388,7 @@ body{
     position: relative;
     top: 60px;
     img{
-      width: 105%;
+      width: 110%;
       object-fit: cover;
       height: 100px;
       opacity: 0.75;
@@ -487,8 +487,12 @@ body{
     padding: 20px;
     position: relative;
     top: 60px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    p{
+      max-width: 1000px;
+      margin: 15px auto;
+    }
     h1, h2, h3{
       &.center{ text-align: center; }
     }
@@ -640,18 +644,20 @@ body{
         // padding: 0 15px; // padding right and left only
         margin-bottom: 20px; // vertical spacing between li elements
         // width: 100%;
-        width: 45%;
+        width: 100%;
         position: relative;
         a:hover{
           img{ opacity: 0.15; }
           h3{
             opacity: 1;
+            font-size: 16px;
           }
         }
         img{
+          aspect-ratio: 1;
           width: 100%;
           // width: 300px;
-          height: 150px;
+          // height: 150px;
           object-fit: cover;
           object-position: inherit;
           transition: opacity ease 200ms;
@@ -677,6 +683,10 @@ body{
       ul{
         justify-content: space-evenly;
         flex-basis: inherit;
+        li{
+          font-size: 16px;
+          width: 45%;
+        }
       }
     }
     // .page-content .buttons-list{
@@ -739,8 +749,8 @@ body{
     .project-list-wrapper{
       ul{
         li{
-          width: 45%;
-          img{ height: 300px; }
+          width: 30%;
+          // img{ height: 300px; }
         }
       }
       ul.one-item{
@@ -748,11 +758,11 @@ body{
           width: 100%;
         }
       }
-      ul.two-items{
-        li{
-          width: 45%;
-        }
-      }
+      // ul.two-items{
+      //   li{
+      //     width: 45%;
+      //   }
+      // }
     }
     .content-banner img{
       height: 250px;
