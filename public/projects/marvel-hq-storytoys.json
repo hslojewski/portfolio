@@ -2,11 +2,11 @@
     "path": "marvel-hq-storytoys",
     "content": [
         {
-            "detail": "<p>sfds</p>",
+            "detail": "<p>I helped the Marvel team in replacing their former Marvel HQ site with a new splash page marketing their content on an app published by StoryToys. I helped the team build the page and ensured that the rest of the site content was unpublished and redirecting to the new splash page.</p>",
             "images": [
                 {
                     "src": "projects/media/marvel-hq/homepage.png",
-                    "alt": "Webpage of Pandorapedia content, including featured and special categories of entries.",
+                    "alt": "Webpage marketing Marvel HQ Published by StoryToys app, including characters featured in the app, a button to watch the trailer, and links to download the app",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
