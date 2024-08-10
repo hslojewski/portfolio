@@ -1,0 +1,82 @@
+{
+    "path": "disney-fan-and-branded-sites",
+    "content": [
+        {
+            "detail": "<p>For about four years, I web developed for the frontend of different studios sites under The Walt Disney Company and their global equivalents -- comprising of over 100 websites. Every site lived on the same platform, supporting various brands and regions. Because of this, each site shared the same functionalities and building blocks while having separate style themes and a localization system.</p><p>The sites included the following:</p><ol><li>Disney.com, its subdomains, and its global counterparts</li><li>20thCenturyStudios.com, its family site, and its global counterparts</li><li>StarWars.com and its kids-centric site</li><li>National Geographic Films and \"For Your Consideration\"</li><li>Avatar.com</li></ol>",
+            "images": [
+                {
+                    "src": "projects/media/disney-fab/disney.png",
+                    "alt": "Homepage of different content links for Disney US site",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "disney.com"
+                },
+                {
+                    "src": "projects/media/disney-fab/disneymovies.png",
+                    "alt": "Homepage of different content links for Disney Movies US site",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "movies.disney.com"
+                },
+                {
+                    "src": "projects/media/disney-fab/disneyme.png",
+                    "alt": "Homepage of different content links for Disney Middle East site in Arabic",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "ar.disneyme.com"
+                },
+                {
+                    "src": "projects/media/disney-fab/20cs.png",
+                    "alt": "Homepage of different content links for 20th Century Studios site",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "20thcenturystudios.com"
+                },
+                {
+                    "src": "projects/media/disney-fab/20csla.png",
+                    "alt": "Homepage of different content links for 20th Century Studios Latin America site",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "20thcenturystudiosla.com"
+                },
+                {
+                    "src": "projects/media/disney-fab/starwars.png",
+                    "alt": "Homepage of different content links for Star Wars site",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.com"
+                },
+                {
+                    "src": "projects/media/disney-fab/starwarskids.png",
+                    "alt": "Homepage of different content links for Star Wars Kids site",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwarskids.com"
+                },
+                {
+                    "src": "projects/media/disney-fab/avatar.png",
+                    "alt": "Homepage of different content links for Avatar site",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "avatar.com"
+                },
+                {
+                    "src": "projects/media/disney-fab/natgeo.png",
+                    "alt": "Homepage of different content links for National Geographic Films site",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "films.nationalgeographic.com"
+                }
+            ]
+        }
+    ]
+}
