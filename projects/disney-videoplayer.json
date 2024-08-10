@@ -3,24 +3,25 @@
     "description": "asdf",
     "content": [
         {
-            "title": "Process",
-            "detail": "<p>asdf</p>",
+            "detail": "<p>My team had been tasked in updating the analytics system across all of the sites on our platform. This became a project where I led the following technical upgrades to achieve this larger goal:</p><ol><li>Replace our old analytics system with a new system, updating all of the frontend modules to ensure that user activity was properly captured</li><li>Replace the old video player with a new one, privacy compliant with our new analytics system</li><li>Provide more privacy configuration across the sites on our platform based on audience and local privacy laws</li></ol><p>While I had lightly touched the analytics and video player code in the past, this project gave me extensive exposure to both of these systems in order to replace them -- ensuring that video and analaytics behavior was not disrupted across the over 100 sites on the platform.</p><p>My experience with the platform itself and its flexibility in configurable options inspired me to provide a configurable privacy solution for already existing sites as well as sites that would live on the platform in the future.</p>",
             "images": [
                 {
-                    "src": "projects/media/disney-videoplayer/disney_video_modal.png",
-                    "alt": "(needs alt text)",
+                    "src": "projects/media/disney-videoplayer/20cs_video_modal.png",
+                    "alt": "Webpage of a 20th Century Studios video player in a modal",
                     "classes": "align-center",
+                    "windowWrapper": "browser",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/disney-videoplayer/starwars_video_modal.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Webpage of a Star Wars Japan video player in a modal",
                     "classes": "align-center",
+                    "windowWrapper": "browser",
                     "containerClasses": "mobile-width-100"
                 },
                 {
                     "src": "projects/media/disney-videoplayer/video_homepage.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Homepage of the Disney Video website",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
@@ -28,11 +29,18 @@
                 },
                 {
                     "src": "projects/media/disney-videoplayer/video_page.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Webpage of a Disney Video website video",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
                     "browserDestination": "https://video.disney.com/watch/inside-out-2-tickets-on-sale-6186cb25f2298dec84751fce"
+                },
+                {
+                    "src": "projects/media/disney-videoplayer/starwars_video.png",
+                    "alt": "Webpage of a Star Wars collection of video pages",
+                    "classes": "align-center",
+                    "windowWrapper": "browser",
+                    "containerClasses": "mobile-width-100"
                 }
             ]
         }
