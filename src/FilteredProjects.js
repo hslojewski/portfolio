@@ -5,7 +5,7 @@ const React = require('react');
 class FilteredProjects extends React.Component {
   render() {
     const {
-      orderChronologically,
+      orderChronologically, closeNav,
       projects = {}, activeTags = [], filterType = "AND", numToDisplay =  null
     } = this.props;
 
@@ -63,7 +63,7 @@ class FilteredProjects extends React.Component {
               {projectsToDisplay.map((path, i) => {
                 return(
                   <li key={i} className="project-detail">
-                    <Link exact="true" to={"/projects/" + path}>
+                    <Link exact="true" to={"/projects/" + path} onClick={closeNav}>
                       <img src={[process.env.PUBLIC_URL, projects[path].thumbnail].join("/")} alt={projects[path].thumbnail_alt} />
                       <h3>{projects[path].title}</h3>
                     </Link>

@@ -386,7 +386,7 @@ body{
   }
   .page{
     position: relative;
-    top: 40px;
+    // top: 40px;
   }
   .content-banner{
     img{
@@ -494,6 +494,7 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     max-width: 1000px;
+    position: relative;
     p{
       margin: 15px auto;
     }

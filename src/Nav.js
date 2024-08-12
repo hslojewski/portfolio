@@ -5,7 +5,7 @@ import { FaBars, FaLinkedinIn, FaEnvelope, FaRegSun, FaRegMoon } from "react-ico
 class Nav extends React.Component {
   render() {
     const {
-      toggleColorMode, toggleNav,
+      toggleColorMode, toggleNav, closeNav,
       colorMode = "light", isNavVisible
     } = this.props;
     
@@ -20,10 +20,10 @@ class Nav extends React.Component {
             <Link to="/">Heidi Slojewski</Link>
           </li>
           <li>
-            <Link to="/about" onClick={toggleNav}>About</Link>
+            <Link to="/about" onClick={closeNav}>About</Link>
           </li>
           <li>
-            <Link to="/projects" onClick={toggleNav}>Projects</Link>
+            <Link to="/projects" onClick={closeNav}>Projects</Link>
           </li>
           {/* <li>
             <Link to="/resume" target="_blank">

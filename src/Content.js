@@ -47,7 +47,7 @@ class Content extends React.Component {
 
   render() {
     const {
-      displayProjects, orderChronologically,
+      displayProjects, orderChronologically, closeNav, projectAmount = 8,
       thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, titleAlignment = null, type = null, projects = {}
     } = this.props;
 
@@ -72,7 +72,7 @@ class Content extends React.Component {
         <div className="page-content blahmeh second-column">
           {type === "project" &&
             <span className="projects-link">
-              <Link to="/projects" className="projects-link">Back to Projects</Link>
+              <Link to="/projects" className="projects-link" onClick={closeNav}>Back to Projects</Link>
             </span>
           }
           <h1 className={titleAlignment}>{title}</h1>
@@ -139,7 +139,8 @@ class Content extends React.Component {
                         filterType={(section.projectsList||{}).filterType}
                         displayProjects={displayProjects}
                         orderChronologically={orderChronologically}
-                        numToDisplay={8}
+                        numToDisplay={projectAmount}
+                        closeNav={closeNav}
                       />
                     </div>
                   }
@@ -150,7 +151,7 @@ class Content extends React.Component {
                           var Component = eduIconComponents[button.icon];
                         }
                         return(
-                          <Link to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")}>
+                          <Link to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
                             <button className={button.classes}>
                               {button.title}
                               {Component && <Component  />}
@@ -224,7 +225,7 @@ class Content extends React.Component {
           }
           {type === "project" &&
             <div className="projects-link bottom">
-              <Link to="/projects">Back to Projects</Link>
+              <Link to="/projects" onClick={closeNav}>Back to Projects</Link>
             </div>
           }
         </div>

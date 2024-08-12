@@ -223,6 +223,10 @@ const App = () => {
     setNavVisibility(!isNavVisible);
   }
 
+  var closeNav = () => {
+    setNavVisibility(false);
+  }
+
   var orderChronologically = (projects) => {
     var blah = {};
     Object.keys(allProjects).forEach(a => {
@@ -261,6 +265,7 @@ const App = () => {
         toggleColorMode={toggleColorMode}
         isNavVisible={isNavVisible}
         toggleNav={toggleNav}
+        closeNav={closeNav}
       />
       <Routes>
         <Route exact="true" path="/"
@@ -282,6 +287,7 @@ const App = () => {
                   displayProjects={displayProjects}
                   projects={projects}
                   orderChronologically={orderChronologically}
+                  closeNav={closeNav}
                 />
                }
         />
@@ -302,6 +308,7 @@ const App = () => {
                   toggleAccordion={toggleAccordion}
                   orderChronologically={orderChronologically}
                   tagAccordions={tagAccordions}
+                  closeNav={closeNav}
                 />
               }
         />

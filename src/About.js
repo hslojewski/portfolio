@@ -7,7 +7,7 @@ class About extends React.Component {
   render() {
 
     const {
-      getProjectData, displayProjects, orderChronologically,
+      getProjectData, displayProjects, orderChronologically, closeNav,
       projects = {}, projectData = {}
     } = this.props;
     
@@ -20,6 +20,8 @@ class About extends React.Component {
         projects={projects}
         displayProjects={displayProjects}
         orderChronologically={orderChronologically}
+        closeNav={closeNav}
+        projectAmount={6}
       />
     );
   }
