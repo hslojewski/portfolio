@@ -20,10 +20,10 @@ class Nav extends React.Component {
             <Link to="/">Heidi Slojewski</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={toggleNav}>About</Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" onClick={toggleNav}>Projects</Link>
           </li>
           {/* <li>
             <Link to="/resume" target="_blank">

@@ -139,7 +139,7 @@ class Content extends React.Component {
                         filterType={(section.projectsList||{}).filterType}
                         displayProjects={displayProjects}
                         orderChronologically={orderChronologically}
-                        numToDisplay={6}
+                        numToDisplay={8}
                       />
                     </div>
                   }

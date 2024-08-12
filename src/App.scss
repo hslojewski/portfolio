@@ -163,7 +163,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
       margin: auto;
       display: block;
       width: 80%;
-      max-width: 700px;
+      max-width: 95%;
     }
     
     /* Add Animation */
@@ -518,7 +518,7 @@ body{
       width: 90%;
       margin: 5px auto 0;
       text-align: center;
-      display: flex;
+      display: flow;
       font-size: 12px;
     }
     .buttons-list{
@@ -541,6 +541,16 @@ body{
       .button-icon svg{
         margin-left: 5px;
         margin-bottom: -2px;
+      }
+    }
+    table{
+      text-align: center;
+      margin: 0 auto;
+      th{
+        padding: 0 15px 10px 15px;
+      }
+      td{
+        padding: 0 15px 15px 15px;
       }
     }
   }
