@@ -71,7 +71,7 @@
                 {
                     "title": "View My Resume",
                     "classes": "align-center resume secondary mobile-width-100 width-20",
-                    "url": "/resume"
+                    "pdf_url": "projects/media/about/heidislojewski_resume.pdf"
                 }
             ]
         },

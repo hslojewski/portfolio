@@ -881,7 +881,7 @@
     "date": 2019
   },
   "disney-styling-refactor": {
-    "title": "The Walt Disney Company Studios Web Styling Refactor",
+    "title": "The Walt Disney Company Studios Websites Styling Refactor",
     "tools": [
       "GitHub"
     ],
@@ -899,7 +899,7 @@
       "Software Engineer"
     ],
     "thumbnail": "projects/thumbnails/disney_styling.png",
-    "thumbnail_alt": "Disney.com website homepage",
+    "thumbnail_alt": "Disney.com website homepage with browser inspector open",
     "date": 2021
   }
 }
