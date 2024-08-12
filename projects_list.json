@@ -52,7 +52,7 @@
           "Prototyping"
         ],
         "affiliations": [
-          "Disney"
+          "The Walt Disney Company"
         ],
         "roles": [
           "Student"
@@ -472,7 +472,7 @@
       "Git"
     ],
     "affiliations": [
-      "Disney",
+      "The Walt Disney Company",
       "Disney's CODE: Rosie",
       "Hackbright Academy"
     ],
@@ -561,7 +561,7 @@
       "Localization"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -580,7 +580,7 @@
       "Product Operations"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -601,7 +601,7 @@
       "HTML/CSS"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -621,7 +621,7 @@
       "Accessibility"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -642,7 +642,7 @@
       "Localization"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -662,7 +662,7 @@
       "Accessibility"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -682,7 +682,7 @@
       "Accessibility"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -701,7 +701,7 @@
       "Product Operations"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -720,7 +720,7 @@
       "Product Operations"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
@@ -733,19 +733,21 @@
     "title": "Star Wars Site Relaunch",
     "tools": [
       "Content Management System (CMS)",
-      "WordPress"
+      "WordPress",
+      "Google Sheets"
     ],
     "skills": [
       "Product Management",
-      "Product Operations"
+      "Product Operations",
+      "Spreadsheets"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/test.jpg",
+    "thumbnail": "projects/thumbnails/starwars_relaunch.png",
     "thumbnail_alt": "StarWars.com website homepage",
     "date": 2022
   },
@@ -765,7 +767,7 @@
       "Mustache"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Software Engineer"
@@ -790,7 +792,7 @@
       "Mustache"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Software Engineer"
@@ -814,20 +816,23 @@
       "Mustache"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Software Engineer"
     ],
     "thumbnail": "projects/thumbnails/disney_video.png",
-    "thumbnail_alt": "Disney website video player",
+    "thumbnail_alt": "20th Century Studios website video player",
     "date": 2022
   },
   "disney-fan-and-branded-sites": {
     "title": "The Walt Disney Company Fan and Branded Websites (Disney, Avatar, Star Wars, 20th Century Studios, National Geographic Films & FYC)",
     "tools": [
       "GitHub",
-      "Figma"
+      "Figma",
+      "InVision",
+      "Zeplin",
+      "Sketch"
     ],
     "skills": [
       "JavaScript",
@@ -839,7 +844,7 @@
       "Mustache"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Software Engineer"
@@ -866,7 +871,7 @@
       "PHP"
     ],
     "affiliations": [
-      "Disney"
+      "The Walt Disney Company"
     ],
     "roles": [
       "Software Engineer"
@@ -874,5 +879,27 @@
     "thumbnail": "projects/thumbnails/disney_editorial.png",
     "thumbnail_alt": "Disney Family website homepage",
     "date": 2019
+  },
+  "disney-styling-refactor": {
+    "title": "The Walt Disney Company Studios Web Styling Refactor",
+    "tools": [
+      "GitHub"
+    ],
+    "skills": [
+      "JavaScript",
+      "Ruby",
+      "Backbone.js",
+      "HTML/CSS",
+      "Sass"
+    ],
+    "affiliations": [
+      "The Walt Disney Company"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "thumbnail": "projects/thumbnails/disney_styling.png",
+    "thumbnail_alt": "Disney.com website homepage",
+    "date": 2021
   }
 }
