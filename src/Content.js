@@ -150,14 +150,26 @@ class Content extends React.Component {
                         if (button.icon) {
                           var Component = eduIconComponents[button.icon];
                         }
-                        return(
-                          <Link to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
-                            <button className={button.classes}>
-                              {button.title}
-                              {Component && <Component  />}
-                            </button>
-                          </Link>
-                        );
+                        var linkUrl;
+                        if (button.pdf_url) {
+                          return(
+                            <a href={[process.env.PUBLIC_URL, button.pdf_url].join("/")} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
+                              <button className={button.classes}>
+                                {button.title}
+                                {Component && <Component  />}
+                              </button>
+                            </a>
+                          );
+                        } else {
+                          return(
+                            <Link to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
+                              <button className={button.classes}>
+                                {button.title}
+                                {Component && <Component  />}
+                              </button>
+                            </Link>
+                          );
+                        }
                       })}
                     </div>
                   }
