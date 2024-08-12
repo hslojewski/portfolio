@@ -1,14 +1,12 @@
 {
     "path": "bring-home-the-bounty",
-    "description": "asdf",
     "content": [
         {
-            "title": "Process",
-            "detail": "<p>asdf</p>",
+            "detail": "<p>For the first instance of the \"Bring Home the Bounty\" campaign on StarWars.com, I was part of the web development of frontend features that provided users a newer experience on the site that was unique to this campaign.</p><p>During the campaign, each week revealed information on new Star Wars products related to the more recent Star Wars series on Disney+. To build anticipation for site guests, they would be informed on how many weeks were left in the campaign and when new product reveals would drop.</p><p>To support this project, I updated an existing frontend feature so that is was more flexible to use for either its traditional purpose or for its new campaign-focused purpose. This was a feature that already allowed site producers to add content grids to pages, whether they linked out to movie pages, databank pages, or more.</p><p>I updated this feature so that the particular links within the content grids could do the following:</p><ul><li>Optionally link out to a page about a specific week's products, unless that week was in the future</li><li>Provide a message in relation to the specific week, such as if the week's collection was avaialble today or on a specific date in the future</li><li>Customize the image asset associated with the particular week</li><li>Indicate which collection number (which week number) was associated with the week</li><li>Indicate if the collection was currently active (green), pending (red), or coming soon (gray)</li></ul>",
             "images": [
                 {
                     "src": "projects/media/bring-home-the-bounty/section.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Main section page for Bring Home the Bounty campaign, featuring announcements, the current week's products, and details about previous and upcoming weeks",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
@@ -16,7 +14,7 @@
                 },
                 {
                     "src": "projects/media/bring-home-the-bounty/week10.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Section page for Bring Home the Bounty campaign's overall weekly details, indicating that Week 11 was pending and Week 12 was coming soon",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
