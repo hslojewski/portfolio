@@ -30,9 +30,9 @@ const App = () => {
     // const date = new Date('2017-4-28');
     // const start = new Date('2017-4-20');
     // const end = new Date('2017-5-16');
-    const springBegins = 2; // March
-    const summerBegins = 4; // May
-    const autumnBegins = 6; // July
+    const springBegins = 3; // March
+    const summerBegins = 5; // May
+    const autumnBegins = 7; // July
     // const winterBegins = 11;
     // // console.log("month: "+moment().month());
 
@@ -255,7 +255,7 @@ const App = () => {
   }, [])
   
   return (
-    <div className={colorMode + "-mode " + season}>
+    <div className={colorMode + "-mode " + "summer"}>
       <div id="image-modal" className="modal">
         <span className="close-modal">&times;</span>
         <img className="modal-content" id="modal-image" alt="modal" />
