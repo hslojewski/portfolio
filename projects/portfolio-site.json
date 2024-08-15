@@ -1,0 +1,103 @@
+{
+    "path": "portfolio-site",
+    "content": [
+        {
+            "detail": "<p>I put together this site in order to record the different projects I've worked on in product management, software engineering, human-computer interaction, and more. In developing the site, I wanted to establish a template system in order to detail each project based on their common elements such as tools and skills used, media, and other details.</p>",
+            "images": [
+                {
+                    "src": "projects/media/portfolio/project1.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-30"
+                },
+                {
+                    "src": "projects/media/portfolio/project2.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-30"
+                },
+                {
+                    "src": "projects/media/portfolio/project3.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-30"
+                }
+            ]
+        },
+        {
+            "subtitle": "Style Theme",
+            "detail": "<p>Regarding the style theming of the site, this updates every day and every season.</p><p><strong>Every day</strong>, the theme of the site is light during the day and dark at night</p><p>The site has a light/dark theme toggle that users can manually change themselves. Light theme has a lighter background while dark theme has a darker background.</p>",
+            "images": [
+                {
+                    "src": "projects/media/portfolio/light.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-45"
+                },
+                {
+                    "src": "projects/media/portfolio/dark.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-45"
+                }
+            ]
+        },
+        {
+            "detail": "<p><strong>Every four months</strong>, the color theme of the site changes to coincide with the seasons changing.</p>",
+            "images": [
+                {
+                    "src": "projects/media/portfolio/winter_light.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-20"
+                },
+                {
+                    "src": "projects/media/portfolio/spring_light.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-20"
+                },
+                {
+                    "src": "projects/media/portfolio/summer_light.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-20"
+                },
+                {
+                    "src": "projects/media/portfolio/autumn_light.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-20"
+                }
+            ]
+        },
+        {
+            "images": [
+                {
+                    "src": "projects/media/portfolio/winter_dark.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-20"
+                },
+                {
+                    "src": "projects/media/portfolio/spring_dark.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-20"
+                },
+                {
+                    "src": "projects/media/portfolio/summer_dark.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-20"
+                },
+                {
+                    "src": "projects/media/portfolio/autumn_dark.png",
+                    "alt": "(tbd)",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-20"
+                }
+            ]
+        }
+    ]
+}
