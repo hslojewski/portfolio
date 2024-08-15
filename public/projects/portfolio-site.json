@@ -2,7 +2,7 @@
     "path": "portfolio-site",
     "content": [
         {
-            "detail": "<p>Put together this site in order to record the different projects I've worked on in product management, software engineering, human-computer interaction, and more. In developing the site, I wanted to establish a template system in order to detail each project based on their common elements such as tools and skills used, media, and other details.</p>",
+            "detail": "<p>I put together this site in order to record the different projects I've worked on in product management, software engineering, human-computer interaction, and more. In developing the site, I wanted to establish a template system in order to detail each project based on their common elements such as tools and skills used, media, and other details.</p>",
             "images": [
                 {
                     "src": "projects/media/portfolio/project1.png",
