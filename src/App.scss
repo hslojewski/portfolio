@@ -99,7 +99,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
           }
         }
         // .project-list-wrapper{
-          a:focus{
+        li:focus, a:focus{
             outline-color: $theme-accent-color;
           }
         // }
@@ -375,6 +375,11 @@ body{
           }
         }
         .mobile-only-nav-text{ margin-right: 10px; }
+        &.menu:focus{
+          outline-style: solid;
+          outline-width: 5px;
+          outline-offset: -10px;
+        }
       }
       li a{
         color: $black;
@@ -413,7 +418,7 @@ body{
   }
   .page{
     position: relative;
-    // top: 40px;
+    top: 40px;
   }
   .content-banner{
     img{
@@ -517,7 +522,6 @@ body{
   }
   .page-content{
     padding: 20px;
-    top: 60px;
     max-width: 1200px;
     margin: 0 auto;
     max-width: 1000px;

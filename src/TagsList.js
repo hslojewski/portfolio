@@ -16,6 +16,7 @@ class TagsList extends React.Component {
             activeFilterTags.push(tag);
         }
     })
+    
     return (
         <div className={["tag", title.toLowerCase(), isAccordionOpen].join(" ")}>
             <div className="tag-title" tabIndex="0" onClick={()=>toggleAccordion(title.toLowerCase())} onKeyUp={(e)=>e.key === 'Enter' ? toggleAccordion(title.toLowerCase()) : null}>

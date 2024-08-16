@@ -19,23 +19,25 @@ class Projects extends React.Component {
         } = this.props;
 
         return (
-            <div className="page-content projects-list">
-                <h1>Projects</h1>
-                <div className="filters-header">
-                    <div className="title">
-                        <h2>Filters</h2>
-                        <span>({activeTags.length})</span>
+            <div className="page">
+                <div className="page-content projects-list">
+                    <h1>Projects</h1>
+                    <div className="filters-header">
+                        <div className="title">
+                            <h2>Filters</h2>
+                            <span>({activeTags.length})</span>
+                        </div>
+                        <div className={"clear-all "}>
+                            <button onClick={clearActiveTags} className={activeTags.length === 0 ? "disabled" : null}>Clear all filters</button>
+                        </div>
                     </div>
-                    <div className={"clear-all "}>
-                        <button onClick={clearActiveTags} className={activeTags.length === 0 ? "disabled" : null}>Clear all filters</button>
-                    </div>
+                    <TagsList title="Tools" tags={tools} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
+                    <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
+                    <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
+                    <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
+                    <h2>List</h2>
+                    <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects} orderChronologically={orderChronologically} closeNav={closeNav} />
                 </div>
-                <TagsList title="Tools" tags={tools} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
-                <TagsList title="Skills" tags={skills} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
-                <TagsList title="Affiliations" activeTags={activeTags} tags={affiliations} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
-                <TagsList title="Roles" tags={roles} activeTags={activeTags} displayProjects={displayProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
-                <h2>List</h2>
-                <FilteredProjects projects={projects} activeTags={activeTags} filterType={filterType} displayProjects={displayProjects} orderChronologically={orderChronologically} closeNav={closeNav} />
             </div>
         );
     }

@@ -51,7 +51,7 @@ class Nav extends React.Component {
               {colorMode === "light" ? <FaRegMoon title={switchToDarkMessage} /> : <FaRegSun title={switchToLightMessage} />}
             </Link>
           </li>
-          <li className="menu" aria-label="Menu" onClick={toggleNav}>
+          <li className="menu" aria-label="Menu" onClick={toggleNav}  onKeyUp={(e)=> e.key === 'Enter' ? toggleNav() : null} tabIndex="0">
             <FaBars />
           </li>
         </ul>
