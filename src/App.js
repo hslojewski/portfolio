@@ -255,10 +255,10 @@ const App = () => {
   }, [])
   
   return (
-    <div className={colorMode + "-mode " + "summer"}>
+    <div className={colorMode + "-mode " + season}>
       <div id="image-modal" className="modal">
         <span className="close-modal">&times;</span>
-        <img className="modal-content" id="modal-image" alt="modal" />
+        <img loading="lazy"className="modal-content" id="modal-image" alt="modal" />
       </div>
       <Nav
         colorMode={colorMode}

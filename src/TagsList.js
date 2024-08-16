@@ -18,7 +18,7 @@ class TagsList extends React.Component {
     })
     return (
         <div className={["tag", title.toLowerCase(), isAccordionOpen].join(" ")}>
-            <div className="tag-title" onClick={()=>toggleAccordion(title.toLowerCase())}>
+            <div className="tag-title" tabIndex="0" onClick={()=>toggleAccordion(title.toLowerCase())} onKeyUp={(e)=>e.key === 'Enter' ? toggleAccordion(title.toLowerCase()) : null}>
                 <h3>{title}</h3>
                 <div className="tag-count">{activeFilterTags.length}</div>
             </div>

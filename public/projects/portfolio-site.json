@@ -98,6 +98,9 @@
                     "containerClasses": "mobile-width-20"
                 }
             ]
+        },
+        {
+            "detail": "<p>The site was also optimized for accessibility, ensuring that all images included alt text, all links and buttons had keyboard tabbing avaialble, and that all style themes had an ideal color contrast ratio.</p>"
         }
     ]
 }

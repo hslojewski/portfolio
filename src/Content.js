@@ -66,7 +66,7 @@ class Content extends React.Component {
       <div className="page">
         {thumbnail &&
           <div className="content-banner">
-            <img src={[process.env.PUBLIC_URL, thumbnail].join("/")} alt="" />
+            <img loading="lazy" src={[process.env.PUBLIC_URL, thumbnail].join("/")} alt="" />
           </div>
         }
         <div className="page-content blahmeh second-column">
@@ -123,7 +123,7 @@ class Content extends React.Component {
               return(
                 <div key={i} className={"section "+ section.classes}>
                   {section.wrap_images && section.wrap_images.map((image, i) => {
-                    return(<img key={i} src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
+                    return(<img loading="lazy" key={i} src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />);
                     }
                   )}
                   <h2 className={section.titleAlignment}>{section.title}</h2>
@@ -153,7 +153,7 @@ class Content extends React.Component {
                         var linkUrl;
                         if (button.pdf_url) {
                           return(
-                            <a href={[process.env.PUBLIC_URL, button.pdf_url].join("/")} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
+                            <a tabIndex="-1" href={[process.env.PUBLIC_URL, button.pdf_url].join("/")} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
                               <button className={button.classes}>
                                 {button.title}
                                 {Component && <Component  />}
@@ -162,7 +162,7 @@ class Content extends React.Component {
                           );
                         } else {
                           return(
-                            <Link to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
+                            <Link tabIndex="-1" to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
                               <button className={button.classes}>
                                 {button.title}
                                 {Component && <Component  />}
@@ -180,7 +180,7 @@ class Content extends React.Component {
                           return(
                             <div key={i} className={"image device " + image.containerClasses}>
                               <div className="content">
-                                <img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
+                                <img loading="lazy" src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
                               </div>
                             </div>
                           );
@@ -192,14 +192,14 @@ class Content extends React.Component {
                                 <input value={image.browserDestination} disabled />
                               </div>
                               <div className="browser-container">
-                                <img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
+                                <img loading="lazy" src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
                               </div>
                             </div>
                           );
                         } else {
                           return(
                             <div key={i} className={"image " + image.containerClasses}>
-                              <img src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
+                              <img loading="lazy" src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
                               {image.caption && <caption>{image.caption}</caption>}
                             </div>
                           );
@@ -208,7 +208,7 @@ class Content extends React.Component {
                     </div>
                   }
                   {section.video &&
-                    <iframe src={section.video} title="video" aria-label="video" width="100%" height="400" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                    <iframe src={section.video} loading="lazy" title="video" aria-label="video" width="100%" height="400" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
                   }
                   {section.instagramEmbed &&
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
