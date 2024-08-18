@@ -32,6 +32,7 @@
         },
         {
             "detail": "<p>My education has specialized in database design, software engineering, and human-computer interaction.</p>",
+            "detailAlignment": "center",
             "icons": [
                 {
                     "component": "FaSitemap",
@@ -76,7 +77,7 @@
             ]
         },
         {
-            "detail": "<p>Outside of work, I enjoy movies, <a href='https://www.instagram.com/explore/tags/heiidski🗺'>travel</a>, <a href='https://www.instagram.com/explore/tags/heiidski🎡'>theme parks</a>, <a href='https://www.instagram.com/explore/tags/heiidski🥾'>hiking</a>, <a href='https://www.instagram.com/explore/tags/heiidski🧩'>puzzles</a>, and exploring and <a href='https://www.instagram.com/explore/tags/heiidski🧨'>trying new things</a> wherever I go. As an advocate of STEM/STEAM, I am open to opportunities where I can encourage and promote tech literacy.</p>",
+            "detail": "<p>Outside of work, I enjoy movies, <a href='https://www.instagram.com/explore/tags/heiidski🗺'>travel</a>, <a href='https://www.instagram.com/explore/tags/heiidski🎡'>theme parks</a>, <a href='https://www.instagram.com/explore/tags/heiidski🥾'>hiking</a>, <a href='https://www.instagram.com/explore/tags/heiidski🧩'>puzzles</a>, and exploring and <a href='https://www.instagram.com/explore/tags/heiidski🧨'>trying new things</a>. As an advocate of STEM/STEAM, I am open to opportunities where I can encourage and promote tech literacy.</p>",
             "instagramEmbed": "https://www.instagram.com/heiidski"
         }
     ]

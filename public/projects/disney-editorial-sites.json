@@ -1,22 +1,28 @@
 {
     "path": "disney-editorial-sites",
-    "description": "asdf",
     "content": [
         {
-            "title": "Process",
-            "detail": "<p>asdf</p>",
+            "detail": "<p>For about four years, I web developed for the frontend of different Wordpress sites under The Walt Disney Company -- covering the news and editorial articles across StarWars.com, Disney Family, Disney Style, and Oh My Disney.</p><p>Projects included</p><ul><li>Migrating the baby names section from Babble.com to Disney Family</li><li>Updating the image overlay price feature on article images that include merchandise</li><li>Mass updating hundreds of articles' images to include alt text for improved accessibility</li></ul>",
             "images": [
                 {
-                    "src": "projects/media/disney-editorial-sites/style.png",
-                    "alt": "(needs alt text)",
+                    "src": "projects/media/disney-editorial-sites/style_article.jpeg",
+                    "alt": "Disney Style article content, including price ratings for specific products mentioned in the article",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
-                    "browserDestination": "style.disney.com"
+                    "browserDestination": "style.disney.com/living/2019/04/27/our-favorite-disney-coffee-table-books"
+                },
+                {
+                    "src": "projects/media/disney-editorial-sites/starwars.png",
+                    "alt": "Webpage of Star Wars content, specifically news and editorial articles",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "starwars.com/news"
                 },
                 {
                     "src": "projects/media/disney-editorial-sites/family.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Webpage of Disney Family content, specifically craft, recipe, and other similar articles",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
@@ -24,19 +30,11 @@
                 },
                 {
                     "src": "projects/media/disney-editorial-sites/omd.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Webpage of Oh My Disney content, specifically news and editorial articles",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
                     "browserDestination": "ohmy.disney.com"
-                },
-                {
-                    "src": "projects/media/disney-editorial-sites/style_article.png",
-                    "alt": "(needs alt text)",
-                    "classes": "align-center",
-                    "containerClasses": "mobile-width-100",
-                    "windowWrapper": "browser",
-                    "browserDestination": "style.disney.com/living/2019/04/27/diy-graduation-cap"
                 }
             ]
         }

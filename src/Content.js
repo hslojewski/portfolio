@@ -129,7 +129,7 @@ class Content extends React.Component {
                   <h2 className={section.titleAlignment}>{section.title}</h2>
                   <h3 className={section.subtitleAlignment}>{section.subtitle}</h3>
                   {section.detail &&
-                    <div>{parse(section.detail)}</div>
+                    <div className={section.detailAlignment}>{parse(section.detail)}</div>
                   }
                   {section.projectsList &&
                     <div className="projects-list">

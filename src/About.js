@@ -21,7 +21,7 @@ class About extends React.Component {
         displayProjects={displayProjects}
         orderChronologically={orderChronologically}
         closeNav={closeNav}
-        projectAmount={4}
+        projectAmount={6}
       />
     );
   }
