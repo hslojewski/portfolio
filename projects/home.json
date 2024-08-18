@@ -23,18 +23,18 @@
             "buttons": [
                 {
                     "title": "More About Me",
-                    "classes": "align-center",
+                    "classes": "align-center secondary",
                     "url": "/about"
                 },
                 {
                     "title": "Connect on LinkedIn",
-                    "classes": "align-center button-icon",
+                    "classes": "align-center button-icon secondary",
                     "icon": "FaLinkedinIn",
                     "url": "https://www.linkedin.com/in/heidislojewski"
                 },
                 {
                     "title": "Contact Me",
-                    "classes": "align-center button-icon",
+                    "classes": "align-center button-icon secondary",
                     "icon": "FaEnvelope",
                     "url": "mailto:heidi.slojewski@gmail.com"
                 }

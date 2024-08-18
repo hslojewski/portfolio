@@ -516,8 +516,7 @@
       "Site B Productions"
     ],
     "roles": [
-      "Web Designer",
-      "Production Assistant"
+      "Web Designer"
     ],
     "thumbnail": "projects/thumbnails/the_drawing.jpg",
     "thumbnail_alt": "Movie poster for The Drawing, a girl in front of a window that has a hand with long fingers behind the glass",
@@ -826,7 +825,7 @@
     "date": 2022
   },
   "disney-fan-and-branded-sites": {
-    "title": "The Walt Disney Company Fan and Branded Websites (Disney, Avatar, Star Wars, 20th Century Studios, National Geographic Films & FYC)",
+    "title": "The Walt Disney Company Fan and Branded Websites (Disney, Avatar, Star Wars, 20th Century Studios, National Geographic Films)",
     "tools": [
       "GitHub",
       "Figma",
@@ -861,13 +860,8 @@
       "WordPress"
     ],
     "skills": [
-      "JavaScript",
-      "Ruby",
-      "Backbone.js",
       "HTML/CSS",
-      "Sass",
       "Accessibility",
-      "Mustache",
       "PHP"
     ],
     "affiliations": [
