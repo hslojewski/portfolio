@@ -6,7 +6,7 @@
             "images": [
                 {
                     "src": "projects/media/disney-ctdi/homepage.jpeg",
-                    "alt": "(needs alt text)",
+                    "alt": "Webpage of different information about the Creative Talent Development and Inclusion program at Disney Entertainment",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",

@@ -1,5 +1,6 @@
 {
     "path": "disney-fan-and-branded-sites",
+    "description": "Frontend development work for websites under Disney, Avatar, Star Wars, 20th Century Studios, National Geographic Films brands.",
     "content": [
         {
             "detail": "<p>For about four years, I web developed for the frontend of different studios sites under The Walt Disney Company and their global equivalents -- comprising of over 100 websites. Every site lived on the same platform, supporting various brands and regions. Because of this, each site shared the same functionalities and building blocks while having separate style themes and a localization system.</p><p>The sites included the following:</p><ol><li>Disney.com, its subdomains, and its global counterparts</li><li>20thCenturyStudios.com, its family site, and its global counterparts</li><li>StarWars.com and its kids-centric site</li><li>National Geographic Films and \"For Your Consideration\"</li><li>Avatar.com</li></ol>",
