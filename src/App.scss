@@ -692,6 +692,8 @@ body{
         // width: 100%;
         width: 100%;
         position: relative;
+        font-size: 16px;
+        width: 45%;
         a:hover{
           img{ opacity: 0.15; }
           h3{
@@ -734,10 +736,10 @@ body{
       ul{
         justify-content: space-evenly;
         flex-basis: inherit;
-        li{
-          font-size: 16px;
-          width: 45%;
-        }
+        // li{
+        //   font-size: 16px;
+        //   width: 45%;
+        // }
       }
     }
     // .page-content .buttons-list{
