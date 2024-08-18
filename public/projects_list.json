@@ -825,7 +825,7 @@
     "date": 2022
   },
   "disney-fan-and-branded-sites": {
-    "title": "The Walt Disney Company Fan and Branded Websites (Disney, Avatar, Star Wars, 20th Century Studios, National Geographic Films)",
+    "title": "The Walt Disney Company Fan and Branded Websites",
     "tools": [
       "GitHub",
       "Figma",
@@ -851,6 +851,28 @@
     "thumbnail": "projects/thumbnails/disney_fab.png",
     "thumbnail_alt": "Compilation of different website homepages across Disney, Star Wars, 20th Century Studios, National Geographic Films, and Avatar",
     "date": 2019
+  },
+  "disney-world-dining-plan": {
+    "title": "Walt Disney World Dining Plan",
+    "tools": [
+      "GitHub"
+    ],
+    "skills": [
+      "JavaScript",
+      "Angular",
+      "Protractor",
+      "HTML/CSS",
+      "Accessibility"
+    ],
+    "affiliations": [
+      "The Walt Disney Company"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "thumbnail": "projects/thumbnails/disney_world.png",
+    "thumbnail_alt": "Webpage of dining plan options for Disney World",
+    "date": 2018
   },
   "disney-editorial-sites": {
     "title": "The Walt Disney Company Editorial Sites (Disney Style, Oh My Disney, Disney Family)",

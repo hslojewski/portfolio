@@ -19,11 +19,12 @@
         {
             "title": "Web Development & Product Management",
             "titleAlignment": "center",
-            "detail": "<p>I've worked for the web in Software Engineering, Product Management, Product Operations, Web Production, and Analytics. I've touched internal tools (including CMS, databases, and DAMs) used to support editorial, social, and website content for the Disney, 20th Century Studios, Star Wars, Avatar, National Geographic, and Marvel brands -- both internationally and domestically.</p><p>Through my experience in the research, management, and support of product development, I want to continue to ideate, design, and build products that can be both helpful and entertaining to people.</p>",
+            "detail": "<p>I've worked for the web in Software Engineering, Product Management, Product Operations, Web Production, and Analytics. I've touched internal tools (including content management systems, databases, and digital asset management systems) used to support editorial, social, and website content for the Disney, 20th Century Studios, Star Wars, Avatar, National Geographic, and Marvel brands -- both internationally and domestically.</p><p>Through my experience in the research, management, and support of product development, I want to continue to ideate, design, and build products that can be both helpful and entertaining to people.</p>",
+            "detailAlignment": "center",
             "buttons": [
                 {
                     "title": "More About Me",
-                    "classes": "align-center secondary",
+                    "classes": "align-center",
                     "url": "/about"
                 },
                 {

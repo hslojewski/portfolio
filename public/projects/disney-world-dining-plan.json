@@ -1,0 +1,18 @@
+{
+    "path": "disney-world-dining-plan",
+    "content": [
+        {
+            "detail": "<p>For about about six months, I worked on the Walt Disney World website's dining plan page. This was a page that site guests would reach if they were building a vacation package through the website. In particular, I worked on improving the accessibility of the page with a focus on implementing the frontend testing of the page.</p>",
+            "images": [
+                {
+                    "src": "projects/media/disney-world-dining-plan/desktop.png",
+                    "alt": "Webpage of dining plan options for site users planning to go to Walt Disney World",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "disneyworld.disney.go.com/resort-add-ons/dining"
+                }
+            ]
+        }
+    ]
+}

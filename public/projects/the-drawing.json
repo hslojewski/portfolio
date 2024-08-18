@@ -6,7 +6,7 @@
             "images": [
                 {
                     "src": "projects/media/the-drawing/desktop.png",
-                    "alt": "Presentation slide about homepage wireframe changes",
+                    "alt": "Webpage of information about \"The Drawing\", with a video player at the top to watch the short film",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
@@ -14,7 +14,7 @@
                 },
                 {
                     "src": "projects/media/the-drawing/mobile.png",
-                    "alt": "Presentation slide about homepage wireframe changes",
+                    "alt": "Mobile view webpage of information about \"The Drawing\", with a video player at the top to watch the short film",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100 width-45",
                     "windowWrapper": "device"
@@ -28,7 +28,7 @@
                 },
                 {
                     "title": "Watch the Short Film",
-                    "classes": "align-center see-all mobile-width-100 width-20",
+                    "classes": "align-center see-all mobile-width-100 width-20 secondary",
                     "url": "https://www.youtube.com/watch?v=EbaAmzjjivo"
                 }
             ]

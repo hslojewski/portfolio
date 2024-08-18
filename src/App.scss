@@ -323,7 +323,7 @@ body{
   a:focus{
     outline-style: solid;
     outline-width: 5px;
-    outline-offset: -10px;
+    outline-offset: 5px;
   }
   button{
     font-size: 16px;
@@ -332,7 +332,9 @@ body{
     border: 0;
     margin: 15px auto;
   }
-  p{ align-content: start; }
+  p{
+    align-content: start;
+  }
   footer{
     padding: 50px 20px 20px 20px;
     margin: 50px 20px 20px 20px;
@@ -530,7 +532,7 @@ body{
     margin: 0 auto;
     max-width: 1000px;
     position: relative;
-    text-align: center;
+    // text-align: center;
     p{
       margin: 15px auto;
     }

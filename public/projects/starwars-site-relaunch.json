@@ -2,42 +2,23 @@
     "path": "starwars-site-relaunch",
     "content": [
         {
-            "detail": "<p>One of the first projects I worked on as a platform product manager was in relaunching the StarWars.com site so that it lived entirely on our proprietary content management system (CMS) as well as on our shared frontend codebase. The site had previously been built very differently from the rest of the sites on our platform:</p><ul><li>While most of the site content lived on our proprietary CMS, the Star Wars site's news and editorial article content lived on a WordPress instance</li><li>While the rest of our 100+ sites' frontend code was shared amongst multiple brands and functionalities, the Star Wars site lived on a forked frontend codestack that couldn't use as many features as the rest of the sites on the platform</li></ul><p>By relaunching in this way, we would be able to reduce costs and allow the site to utilize more functionality that was also used by the rest of the sites on our CMS.</p><p>As the platform product manager, my main priority was ensuring that the site's former article content was properly migrated over to our CMS. This meant working with our software engineers to ensure that the data was properly mapped from WordPress for articles that included text, image, video, poll, and quiz content -- which added up to over 4,000 article pages. In addition to that were the author, category, and tag pages associated with each article.</p><p>Because there were also a lot of differences between how content was programmed between the old (forked code) and new (shared code) frontend features, it was ultimately easier to rebuild the entire site's content within the CMS as a new website -- which meant that I also had to work with software engineers to ensure that old programmed features properly mapped to their new counterparts. In total, we relaunched a site made up of over 14,000 pages so that all of its contents would live on the same platform, utilizing the same frontend features as the rest of the sites on the platform.</p><p>Credit for the frontend redesign of this site -- especially the news section redesign -- goes to the product manager for the Star Wars site who was also on my team.</p><h4>Before</h4>",
-            "images": [
-                {
-                    "src": "projects/media/starwars-relaunch/prelaunch_news.png",
-                    "alt": "(needs alt text)",
-                    "classes": "align-center",
-                    "containerClasses": "mobile-width-45 width-45",
-                    "windowWrapper": "browser",
-                    "browserDestination": "starwars.com/news"
-                },
-                {
-                    "src": "projects/media/starwars-relaunch/prelaunch_article.png",
-                    "alt": "(needs alt text)",
-                    "classes": "align-center",
-                    "containerClasses": "mobile-width-45 width-45",
-                    "windowWrapper": "browser",
-                    "browserDestination": "starwars.com/news/tony-gilroy-andor-season-1-interview"
-                }
-            ]
+            "detail": "<p>One of the first projects I worked on as a platform product manager was in relaunching the StarWars.com site so that it lived entirely on our proprietary content management system (CMS) as well as on our shared frontend codebase. The site had previously been built very differently from the rest of the sites on our platform:</p><ul><li>While most of the site content lived on our proprietary CMS, the Star Wars site's news and editorial article content lived on a WordPress instance</li><li>While the rest of our 100+ sites' frontend code was shared amongst multiple brands and functionalities, the Star Wars site lived on a forked frontend codestack that couldn't use as many features as the rest of the sites on the platform</li></ul><p>By relaunching in this way, we would be able to reduce costs and allow the site to utilize more functionality that was also used by the rest of the sites on our CMS.</p><p>As the platform product manager, my main priority was ensuring that the site's former article content was properly migrated over to our CMS. This meant working with our software engineers to ensure that the data was properly mapped from WordPress for articles that included text, image, video, poll, and quiz content -- which added up to over 4,000 article pages. In addition to that were the author, category, and tag pages associated with each article.</p><p>Because there were also a lot of differences between how content was programmed between the old (forked code) and new (shared code) frontend features, it was ultimately easier to rebuild the entire site's content within the CMS as a new website -- which meant that I also had to work with software engineers to ensure that old programmed features properly mapped to their new counterparts. In total, we relaunched a site made up of over 14,000 pages so that all of its contents would live on the same platform, utilizing the same frontend features as the rest of the sites on the platform.</p><p>Credit for the frontend redesign of this site -- especially the news section redesign -- goes to the product manager for the Star Wars site who was also on my team.</p>"
         },
         {
-            "detail": "<h4>After</h4>",
             "images": [
                 {
                     "src": "projects/media/starwars-relaunch/news.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Webpage of different Star Wars news and editorial articles",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-45 width-45",
+                    "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
                     "browserDestination": "starwars.com/news"
                 },
                 {
                     "src": "projects/media/starwars-relaunch/article.png",
-                    "alt": "(needs alt text)",
+                    "alt": "Webpage of specific Star Wars news article",
                     "classes": "align-center",
-                    "containerClasses": "mobile-width-45 width-45",
+                    "containerClasses": "mobile-width-100",
                     "windowWrapper": "browser",
                     "browserDestination": "starwars.com/news/tony-gilroy-andor-season-1-interview"
                 }

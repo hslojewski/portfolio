@@ -3,6 +3,7 @@
     "content": [
         {
             "detail": "<p>I grew up playing computer games that were both entertaining and educational. Among the CD-ROMs I played as a kid, I mastered touch typing from <i>Adventures in Typing with Timon & Pumbaa</i> created by Disney Interactive. When the Internet became more available, I learned HTML and CSS while playing Neopets. A few years later, I had an internship at the same Disney division that created so many of the games I enjoyed. And soon after that, I was part of a Disney initiative that taught current employees how to code.</p>",
+            "detailAlignment": "center",
             "images": [
                 {
                     "src": "projects/media/about/heidi1.jpg",
@@ -56,6 +57,7 @@
         },
         {
             "detail": "<p>My career thus far has focused on product management and web development. My professional experience includes work with content management systems and scalable website solutions where I get to collaborate with global colleagues and various brands under The Walt Disney Company.</p>",
+            "detailAlignment": "center",
             "projectsList": {
                 "filters": [
                     "Platform Product Manager",
@@ -77,7 +79,8 @@
             ]
         },
         {
-            "detail": "<p>Outside of work, I enjoy movies, <a href='https://www.instagram.com/explore/tags/heiidski🗺'>travel</a>, <a href='https://www.instagram.com/explore/tags/heiidski🎡'>theme parks</a>, <a href='https://www.instagram.com/explore/tags/heiidski🥾'>hiking</a>, <a href='https://www.instagram.com/explore/tags/heiidski🧩'>puzzles</a>, and exploring and <a href='https://www.instagram.com/explore/tags/heiidski🧨'>trying new things</a>. As an advocate of STEM/STEAM, I am open to opportunities where I can encourage and promote tech literacy.</p>",
+            "detail": "<p>Outside of work, I enjoy movies, <a href='https://www.instagram.com/explore/tags/heiidski🗺'>travel</a>, <a href='https://www.instagram.com/explore/tags/heiidski🎡'>theme parks</a>, <a href='https://www.instagram.com/explore/tags/heiidski🥾'>hiking</a>, <a href='https://www.instagram.com/explore/tags/heiidski🧩'>puzzles</a>, exploring, and <a href='https://www.instagram.com/explore/tags/heiidski🧨'>trying new things</a>. As an advocate of STEM/STEAM, I am open to opportunities where I can encourage and promote tech literacy.</p>",
+            "detailAlignment": "center",
             "instagramEmbed": "https://www.instagram.com/heiidski"
         }
     ]
