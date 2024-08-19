@@ -43,6 +43,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
           color: $theme-dark-bg;
           background: $theme-light-bg;
           text-decoration: none;
+          font-weight: bold;
           &:hover:not(.button){ text-decoration: underline; }
         }
         button{
@@ -99,7 +100,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
           }
         }
         // .project-list-wrapper{
-        li:focus, a:focus{
+        li:focus, a:focus, .browser-container:focus, .content:focus{
             outline-color: $theme-accent-color;
           }
         // }
@@ -113,6 +114,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
           color: $theme-accent-color;
           background: $theme-dark-bg;
           text-decoration: none;
+          font-weight: bold;
           &:hover:not(.button){ text-decoration: underline; }
         }
         button{
@@ -394,6 +396,7 @@ body{
         // background: red;
         text-align: center;
         &.mode{ width: 100%; }
+        margin: 0 5px;
 
       }
       // display: none;

@@ -179,7 +179,7 @@ class Content extends React.Component {
                         if (image.windowWrapper === "device") {
                           return(
                             <div key={i} className={"image device " + image.containerClasses}>
-                              <div className="content">
+                              <div  tabIndex="0" className="content">
                                 <img loading="lazy" src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
                               </div>
                             </div>
@@ -189,9 +189,9 @@ class Content extends React.Component {
                             <div key={i} className={"image browser " + image.containerClasses}>
                               <div className="browser-navigation-bar">
                                 <i></i><i></i><i></i>
-                                <input value={image.browserDestination} disabled />
+                                <input title="browser-url" value={image.browserDestination} disabled />
                               </div>
-                              <div className="browser-container">
+                              <div tabIndex="0" className="browser-container">
                                 <img loading="lazy" src={[process.env.PUBLIC_URL, image.src].join("/")} alt={image.alt} className={image.classes} />
                               </div>
                             </div>

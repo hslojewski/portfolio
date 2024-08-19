@@ -10,7 +10,7 @@
             "detail": "<p>This color map graph is from an article by Chloe Whiteaker, Alex McIntyre, and Christopher Cannon. It’s from Bloomberg.com’s article <a target='_blank' href='http://www.bloomberg.com/graphics/2016-powerball-jackpot-payoff'>\"The Best and Worst States for Powerball Winners,\"</a> which was about the recent Powerball Lottery.</p>",
             "images": [
                 {
-                    "src": "projects/media/good-bad-graph/jackpot-map.jpeg",
+                    "src": "projects/media/good-bad-graph/jackpot-map.png",
                     "alt": "Lottery jackpot value graph across the U.S.",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100 width-75"
@@ -62,7 +62,7 @@
             "detail": "<p>The following sketches address the problems that the current graph has by placing Bush’s and Trump’s tax cut numbers closer to each other for better comparison, including more visual cues such as texture or color shades that better categorize the information, and reducing the extra textual junk that was on the chart. A bar chart may be best for this, especially with the change to a top-down approach, but a stacked bar or column chart could also better show both candidates’ tax cuts in total. Additionally, there is a sketch recommendation that the original Area Chart could look slightly better if the circles enveloped each other.</p>",
             "images": [
                 {
-                    "src": "projects/media/good-bad-graph/graph-recommendation.jpeg",
+                    "src": "projects/media/good-bad-graph/graph-recommendation.png",
                     "alt": "Examples of recommended bar charts and circle area graphs",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-100 width-75"
