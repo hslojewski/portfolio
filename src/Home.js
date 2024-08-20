@@ -5,7 +5,7 @@ const React = require('react');
 class Home extends React.Component {
 
   componentDidMount() {
-    document.title = "Heidi Slojewski";
+    document.title = "Heidi Slojewski | Web Developer & Product Manager";
   }
 
   render() {
