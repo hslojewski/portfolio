@@ -43,6 +43,7 @@ class Content extends React.Component {
       top: 0,
       left: 0
     });
+    document.title = this.props.title + " | Heidi Slojewski";
   }
 
   render() {

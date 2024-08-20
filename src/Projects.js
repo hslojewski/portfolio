@@ -10,6 +10,7 @@ class Projects extends React.Component {
             top: 0,
             left: 0
         });
+        document.title = "Projects | Heidi Slojewski";
     }
 
     render() {

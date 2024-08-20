@@ -4,6 +4,10 @@ const React = require('react');
 
 class Home extends React.Component {
 
+  componentDidMount() {
+    document.title = "Heidi Slojewski";
+  }
+
   render() {
 
     const {

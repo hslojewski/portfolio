@@ -4,6 +4,10 @@ const React = require('react');
 
 class About extends React.Component {
 
+  componentDidMount() {
+    document.title = "About | Heidi Slojewski";
+  }
+
   render() {
 
     const {
