@@ -1,3 +1,19 @@
+# Robots.txt for hslojewski.github.io/portfolio
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
 Disallow:
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+Sitemap: https://hslojewski.github.io/portfolio/sitemap.xml
