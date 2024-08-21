@@ -2,7 +2,7 @@
     "path": "disney-editorial-sites",
     "content": [
         {
-            "detail": "<p>For about four years, I web developed for the frontend of different Wordpress sites under The Walt Disney Company -- covering the news and editorial articles across StarWars.com, Disney Family, Disney Style, and Oh My Disney.</p><p>Projects included</p><ul><li>Migrating the baby names section from Babble.com to Disney Family</li><li>Updating the image overlay price feature on article images that include merchandise</li><li>Mass updating hundreds of articles' images to include alt text for improved accessibility</li></ul>",
+            "detail": "<p>For about four years, I web developed for the frontend of different Wordpress sites under The Walt Disney Company -- covering the news and editorial articles across StarWars.com, Disney Family, Disney Style, and Oh My Disney.</p><p>Projects included:</p><ul><li>Adding the baby names section to Disney Family</li><li>Updating the image overlay price feature on article images that include merchandise</li><li>Mass updating hundreds of articles' images to include alt text for improved accessibility</li></ul>",
             "images": [
                 {
                     "src": "projects/media/disney-editorial-sites/style_article.jpeg",
