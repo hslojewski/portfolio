@@ -49,8 +49,14 @@ const App = () => {
   }
 
   var initializeColorMode = () => {
-    var localTimeHour = parseInt(moment().local().format("H"));
-    setColorMode((localTimeHour > 6 && localTimeHour < 18) ? "light" : "dark");
+    // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    //   setColorMode("dark");
+    // } else if (window.matchMedia("(prefers-color-scheme: light)").matches){
+    //   setColorMode("light");
+    // } else{
+      var localTimeHour = parseInt(moment().local().format("H"));
+      setColorMode((localTimeHour > 6 && localTimeHour < 18) ? "light" : "dark");
+    // }
   }
 
   var toggleColorMode = () => {
