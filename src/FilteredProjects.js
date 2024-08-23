@@ -64,7 +64,7 @@ class FilteredProjects extends React.Component {
                 return(
                   <li key={i} className="project-detail">
                     <Link exact="true" to={"/projects/" + path} onClick={closeNav}>
-                      <img loading="lazy" src={[process.env.PUBLIC_URL, projects[path].thumbnail].join("/")} alt={projects[path].thumbnail_alt} />
+                      <img loading={i > 5 ? "lazy" : null} src={[process.env.PUBLIC_URL, projects[path].thumbnail].join("/")} alt={projects[path].thumbnail_alt} />
                       <h3>{projects[path].title}</h3>
                     </Link>
                   </li>
