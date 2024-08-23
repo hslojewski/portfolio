@@ -469,7 +469,8 @@
       "Jinja",
       "BeautifulSoup",
       "PyDictionary",
-      "Git"
+      "Git",
+      "Fullstack"
     ],
     "affiliations": [
       "The Walt Disney Company",
@@ -536,7 +537,8 @@
       "JavaScript",
       "React",
       "Sass",
-      "Accessibility"
+      "Accessibility",
+      "Frontend"
     ],
     "affiliations": [
       "Self"
@@ -763,7 +765,8 @@
       "HTML/CSS",
       "Sass",
       "Accessibility",
-      "Mustache"
+      "Mustache",
+      "Frontend"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -788,7 +791,8 @@
       "HTML/CSS",
       "Sass",
       "Accessibility",
-      "Mustache"
+      "Mustache",
+      "Frontend"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -812,7 +816,8 @@
       "HTML/CSS",
       "Sass",
       "Accessibility",
-      "Mustache"
+      "Mustache",
+      "Frontend"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -840,7 +845,8 @@
       "HTML/CSS",
       "Sass",
       "Accessibility",
-      "Mustache"
+      "Mustache",
+      "Frontend"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -862,7 +868,8 @@
       "Angular",
       "Protractor",
       "HTML/CSS",
-      "Accessibility"
+      "Accessibility",
+      "Frontend"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -883,7 +890,8 @@
     "skills": [
       "HTML/CSS",
       "Accessibility",
-      "PHP"
+      "PHP",
+      "Frontend"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -905,7 +913,8 @@
       "Ruby",
       "Backbone.js",
       "HTML/CSS",
-      "Sass"
+      "Sass",
+      "Frontend"
     ],
     "affiliations": [
       "The Walt Disney Company"
