@@ -13,6 +13,11 @@ class Projects extends React.Component {
         document.title = "Projects | Heidi Slojewski";
     }
 
+    componentWillUnmount() {
+        const { clearActiveTags } = this.props;
+        clearActiveTags();
+    }
+
     render() {
         const {
             displayProjects, clearActiveTags, toggleAccordion, orderChronologically, closeNav,
