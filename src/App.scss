@@ -430,14 +430,14 @@ body {
   }
   .content-banner {
     img {
-      width: 110%;
+      width: 150%;
       // width: 100%;
       object-fit: cover;
       height: 200px;
       opacity: 0.8;
       // margin-left: -25px;
       filter: blur(10px);
-      margin-left: 49%;
+      margin-left: 45%;
       transform: translateX(-50%);
     }
   }
@@ -509,8 +509,9 @@ body {
       flex-basis: 100%;
       *{ display: inline; }
       li {
-        margin: 10px 10px 0 10px;
+        margin: 5px 0 0 5px;
         button {
+          font-size: 12px;
           margin: 0;
           cursor: pointer;
           // background: $color-hot-purple;
@@ -806,9 +807,8 @@ body {
         .tag-title h3:before {
           // content: inherit;
         }
-        .tags-list {
-          // display: flex;
-        }
+        .tags-list li button{ font-size: 16px; }
+
       }
     }
     .tags-list.close { display: flex; }

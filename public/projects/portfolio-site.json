@@ -6,19 +6,19 @@
             "images": [
                 {
                     "src": "projects/media/portfolio/project1.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during summer of Infographic project",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-30"
                 },
                 {
                     "src": "projects/media/portfolio/project2.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during winter of website launch project",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-30"
                 },
                 {
                     "src": "projects/media/portfolio/project3.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during spring of website campaign project",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-30"
                 }
@@ -30,13 +30,13 @@
             "images": [
                 {
                     "src": "projects/media/portfolio/light.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during autumn day of movie website project",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-45"
                 },
                 {
                     "src": "projects/media/portfolio/dark.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during autumn night of movie website project",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-45"
                 }
@@ -47,25 +47,25 @@
             "images": [
                 {
                     "src": "projects/media/portfolio/winter_light.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during winter day of this portfolio site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-20"
                 },
                 {
                     "src": "projects/media/portfolio/spring_light.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during spring day of this portfolio site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-20"
                 },
                 {
                     "src": "projects/media/portfolio/summer_light.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during summer day of this portfolio site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-20"
                 },
                 {
                     "src": "projects/media/portfolio/autumn_light.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during autumn day of this portfolio site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-20"
                 }
@@ -75,25 +75,25 @@
             "images": [
                 {
                     "src": "projects/media/portfolio/winter_dark.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during winter night of this portfolio site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-20"
                 },
                 {
                     "src": "projects/media/portfolio/spring_dark.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during spring night of this portfolio site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-20"
                 },
                 {
                     "src": "projects/media/portfolio/summer_dark.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during summer night of this portfolio site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-20"
                 },
                 {
                     "src": "projects/media/portfolio/autumn_dark.png",
-                    "alt": "(tbd)",
+                    "alt": "Webpage during autumn night of this portfolio site",
                     "classes": "align-center",
                     "containerClasses": "mobile-width-20"
                 }

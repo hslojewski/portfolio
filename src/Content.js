@@ -77,7 +77,9 @@ class Content extends React.Component {
             </span>
           }
           <h1 className={titleAlignment}>{title}</h1>
-          <p className="description">{data.description}</p>
+          {data.description &&
+            <p className="description">{data.description}</p>
+          }
           <div className="meta">
             {tags.tools.length > 0 &&
               <span className="meta-item tools">

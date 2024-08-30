@@ -492,7 +492,8 @@
     ],
     "skills": [
       "HTML/CSS",
-      "JavaScript"
+      "JavaScript",
+      "Site Launch"
     ],
     "affiliations": [
       "Site B Productions"
@@ -505,13 +506,14 @@
     "date": 2020
   },
   "the-drawing": {
-    "title": "The Drawing Short Film",
+    "title": "The Drawing Short Film Website",
     "tools": [
       "Squarespace"
     ],
     "skills": [
       "HTML/CSS",
-      "JavaScript"
+      "JavaScript",
+      "Site Launch"
     ],
     "affiliations": [
       "Site B Productions"
@@ -524,7 +526,7 @@
     "date": 2023
   },
   "portfolio-site": {
-    "title": "My Portfolio Site",
+    "title": "My Portfolio Website",
     "tools": [
       "GitHub",
       "GitHub Pages",
@@ -538,7 +540,8 @@
       "React",
       "Sass",
       "Accessibility",
-      "Frontend"
+      "Frontend",
+      "Site Launch"
     ],
     "affiliations": [
       "Self"
@@ -559,7 +562,8 @@
       "Product Management",
       "Product Operations",
       "Accessibility",
-      "Localization"
+      "Localization",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -578,7 +582,8 @@
     ],
     "skills": [
       "Product Management",
-      "Product Operations"
+      "Product Operations",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -599,7 +604,8 @@
       "Product Management",
       "Product Operations",
       "Accessibility",
-      "HTML/CSS"
+      "HTML/CSS",
+      "Site Maintenance"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -612,14 +618,15 @@
     "date": 2023
   },
   "disney-press-sites": {
-    "title": "Disney+ Press and Disney Advertising Press Site Launches",
+    "title": "Disney+ Press and Disney Advertising Press Website Launches",
     "tools": [
       "Content Management System (CMS)"
     ],
     "skills": [
       "Product Management",
       "Product Operations",
-      "Accessibility"
+      "Accessibility",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -632,7 +639,7 @@
     "date": 2023
   },
   "disney-press-latam-sites": {
-    "title": "Disney Press Latin America and Disney Press Brazil Site Launches",
+    "title": "Disney Press Latin America and Disney Press Brazil Websites",
     "tools": [
       "Content Management System (CMS)"
     ],
@@ -640,7 +647,8 @@
       "Product Management",
       "Product Operations",
       "Accessibility",
-      "Localization"
+      "Localization",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -653,14 +661,15 @@
     "date": 2024
   },
   "disney-ctdi-site": {
-    "title": "Disney Entertainment | Creative Talent Development & Inclusion Site Migration",
+    "title": "Disney Entertainment Creative Talent Development & Inclusion Website Migration",
     "tools": [
       "Content Management System (CMS)"
     ],
     "skills": [
       "Product Management",
       "Product Operations",
-      "Accessibility"
+      "Accessibility",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -673,14 +682,15 @@
     "date": 2023
   },
   "disney-games-site": {
-    "title": "Disney Games Site Relaunch",
+    "title": "Disney Games Website Relaunch",
     "tools": [
       "Content Management System (CMS)"
     ],
     "skills": [
       "Product Management",
       "Product Operations",
-      "Accessibility"
+      "Accessibility",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -693,13 +703,14 @@
     "date": 2023
   },
   "disney-plus-site-rebrand": {
-    "title": "On Disney+ Site Rebrand",
+    "title": "On Disney+ Website Rebrand",
     "tools": [
       "Content Management System (CMS)"
     ],
     "skills": [
       "Product Management",
-      "Product Operations"
+      "Product Operations",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -712,13 +723,14 @@
     "date": 2023
   },
   "avatar-pandorapedia": {
-    "title": "Pandorapedia Site Migration to Avatar.com",
+    "title": "Pandorapedia Website Migration to Avatar.com",
     "tools": [
       "Content Management System (CMS)"
     ],
     "skills": [
       "Product Management",
-      "Product Operations"
+      "Product Operations",
+      "Site Maintenance"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -731,7 +743,7 @@
     "date": 2022
   },
   "starwars-site-relaunch": {
-    "title": "Star Wars Site Relaunch",
+    "title": "Star Wars Website Relaunch",
     "tools": [
       "Content Management System (CMS)",
       "WordPress",
@@ -740,7 +752,8 @@
     "skills": [
       "Product Management",
       "Product Operations",
-      "Spreadsheets"
+      "Spreadsheets",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -766,7 +779,8 @@
       "Sass",
       "Accessibility",
       "Mustache",
-      "Frontend"
+      "Frontend",
+      "Site Maintenance"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -779,7 +793,7 @@
     "date": 2021
   },
   "avatar-site": {
-    "title": "Avatar.com Site Launch",
+    "title": "Avatar.com Website",
     "tools": [
       "GitHub",
       "Figma"
@@ -792,7 +806,8 @@
       "Sass",
       "Accessibility",
       "Mustache",
-      "Frontend"
+      "Frontend",
+      "Site Launch"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -817,7 +832,8 @@
       "Sass",
       "Accessibility",
       "Mustache",
-      "Frontend"
+      "Frontend",
+      "Site Maintenance"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -846,7 +862,8 @@
       "Sass",
       "Accessibility",
       "Mustache",
-      "Frontend"
+      "Frontend",
+      "Site Maintenance"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -869,7 +886,8 @@
       "Protractor",
       "HTML/CSS",
       "Accessibility",
-      "Frontend"
+      "Frontend",
+      "Site Maintenance"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -891,7 +909,8 @@
       "HTML/CSS",
       "Accessibility",
       "PHP",
-      "Frontend"
+      "Frontend",
+      "Site Maintenance"
     ],
     "affiliations": [
       "The Walt Disney Company"
@@ -914,7 +933,8 @@
       "Backbone.js",
       "HTML/CSS",
       "Sass",
-      "Frontend"
+      "Frontend",
+      "Site Maintenance"
     ],
     "affiliations": [
       "The Walt Disney Company"
