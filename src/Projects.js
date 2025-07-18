@@ -35,7 +35,7 @@ class Projects extends React.Component {
                     <div className="filters-header">
                         <div className="title">
                             <h2>Filters</h2>
-                            <span>({activeTags.length})</span>
+                            <span>({Object.values(activeTags).length ? Object.values(activeTags).flat().length : Object.values(activeTags).length})</span>
                         </div>
                         <div className={"clear-all "}>
                             <button onClick={clearActiveTags} className={activeTags.length === 0 ? "disabled" : null}>Clear all filters</button>
