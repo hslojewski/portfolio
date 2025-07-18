@@ -38,7 +38,7 @@ class Projects extends React.Component {
                             <span>({Object.values(activeTags).length ? Object.values(activeTags).flat().length : Object.values(activeTags).length})</span>
                         </div>
                         <div className={"clear-all "}>
-                            <button onClick={clearActiveTags} className={activeTags.length === 0 ? "disabled" : null}>Clear all filters</button>
+                            <button onClick={clearActiveTags} className={Object.values(activeTags).length === 0 ? "disabled" : null}>Clear all filters</button>
                         </div>
                     </div>
                     <TagsList title="Roles" tags={roles} activeTags={activeTags} updateActiveTagsAndProjects={updateActiveTagsAndProjects} toggleAccordion={toggleAccordion} tagAccordions={tagAccordions} />
