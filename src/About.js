@@ -11,7 +11,7 @@ class About extends React.Component {
   render() {
 
     const {
-      getProjectData, displayProjects, orderChronologically, closeNav,
+      getProjectData, updateActiveTagsAndProjects, orderChronologically, closeNav,
       projects = {}, projectData = {}
     } = this.props;
     
@@ -22,10 +22,11 @@ class About extends React.Component {
         data={projectData}
         getProjectData={getProjectData}
         projects={projects}
-        displayProjects={displayProjects}
+        updateActiveTagsAndProjects={updateActiveTagsAndProjects}
         orderChronologically={orderChronologically}
         closeNav={closeNav}
         projectAmount={8}
+        
       />
     );
   }

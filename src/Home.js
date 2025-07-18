@@ -11,7 +11,7 @@ class Home extends React.Component {
   render() {
 
     const {
-      getProjectData, displayProjects, orderChronologically,
+      getProjectData, updateActiveTagsAndProjects, orderChronologically,
       projects = {}, projectData = {}
     } = this.props;
     
@@ -23,8 +23,9 @@ class Home extends React.Component {
         data={projectData}
         getProjectData={getProjectData}
         projects={projects}
-        displayProjects={displayProjects}
+        updateActiveTagsAndProjects={updateActiveTagsAndProjects}
         orderChronologically={orderChronologically}
+        
       />
     );
   }

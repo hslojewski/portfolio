@@ -17,7 +17,7 @@ const App = () => {
   const [projects, setProjects] = useState([]);
   const [allProjects, setAllProjects] = useState({});
   const [projectData, setProjectData] = useState({});
-  const [activeTags, setActiveTags] = useState([]);
+  const [activeTags, setActiveTags] = useState({});
   const [colorMode, setColorMode] = useState("light");
   const [season, setSeason] = useState("");
   const [filterType, setFilterType] = useState("AND");
@@ -152,30 +152,55 @@ const App = () => {
     var ignoredProjectsSet = new Set();
     var ignoredProjectsList = [];
     var projectsToIgnore = [];
-    if (activeTags.length) {
-      activeTags.forEach(tag => {
+    if (Object.keys(activeTags).length) {
+      Object.keys(activeTags).forEach(category => {
+        // debugger;
         Object.keys(allProjects).forEach(projectPath => {
-          var tools = allProjects[projectPath].tools || [],
-              skills = allProjects[projectPath].skills || [],
-              affiliations = allProjects[projectPath].affiliations || [],
-              roles = allProjects[projectPath].roles || [],
-              tags = tools.concat(skills).concat(affiliations).concat(roles);
-          if (tags.includes(tag)) {
-            activeTagProjectsSet.add(projectPath);
-            activeTagProjectsList = Array.from(activeTagProjectsSet);
-            projectsToDisplay = activeTagProjectsList;
+          // debugger;
+          if (allProjects[projectPath][category].some(tag => activeTags[category].includes(tag))) {
+            // debugger;
+            console.log("project's tags:");
+            console.log(allProjects[projectPath][category]);
+            console.log("active tags:");
+            console.log(activeTags[category]);
+            // debugger;
+            // activeTagProjectsSet.add(projectPath);
+            // activeTagProjectsList = Array.from(activeTagProjectsSet);
+            // projectsToDisplay = activeTagProjectsList;
+            activeTags[category].forEach(tag => {
+              if (allProjects[projectPath][category].includes(tag)) {
+                activeTagProjectsSet.add(projectPath);
+                activeTagProjectsList = Array.from(activeTagProjectsSet);
+                projectsToDisplay = activeTagProjectsList;
+              } else {
+                ignoredProjectsSet.add(projectPath);
+                ignoredProjectsList = Array.from(ignoredProjectsSet);
+                projectsToIgnore = ignoredProjectsList;
+              }
+            });
           } else {
+            // debugger;
             ignoredProjectsSet.add(projectPath);
             ignoredProjectsList = Array.from(ignoredProjectsSet);
             projectsToIgnore = ignoredProjectsList;
+            console.log("projectsToIgnore");
+            console.log(projectsToIgnore);
+            // debugger;
           }
+          console.log("projectsToDisplay");
+          console.log(projectsToDisplay);
+          // debugger;
           projectsToDisplay = projectsToDisplay.filter(project => {
             if (!projectsToIgnore.includes(project)) {
               return project;
             }
           });
+          // debugger;
         });
-      })
+      });
+      console.log("projectsToDisplay");
+      console.log(projectsToDisplay);
+      // debugger;
       var blah = {};
       projectsToDisplay.forEach(a => {
         blah[a] = allProjects[a];
@@ -189,25 +214,28 @@ const App = () => {
     }
   }
 
-  var displayProjects = (tag) => {
+  var updateActiveTagsAndProjects = (selectedTag) => {
     var updatedActiveTags = activeTags;
-    if (activeTags.includes(tag)) {
-      // // debugger;
-      // setActiveTags(activeTags.filter(activeTag => activeTag !== tag));
-      updatedActiveTags = activeTags.filter(activeTag => activeTag !== tag);
-      setActiveTags(updatedActiveTags);
-      // // debugger;
-      // getTags(projects);
-      updateProjectsList(updatedActiveTags);
+    if (Object.keys(activeTags).includes(selectedTag.title)) {
+      if (activeTags[selectedTag.title].includes(selectedTag.tag)) {
+        updatedActiveTags[selectedTag.title] = activeTags[selectedTag.title].filter(a => a !== selectedTag.tag);
+        if (updatedActiveTags[selectedTag.title].length === 0) {
+          delete updatedActiveTags[selectedTag.title];
+        }
+        setActiveTags(updatedActiveTags);
+        updateProjectsList(updatedActiveTags);
+      } else {
+        updatedActiveTags[selectedTag.title] = updatedActiveTags[selectedTag.title].concat(selectedTag.tag);
+        updateProjectsList(updatedActiveTags);
+      }
     } else {
-      // // debugger;
-      updatedActiveTags = activeTags.concat(tag);
+      activeTags[selectedTag.title] = [selectedTag.tag]
+      updatedActiveTags = activeTags;
       setActiveTags(updatedActiveTags);
-      // getTags(projects);
       updateProjectsList(updatedActiveTags);
-    };
-    // console.log(activeTags);
-    // debugger;
+    }
+    console.log("activeTags");
+    console.log(activeTags);
   }
 
   var toggleFilterType = () => {
@@ -216,8 +244,8 @@ const App = () => {
   }
 
   var clearActiveTags = () => {
-    setActiveTags([]);
-    updateProjectsList([]);
+    setActiveTags({});
+    updateProjectsList({});
   }
 
   var toggleAccordion = (tagType) => {
@@ -279,7 +307,7 @@ const App = () => {
                <Home
                   getProjectData={getProjectData}
                   projectData={projectData}
-                  displayProjects={displayProjects}
+                  updateActiveTagsAndProjects={updateActiveTagsAndProjects}
                   projects={projects}
                   orderChronologically={orderChronologically}
                />
@@ -290,7 +318,7 @@ const App = () => {
                 <About
                   getProjectData={getProjectData}
                   projectData={projectData}
-                  displayProjects={displayProjects}
+                  updateActiveTagsAndProjects={updateActiveTagsAndProjects}
                   projects={projects}
                   orderChronologically={orderChronologically}
                   closeNav={closeNav}
@@ -309,12 +337,13 @@ const App = () => {
                   toggleFilterType={toggleFilterType}
                   filterType={filterType}
                   activeTags={activeTags}
-                  displayProjects={displayProjects}
+                  updateActiveTagsAndProjects={updateActiveTagsAndProjects}
                   clearActiveTags={clearActiveTags}
                   toggleAccordion={toggleAccordion}
                   orderChronologically={orderChronologically}
                   tagAccordions={tagAccordions}
                   closeNav={closeNav}
+                  
                 />
               }
         />
@@ -339,6 +368,7 @@ const App = () => {
                       date={projects[projectPath].date}
                       type="project"
                       orderChronologically={orderChronologically}
+                      
                     />
                     }
               />

@@ -48,7 +48,7 @@ class Content extends React.Component {
 
   render() {
     const {
-      displayProjects, orderChronologically, closeNav, projectAmount = 8,
+      updateActiveTagsAndProjects, orderChronologically, closeNav, projectAmount = 8,
       thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, titleAlignment = null, type = null, projects = {}
     } = this.props;
 
@@ -140,10 +140,11 @@ class Content extends React.Component {
                         projects={projects}
                         activeTags={(section.projectsList||{}).filters}
                         filterType={(section.projectsList||{}).filterType}
-                        displayProjects={displayProjects}
+                        updateActiveTagsAndProjects={updateActiveTagsAndProjects}
                         orderChronologically={orderChronologically}
                         numToDisplay={projectAmount}
                         closeNav={closeNav}
+                        
                       />
                     </div>
                   }

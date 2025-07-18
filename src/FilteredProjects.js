@@ -6,54 +6,81 @@ class FilteredProjects extends React.Component {
   render() {
     const {
       orderChronologically, closeNav,
-      projects = {}, activeTags = [], filterType = "AND", numToDisplay =  null
+      projects = {}, activeTags = {}, filterType = "AND", numToDisplay =  null
     } = this.props;
 
-    var activeTagProjectsList = [];
-    var activeTagProjectsSet = new Set();
-    var projectsToDisplay = [];
-    var ignoredProjectsSet = new Set();
-    var ignoredProjectsList = [];
-    var projectsToIgnore = [];
-
-    if (activeTags.length) {
-      activeTags.forEach(tag => {
-        Object.keys(projects).forEach(projectPath => {
-          var tools = projects[projectPath].tools || [],
-              skills = projects[projectPath].skills || [],
-              affiliations = projects[projectPath].affiliations || [],
-              roles = projects[projectPath].roles || [],
-              tags = tools.concat(skills).concat(affiliations).concat(roles);
-          if (tags.includes(tag)) {
-            activeTagProjectsSet.add(projectPath);
-            activeTagProjectsList = Array.from(activeTagProjectsSet);
-            projectsToDisplay = activeTagProjectsList;
-          } else {
-            ignoredProjectsSet.add(projectPath);
-            ignoredProjectsList = Array.from(ignoredProjectsSet);
-            projectsToIgnore = ignoredProjectsList;
-          }
-        });
-      });
-    } else {
-      projectsToDisplay = Object.keys(projects);
-    }
-    if (filterType === "AND") {
-      // debugger;
-      projectsToDisplay = projectsToDisplay.filter(project => {
-        if (!projectsToIgnore.includes(project)) {
-          return project;
-        }
-      });
-    }
+    // var activeTagProjectsList = [];
+    // var activeTagProjectsSet = new Set();
+    // var projectsToDisplay = [];
+    // var ignoredProjectsSet = new Set();
+    // var ignoredProjectsList = [];
+    // var projectsToIgnore = [];
+    // // debugger;
+    // if (Object.keys(activeTags).length) {
+    //   Object.keys(activeTags).forEach(category => {
+    //     // debugger;
+    //     Object.keys(projects).forEach(projectPath => {
+    //       if (projects[projectPath][category].some(tag => activeTags[category].includes(tag))) {
+    //         console.log("project's tags:");
+    //         console.log(projects[projectPath][category]);
+    //         console.log("active tags:");
+    //         console.log(activeTags[category]);
+    //         // debugger;
+    //         activeTagProjectsSet.add(projectPath);
+    //         activeTagProjectsList = Array.from(activeTagProjectsSet);
+    //         projectsToDisplay = activeTagProjectsList;
+    //       } else {
+    //         ignoredProjectsSet.add(projectPath);
+    //         ignoredProjectsList = Array.from(ignoredProjectsSet);
+    //         projectsToIgnore = ignoredProjectsList;
+    //       }
+    //       projectsToDisplay = projectsToDisplay.filter(project => {
+    //         if (!projectsToIgnore.includes(project)) {
+    //           return project;
+    //         }
+    //       });
+    //     });
+    //   });
+    //   // console.log("projectsToDisplay");
+    //   // console.log(projectsToDisplay);
+    //   // console.log("projectsToIgnore");
+    //   // console.log(projectsToIgnore);
+    //   // activeTags.forEach(tag => {
+    //   //   Object.keys(projects).forEach(projectPath => {
+    //   //     var tools = projects[projectPath].tools || [],
+    //   //         skills = projects[projectPath].skills || [],
+    //   //         affiliations = projects[projectPath].affiliations || [],
+    //   //         roles = projects[projectPath].roles || [],
+    //   //         tags = tools.concat(skills).concat(affiliations).concat(roles);
+    //   //     if (tags.includes(tag)) {
+    //   //       activeTagProjectsSet.add(projectPath);
+    //   //       activeTagProjectsList = Array.from(activeTagProjectsSet);
+    //   //       projectsToDisplay = activeTagProjectsList;
+    //   //     } else {
+    //   //       ignoredProjectsSet.add(projectPath);
+    //   //       ignoredProjectsList = Array.from(ignoredProjectsSet);
+    //   //       projectsToIgnore = ignoredProjectsList;
+    //   //     }
+    //   //   });
+    //   // });
+    // } else {
+    //   projectsToDisplay = Object.keys(projects);
+    // }
+    // if (filterType === "AND") {
+    //   debugger;
+    //   projectsToDisplay = projectsToDisplay.filter(project => {
+    //     if (!projectsToIgnore.includes(project)) {
+    //       return project;
+    //     }
+    //   });
+    // }
+    var projectsToDisplay = Object.keys(projects);
     var orderedProjects = orderChronologically(projects);
     projectsToDisplay = orderedProjects.filter(a => projectsToDisplay.includes(a));
     
     if (numToDisplay && projectsToDisplay.length) {
       projectsToDisplay = projectsToDisplay.slice(0, numToDisplay);
     }
-    // console.log(numToDisplay);
-    // console.log(projectsToDisplay);
 
     return (
         <div>

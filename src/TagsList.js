@@ -4,18 +4,20 @@ class TagsList extends React.Component {
   render() {
     
     const {
-        displayProjects, toggleAccordion,
-        title = "", tags = {}, activeTags = [], tagAccordions = {}
+        updateActiveTagsAndProjects, toggleAccordion,
+        title = "", tags = {}, activeTags = {}, tagAccordions = {}
     } = this.props;
 
     var isAccordionOpen = tagAccordions[title.toLowerCase()] === true ? "open" : "close";
     // debugger;
     var activeFilterTags = [];
     Object.keys(tags).forEach(tag => {
-        if (activeTags.includes(tag)) {
+        if ((activeTags[title.toLowerCase()]||[]).includes(tag)) {
             activeFilterTags.push(tag);
         }
     })
+    // debugger;
+    console.log("activeFilterTags ",activeFilterTags);
     
     return (
         <div className={["tag", title.toLowerCase(), isAccordionOpen].join(" ")}>
@@ -27,15 +29,16 @@ class TagsList extends React.Component {
             {Object.keys(tags).sort().map((tag, i) => {
                 // debugger;
                 var tagLinkClasses = [];
-                if (activeTags.includes(tag)) {
+                if ((activeTags[title.toLowerCase()]||[]).includes(tag)) {
                     tagLinkClasses.push("active");
                 }
                 if (tags[tag] === 0) {
                     tagLinkClasses.push("disabled");
                 }
+                // debugger;
                 return(
                     <li key={i}>
-                        <button onClick={()=>displayProjects(tag)} className={tagLinkClasses}>
+                        <button onClick={()=>updateActiveTagsAndProjects({title: title.toLowerCase(), tag: tag})} className={tagLinkClasses}>
                             {tag} ({tags[tag]})
                         </button>
                     </li>
