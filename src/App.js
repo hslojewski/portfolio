@@ -145,7 +145,6 @@ const App = () => {
   var updateProjectsList = (activeTags) => {
     // console.log(projects);
     // console.log(activeTags);
-    // // debugger;
     var activeTagProjectsList = [];
     var activeTagProjectsSet = new Set();
     var projectsToDisplay = [];
@@ -157,7 +156,12 @@ const App = () => {
         // debugger;
         Object.keys(allProjects).forEach(projectPath => {
           // debugger;
-          if (allProjects[projectPath][category].some(tag => activeTags[category].includes(tag))) {
+            console.log("blah active tags:");
+            console.log(activeTags[category]);
+            var allProjectsTags = allProjects[projectPath][category].map(a => a.toLowerCase());
+            console.log("blah project's tags:");
+            console.log(allProjectsTags);
+          if (allProjectsTags.some(tag => activeTags[category].includes(tag))) {
             // debugger;
             console.log("project's tags:");
             console.log(allProjects[projectPath][category]);
@@ -168,7 +172,7 @@ const App = () => {
             // activeTagProjectsList = Array.from(activeTagProjectsSet);
             // projectsToDisplay = activeTagProjectsList;
             activeTags[category].forEach(tag => {
-              if (allProjects[projectPath][category].includes(tag)) {
+              if (allProjectsTags.includes(tag)) {
                 activeTagProjectsSet.add(projectPath);
                 activeTagProjectsList = Array.from(activeTagProjectsSet);
                 projectsToDisplay = activeTagProjectsList;
@@ -187,9 +191,8 @@ const App = () => {
             console.log(projectsToIgnore);
             // debugger;
           }
-          console.log("projectsToDisplay");
+          console.log("blahblah projectsToDisplay");
           console.log(projectsToDisplay);
-          // debugger;
           projectsToDisplay = projectsToDisplay.filter(project => {
             if (!projectsToIgnore.includes(project)) {
               return project;
@@ -207,7 +210,7 @@ const App = () => {
       })
       getTags(blah);
       setProjects(blah);
-      // debugger;
+      debugger;
     } else {
       getTags(allProjects);
       setProjects(allProjects);
@@ -282,7 +285,23 @@ const App = () => {
     return orderedProjects;
   }
 
+  var getUrlFilters = () => {
+    var params = Object.fromEntries(new URLSearchParams(window.location.hash.replace("#/projects?","")));
+    var categories = ['roles', 'affiliations', 'tools', 'skills'];
+    var activeTags = {};
+    Object.keys(params).forEach(paramKey => {
+      if (categories.includes(paramKey)) {
+        activeTags[paramKey] = params[paramKey].split(",");
+      }
+    })
+    console.log("activeTags");
+    console.log(activeTags);
+    setActiveTags(activeTags);
+    // updateProjectsList(activeTags);
+  }
+
   useEffect(() => {
+    getUrlFilters();
     getProjectsAndTags();
     initializeSeason();
     initializeColorMode();
