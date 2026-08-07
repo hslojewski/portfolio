@@ -45,9 +45,9 @@ class Nav extends React.Component {
           </li>
           <li className="colorMode">
             <Link className={"mode " + colorMode+"-mode"}
-                  alt={[colorMode, "mode"].join(" ")}
+                  aria-label={dynamicColorModeMessage}
                   onClick={toggleColorMode}>
-              <span className="mobile-only-nav-text" aria-label={dynamicColorModeMessage}>{dynamicColorModeMessage}</span>
+              <span className="mobile-only-nav-text">{dynamicColorModeMessage}</span>
               {colorMode === "light" ? <FaRegMoon title={switchToDarkMessage} /> : <FaRegSun title={switchToLightMessage} />}
             </Link>
           </li>
