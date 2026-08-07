@@ -59,7 +59,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
           font-weight: bold;
           &:hover:not(.button) { text-decoration: underline; }
         }
-        button {
+        button, .button {
           color: $theme-light-bg;
           border: 1px solid $theme-dark-bg;
           background: $theme-dark-bg;
@@ -130,7 +130,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
           font-weight: bold;
           &:hover:not(.button) { text-decoration: underline; }
         }
-        button {
+        button, .button {
           color: $theme-dark-bg;
           border: 1px solid $theme-light-bg;
           background: $theme-light-bg;
