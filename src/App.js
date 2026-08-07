@@ -140,25 +140,23 @@ const App = () => {
       });
   }
 
-  // Flattens activeTags (e.g. { tools: ["React"], skills: ["UX"] }) into
-  // [{ category: "tools", tag: "React" }, { category: "skills", tag: "UX" }]
-  // so we can test a project against every selected tag with one pass.
-  var getSelectedTagEntries = (activeTags) => {
-    return Object.keys(activeTags).flatMap(category =>
-      activeTags[category].map(tag => ({ category, tag }))
-    );
+  // Within a single category, selecting multiple tags is always an OR
+  // (e.g. Tools: "Squarespace" or "WordPress" - a project needs just one).
+  // The AND/OR toggle controls how categories combine with each other
+  // (e.g. Tools AND Affiliations both needing a match, vs either one).
+  var categoryHasMatch = (project, category, selectedTagsInCategory) => {
+    return (project[category] || []).some(tag => selectedTagsInCategory.includes(tag));
   }
 
   var updateProjectsList = (activeTags, filterTypeOverride) => {
     var currentFilterType = filterTypeOverride || filterType;
-    var selectedTagEntries = getSelectedTagEntries(activeTags);
+    var activeCategories = Object.keys(activeTags).filter(category => (activeTags[category] || []).length > 0);
 
     var projectsToDisplay = allProjects;
-    if (selectedTagEntries.length) {
-      // AND: project must have every selected tag. OR: project must have at least one.
+    if (activeCategories.length) {
       var projectMatchesSelection = currentFilterType === "OR"
-        ? (project) => selectedTagEntries.some(({ category, tag }) => (project[category] || []).includes(tag))
-        : (project) => selectedTagEntries.every(({ category, tag }) => (project[category] || []).includes(tag));
+        ? (project) => activeCategories.some(category => categoryHasMatch(project, category, activeTags[category]))
+        : (project) => activeCategories.every(category => categoryHasMatch(project, category, activeTags[category]));
 
       projectsToDisplay = Object.fromEntries(
         Object.entries(allProjects).filter(([, project]) => projectMatchesSelection(project))

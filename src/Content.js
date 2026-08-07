@@ -6,7 +6,6 @@ import { FaRegKeyboard, FaCode, FaSitemap, FaLinkedinIn, FaEnvelope } from "reac
 import FilteredProjects from './FilteredProjects';
 
 class Content extends React.Component {
-
   imageModalTrigger() {
     var imageModal = document.getElementById("image-modal"),
         contentImages = document.querySelectorAll(".image-container .image img:not(.ignore-modal)"),
@@ -62,26 +61,20 @@ class Content extends React.Component {
       "FaEnvelope": FaEnvelope
     };
 
-    // "Related" = any other project sharing at least one tag (tools, skills,
-    // affiliations, or roles) with this one.
-    var currentProjectTags = [].concat(tags.tools || [], tags.skills || [], tags.affiliations || [], tags.roles || []);
-    var relatedProjects = {};
-    if (type === "project" && currentProjectTags.length > 0) {
-      Object.keys(projects).forEach(path => {
-        if (path === projectPath) {
-          return;
-        }
-        var otherProject = projects[path];
-        var otherProjectTags = [].concat(
-          otherProject.tools || [], otherProject.skills || [], otherProject.affiliations || [], otherProject.roles || []
-        );
-        if (otherProjectTags.some(tag => currentProjectTags.includes(tag))) {
-          relatedProjects[path] = otherProject;
-        }
-      });
-    }
+    // Related Projects: Content just supplies the candidate data (every other
+    // project) and its own tags as preferences; FilteredProjects decides who
+    // qualifies (OR: any shared category) and ranks stronger matches - those
+    // sharing a tag in every category this project has tags in - first.
+    var otherProjects = { ...projects };
+    delete otherProjects[projectPath];
+    var tagCategories = ['tools', 'skills', 'affiliations', 'roles'];
+    var hasAnyRelated = type === "project" && tagCategories.some(category =>
+      (tags[category] || []).some(tag =>
+        Object.values(otherProjects).some(project => (project[category] || []).includes(tag))
+      )
+    );
 
-    
+
     return (
       <div className="page">
         {thumbnail &&
@@ -258,11 +251,13 @@ class Content extends React.Component {
               );
             })}</div>
           }
-          {type === "project" && Object.keys(relatedProjects).length > 0 &&
+          {type === "project" && hasAnyRelated &&
             <div className="projects-list related-projects">
               <h2>Related Projects</h2>
               <FilteredProjects
-                projects={relatedProjects}
+                projects={otherProjects}
+                activeTags={tags}
+                filterType={["AND", "OR"]}
                 orderChronologically={orderChronologically}
                 numToDisplay={projectAmount}
                 closeNav={closeNav}

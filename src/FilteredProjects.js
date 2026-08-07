@@ -6,35 +6,69 @@ class FilteredProjects extends React.Component {
   render() {
     const {
       orderChronologically, closeNav,
-      projects = {}, activeTags = [], filterType = "AND", numToDisplay =  null
+      projects = {}, activeTags = [], filterType = ["AND"], numToDisplay =  null, order = null
     } = this.props;
 
-    // This component is used two different ways with two different activeTags shapes:
-    // 1. From the Projects page: activeTags is the category-keyed object ({tools: [...]})
-    //    used for the page-level filters. `projects` has already been filtered by App.js
-    //    in that case, so there's nothing more to do here.
-    // 2. From Content.js (e.g. About/Home "related projects" sections): activeTags is a
-    //    flat list of tag strings from that project's own JSON, e.g.
-    //    ["Platform Product Manager", "Software Engineer"]. A project matches if any of
-    //    its tools/skills/affiliations/roles tags are in that list.
-    var selectedTags = Array.isArray(activeTags) ? activeTags.filter(Boolean) : [];
+    // activeTags can be given in two shapes - this component figures out
+    // which one it got and matches accordingly:
+    // 1. A flat list of tag strings, e.g. ["Platform Product Manager", "Software Engineer"]
+    //    (used by project-JSON-driven "featured projects" sections). A project
+    //    matches if any/all of its tags (any category) are in that list.
+    // 2. A category-keyed object, e.g. { tools: ["Squarespace"], affiliations: [...] }
+    //    (used for Related Projects, where a caller wants matching scoped per
+    //    category rather than one flat pool of tags).
+    var tagCategories = ['tools', 'skills', 'affiliations', 'roles'];
+    var isCategorized = activeTags && !Array.isArray(activeTags) && typeof activeTags === 'object';
+    var activeCategories = isCategorized ? tagCategories.filter(category => (activeTags[category] || []).length > 0) : [];
+    var selectedFlatTags = isCategorized ? [] : (Array.isArray(activeTags) ? activeTags.filter(Boolean) : []);
+    var hasActiveSelection = isCategorized ? activeCategories.length > 0 : selectedFlatTags.length > 0;
+    var requiredMatchCount = isCategorized ? activeCategories.length : selectedFlatTags.length;
+
+    // Number of active categories (or, for the flat shape, "tags") a project matches.
+    var matchStrength = (project) => {
+      if (isCategorized) {
+        return activeCategories.filter(category => (project[category] || []).some(tag => activeTags[category].includes(tag))).length;
+      }
+      var projectTags = [].concat(project.tools || [], project.skills || [], project.affiliations || [], project.roles || []);
+      return selectedFlatTags.filter(tag => projectTags.includes(tag)).length;
+    };
+
+    // filterType is one or more of "AND"/"OR", tried in order - e.g.
+    // ["AND", "OR"] means "AND-matches first, then anything OR-matches".
+    // A single value like "AND" or "OR" is also accepted for simple cases.
+    var filterTypes = Array.isArray(filterType) ? filterType : [filterType];
+    var satisfies = (project, ft) => {
+      var strength = matchStrength(project);
+      return ft === "OR" ? strength > 0 : strength === requiredMatchCount;
+    };
+    // The tier is the earliest (lowest-index) filterType a project satisfies.
+    // A project satisfying none of the given filterTypes is excluded entirely.
+    var tierFor = (project) => {
+      for (var i = 0; i < filterTypes.length; i++) {
+        if (satisfies(project, filterTypes[i])) {
+          return i;
+        }
+      }
+      return -1;
+    };
 
     var projectsToDisplay = Object.keys(projects);
-    if (selectedTags.length) {
-      projectsToDisplay = projectsToDisplay.filter(path => {
-        var project = projects[path];
-        var projectTags = [].concat(
-          project.tools || [], project.skills || [], project.affiliations || [], project.roles || []
-        );
-        return filterType === "OR"
-          ? selectedTags.some(tag => projectTags.includes(tag))
-          : selectedTags.every(tag => projectTags.includes(tag));
-      });
+    if (hasActiveSelection) {
+      projectsToDisplay = projectsToDisplay.filter(path => tierFor(projects[path]) !== -1);
     }
 
-    var orderedProjects = orderChronologically(projects);
+    // `order` lets a caller supply a specific display order instead of the
+    // default chronological sort.
+    var orderedProjects = order || orderChronologically(projects);
     projectsToDisplay = orderedProjects.filter(a => projectsToDisplay.includes(a));
-    
+
+    // With multiple filterTypes, earlier tiers (e.g. AND) rank before later
+    // ones (e.g. OR); Array.sort is stable, so chronological order is
+    // preserved within each tier.
+    if (hasActiveSelection && filterTypes.length > 1) {
+      projectsToDisplay = [...projectsToDisplay].sort((a, b) => tierFor(projects[a]) - tierFor(projects[b]));
+    }
+
     if (numToDisplay && projectsToDisplay.length) {
       projectsToDisplay = projectsToDisplay.slice(0, numToDisplay);
     }
