@@ -1,18 +1,3 @@
-import { useEffect } from 'react';
-import Content from './Content';
-
-const Home = () => {
-  useEffect(() => {
-    document.title = "Heidi Slojewski | Web Developer & Product Manager";
-  }, []);
-
-  return (
-    <Content
-      projectPath="home"
-      title="Heidi Slojewski"
-      titleAlignment="center"
-    />
-  );
-};
-
-export default Home;
+// Moved to Home.jsx - Vite only transforms JSX syntax in .jsx/.tsx files, so
+// the real implementation lives there now. This file just forwards to it.
+export { default } from './Home.jsx';

@@ -1,0 +1,17 @@
+{
+    "path": "health-activity-infographic",
+    "description": "Information Visualization and Infographics exercise",
+    "content": [
+        {
+            "detail": "<p>For my Infographics and Data Visualization course, I had to keep track of two to three self-measurements for four weeks. Since I was assigned this in January, I thought it was fitting to multi-task by tracking my fitness and holiday pounds lost for this project.</p><p>So for four weeks I tracked my weight, steps taken, and calories ingested for each day and visualized the progress in an infographic.</p><p>Weight was mentioned first because it essentially summarizes the results of my activity and nutrition and so will be what readers want to notice first. It was tracked as the number of pounds lost or gained each day as a line graph so that you could more clearly see the peaks and dips in the progress.</p><p>Steps taken was below that and tracked as an area graph to differentiate from weight and more closely resemble the concept that I walked more or fewer steps each day. I noted here that recommendations for sedentary levels were about 4000 steps while 10000 steps was more for athletes, and also that my highest day of steps was because of a trip to an amusement park.</p><p>Finally, calories tracked were broken down by each day’s meals into a stacked column graph so that you could clearly see what meals had more calories than others as well as seeing how many calories I ingested overall each day. Here is where I also indicated the calorie ranges I would need if I wanted to maintain or lose weight.</p><p>I summarized this information in the text box on the top right, which explains what I had to do in order to lose weight, based on my personal measurements and sedentary lifestyle. This also explains how I measured the three types of health and activity as well as the results of total weight lost, average steps taken per day, and average calories ingested per day.</p><p>The colors used for the infographic were shades of reddish brown, orange, and gray. Brown served as the background, while its lighter saturations of red and salmon were used for weight and steps. Calories used three shades of orange to cover the three calorie meals that I had tracked. And gray and white were used for the fonts to indicate primary and secondary information.</p>",
+            "images": [
+                {
+                    "src": "projects/media/quantified-self/infographic.jpeg",
+                    "alt": "Infographic of health and activity data",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-50"
+                }
+            ]
+        }
+    ]
+}

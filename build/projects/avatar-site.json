@@ -1,0 +1,26 @@
+{
+    "path": "avatar-site",
+    "content": [
+        {
+            "detail": "<p>I participated as a software engineer in the migration of the avatar.com site from its former platform to the proprietary CMS that my team works with. As a web developer, I contributed to the site's style theming (specific to the Avatar brand) and I also built new features that aided with this migration in addition to benefiting other websites that live on the same CMS platform.</p><p>In particular, I contributed a lot of work to support the creation of the \"Our Team\" section of the site, which features a landing page introducing site guests to the team, with each member having their own bio page. An example of the work I supported included the configurability of having separate top-aligned and bottom-aligned background images for each page, regardless of the varying amounts of content across each team member's information.",
+            "images": [
+                {
+                    "src": "projects/media/avatar-site/homepage.png",
+                    "alt": "Webpage of various Avatar-related content, including news articles and featured games.",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "avatar.com"
+                },
+                {
+                    "src": "projects/media/avatar-site/team.png",
+                    "alt": "Webpage focused on the team that works on the Avatar movies, mentioning each member by name.",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "avatar.com/team"
+                }
+            ]
+        }
+    ]
+}

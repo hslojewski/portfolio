@@ -1,18 +1,3 @@
-import { useEffect } from 'react';
-import Content from './Content';
-
-const About = () => {
-  useEffect(() => {
-    document.title = "About | Heidi Slojewski";
-  }, []);
-
-  return (
-    <Content
-      title="Hi! I'm Heidi"
-      projectPath="about"
-      projectAmount={8}
-    />
-  );
-};
-
-export default About;
+// Moved to About.jsx - Vite only transforms JSX syntax in .jsx/.tsx files, so
+// the real implementation lives there now. This file just forwards to it.
+export { default } from './About.jsx';

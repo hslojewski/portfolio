@@ -1,0 +1,278 @@
+import { useEffect } from 'react';
+import parse from 'html-react-parser';
+import { Link } from "react-router-dom";
+import { InstagramEmbed } from 'react-social-media-embed';
+import { FaRegKeyboard, FaCode, FaSitemap, FaLinkedinIn, FaEnvelope } from "react-icons/fa6";
+import FilteredProjects from './FilteredProjects';
+import { useAppContext } from './AppContext';
+import { withBase } from './publicUrl';
+
+const imageModalTrigger = () => {
+  var imageModal = document.getElementById("image-modal"),
+      contentImages = document.querySelectorAll(".image-container .image img:not(.ignore-modal)"),
+      modalImage = document.getElementById("modal-image"),
+      closeIcon = document.getElementsByClassName("close-modal")[0];
+  if (contentImages.length) {
+    Array.from(contentImages).forEach(contentImage => {
+      contentImage.onclick = function(){
+        imageModal.style.display = "block";
+        modalImage.src = this.src;
+        modalImage.alt = this.alt;
+      }
+    });
+  }
+  if (closeIcon) {
+    closeIcon.onclick = function() {
+        imageModal.style.display = "none";
+    }
+  }
+  window.addEventListener('keydown', e => {
+    if (e.key === "Escape") {
+      imageModal.style.display = "none";
+    }
+  });
+}
+
+const Content = (props) => {
+  const {
+    projectAmount = 8, projectPath = "",
+    thumbnail = "", tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, titleAlignment = null, type = null,
+    projects: projectsProp
+  } = props;
+
+  const {
+    getProjectData, closeNav,
+    projects: contextProjects, projectData: data = {}
+  } = useAppContext();
+
+  const projects = projectsProp !== undefined ? projectsProp : contextProjects;
+
+  useEffect(() => {
+    getProjectData(projectPath);
+    document.querySelector('body').scrollTo({
+      top: 0,
+      left: 0
+    });
+    document.title = title + " | Heidi Slojewski";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [projectPath]);
+
+  useEffect(() => {
+    imageModalTrigger();
+  });
+
+  var eduIconComponents = {
+    "FaSitemap": FaSitemap,
+    "FaCode": FaCode,
+    "FaRegKeyboard": FaRegKeyboard,
+    "FaLinkedinIn": FaLinkedinIn,
+    "FaEnvelope": FaEnvelope
+  };
+
+  // Related Projects: Content just supplies the candidate data (every other
+  // project) and its own tags as preferences; FilteredProjects decides who
+  // qualifies (OR: any shared category) and ranks stronger matches - those
+  // sharing a tag in every category this project has tags in - first.
+  var otherProjects = { ...projects };
+  delete otherProjects[projectPath];
+  var tagCategories = ['tools', 'skills', 'affiliations', 'roles'];
+  var hasAnyRelated = type === "project" && tagCategories.some(category =>
+    (tags[category] || []).some(tag =>
+      Object.values(otherProjects).some(project => (project[category] || []).includes(tag))
+    )
+  );
+
+  return (
+    <div className="page">
+      {thumbnail &&
+        <div className="content-banner">
+          <img loading="lazy" src={withBase(thumbnail)} alt="" />
+        </div>
+      }
+      <div className="page-content blahmeh second-column">
+        {type === "project" &&
+          <span className="projects-link">
+            <Link to="/projects" className="projects-link" onClick={closeNav}>Back to Projects</Link>
+          </span>
+        }
+        <h1 className={titleAlignment}>{title}</h1>
+        {data.description &&
+          <p className="description">{data.description}</p>
+        }
+        <div className="meta">
+          {tags.tools.length > 0 &&
+            <span className="meta-item tools">
+              <strong>Tools: </strong>
+              {tags.tools.sort().map((tool, i) => {
+                return(<span key={i}>{tool}{tags.tools.length - 1 === i ? "" : ", "}</span>);
+              })}
+            </span>
+          }
+          {tags.skills.length > 0 &&
+            <span className="meta-item">
+              <strong>Skills: </strong>
+              {tags.skills.sort().map((skill, i) => {
+                return(<span key={i}>{skill}{tags.skills.length - 1 === i ? "" : ", "}</span>);
+              })}
+            </span>
+          }
+          {tags.affiliations.length > 0 &&
+            <span className="meta-item">
+              <strong>Affiliation: </strong>
+              {tags.affiliations.sort().map((affiliation, i) => {
+                return(<span key={i}>{affiliation}{tags.affiliations.length - 1 === i ? "" : ", "}</span>);
+              })}
+            </span>
+          }
+          {tags.roles.length > 0 &&
+            <span className="meta-item">
+              <strong>Role: </strong>
+              {tags.roles.sort().map((role, i) => {
+                return(<span key={i}>{role}{tags.roles.length - 1 === i ? "" : ", "}</span>);
+              })}
+            </span>
+          }
+          {date &&
+            <span className="meta-item date">
+              <strong>Date: </strong>
+              <span>{date}</span>
+            </span>
+          }
+        </div>
+        {type === "project" && <hr className="content-divider"></hr>}
+        {(data.content||[]).length > 0 &&
+          <div>{(data.content||[]).map((section, i) => {
+            return(
+              <div key={i} className={"section "+ section.classes}>
+                {section.wrap_images && section.wrap_images.map((image, i) => {
+                  return(<img loading="lazy" key={i} src={withBase(image.src)} alt={image.alt} className={image.classes} />);
+                  }
+                )}
+                <h2 className={section.titleAlignment}>{section.title}</h2>
+                <h3 className={section.subtitleAlignment}>{section.subtitle}</h3>
+                {section.detail &&
+                  <div className={section.detailAlignment}>{parse(section.detail)}</div>
+                }
+                {section.projectsList &&
+                  <div className="projects-list">
+                    <FilteredProjects
+                      projects={projects}
+                      activeTags={(section.projectsList||{}).filters}
+                      filterType={(section.projectsList||{}).filterType}
+                      numToDisplay={projectAmount}
+                    />
+                  </div>
+                }
+                {(section.buttons||[]).length > 0 &&
+                  <div className="buttons-list">
+                    {(section.buttons||[]).map((button, i) => {
+                      if (button.icon) {
+                        var Component = eduIconComponents[button.icon];
+                      }
+                      var linkUrl;
+                      if (button.pdf_url) {
+                        return(
+                          <a href={withBase(button.pdf_url)} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
+                            <span className={button.classes}>
+                              {button.title}
+                              {Component && <Component  />}
+                            </span>
+                          </a>
+                        );
+                      } else {
+                        return(
+                          <Link to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
+                            <span className={button.classes}>
+                              {button.title}
+                              {Component && <Component  />}
+                            </span>
+                          </Link>
+                        );
+                      }
+                    })}
+                  </div>
+                }
+                {(section.images||[]).length > 0 &&
+                  <div className="image-container">
+                    {(section.images||[]).map((image, i) => {
+                      if (image.windowWrapper === "device") {
+                        return(
+                          <div key={i} className={"image device " + image.containerClasses}>
+                            <div  tabIndex="0" className="content">
+                              <img loading="lazy" src={withBase(image.src)} alt={image.alt} className={image.classes} />
+                            </div>
+                          </div>
+                        );
+                      } else if (image.windowWrapper === "browser") {
+                        return(
+                          <div key={i} className={"image browser " + image.containerClasses}>
+                            <div className="browser-navigation-bar">
+                              <i></i><i></i><i></i>
+                              <input title="browser-url" value={image.browserDestination} disabled />
+                            </div>
+                            <div tabIndex="0" className="browser-container">
+                              <img loading="lazy" src={withBase(image.src)} alt={image.alt} className={image.classes} />
+                            </div>
+                          </div>
+                        );
+                      } else {
+                        return(
+                          <div key={i} className={"image " + image.containerClasses}>
+                            <img loading="lazy" src={withBase(image.src)} alt={image.alt} className={image.classes} />
+                            {image.caption && <caption>{image.caption}</caption>}
+                          </div>
+                        );
+                      };
+                    })}
+                  </div>
+                }
+                {section.video &&
+                  <iframe src={section.video} loading="lazy" title="video" aria-label="video" width="100%" height="400" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                }
+                {section.instagramEmbed &&
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <InstagramEmbed url={section.instagramEmbed} width={550} />
+                  </div>
+                }
+                {(section.icons||[]).length > 0 &&
+                  <div className="section-icon-list">
+                    {section.icons.map((icon, i) => {
+                      var Component = eduIconComponents[icon.component];
+                      return(
+                        <div key={i} className="icon-details">
+                          <Component key={i} size={icon.width} />
+                          {icon.degree && <div className="degree">{icon.degree}</div>}
+                          {icon.source && icon.source.map((source, i) => {
+                            return (<div key={i} className="source">{source}</div>);
+                          })}
+                        </div>
+                      );
+                    })}
+                  </div>
+                }
+              </div>
+            );
+          })}</div>
+        }
+        {type === "project" && hasAnyRelated &&
+          <div className="projects-list related-projects">
+            <h2>Related Projects</h2>
+            <FilteredProjects
+              projects={otherProjects}
+              activeTags={tags}
+              filterType={["AND", "OR"]}
+              numToDisplay={projectAmount}
+            />
+          </div>
+        }
+        {type === "project" &&
+          <div className="projects-link bottom">
+            <Link to="/projects" onClick={closeNav}>Back to Projects</Link>
+          </div>
+        }
+      </div>
+    </div>
+  );
+};
+
+export default Content;

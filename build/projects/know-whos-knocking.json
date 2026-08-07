@@ -1,0 +1,60 @@
+{
+    "path": "know-whos-knocking",
+    "description": "Arduino project to redesign the doorbell idea.",
+    "content": [
+        {
+            "detail": "<p>For the Interaction Design class, Digital User Experience Disney Creative Academy. During this 4-class course, I designed a small prototype using a combination of an Arduino circuit and a Processing screen output.</p>",
+            "images": [
+                {
+                    "src": "projects/media/knocking/drawing.png",
+                    "alt": "Drawing of example use case, applied to an apartment setting where a hallway of apartments was gated by a locked door",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
+                }
+            ]
+        },
+        {
+            "title": "Problem",
+            "detail": "<p>Based on a visit to a friend's apartment, I experienced poor user experience myself when notifying the friend of my arrival. The friend lived in a room on the second floor hallway of the apartment complex. Each door on this floor had its own doorbell, but the hallway itself was gated and locked from those without a key, and there was no outside intercom system for the apartment complex as a whole.</p><p>This proved to be a frustration when visiting the apartment, because an apartment resident wasn't likely to hear any visitor's knocks on the hallway gate to notify them of their arrival. Furthermore, alternative methods of notification such as a phone call could be unsuccessful due to the various sound/vibration states and locations around an apartment during a day that could easily be unnoticed.</p><p>Therefore, a new \"doorbell\" proposition had two requirements:</p><ul><li>Give the apartment resident clear notification that a visitor was outside of the building to visit them.</li><li>Allow the resident privacy so that not every visitor (i.e. solicitors) had access to \"ring\" the doorbell.</li></ul></p>"
+        },
+        {
+            "title": "Tools and Terms",
+            "detail": "<p>The tools available to use included both Arduino and Processing. Arduino allows physical interactions with a small circuit board, including both light and proximity sensor options. Processing is a language that accepts input from Arduino interactions and outputs results on a computer.</p><p>The use of Arduino during the project was understood to be the input: the new doorbell's \"ringer\" that the visitor would \"ring.\"</p><p>The use of Processing during the project was understood to be the output: the notification to the resident that the visitor was there to see them.</p>",
+            "images": [
+                {
+                    "src": "projects/media/knocking/drawing_annotated.png",
+                    "alt": "Same drawing annotated with notes including where to place doorbells sensors and what fields to measure",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
+                }
+            ]
+        },
+        {
+            "title": "Interaction Design",
+            "detail": "<p>In designing the doorbell, I decided that the instance of \"ringing\" it -- the input -- be done in two parts:</p><ul><li>The ringer would recognize a visitor based on them approaching the door (Proximity).</li><li>The visitor would shine a light on the ringer so that the ringer would understand that the visitor was \"ringing\" the doorbell.</li></ul><p>To incorporate the elements of privacy and recognition, this light-shining activity would require the visitor to know for how long they should shine the light. This way, the new doorbell had a combination lock in order to notify the resident of a specific visitor who was there to see them.</p>"
+        },
+        {
+            "title": "Use Scenario",
+            "detail": "<p><b>The \"Bell\" - Proximity and Light Sensor:</b> My example situation kept the proximity sensor at the bottom of the stairs to the apartment. If the visitor was less than three feet away from the sensor, the first piece of the combination lock would initiate the second piece to be open for recognition. This visitor would then walk up the stairs to the second floor and shine a light on the light sensor for five seconds and off for six seconds before the bell would register those steps and lead to the next.</p><b>The \"Ring\" - Resident Notification:</b> The resident would then receive notification of the visitor's presence at the door in the form of a sound or image on a device such as a phone or computer. The idea of using a phone or device was based on both perceived convenience for the resident; however, other considerations included television or image projections on the resident's walls.</p>",
+            "images": [
+                {
+                    "src": "projects/media/knocking/process_flow.png",
+                    "alt": "Process flow drawing",
+                    "caption": "Process Flow of the combination of proximity and light sensor requirements in order to \"unlock\" the doorbell's combination lock",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
+                }
+            ]
+        },
+        {
+            "title": "Prototype",
+            "detail": "<p>The prototype created by the end of the class was the Arduino circuit board and Processing output tools. A user could come within three feet of contact with the \"bell\" sensor on the board to initiate a red circle notification on the screen. Then, the user could shine a light -- on that same sensor -- for five seconds before the red circle turned green, then proceed to wait for six seconds before the green circle would turn into a notification image.</p>",
+            "instagramEmbed": "https://www.instagram.com/p/psMxABnFHF/?utm_source=ig_embed&ig_rid=db11df7b-76b4-4767-afe0-00c0a9a7a073"
+        },
+        {
+            "title": "Future Opportunities",
+            "detail": "<h3>Difference Between the Visitor and Resident Views</h3><p>The idea of the red and green circles was used as a method for showing the visitor the steps they were completing in accessing the building. Although the physical interaction with the device is shown with the laptop screen in the prototype, there should essentially be two screens in use: One for the visitor to see and another for the resident. The visitor should be able to tell if she input the correct light/shadow combination so that she knows that the resident will be notified that she is there. Likewise, through the device, the resident should be able to tell that someone is at the building to visit his apartment.</p><h3>Customized Doorbell \"Keys\" for Different Visitors</h3><p>Furthermore, because the device can be programmed to accept a number of different combinations and consequences of those combinations, there is the opportunity for the resident to assign multiple combinations to different visitors. This gives the resident the opportunity to know who specifically the visitor could be, whether the resident chooses to assign a combination to one person in particular or a group just so that he has better awareness of who is at the door.</p>"
+        }
+    ]
+
+}

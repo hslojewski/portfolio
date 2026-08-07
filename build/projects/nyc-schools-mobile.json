@@ -1,0 +1,56 @@
+{
+    "path": "nyc-schools-mobile",
+    "description": "iOS and Android wireframes exercise",
+    "content": [
+        {
+            "detail": "<p>For a Mobile Design course, I was given an selection of websites to choose from in order to design what its mobile app experience would include in both functionality and design. I ultimately chose the NYC Department of Education website, and after reviewing its many resources for parents and students, I selected two tasks that I felt were common for users to do:</p><ul><li>Check and edit their child's bus route status to and from school</li><li>Review and edit their child's meal plans and menu options for previous and upcoming school meals</li></ul>",
+            "images": [
+                {
+                    "src": "projects/media/nyc-schools/nyc_website.png",
+                    "alt": "Homepage of NYC Schools website",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        },
+        {
+            "title": "Wireframes",
+            "detail": "<p>I approached this project keeping in mind that the user of this app would return to it (as opposed to the website) in order to access consistently updated information relevant to their child's or children's profile(s). With this in mind, I wanted to focus on two tasks that would be useful to reference with an NYC Schools app: reviewing Meal Plans/Menus and reviewing Transportation status for your child or children.</p><p>In wiring out these scenarios, I kept in mind that the parent may have multiple children in the NYC schools.</p><p>What parents can reference under \"Food\" would be the child's selected meals, the complete menu options available, and the allergies associated with the child that the schools should be aware of. In particular, I focused on Meals and Menus.</p><p>What parents can reference under \"Bus Routes\" would be the child's current Status (whether they are at home, school, or in between the two in transit) and a Map that actively shows the locations of the children.</p><p>The major differences in user interface between the Android and iOS verisons of the wireframes mostly have to do with visual layout and fonts. A quick list of these differences would include: Navigation menu options layout, Button styles, Section headers, Menu toggle options, Screen content layout/cards and space, Dropdowns, and Back/Close buttons.</p>"
+        },
+        {
+            "subtitle": "iOS",
+            "images": [
+                {
+                    "src": "projects/media/nyc-schools/ios.jpeg",
+                    "alt": "iOS wireframes",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/nyc-schools/ios_annotated.jpeg",
+                    "alt": "Annotated iOS wireframes",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        },
+        {
+            "subtitle": "Android",
+            "images": [
+                {
+                    "src": "projects/media/nyc-schools/android.jpeg",
+                    "alt": "Android wireframes",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/nyc-schools/android_annotated.jpeg",
+                    "alt": "Annotated Android wireframes",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        }
+    ]
+
+}

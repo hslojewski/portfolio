@@ -1,0 +1,127 @@
+{
+    "path": "disney-styling-refactor",
+    "content": [
+        {
+            "subtitle": "Problem",
+            "detail": "<p>For each given page using a theme (20th Century Studios, Disney, National Geographic, etc.), that page was loading <em>all</em> the CSS that could possibly be used regardless of how many features/functionalities were loaded on that page. For example, a 20th Century Studios page could have only a hero and slider module on it, but it had additionally loaded CSS for other features, such as article, grid, and gallery modules.</p><p>Technically, the previous way that CSS files were processed was that each theme’s application.css file was compiled, and each one of those application.css files imported several other CSS files.</p>",
+            "images": [
+                {
+                    "src": "projects/media/disney-styling-refactor/before_css.jpg",
+                    "alt": "Text editor displaying example of previous imports of all css files for a single webpage",
+                    "caption": "Previous CSS structure, where all universal CSS files loaded regardless of functionalities used on page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
+                }
+            ]
+        },
+        {
+            "subtitle": "Solution",
+            "detail": "<p>This solution completed two things:</p><ol><li>Reduced the amount of data in each theme’s application.css file</li><li>Evaluate which modules are being used on a page, and then compile the respective CSS files for those modules</li></ol><p>To summarize the changes in the pull request for this refactor:</p><ul><li>Updates the ruby that was previously only referring to the application.css file to now:</li><ul><li>Refer to module view/key css files if that respective module is in a page's module stack. Prioritize views first, i.e. emea_header is a view under the header_banner module key but the natgeo theme has a style file for both the key and view</li><li>Include a list of module-based stylesheet html tags in the page's head in addition to the application stylesheet tag</li></ul><li>Across the codebase, cleans up the themes’ files to:</li><ul><li>Be properly named to match the module view or key name</li><ul><li>If a module view file exists, ensure that it imports the module key file, i.e. emea_header.css should have an @import statement to include the header_banner.css file</li></ul><li>Move module-based files into a modules/ folder</li><li>Have the application.css file only refer to universally styled elements</li></ul></ul>"
+        },
+        {
+            "subtitle": "Results",
+            "detail": "<p>Across <em>all</em> sites that lived on the platform, each page had a reduction in the amount of CSS files that loaded. This amount differed depending on the brand of the site since each site uses a mix of different features available. The Disney style theme, for example, had the most significant improvement since over 100 sites on the platform utilized this theme.</p><p>Before, each page on each site would be loading the same amount of CSS. After the refactor, each page would only load the amount of CSS needed based on the different modules or functionalities that each page called for.</p>"
+        },
+        {
+            "detail": "<h4>National Geographic Style Theme in Total Bytes (Estimation)</h4><table><tr><th>Page</th><th>Before</th><th>After</th><th>Percentage Reduction</th></tr><tr><td>Homepage</td><td>59,400</td><td>44,200</td><td>25%</td></tr><tr><td>All Movies Page</td><td>59,400</td><td>31,900</td><td>45%</td></tr><tr><td><em>Free Solo</em> Movie Page</td><td>59,400</td><td>53,500</td><td>9.9%</td></tr></table>",
+            "images": [
+                {
+                    "src": "projects/media/disney-styling-refactor/natgeo_before.jpg",
+                    "alt": "NatGeo Films homepage with browser inspector open, revealing CSS coverage",
+                    "caption": "NatGeo Films: Previous total bytes loaded on each page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/natgeo_after1.png",
+                    "alt": "NatGeo Films homepage after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "NatGeo Films Post-Refactor: Homepage",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/natgeo_after2.png",
+                    "alt": "NatGeo Films movies page after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "NatGeo Films Post-Refactor: All Movies Page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/natgeo_after3.png",
+                    "alt": "NatGeo Films Free Solo page after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "NatGeo Films Post-Refactor: Individual Movie Page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                }
+            ]
+        },
+        {
+            "detail": "<h4>20th Century Studios Style Theme in Total Bytes (Estimation)</h4><table><tr><th>Page</th><th>Before</th><th>After</th><th>Percentage Reduction</th></tr><tr><td>Homepage</td><td>136,200</td><td>85,200</td><td>37%</td></tr><tr><td>All Movies Page</td><td>136,200</td><td>76,000</td><td>44%</td></tr><tr><td><em>Free Guy</em> Movie Page</td><td>136,200</td><td>88,800</td><td>34%</td></tr></table>",
+            "images": [
+                {
+                    "src": "projects/media/disney-styling-refactor/20cs_before.jpg",
+                    "alt": "20th Century Studios homepage with browser inspector open, revealing CSS coverage",
+                    "caption": "20th Century Studios: Previous total bytes loaded on each page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/20cs_after1.png",
+                    "alt": "20th Century Studios homepage after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "20th Century Studios Post-Refactor: Homepage",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/20cs_after2.png",
+                    "alt": "20th Century Studios movies page after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "20th Century Studios Post-Refactor: All Movies Page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/20cs_after3.png",
+                    "alt": "20th Century Studios Free Guy page after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "20th Century Studios Post-Refactor: Individual Movie Page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                }
+            ]
+        },
+        {
+            "detail": "<h4>Disney Style Theme in Total Bytes (Estimation)</h4><table><tr><th>Page</th><th>Before</th><th>After</th><th>Percentage Reduction</th></tr><tr><td>Homepage</td><td>1,241,200</td><td>364,000</td><td>70%</td></tr><tr><td>All Movies Page</td><td>1,241,200</td><td>264,000</td><td>78%</td></tr><tr><td><em>Inside Out 2</em> Movie Page</td><td>1,241,200</td><td>230,000</td><td>81%</td></tr></table>",
+            "images": [
+                {
+                    "src": "projects/media/disney-styling-refactor/disney_before.jpg",
+                    "alt": "Disney homepage with browser inspector open, revealing CSS coverage",
+                    "caption": "Disney: Previous total bytes loaded on each page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-75"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/disney_after1.png",
+                    "alt": "Disney homepage after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "Disney Post-Refactor: Homepage",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/disney_after2.png",
+                    "alt": "Disney movies page after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "Disney Post-Refactor: All Movies Page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                },
+                {
+                    "src": "projects/media/disney-styling-refactor/disney_after3.png",
+                    "alt": "Disney Inside Out 2 page after refactor, with browser inspector open, revealing reduced CSS coverage",
+                    "caption": "Disney Post-Refactor: Individual Movie Page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-30"
+                }
+            ]
+        }
+
+
+    ]
+}
