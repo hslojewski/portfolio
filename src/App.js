@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Routes, Route } from "react-router-dom";
 
 import './App.scss';
+import { AppProvider } from './AppContext';
 import Nav from './Nav';
 import Footer from './Footer';
 import Home from './Home';
@@ -229,7 +230,33 @@ const App = () => {
     initializeSeason();
     initializeColorMode();
   }, [])
-  
+
+  // Everything here is global app state/behavior that would otherwise have
+  // to be threaded as props through Home/About/Projects/Content and further
+  // down into TagsList/FilteredProjects. Route- or instance-specific values
+  // (e.g. which project a given <Content> is showing) are still passed as
+  // ordinary props below.
+  const appContextValue = useMemo(() => ({
+    projects,
+    allProjects,
+    tags,
+    activeTags,
+    filterType,
+    tagAccordions,
+    projectData,
+    getProjectData,
+    updateActiveTagsAndProjects,
+    clearActiveTags,
+    toggleFilterType,
+    toggleAccordion,
+    orderChronologically,
+    closeNav
+  }), [
+    projects, allProjects, tags, activeTags, filterType, tagAccordions, projectData,
+    getProjectData, updateActiveTagsAndProjects, clearActiveTags, toggleFilterType,
+    toggleAccordion, orderChronologically, closeNav
+  ]);
+
   return (
     <div className={colorMode + "-mode " + season}>
       <div id="image-modal" className="modal">
@@ -243,93 +270,48 @@ const App = () => {
         toggleNav={toggleNav}
         closeNav={closeNav}
       />
-      <Routes>
-        <Route exact="true" path="/"
-               element={
-               <Home
-                  getProjectData={getProjectData}
-                  projectData={projectData}
-                  updateActiveTagsAndProjects={updateActiveTagsAndProjects}
-                  projects={projects}
-                  orderChronologically={orderChronologically}
-               />
-              }
-        />
-        <Route path="/about"
-               element={
-                <About
-                  getProjectData={getProjectData}
-                  projectData={projectData}
-                  updateActiveTagsAndProjects={updateActiveTagsAndProjects}
-                  projects={projects}
-                  orderChronologically={orderChronologically}
-                  closeNav={closeNav}
+      <AppProvider value={appContextValue}>
+        <Routes>
+          <Route exact="true" path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          {Object.keys(projects).map((projectPath, i) => {
+            var path = "/projects/" + projectPath;
+            return (
+              <Route path={path}
+                     key={i}
+                     element={
+                      <Content
+                        key={projectPath}
+                        projectPath={projectPath}
+                        thumbnail={projects[projectPath].thumbnail}
+                        title={projects[projectPath].title}
+                        tags={{
+                          tools: projects[projectPath].tools,
+                          skills: projects[projectPath].skills,
+                          affiliations: projects[projectPath].affiliations,
+                          roles: projects[projectPath].roles
+                        }}
+                        date={projects[projectPath].date}
+                        type="project"
+                        projects={allProjects}
+                      />
+                      }
                 />
-               }
-        />
-        <Route path="/projects"
-               element={
-                <Projects
-                  projects={projects}
-                  tools={tags.tools}
-                  skills={tags.skills}
-                  affiliations={tags.affiliations}
-                  roles={tags.roles}
-                  // tags={tags}
-                  toggleFilterType={toggleFilterType}
-                  filterType={filterType}
-                  activeTags={activeTags}
-                  updateActiveTagsAndProjects={updateActiveTagsAndProjects}
-                  clearActiveTags={clearActiveTags}
-                  toggleAccordion={toggleAccordion}
-                  orderChronologically={orderChronologically}
-                  tagAccordions={tagAccordions}
-                  closeNav={closeNav}
-                  
-                />
-              }
-        />
-        {Object.keys(projects).map((projectPath, i) => {
-          var path = "/projects/" + projectPath;
-          return (
-            <Route path={path}
-                   key={i} 
-                   element={
-                    <Content
-                      key={projectPath}
-                      projectPath={projectPath}
-                      thumbnail={projects[projectPath].thumbnail}
-                      data={projectData}
-                      getProjectData={getProjectData}
-                      title={projects[projectPath].title}
-                      tags={{
-                        tools: projects[projectPath].tools,
-                        skills: projects[projectPath].skills,
-                        affiliations: projects[projectPath].affiliations,
-                        roles: projects[projectPath].roles
-                      }}
-                      date={projects[projectPath].date}
-                      type="project"
-                      orderChronologically={orderChronologically}
-                      projects={allProjects}
-                      closeNav={closeNav}
-
-                    />
-                    }
+            );
+          })}
+          {/* {tools.concat(skills).concat(affiliations).map((tag, i) => {
+            var path = "/tags/" + tag;
+            return (
+              <Route path={path} key={i}
+                      element={<Tag projects={projects}
+                                    tag={tag}
+                              />}
               />
-          );
-        })}
-        {/* {tools.concat(skills).concat(affiliations).map((tag, i) => {
-          var path = "/tags/" + tag;
-          return (
-            <Route path={path} key={i} 
-                    element={<Tag projects={projects}
-                                  tag={tag}
-                            />}
-            />
-          );
-        })} */}
-      </Routes>
+            );
+          })} */}
+        </Routes>
+      </AppProvider>
       <Footer />
     </div>
   );
