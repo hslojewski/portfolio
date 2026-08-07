@@ -12,7 +12,7 @@ import Projects from './Projects';
 import Content from './Content';
 
 const App = () => {
-  var [tags, setTags] = useState({ tools: {}, skills: {}, affiliations: {}, roles: {} });
+  const [tags, setTags] = useState({ tools: {}, skills: {}, affiliations: {}, roles: {} });
   const [projects, setProjects] = useState([]);
   const [allProjects, setAllProjects] = useState({});
   const [projectData, setProjectData] = useState({});
@@ -53,8 +53,10 @@ const App = () => {
     colorMode === "light" ? setColorMode('dark') : setColorMode('light');
   }
 
+  // Builds a fresh tag-count object from scratch rather than mutating the
+  // `tags` state directly, so the only way `tags` ever changes is via setTags.
   var getTags = (projects) => {
-    tags = { tools: {}, skills: {}, affiliations: {}, roles: {} };
+    var newTags = { tools: {}, skills: {}, affiliations: {}, roles: {} };
     var blahProjects = projects;
     if (Object.keys(allProjects).length) {
       blahProjects = allProjects;
@@ -62,48 +64,24 @@ const App = () => {
     Object.keys(blahProjects).forEach(projectId => {
       var project = blahProjects[projectId];
       ['tools', 'skills', 'affiliations', 'roles'].forEach(tagType => {
-      // ['tools', 'affiliations'].forEach(tagType => {
-      // ['affiliations'].forEach(tagType => {
-        // debugger;
         if (project[tagType]) {
           project[tagType].forEach(projectTag => {
-            // console.log(projects);
-            // debugger;
-            // if (projectTag in tags[tagType]) {
-            //   tags[tagType][projectTag]++;
-            // } else {
-            //   if (projects[projectId]) {
-            //     tags[tagType][projectTag] = 1;
-            //   } else {
-            //     tags[tagType][projectTag] = 0;
-            //   }
-            //   debugger;
-            // }
-            // console.log(projectId);
-            // if (projectTag === "DePaul University" && projectId === "health-activity-infographic") {
-            //   debugger;
-            // }
-
             if (projects[projectId]) {
-              if (projectTag in tags[tagType]) {
-                tags[tagType][projectTag]++;
+              if (projectTag in newTags[tagType]) {
+                newTags[tagType][projectTag]++;
               } else {
-                tags[tagType][projectTag] = 1;
+                newTags[tagType][projectTag] = 1;
               }
             } else {
-              // debugger;
-              if (!tags[tagType][projectTag]) {
-                // debugger;
-                tags[tagType][projectTag] = 0;
+              if (!newTags[tagType][projectTag]) {
+                newTags[tagType][projectTag] = 0;
               };
             }
           });
         };
       });
     });
-    // console.log(tags);
-    // debugger;
-    setTags({...tags});
+    setTags(newTags);
   }
 
   var getProjectsAndTags = () => {
@@ -159,26 +137,23 @@ const App = () => {
     setProjects(projectsToDisplay);
   }
 
+  // Builds a new activeTags object (and a new array for the affected
+  // category) instead of mutating the activeTags state in place.
   var updateActiveTagsAndProjects = (selectedTag) => {
-    var updatedActiveTags = activeTags;
-    if (Object.keys(activeTags).includes(selectedTag.title)) {
-      if (activeTags[selectedTag.title].includes(selectedTag.tag)) {
-        updatedActiveTags[selectedTag.title] = activeTags[selectedTag.title].filter(a => a !== selectedTag.tag);
-        if (updatedActiveTags[selectedTag.title].length === 0) {
-          delete updatedActiveTags[selectedTag.title];
-        }
-        setActiveTags(updatedActiveTags);
-        updateProjectsList(updatedActiveTags);
-      } else {
-        updatedActiveTags[selectedTag.title] = updatedActiveTags[selectedTag.title].concat(selectedTag.tag);
-        updateProjectsList(updatedActiveTags);
-      }
+    var currentTagsForTitle = activeTags[selectedTag.title] || [];
+    var updatedTagsForTitle = currentTagsForTitle.includes(selectedTag.tag)
+      ? currentTagsForTitle.filter(a => a !== selectedTag.tag)
+      : currentTagsForTitle.concat(selectedTag.tag);
+
+    var updatedActiveTags = { ...activeTags };
+    if (updatedTagsForTitle.length === 0) {
+      delete updatedActiveTags[selectedTag.title];
     } else {
-      activeTags[selectedTag.title] = [selectedTag.tag]
-      updatedActiveTags = activeTags;
-      setActiveTags(updatedActiveTags);
-      updateProjectsList(updatedActiveTags);
+      updatedActiveTags[selectedTag.title] = updatedTagsForTitle;
     }
+
+    setActiveTags(updatedActiveTags);
+    updateProjectsList(updatedActiveTags);
   }
 
   var toggleFilterType = () => {
@@ -193,8 +168,7 @@ const App = () => {
   }
 
   var toggleAccordion = (tagType) => {
-    tagAccordions[tagType] = !tagAccordions[tagType];
-    setTagAccordions({...tagAccordions});
+    setTagAccordions({ ...tagAccordions, [tagType]: !tagAccordions[tagType] });
   }
 
   var toggleNav = () => {

@@ -80,7 +80,7 @@ const FilteredProjects = ({
               return(
                 <li key={i} className="project-detail">
                   <Link exact="true" to={"/projects/" + path} onClick={closeNav}>
-                    <img loading={i > 5 ? "lazy" : null} src={withBase(projects[path].thumbnail)} alt={projects[path].thumbnail_alt} />
+                    <img loading={i > 5 ? "lazy" : null} src={withBase(projects[path].thumbnail)} alt={projects[path].thumbnail_alt || ""} />
                     <h3>{projects[path].title}</h3>
                   </Link>
                 </li>

@@ -145,7 +145,7 @@ const Content = (props) => {
             return(
               <div key={i} className={"section "+ section.classes}>
                 {section.wrap_images && section.wrap_images.map((image, i) => {
-                  return(<img loading="lazy" key={i} src={withBase(image.src)} alt={image.alt} className={image.classes} />);
+                  return(<img loading="lazy" key={i} src={withBase(image.src)} alt={image.alt || ""} className={image.classes} />);
                   }
                 )}
                 <h2 className={section.titleAlignment}>{section.title}</h2>
@@ -172,7 +172,7 @@ const Content = (props) => {
                       var linkUrl;
                       if (button.pdf_url) {
                         return(
-                          <a href={withBase(button.pdf_url)} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
+                          <a href={withBase(button.pdf_url)} key={i} aria-label={button.title} className={button.classes.concat(" button")} onClick={closeNav}>
                             <span className={button.classes}>
                               {button.title}
                               {Component && <Component  />}
@@ -181,7 +181,7 @@ const Content = (props) => {
                         );
                       } else {
                         return(
-                          <Link to={button.url} key={i} aria-label="title" className={button.classes.concat(" button")} onClick={closeNav}>
+                          <Link to={button.url} key={i} aria-label={button.title} className={button.classes.concat(" button")} onClick={closeNav}>
                             <span className={button.classes}>
                               {button.title}
                               {Component && <Component  />}
@@ -199,7 +199,7 @@ const Content = (props) => {
                         return(
                           <div key={i} className={"image device " + image.containerClasses}>
                             <div  tabIndex="0" className="content">
-                              <img loading="lazy" src={withBase(image.src)} alt={image.alt} className={image.classes} />
+                              <img loading="lazy" src={withBase(image.src)} alt={image.alt || ""} className={image.classes} />
                             </div>
                           </div>
                         );
@@ -211,14 +211,14 @@ const Content = (props) => {
                               <input title="browser-url" value={image.browserDestination} disabled />
                             </div>
                             <div tabIndex="0" className="browser-container">
-                              <img loading="lazy" src={withBase(image.src)} alt={image.alt} className={image.classes} />
+                              <img loading="lazy" src={withBase(image.src)} alt={image.alt || ""} className={image.classes} />
                             </div>
                           </div>
                         );
                       } else {
                         return(
                           <div key={i} className={"image " + image.containerClasses}>
-                            <img loading="lazy" src={withBase(image.src)} alt={image.alt} className={image.classes} />
+                            <img loading="lazy" src={withBase(image.src)} alt={image.alt || ""} className={image.classes} />
                             {image.caption && <caption>{image.caption}</caption>}
                           </div>
                         );
