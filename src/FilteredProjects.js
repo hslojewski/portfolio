@@ -6,75 +6,32 @@ class FilteredProjects extends React.Component {
   render() {
     const {
       orderChronologically, closeNav,
-      projects = {}, activeTags = {}, filterType = "AND", numToDisplay =  null
+      projects = {}, activeTags = [], filterType = "AND", numToDisplay =  null
     } = this.props;
 
-    // var activeTagProjectsList = [];
-    // var activeTagProjectsSet = new Set();
-    // var projectsToDisplay = [];
-    // var ignoredProjectsSet = new Set();
-    // var ignoredProjectsList = [];
-    // var projectsToIgnore = [];
-    // // debugger;
-    // if (Object.keys(activeTags).length) {
-    //   Object.keys(activeTags).forEach(category => {
-    //     // debugger;
-    //     Object.keys(projects).forEach(projectPath => {
-    //       if (projects[projectPath][category].some(tag => activeTags[category].includes(tag))) {
-    //         console.log("project's tags:");
-    //         console.log(projects[projectPath][category]);
-    //         console.log("active tags:");
-    //         console.log(activeTags[category]);
-    //         // debugger;
-    //         activeTagProjectsSet.add(projectPath);
-    //         activeTagProjectsList = Array.from(activeTagProjectsSet);
-    //         projectsToDisplay = activeTagProjectsList;
-    //       } else {
-    //         ignoredProjectsSet.add(projectPath);
-    //         ignoredProjectsList = Array.from(ignoredProjectsSet);
-    //         projectsToIgnore = ignoredProjectsList;
-    //       }
-    //       projectsToDisplay = projectsToDisplay.filter(project => {
-    //         if (!projectsToIgnore.includes(project)) {
-    //           return project;
-    //         }
-    //       });
-    //     });
-    //   });
-    //   // console.log("projectsToDisplay");
-    //   // console.log(projectsToDisplay);
-    //   // console.log("projectsToIgnore");
-    //   // console.log(projectsToIgnore);
-    //   // activeTags.forEach(tag => {
-    //   //   Object.keys(projects).forEach(projectPath => {
-    //   //     var tools = projects[projectPath].tools || [],
-    //   //         skills = projects[projectPath].skills || [],
-    //   //         affiliations = projects[projectPath].affiliations || [],
-    //   //         roles = projects[projectPath].roles || [],
-    //   //         tags = tools.concat(skills).concat(affiliations).concat(roles);
-    //   //     if (tags.includes(tag)) {
-    //   //       activeTagProjectsSet.add(projectPath);
-    //   //       activeTagProjectsList = Array.from(activeTagProjectsSet);
-    //   //       projectsToDisplay = activeTagProjectsList;
-    //   //     } else {
-    //   //       ignoredProjectsSet.add(projectPath);
-    //   //       ignoredProjectsList = Array.from(ignoredProjectsSet);
-    //   //       projectsToIgnore = ignoredProjectsList;
-    //   //     }
-    //   //   });
-    //   // });
-    // } else {
-    //   projectsToDisplay = Object.keys(projects);
-    // }
-    // if (filterType === "AND") {
-    //   debugger;
-    //   projectsToDisplay = projectsToDisplay.filter(project => {
-    //     if (!projectsToIgnore.includes(project)) {
-    //       return project;
-    //     }
-    //   });
-    // }
+    // This component is used two different ways with two different activeTags shapes:
+    // 1. From the Projects page: activeTags is the category-keyed object ({tools: [...]})
+    //    used for the page-level filters. `projects` has already been filtered by App.js
+    //    in that case, so there's nothing more to do here.
+    // 2. From Content.js (e.g. About/Home "related projects" sections): activeTags is a
+    //    flat list of tag strings from that project's own JSON, e.g.
+    //    ["Platform Product Manager", "Software Engineer"]. A project matches if any of
+    //    its tools/skills/affiliations/roles tags are in that list.
+    var selectedTags = Array.isArray(activeTags) ? activeTags.filter(Boolean) : [];
+
     var projectsToDisplay = Object.keys(projects);
+    if (selectedTags.length) {
+      projectsToDisplay = projectsToDisplay.filter(path => {
+        var project = projects[path];
+        var projectTags = [].concat(
+          project.tools || [], project.skills || [], project.affiliations || [], project.roles || []
+        );
+        return filterType === "OR"
+          ? selectedTags.some(tag => projectTags.includes(tag))
+          : selectedTags.every(tag => projectTags.includes(tag));
+      });
+    }
+
     var orderedProjects = orderChronologically(projects);
     projectsToDisplay = orderedProjects.filter(a => projectsToDisplay.includes(a));
     

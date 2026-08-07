@@ -140,76 +140,33 @@ const App = () => {
       });
   }
 
-  var updateProjectsList = (activeTags) => {
-    // console.log(projects);
-    // console.log(activeTags);
-    // // debugger;
-    var activeTagProjectsList = [];
-    var activeTagProjectsSet = new Set();
-    var projectsToDisplay = [];
-    var ignoredProjectsSet = new Set();
-    var ignoredProjectsList = [];
-    var projectsToIgnore = [];
-    if (Object.keys(activeTags).length) {
-      Object.keys(activeTags).forEach(category => {
-        // debugger;
-        Object.keys(allProjects).forEach(projectPath => {
-          // debugger;
-          if (allProjects[projectPath][category].some(tag => activeTags[category].includes(tag))) {
-            // debugger;
-            console.log("project's tags:");
-            console.log(allProjects[projectPath][category]);
-            console.log("active tags:");
-            console.log(activeTags[category]);
-            // debugger;
-            // activeTagProjectsSet.add(projectPath);
-            // activeTagProjectsList = Array.from(activeTagProjectsSet);
-            // projectsToDisplay = activeTagProjectsList;
-            activeTags[category].forEach(tag => {
-              if (allProjects[projectPath][category].includes(tag)) {
-                activeTagProjectsSet.add(projectPath);
-                activeTagProjectsList = Array.from(activeTagProjectsSet);
-                projectsToDisplay = activeTagProjectsList;
-              } else {
-                ignoredProjectsSet.add(projectPath);
-                ignoredProjectsList = Array.from(ignoredProjectsSet);
-                projectsToIgnore = ignoredProjectsList;
-              }
-            });
-          } else {
-            // debugger;
-            ignoredProjectsSet.add(projectPath);
-            ignoredProjectsList = Array.from(ignoredProjectsSet);
-            projectsToIgnore = ignoredProjectsList;
-            console.log("projectsToIgnore");
-            console.log(projectsToIgnore);
-            // debugger;
-          }
-          console.log("projectsToDisplay");
-          console.log(projectsToDisplay);
-          // debugger;
-          projectsToDisplay = projectsToDisplay.filter(project => {
-            if (!projectsToIgnore.includes(project)) {
-              return project;
-            }
-          });
-          // debugger;
-        });
-      });
-      console.log("projectsToDisplay");
-      console.log(projectsToDisplay);
-      // debugger;
-      var blah = {};
-      projectsToDisplay.forEach(a => {
-        blah[a] = allProjects[a];
-      })
-      getTags(blah);
-      setProjects(blah);
-      // debugger;
-    } else {
-      getTags(allProjects);
-      setProjects(allProjects);
+  // Flattens activeTags (e.g. { tools: ["React"], skills: ["UX"] }) into
+  // [{ category: "tools", tag: "React" }, { category: "skills", tag: "UX" }]
+  // so we can test a project against every selected tag with one pass.
+  var getSelectedTagEntries = (activeTags) => {
+    return Object.keys(activeTags).flatMap(category =>
+      activeTags[category].map(tag => ({ category, tag }))
+    );
+  }
+
+  var updateProjectsList = (activeTags, filterTypeOverride) => {
+    var currentFilterType = filterTypeOverride || filterType;
+    var selectedTagEntries = getSelectedTagEntries(activeTags);
+
+    var projectsToDisplay = allProjects;
+    if (selectedTagEntries.length) {
+      // AND: project must have every selected tag. OR: project must have at least one.
+      var projectMatchesSelection = currentFilterType === "OR"
+        ? (project) => selectedTagEntries.some(({ category, tag }) => (project[category] || []).includes(tag))
+        : (project) => selectedTagEntries.every(({ category, tag }) => (project[category] || []).includes(tag));
+
+      projectsToDisplay = Object.fromEntries(
+        Object.entries(allProjects).filter(([, project]) => projectMatchesSelection(project))
+      );
     }
+
+    getTags(projectsToDisplay);
+    setProjects(projectsToDisplay);
   }
 
   var updateActiveTagsAndProjects = (selectedTag) => {
@@ -232,13 +189,12 @@ const App = () => {
       setActiveTags(updatedActiveTags);
       updateProjectsList(updatedActiveTags);
     }
-    console.log("activeTags");
-    console.log(activeTags);
   }
 
   var toggleFilterType = () => {
-    setFilterType(filterType === "AND" ? "OR" : "AND");
-    // console.log(filterType);
+    var newFilterType = filterType === "AND" ? "OR" : "AND";
+    setFilterType(newFilterType);
+    updateProjectsList(activeTags, newFilterType);
   }
 
   var clearActiveTags = () => {
