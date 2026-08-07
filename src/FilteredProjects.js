@@ -1,6 +1,5 @@
+import React from 'react';
 import { Link } from "react-router-dom";
-
-const React = require('react');
 
 class FilteredProjects extends React.Component {
   render() {

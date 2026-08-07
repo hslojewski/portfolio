@@ -1,8 +1,6 @@
+import React from 'react';
 import TagsList from './TagsList';
 import FilteredProjects from './FilteredProjects';
-
-
-const React = require('react');
 
 class Projects extends React.Component {
     componentDidMount() {

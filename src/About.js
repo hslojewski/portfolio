@@ -1,6 +1,5 @@
+import React from 'react';
 import Content from './Content';
-
-const React = require('react');
 
 class About extends React.Component {
 

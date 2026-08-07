@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 
 import './App.scss';
@@ -7,9 +8,6 @@ import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import Content from './Content';
-
-const React = require('react'),
-      { useState, useEffect } = require('react');
 
 const App = () => {
   var [tags, setTags] = useState({ tools: {}, skills: {}, affiliations: {}, roles: {} });
