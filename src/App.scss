@@ -8,32 +8,45 @@ $one-hundred-percent: 100%;
 $black: #000;
 $white: #fff;
 
-// winter colors - purple
-$color-bubble-bath: #EBE4EC;
-$color-hot-purple: #4F2056;
-$color-selago: #332e26;
-$color-vista-blue: #89D1A5;
+// winter colors - purple with a blue accent
+$color-frost-blue: #F0E7ED;
+$color-deep-indigo: #3F1A48;
+$color-winter-font: #1D1228;
+$color-sky-accent: #6FA8DC;
 
-// spring colors - green
-$color-early-dawn: #FFF6DE;
-$color-pine-tree: #244207;
-$color-eggplant: #A5056D;
-$color-twilight: #E1C4D6;
+// spring colors - green with a pink accent
+$color-leaf-white: #F8F2E1;
+$color-fresh-green: #17663F;
+$color-berry: #8A143D;
+$color-blossom-pink: #F8D0E0;
 
-// summer colors - red
-$color-banana-mania: #FFEEB8;
-$color-bright-red: #901D29;
-$color-melon: #FFB8B8;
+// summer colors - red with a yellow accent
+$color-sun-cream: #FFF3D6;
+$color-brick-red: #871316;
+$color-summer-font: #3A2418;
+$color-golden: #F2C14E;
 
-// autumn colors - orange
-$color-linen: #F6F0EA;
-$color-brown-pod: #632612;
-$color-sea-green: #233E30;
-$color-chilean-fire: #F4BEAE;
+// autumn colors - brown with an orange accent
+$color-harvest-cream: #FBF1E4;
+$color-rust-brown: #4C230A;
+$color-chocolate: #3B2415;
+$color-burnt-orange: #E8863A;
+
+// teal colors - teal with a purple/lavender accent - December 10th only
+$color-teal-light: #E3F3F1;
+$color-teal-dark: #0B4A47;
+$color-teal-font: #062E2C;
+$color-lavender-accent: #C3B1FA;
 
 $widths: 20, 25, 30, 45, 50, 75, 100;
 
 @mixin season-theming($season, $theme-light-bg, $theme-dark-bg, $theme-accent-color, $theme-font-color) {
+  // Focus outline flashes the accent color briefly on click/focus, then fades
+  // out, instead of staying visible for as long as the element has focus.
+  @keyframes flash-outline-#{$season} {
+    0%, 80% { outline-color: $theme-accent-color; }
+    100% { outline-color: transparent; }
+  }
   body {
     &:has(div.#{$season}) {
       &:has(.light-mode), &:has(.dark-mode) .nav {
@@ -66,10 +79,10 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
             &.disabled { background: rgba($theme-accent-color, .8); }
           }
           &:focus {
-            outline-color: $theme-accent-color;
             outline-style: solid;
             outline-width: 5px;
             outline-offset: 3px;
+            animation: flash-outline-#{$season} 1s ease-out forwards;
           }
         }
         .tag {
@@ -79,10 +92,10 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
         .tag-title {
           background: rgba($theme-dark-bg, .15);
           &:focus {
-            outline-color: $theme-accent-color;
             outline-style: solid;
             outline-width: 5px;
             outline-offset: 3px;
+            animation: flash-outline-#{$season} 1s ease-out forwards;
           }
         }
         .tags-list {
@@ -101,7 +114,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
         }
         // .project-list-wrapper {
         li:focus, a:focus, .browser-container:focus, .content:focus {
-            outline-color: $theme-accent-color;
+            animation: flash-outline-#{$season} 1s ease-out forwards;
           }
         // }
       }
@@ -160,7 +173,7 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
         }
         // .project-list-wrapper {
           a:focus {
-            outline-color: $theme-accent-color;
+            animation: flash-outline-#{$season} 1s ease-out forwards;
           }
         // }
       }
@@ -245,10 +258,10 @@ $widths: 20, 25, 30, 45, 50, 75, 100;
 }
 
 $winter-colors: (
-  light: $color-bubble-bath,
-  dark: $color-hot-purple,
-  accent: $color-vista-blue,
-  font: $color-selago
+  light: $color-frost-blue,
+  dark: $color-deep-indigo,
+  accent: $color-sky-accent,
+  font: $color-winter-font
 );
 
 @include season-theming(
@@ -260,10 +273,10 @@ $winter-colors: (
 );
 
 $spring-colors: (
-  light: $color-early-dawn,
-  dark: $color-pine-tree,
-  accent: $color-twilight,
-  font: $color-eggplant
+  light: $color-leaf-white,
+  dark: $color-fresh-green,
+  accent: $color-blossom-pink,
+  font: $color-berry
 );
 
 @include season-theming(
@@ -275,10 +288,10 @@ $spring-colors: (
 );
 
 $summer-colors: (
-  light: $color-banana-mania,
-  dark: $color-bright-red,
-  accent: $color-melon,
-  font: $color-selago
+  light: $color-sun-cream,
+  dark: $color-brick-red,
+  accent: $color-golden,
+  font: $color-summer-font
 );
 
 @include season-theming(
@@ -290,10 +303,10 @@ $summer-colors: (
 );
 
 $autumn-colors: (
-  light: $color-linen,
-  dark: $color-brown-pod,
-  accent: $color-chilean-fire,
-  font: $color-sea-green
+  light: $color-harvest-cream,
+  dark: $color-rust-brown,
+  accent: $color-burnt-orange,
+  font: $color-chocolate
 );
 
 @include season-theming(
@@ -302,6 +315,21 @@ $autumn-colors: (
   map-get( $autumn-colors, 'dark'),
   map-get( $autumn-colors, 'accent'),
   map-get( $autumn-colors, 'font')
+);
+
+$teal-colors: (
+  light: $color-teal-light,
+  dark: $color-teal-dark,
+  accent: $color-lavender-accent,
+  font: $color-teal-font
+);
+
+@include season-theming(
+  "teal",
+  map-get( $teal-colors, 'light'),
+  map-get( $teal-colors, 'dark'),
+  map-get( $teal-colors, 'accent'),
+  map-get( $teal-colors, 'font')
 );
 
 // body { padding: 20px; }

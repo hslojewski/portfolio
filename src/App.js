@@ -25,17 +25,15 @@ const App = () => {
 
 
   var initializeSeason = () => {
-    // // debugger;
-    // const date = new Date('2017-4-28');
-    // const start = new Date('2017-4-20');
-    // const end = new Date('2017-5-16');
     const springBegins = 3; // March
     const summerBegins = 5; // May
     const autumnBegins = 7; // July
-    // const winterBegins = 11;
-
     const currentMonth = new Date().getMonth();
-    if (currentMonth <= springBegins) {
+    const today = new Date();
+
+    if (today.getMonth() === 11) {
+      setSeason("teal");
+    } else if (currentMonth <= springBegins) {
       setSeason("winter");
     } else if (currentMonth <= summerBegins) {
       setSeason("spring");
@@ -47,14 +45,8 @@ const App = () => {
   }
 
   var initializeColorMode = () => {
-    // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    //   setColorMode("dark");
-    // } else if (window.matchMedia("(prefers-color-scheme: light)").matches){
-    //   setColorMode("light");
-    // } else{
-      var localTimeHour = new Date().getHours();
-      setColorMode((localTimeHour > 6 && localTimeHour < 18) ? "light" : "dark");
-    // }
+    var localTimeHour = new Date().getHours();
+    setColorMode((localTimeHour > 6 && localTimeHour < 18) ? "light" : "dark");
   }
 
   var toggleColorMode = () => {
