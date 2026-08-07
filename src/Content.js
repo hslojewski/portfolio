@@ -49,7 +49,7 @@ class Content extends React.Component {
   render() {
     const {
       updateActiveTagsAndProjects, orderChronologically, closeNav, projectAmount = 8,
-      thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, titleAlignment = null, type = null, projects = {}
+      thumbnail = "", data = {}, tags = { tools: [], skills: [], affiliations: [], roles: [] }, date = null, title = null, titleAlignment = null, type = null, projects = {}, projectPath = ""
     } = this.props;
 
     this.imageModalTrigger();
@@ -61,7 +61,26 @@ class Content extends React.Component {
       "FaLinkedinIn": FaLinkedinIn,
       "FaEnvelope": FaEnvelope
     };
-    
+
+    // "Related" = any other project sharing at least one tag (tools, skills,
+    // affiliations, or roles) with this one.
+    var currentProjectTags = [].concat(tags.tools || [], tags.skills || [], tags.affiliations || [], tags.roles || []);
+    var relatedProjects = {};
+    if (type === "project" && currentProjectTags.length > 0) {
+      Object.keys(projects).forEach(path => {
+        if (path === projectPath) {
+          return;
+        }
+        var otherProject = projects[path];
+        var otherProjectTags = [].concat(
+          otherProject.tools || [], otherProject.skills || [], otherProject.affiliations || [], otherProject.roles || []
+        );
+        if (otherProjectTags.some(tag => currentProjectTags.includes(tag))) {
+          relatedProjects[path] = otherProject;
+        }
+      });
+    }
+
     
     return (
       <div className="page">
@@ -238,6 +257,17 @@ class Content extends React.Component {
                 </div>
               );
             })}</div>
+          }
+          {type === "project" && Object.keys(relatedProjects).length > 0 &&
+            <div className="projects-list related-projects">
+              <h2>Related Projects</h2>
+              <FilteredProjects
+                projects={relatedProjects}
+                orderChronologically={orderChronologically}
+                numToDisplay={projectAmount}
+                closeNav={closeNav}
+              />
+            </div>
           }
           {type === "project" &&
             <div className="projects-link bottom">

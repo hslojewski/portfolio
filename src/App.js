@@ -308,6 +308,7 @@ const App = () => {
                    key={i} 
                    element={
                     <Content
+                      key={projectPath}
                       projectPath={projectPath}
                       thumbnail={projects[projectPath].thumbnail}
                       data={projectData}
@@ -322,7 +323,9 @@ const App = () => {
                       date={projects[projectPath].date}
                       type="project"
                       orderChronologically={orderChronologically}
-                      
+                      projects={allProjects}
+                      closeNav={closeNav}
+
                     />
                     }
               />
