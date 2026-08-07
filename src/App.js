@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import moment from 'moment';
 
 import './App.scss';
 import Nav from './Nav';
@@ -34,9 +33,8 @@ const App = () => {
     const summerBegins = 5; // May
     const autumnBegins = 7; // July
     // const winterBegins = 11;
-    // // console.log("month: "+moment().month());
 
-    const currentMonth = moment().month();
+    const currentMonth = new Date().getMonth();
     if (currentMonth <= springBegins) {
       setSeason("winter");
     } else if (currentMonth <= summerBegins) {
@@ -54,7 +52,7 @@ const App = () => {
     // } else if (window.matchMedia("(prefers-color-scheme: light)").matches){
     //   setColorMode("light");
     // } else{
-      var localTimeHour = parseInt(moment().local().format("H"));
+      var localTimeHour = new Date().getHours();
       setColorMode((localTimeHour > 6 && localTimeHour < 18) ? "light" : "dark");
     // }
   }
