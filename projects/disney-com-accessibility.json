@@ -1,0 +1,14 @@
+{
+    "path": "disney-com-accessibility",
+    "description": "Web accessbility evaluation for disney.com",
+    "content": [
+        {
+            "detail": "<p>For an Accssibility and Design for Diverse Users course. I reviewed the web accessibility of the Disney Movies homepage and one of its child pages in order to determine the common highlights and deficiencies that the site has in providing an accessible experience to all of its users.</p>",
+            "video": "https://player.vimeo.com/video/142007046?h=a404f34b7f"
+        },
+        {
+            "detail": "<p>While the Disney Movies site may be highly visually accessible, such as in the use of color contrast and natural keyboard tab order, and also passed certain tests such as the average reading grade level, the site could benefit from a the following recommendations changes to enhance its accessibility to all kinds of users:  visually accessibleAmong the 15 patterns found in this evaluation, I focused on three of the most important ones:</p><ol><li><strong>Alternative Text:</strong> Add all instances of missing alternative text from images on the site, including page-wide graphics and product images. Additionally, make the existing alternative text for hero images more comprehensible for the user.</li><li><strong>Multimedia:</strong> Provide more closed captioning for games as well as short-form video.</li><li><strong>Basic Structure:</strong> Ensure that page text is unrepeated and relevant to the user when images and styling are disabled.</li><li><strong>Resizing:</strong> Expose text throughout the page that may be slightly cut off by image or page structure interference.</li><li><strong>Labels:</strong> Ensure that the semantic markup of the Search Bar is labeled.</li><li><strong>Tab Order, Selection, and Visibility:</strong> Make the hero carousel scrollable by tab. Make the tab-selected buttons more visible to the user. Remove empty links within the pages so that they will not be tab-selectable. Combine hyperlinked images and their associated titles (visible or invisible) are read as one element by screen readers so as to not have redundant tabbing.</li></ol><p>The <a href=\"/portfolio/projects/media/dcom-accessibility/report.pdf\"><strong>final report</strong></a> provides more detail into this evaluation and the four POUR principles: Perceivable, Operable, Understandable, and Robust.</p>"
+        }
+    ]
+
+}

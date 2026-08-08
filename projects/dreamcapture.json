@@ -1,0 +1,114 @@
+{
+    "path": "dreamcapture",
+    "description": "Full stack dream journal web application",
+    "content": [
+        {
+            "title": "Background",
+            "detail": "<p>While I was working in product management at Disney, a new program had started within the company with the goal of educating women employees already within the company in order to convert them to software engineers. I was part of this program's first cohort, which went through a 12-week coding bootcamp through Hackbright Academy.</p><p>During the second half of the program, I got to work on my own individual full-stack web application. I ultimately chose to create a dream journal app for a few reasons:</p><ul><li>Writing down your dreams is the best way to remember them, especially since most dreams are forgotten even five minutes after waking up. Personally, reviewing dreams I recorded in the past helps me recall them years later as if they were actual live memories.</li><li>I like using habit trackers to record other aspects of my health and activities, and dream journaling has proven to be an excellent habit to develop in order to benefit mental health and creativity.</li><li>Dreams can be reviewed with different analyses -- from scientific research of the unconscious mind to more pseudoscientific interpretations of what certain imagery means within a dream experience.</li><li>And finally, there are so many data factors that could be associated with dreams: from the type of dream (normal versus nightmare), to whether it's a recurring one, to the most common symbols/images that could be referenced. This means there are several ways to understand patterns and habits through data visualization.</li></ul>"
+        },
+        {
+            "title": "Description",
+            "detail": "<p>DreamCapture is a full stack web app where you can store your dreams to review later and get feedback about what they could mean or what patterns you can draw from them. This is intended to be a tool to promote better dream-recording habits for users to better remember and understand what their dreams could be telling them about themselves.</p><p>It does this through 3 major features:</p><ul><li><strong>Journal</strong> to record and review dreams</li><li><strong>Analysis</strong> to find matches between symbols in dream and in the database's provided list of symbols</li><li><strong>Visualization</strong> to better understand what you dream about and how often</li></ul>"
+        },
+        {
+            "title": "Symbols",
+            "detail": "<p>A symbol is a keyword from your dream that may have a specific meaning to you or to people in general. The symbol meanings provided from this version of the app were scraped from DreamMoods.com. Symbol meanings are generally subjective, every user may have their own interpretation of what a symbol actually means to them.</p>"
+        },
+        {
+            "title": "Features",
+            "subtitle": "Current",
+            "detail": "<ul><li>Log in and/or create account that is saved in the user database</li><li>Create/Save and Edit a new dream to the database's Dreams table</li><li>Analysis function that finds terms in a dream that match from the database's Symbols table</li><li>Jinja templating to view all Dream Detail and Symbol Detail pages</li><li>Symbol detail pages link to related terms that are also available in the Symbols table, thanks to PyDictionary/BeautifulSoup</li><li>Symbol Frequency D3 calendar graph, fed with JSON list of dream dates queried by a specific symbol and user</li><li>Dream References function that queries dreams created by specific user who dreamt of specific symbol</li><li>Search Results function that queries Symbol Names, Symbol Meanings, and Dream Details for any mentions of specific terms</li><li>Dream Type Frequency D3 calendar graph, fed with JSON list of dream dates associated with specific dream type</li><li>Common Symbols from All Dreams D3 Pack Force (Bubble) graph, fed with JSON list of top 30 symbols mentioned in dreams queried by a specific user Initial confirmation text that user is able to register with the system through the Twilio API</li><li>Styling themed to provide a cozy, relaxing mood with dream-related imagery. I particularly took pride in creating a logo where the placement of crescent moons was reminiscent of the initals of the app's name (<b>D</b>ream<b>C</b>apture).</li></ul>"
+        },
+        {
+            "subtitle": "Future",
+            "detail": "<ul><li>Dream Type Frequency D3 calendar graph to include multiple dream types per date, indicated by a particular color pattern/gradient</li><li>Send reminders, determined by users, through the Twilio API and CRON jobs through SMS</li><li>Allow users to directly record dreams through text, using the Twilio API</li><li>Ability to select libraries for different symbol interpretations</li></ul>"
+        },
+        {
+            "title": "Data Model",
+            "detail": "<p>The database for this app was made up of 5 tables: Dreams, Symbols, Users, DreamSymbols (Association), and UserDreams (Association). Below is an illustration of the data model.</p>",
+            "images": [
+                {
+                    "src": "projects/media/dreamcapture/datamodel.png",
+                    "alt": "Data model diagramming relationship between users, dreams, and symbols",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        },
+        {
+            "title": "Data",
+            "subtitle": "Symbols and Meanings: DreamMoods.com",
+            "detail": "<p>There were several websites I explored to find available symbol/meaning data. These sites were more scrapable (than what I ultimately used) based on their HTML structures. I was able to run test scraping thanks to Python-Guide.org's resource .</p><p>While some sites were easier to scrape than others, I ultimately utilized DreamMoods.com based on my preference for their range of meanings. For this site, I had to instead copy/paste its set of symbols and create/run some data-cleaning and formatting functions so that it could be ready for database-seeding.</p>"
+        },
+        {
+            "subtitle": "Sample Dreams: DreamBank.net",
+            "detail": "<p>I collected about 300-500 sample dreams from DreamBank.net in order to create 3-5 sample users. The site provides several options for the type of users to collect dream data from, and its HTML structure is more consistent than that of DreamMoods.com. While this would make it easier to scrape the site through the Python-Guide.org method, there would still be some additional formatting needed.</p>"
+        },
+        {
+            "title": "User Capabilities",
+            "detail": "<ul><li>Create or log into an account. If creating an account, inputting a real phone number will send a confirmation text message to that number.</li><li>The dashboard contains the list of dreams previously recorded (on the left-hand side), a calendar that indicates the frequency of types of dreams (top right), and the most commonly dreamt symbols (bottom right).</li><li>If creating a new account, the dashboard will be empty. Record a dream through the navigation bar to add more data-visualizing life to the dashboard. The date should default to today and you can input the dream details and check the dream type(s). Once a dream is saved, the user is taken to its dream detail page where they can edit or review the dream and review the symbols in detail from that dream.</li><li>Users can go to individual symbol detail pages from the dream, from the symbol dictionary in the navbar, or find symbols through search. Symbol detail pages include their meanings, related terms, and dream references as noted by a calendar marking specific dates and a list of the dream details in full.</li><li>Search allows users to find terms that match any symbol names, symbol meanings, or dreams recorded.</li></ul>",
+            "images": [
+                {
+                    "src": "projects/media/dreamcapture/homepage.png",
+                    "caption": "App homepage including DreamCapture logo and tagline to \"Unlock Your Dreams,\" prompting user to log in or create an account",
+                    "alt": "App homepage including DreamCapture logo and tagline to \"Unlock Your Dreams,\" prompting user to log in or create an account",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/dreamcapture/create_account.png",
+                    "caption": "App homepage with opened modal that includes login and account creation form options",
+                    "alt": "App homepage with opened modal that includes login and account creation form options",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/dreamcapture/dashboard.png",
+                    "caption": "App dashboard that includes recent dream logs, data visualization of user's types of dreams, and word cloud of phrases mentioned in journal entries",
+                    "alt": "App dashboard that includes recent dream logs, data visualization of user's types of dreams, and word cloud of phrases mentioned in journal entries",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/dreamcapture/record_dream.png",
+                    "caption": "App dashboard with opened modal that allows user to log dream details",
+                    "alt": "App dashboard with opened modal that allows user to log dream details",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/dreamcapture/dream_detail.png",
+                    "caption": "App journal entry of dream details, including words highlighted from the entry as symbols, with references to potential meanings based on known interpretations",
+                    "alt": "App journal entry of dream details, including words highlighted from the entry as symbols, with references to potential meanings based on known interpretations",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/dreamcapture/search_results.png",
+                    "caption": "App search results page where user can see how search terms match across known symbols, symbol meanings, and journal entries",
+                    "alt": "App search results page where user can see how search terms match across known symbols, symbol meanings, and journal entries",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/dreamcapture/symbol_detail.png",
+                    "caption": "App symbol entry that indicates meanings, related phrases, and related dream data including dates dreamed and journal entry details",
+                    "alt": "App symbol entry that indicates meanings, related phrases, and related dream data including dates dreamed and journal entry details",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/dreamcapture/text_message.png",
+                    "caption": "App open in a window on the left, with example SMS reminder from Twilio API confirming that user will be reminded to record dreams",
+                    "alt": "App open in a window on the left, with example SMS reminder from Twilio API confirming that user will be reminded to record dreams",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        },
+        {
+            "title": "Credits",
+            "detail": "<p>This web app was created during the CODE: Rosie Pilot Program, under the instruction of Hackbright Academy. I would like to thank the DCPI team that made this program possible, the Hackbright instructors for their curriculum and coaching, my Hackbright advisor Anne Vetto for her support and guidance through the management of this product, my program buddy Martin Calvert for his commitment to contributing his ideas and expertise so that I could fulfill my MVP and additional features, and to my program mentor Einav Shech-Brent for her thoughtful input and insight.</p>"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "path": "auto-car-prototype",
+    "description": "Car assistance device and app.",
+    "content": [
+        {
+            "title": "Concept and Problem",
+            "detail": "<p>For a Prototyping and Implementation course. This assignment required that my partner and I design a combination smart object and mobile application. The smart object needed to come into physical contact with the user while the mobile app was the only interface allowed to the user. Although we considered this project going in the direction of topics such as travel and luggage, washing machines, musical instruments, and pets, we ultimately decided that a device and app connected to an Automobile would have a number of opportunities to explore and various users to consider.</p><p>For this particular project, we considered the different concerns and everyday conveniences that seemed possible from the situation of a car's vitals and functionalities being accessible remotely. This included topics such as:</p><ul><li>Vehicle safety and locks</li><li>Dashboard vitals</li><li>Mileage and maintenance log</li><li>Remote operations</li></ul>",
+            "images": [
+                {
+                    "src": "projects/media/auto/pres1.png",
+                    "alt": "Bullet points from the final presentation",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/auto/pres2.png",
+                    "alt": "More bullet points from the final presentation",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        },
+        {
+            "title": "Interactive Prototype",
+            "detail": "<p>The final prototype displays the dashboard of your car's dashboard as its home screen, including vitals, fuel levels, engine status, and security status. The sticky bottom menu allows users to access deeper settings such as car location (in accordance with security), connected vehicles to choose from, and app settings.</p>",
+            "images": [
+                {
+                    "src": "projects/media/auto/prototype.png",
+                    "alt": "Auto app prototype view",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        },
+        {
+            "title": "Presentation",
+            "detail": "<p>View the presentation of the process and final prototype below.</p>",
+            "video": "https://player.vimeo.com/video/120661560?h=81a3e6c765"
+        }
+    ]
+}

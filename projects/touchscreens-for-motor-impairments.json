@@ -1,0 +1,15 @@
+{
+    "path": "touchscreens-for-motor-impairments",
+    "description": "Accessible iPad Design for Motor Impairments While Using YouTube",
+    "content": [
+        {
+            "title": "Evaluation",
+            "detail": "<p>For a Accessibility and Design for Diverse Users course. I had the opportunity to work with a group in exploring the  accessibility of a topic or product of choice. After some discussion, we were ultimately curious about how usable touchscreen devices are for users with motor impairments. We then specified our question down to the usability of tablet touchscreens (particularly iPads) for users with Essential Tremor, especially after finding several research papers that touched upon elements of our topic but did not cover it entirely.</p><p>We worked through the Hand Tremor Network in order to find several participants who were incredibly enthusiastic to help us in our research. Our participants performed the following tasks on Apple's iPad device, using the YouTube app:</p><ol><li>Search for video</li><li>Select a video</li><li>Skip to halfway through the video</li><li>Pause the video</li><li>Scroll through recommended videos and select one</li><li>Make video fullscreen</li><li>\"Pinch\" video to return to default size</li></ol><p>Post-test data consisted of our qualitative observations, quantitative task measurements during the test, and the users' responses to a post-task questionnaire.</p><p>Common frustrations from the tests were in:</p><ul><li>Pressing buttons</li><li>Scrolling on a page</li><li>Changing the time selected on the YouTube video timeline control</li><li>Physically gripping the tablet</li></ul><p>Our participants stated that the tablet was harder to use than a smartphone. Overall, improvements to tablet design and app design for tablets could benefit users like our participants as well as others with hand disabilities.</p><p>The following deck presents the rest of our findings in addition to our methods and other information from the usability tests.</p>"
+        },
+        {
+            "title": "Presentation",
+            "detail": "<p>The following presentation summarizes the rest of our findings in addition to our methods and other information from the usability tests.</p>",
+            "video": "https://player.vimeo.com/video/146667894?h=5225812519"
+        }
+    ]
+}

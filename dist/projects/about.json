@@ -1,0 +1,88 @@
+{
+    "path": "about",
+    "content": [
+        {
+            "detail": "<p>I grew up playing computer games that were both entertaining and educational. Among the CD-ROMs I played as a kid, I mastered touch typing from <i>Adventures in Typing with Timon & Pumbaa</i> created by Disney Interactive. When the Internet became more available, I learned HTML and CSS while playing Neopets. A few years later, I had an internship at the same Disney division that created so many of the games I enjoyed. And soon after that, I was part of a Disney initiative that taught current employees how to code.</p>",
+            "detailAlignment": "center",
+            "images": [
+                {
+                    "src": "projects/media/about/heidi1.jpg",
+                    "alt": "Photo of a girl in front of a Macintosh computer",
+                    "classes": "align-center ignore-modal",
+                    "containerClasses": "mobile-width-50 width-20 no-padding"
+                },
+                {
+                    "src": "projects/media/about/heidi2.jpg",
+                    "alt": "Photo of a girl using an iMac",
+                    "classes": "align-center ignore-modal",
+                    "containerClasses": "mobile-width-50 width-20 no-padding"
+                },
+                {
+                    "src": "projects/media/about/heidi3.jpg",
+                    "alt": "Photo of a girl with a Mac laptop",
+                    "classes": "align-center ignore-modal",
+                    "containerClasses": "mobile-width-50 width-20 no-padding"
+                },
+                {
+                    "src": "projects/media/about/heidi4.jpg",
+                    "alt": "Photo of a girl with a Mac laptop",
+                    "classes": "align-center ignore-modal",
+                    "containerClasses": "mobile-width-50 width-20 no-padding"
+                }
+            ]
+        },
+        {
+            "detail": "<p>My education has specialized in database design, software engineering, and human-computer interaction.</p>",
+            "detailAlignment": "center",
+            "icons": [
+                {
+                    "component": "FaSitemap",
+                    "degree": "Applied Information Management Systems",
+                    "source": ["Loyola Marymount University"],
+                    "width": 100
+                },
+                {
+                    "component": "FaCode",
+                    "degree": "Software Engineering",
+                    "source": ["Disney's CODE: Rosie Program", "(Hackbright Academy)"],
+                    "width": 100
+                },
+                {
+                    "component": "FaRegKeyboard",
+                    "degree": "Human-Computer Interaction",
+                    "source": ["DePaul University"],
+                    "width": 100
+                }
+            ]
+        },
+        {
+            "detail": "<p>My career thus far has focused on product management and web development. My professional experience includes work with content management systems and scalable website solutions where I get to collaborate with global colleagues and various brands under The Walt Disney Company.</p>",
+            "detailAlignment": "center",
+            "projectsList": {
+                "filters": [
+                    "Platform Product Manager",
+                    "Software Engineer"
+                ],
+                "filterType": "OR"
+            },
+            "buttons": [
+                {
+                    "title": "See All Projects",
+                    "classes": "align-center see-all mobile-width-100 width-20",
+                    "url": "/projects"
+                },
+                {
+                    "title": "View My Resume",
+                    "classes": "align-center resume secondary mobile-width-100 width-20",
+                    "pdf_url": "projects/media/about/heidislojewski_resume.pdf"
+                }
+            ]
+        },
+        {
+            "detail": "<p>Outside of work, I enjoy movies, travel, theme parks, hiking, puzzles, exploring, and trying new things. As an advocate of STEM/STEAM, I am open to opportunities where I can encourage and promote tech literacy.</p>",
+            "detailAlignment": "center",
+            "instagramEmbed": "https://www.instagram.com/heiidski"
+        }
+    ]
+
+}

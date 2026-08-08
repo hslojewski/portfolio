@@ -1,0 +1,31 @@
+{
+    "path": "bookshop-database",
+    "description": "Database management system and ecommerce site",
+    "content": [
+        {
+            "title": "Process",
+            "detail": "<p>For the Information Management Systems Capstone Content. This capstone project was for a bookshop in need of marketability to customers. I compiled and organized data for the inventory, developed ER Models and schemas for the database, created sitemaps and schematics for a storyboard of wireframes for the bookshop's new website, and populated and configured both the database and the website in order to automate invoices, customer communication, and inventory findability and purchasability.</p>",
+            "images": [
+                {
+                    "src": "projects/media/bookshop/site_wireframe.png",
+                    "alt": "Wireframe of bookshop website checkout form",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/bookshop/relationship_diagram.png",
+                    "alt": "Entity-Relationship diagram for bookshop database, including customers, books, and orders",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                },
+                {
+                    "src": "projects/media/bookshop/site_sitemap.png",
+                    "alt": "Bookshop webiste sitemap to show site's information architecture",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        }
+    ]
+
+}

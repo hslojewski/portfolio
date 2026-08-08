@@ -1,0 +1,33 @@
+{
+    "path": "northwood-pie",
+    "description": "Movie website design",
+    "content": [
+        {
+            "detail": "<p>I built a website for a feature film called <em>Northwood Pie</em> from Site B Productions.<p></p>The site was built on Squarespace -- with some adjustments made through HTML, CSS, and JavaScript -- so that future non-developers could edit the site content more easily in the future. The content hierarchy was set up to feature the trailer, review quotes, and where users could stream the movie online. The reset of the single-page site describes the movie's premise in more detail, followed by the cast and crew, other review highlights, news, and more information about the real restaurant that the movie was based on and filmed at. The social networks mentioned included a custom Letterboxed link. The site content was optimized for accessibility and SEO -- including heading structure, image alt text, and schema/JSON-LD.</p>",
+            "images": [
+                {
+                    "src": "projects/media/northwood-pie/desktop.png",
+                    "alt": "Webpage of information about \"Northwood Pie\", with a video player at the top to watch the feature film",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "northwoodpie.com"
+                },
+                {
+                    "src": "projects/media/northwood-pie/mobile.png",
+                    "alt": "Mobile view webpage of information about \"Northwood Pie\", with a video player at the top to watch the feature film",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45",
+                    "windowWrapper": "device"
+                }
+            ],
+            "buttons": [
+                {
+                    "title": "Check Out the Website",
+                    "classes": "align-center see-all mobile-width-100 width-20",
+                    "url": "https://www.northwoodpie.com"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "path": "diva-den",
+    "description": "Digital Divas mobile app prototype",
+    "content": [
+        {
+            "detail": "<p>For a Social Interaction Design course, my group chose to implement more social interaction design patterns into an after-school program in Chicago known as Digital Divas, a program that encourages and empowers young girls to complete STEM (Science, Technology, Engineering, and Math) projects today and in their future.</p>"
+        },
+        {
+            "title": "Storyboards",
+            "detail": "<p>We ultimately chose to design a new app, primarily for tablet devices, that provided users the opportunity to go through 2 different experience flows:</p><ol><li>A <strong>Gamification Flow</strong> where users can collect rewards and badges for finishing projects</li><li>A <strong>Collaboration Flow</strong> where users can follow friend activity and communicate with others as individuals or groups</li></ol>",
+            "images": [
+                {
+                    "src": "projects/media/diva-den/storyboard1.jpeg",
+                    "alt": "Drawings depicting gamification flow of user experience with app design",
+                    "caption": "Gamification Flow",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/storyboard2.jpeg",
+                    "alt": "Drawings depicting collaboration flow of user experience with app design",
+                    "caption": "Collaboration Flow",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        },
+        {
+            "title": "Wireframes",
+            "detail": "<p>Sketched storyboards allowed us to explore these flows and confirm the design patterns selected that would be incorporated into our wireframes.</p><p>Design patterns included:</p><ul><li>Points</li><li>Labels</li><li>Share Widget</li><li>Profile Customization</li><li>Calendar</li><li>Invite Friends</li><li>Private Conversation</li><li>Video Chat</li><li>Log In/Sign up</li><li>Buddy List</li><li>Avatar</li><li>Personal Dashboard</li><li>Adding Friends</li><li>Activity Stream</li><li>Collectible Achievements</li></ul>",
+            "images": [
+                {
+                    "src": "projects/media/diva-den/wireframe1.png",
+                    "alt": "Wireframe drawing of login screen",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe2.png",
+                    "alt": "Wireframe drawing of dashboard",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe3.png",
+                    "alt": "Wireframe drawing of reward notification",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe4.png",
+                    "alt": "Wireframe drawing of reward shop",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe5.png",
+                    "alt": "Wireframe drawing of reward confirmation",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe6.png",
+                    "alt": "Wireframe drawing of avatar page",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe7.png",
+                    "alt": "Wireframe drawing of calendar",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe8.png",
+                    "alt": "Wireframe drawing of calendar event",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe9.png",
+                    "alt": "Wireframe drawing of direct message chat",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                },
+                {
+                    "src": "projects/media/diva-den/wireframe10.png",
+                    "alt": "Wireframe drawing of video call",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100 width-45"
+                }
+            ]
+        },
+        {
+            "title": "Prototype",
+            "detail": "<p>After a heuristic evaluation from our peers and a personal evaluation of our project so far, we moved forward with making our wireframes interactive and creating our final prototype.</p>",
+            "images": [
+                {
+                    "src": "projects/media/diva-den/diva-den.png",
+                    "alt": "Wireframe to prototype comparison for Diva Den user dashboard",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100"
+                }
+            ]
+        },
+        {
+            "subtitle": "Presentation",
+            "detail": "<p>The presentation of the final project can be viewed below.</p>",
+            "video": "https://player.vimeo.com/video/145808124?h=0eee14a813"
+        }
+    ]
+
+}

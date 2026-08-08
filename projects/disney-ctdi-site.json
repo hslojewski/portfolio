@@ -1,0 +1,18 @@
+{
+    "path": "disney-ctdi-site",
+    "content": [
+        {
+            "detail": "<p>Onboarded and shepherded the launch of the Creative Talent Development and Inclusion website for the Disney Entertainment Team. Trained the team's site producer on how to utilize the out-of-box tools provided through the proprietary CMS that I am product manager for. Coordinated the launch of this site with our infrastructure team.</p>",
+            "images": [
+                {
+                    "src": "projects/media/disney-ctdi/homepage.jpeg",
+                    "alt": "Webpage of different information about the Creative Talent Development and Inclusion program at Disney Entertainment",
+                    "classes": "align-center",
+                    "containerClasses": "mobile-width-100",
+                    "windowWrapper": "browser",
+                    "browserDestination": "dgectdi.com"
+                }
+            ]
+        }
+    ]
+}
