@@ -553,30 +553,8 @@
     "thumbnail_alt": "Personal portfolio website homepage",
     "date": 2024
   },
-  "disney-japan-migrations": {
-    "title": "Disney Japan Website Migrations",
-    "tools": [
-      "Content Management System (CMS)"
-    ],
-    "skills": [
-      "Product Management",
-      "Product Operations",
-      "Accessibility",
-      "Localization",
-      "Site Launch"
-    ],
-    "affiliations": [
-      "The Walt Disney Company"
-    ],
-    "roles": [
-      "Platform Product Manager"
-    ],
-    "thumbnail": "projects/thumbnails/disney_japan.png",
-    "thumbnail_alt": "Disney Japan website homepage",
-    "date": 2023
-  },
   "el-capitan-theatre-site": {
-    "title": "El Capitan Theatre Website Migration",
+    "title": "El Capitan Theatre Website Replatform",
     "tools": [
       "Content Management System (CMS)"
     ],
@@ -617,29 +595,8 @@
     "thumbnail_alt": "Marvel HQ Published by StoryToys website homepage",
     "date": 2023
   },
-  "disney-press-sites": {
-    "title": "Disney+ Press and Disney Advertising Press Website Launches",
-    "tools": [
-      "Content Management System (CMS)"
-    ],
-    "skills": [
-      "Product Management",
-      "Product Operations",
-      "Accessibility",
-      "Site Launch"
-    ],
-    "affiliations": [
-      "The Walt Disney Company"
-    ],
-    "roles": [
-      "Platform Product Manager"
-    ],
-    "thumbnail": "projects/thumbnails/disney_press.png",
-    "thumbnail_alt": "Disney+ Press website homepage",
-    "date": 2023
-  },
-  "disney-press-latam-sites": {
-    "title": "Disney Press Latin America and Disney Press Brazil Websites",
+  "disney-international-marketing-migrations": {
+    "title": "International Disney Marketing Website Migrations",
     "tools": [
       "Content Management System (CMS)"
     ],
@@ -656,12 +613,12 @@
     "roles": [
       "Platform Product Manager"
     ],
-    "thumbnail": "projects/thumbnails/disney_latam_press.png",
-    "thumbnail_alt": "Disney Brazil Press website homepage",
-    "date": 2024
+    "thumbnail": "projects/thumbnails/disney_japan.png",
+    "thumbnail_alt": "Disney Japan website homepage",
+    "date": "2023-2024"
   },
   "disney-ctdi-site": {
-    "title": "Disney Entertainment Creative Talent Development & Inclusion Website Migration",
+    "title": "Disney Entertainment CTDI Website Replatform",
     "tools": [
       "Content Management System (CMS)"
     ],
@@ -681,49 +638,8 @@
     "thumbnail_alt": "Disney Entertainment CTDI website homepage",
     "date": 2023
   },
-  "disney-games-site": {
-    "title": "Disney Games Website Relaunch",
-    "tools": [
-      "Content Management System (CMS)"
-    ],
-    "skills": [
-      "Product Management",
-      "Product Operations",
-      "Accessibility",
-      "Site Launch"
-    ],
-    "affiliations": [
-      "The Walt Disney Company"
-    ],
-    "roles": [
-      "Platform Product Manager"
-    ],
-    "thumbnail": "projects/thumbnails/disney_games.png",
-    "thumbnail_alt": "Disney Games website homepage",
-    "date": 2023
-  },
-  "disney-plus-site-rebrand": {
-    "title": "On Disney+ Website Rebrand",
-    "tools": [
-      "Content Management System (CMS)"
-    ],
-    "skills": [
-      "Product Management",
-      "Product Operations",
-      "Site Launch"
-    ],
-    "affiliations": [
-      "The Walt Disney Company"
-    ],
-    "roles": [
-      "Platform Product Manager"
-    ],
-    "thumbnail": "projects/thumbnails/on-disney-plus.png",
-    "thumbnail_alt": "On Disney+ website homepage",
-    "date": 2023
-  },
   "avatar-pandorapedia": {
-    "title": "Pandorapedia Website Migration to Avatar.com",
+    "title": "Pandorapedia Website Replatform to Avatar.com",
     "tools": [
       "Content Management System (CMS)"
     ],

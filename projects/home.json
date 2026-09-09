@@ -29,8 +29,7 @@
                 },
                 {
                     "title": "Connect on LinkedIn",
-                    "classes": "align-center button-icon secondary",
-                    "icon": "FaLinkedinIn",
+                    "classes": "align-center secondary",
                     "url": "https://www.linkedin.com/in/heidislojewski"
                 },
                 {
